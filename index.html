@@ -1,35 +1,40 @@
-﻿<div id="erewhile-dstudio">
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>erewhile.digital</title>
+</head>
+<body>
+
+<div id="erewhile-dstudio">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,650;0,750;1,400;1,650&display=swap" rel="stylesheet">
 
-
   <style>
     :root{
       /* Brand palette */
-      --a:#076B58;    /* насыщенный зелёно-бирюзовый */
-      --t1:#054B4D;   /* тёмный холодный бирюзово-зелёный */
-      --t2:#0B324B;   /* глубокий синевато-зелёный */
-      --shadow:#042727; /* почти чёрный (текстура/тени) */
-
+      --a:#076B58;
+      --t1:#054B4D;
+      --t2:#0B324B;
+      --shadow:#042727;
 
       /* White-page system */
       --bg:#ffffff;
       --paper:#fbfbfb;
-      --ink:#0b0b0b; /* органичный чёрный */
+      --ink:#0b0b0b;
       --muted:rgba(11,11,11,.64);
       --muted2:rgba(11,11,11,.48);
       --line:rgba(11,11,11,.10);
       --line2:rgba(11,11,11,.06);
-
 
       /* Buttons */
       --btnH:42px;
       --r:999px;
       --ease:cubic-bezier(.16,1,.3,1);
     }
-
 
     #erewhile-dstudio{
       font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -38,101 +43,14 @@
     #erewhile-dstudio *{ box-sizing:border-box; }
     #erewhile-dstudio a{ color:inherit; text-decoration:none; }
 
-
     /* Outer frame */
     .wrap{
       background: var(--bg);
       border: 1px solid var(--line);
       border-radius: 22px;
       overflow:hidden;
+      overflow-x:hidden;
     }
-
-
-
-
-
-
-/* VIDEO — typography aligned with site */
-.video-showcase{
-  background: transparent;
-  padding: 0; /* отступы задаёт .section */
-}
-
-
-.video-inner{
-  display:grid;
-  grid-template-columns: 1.05fr .95fr; /* ближе к твоему split */
-  gap: 36px;
-  align-items: center;
-}
-
-
-.video-text h2{
-  margin: 0;
-  font-size: 34px;              /* как .caseHeader h2 */
-  line-height: 1.05;
-  letter-spacing: -0.05em;
-  font-weight: 780;
-  color: var(--ink);
-}
-
-
-.video-text p{
-  margin: 10px 0 0;
-  font-size: 13px;              /* как .p / .ecoSub */
-  line-height: 1.75;
-  color: var(--muted);
-  max-width: 70ch;
-}
-
-
-.video-frame{
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  background: #000;
-  border-radius: 22px;          /* как карточки */
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: 0 22px 60px rgba(4, 39, 39, 0.10);
-}
-
-
-.video-frame iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-}
-
-
-@media (max-width: 900px){
-  .video-inner{ grid-template-columns: 1fr; }
-}
-
-
-
-
-
-
-
-
-
-
-/* Адаптив */
-@media (max-width: 900px) {
-  .video-inner {
-    grid-template-columns: 1fr;
-  }
-
-
-  .video-text h2 {
-    font-size: 32px;
-  }
-}
-
-
-
 
     /* Subtle grid background like the reference */
     .gridBg{
@@ -152,7 +70,6 @@
       pointer-events:none;
     }
 
-
     /* Header (sticky) */
     .header{
       position:sticky;
@@ -170,24 +87,29 @@
       align-items:center;
       gap: 16px;
     }
+
+    /* ✅ UPDATED BRAND: logo + text (desktop), logo only (mobile) */
     .brand{
-      display:flex; align-items:center; gap:10px;
+      display:flex;
+      align-items:center;
+      gap:12px;
       min-width: 220px;
       font-weight: 750;
       letter-spacing: -0.02em;
     }
-    .mark{
-      width: 34px; height: 34px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(18px circle at 30% 30%, rgba(7,107,88,.22), transparent 55%),
-        radial-gradient(18px circle at 70% 80%, rgba(11,50,75,.12), transparent 60%),
-        var(--paper);
-      display:grid; place-items:center;
+    .brandLogo{
+      height: 28px;
+      width: auto;
+      display:block;
+      transition: .2s var(--ease);
     }
-    .dot{ width:8px; height:8px; border-radius:999px; background: var(--a); box-shadow: 0 16px 30px rgba(7,107,88,.22); }
-
+    .brandText{
+      white-space: nowrap;
+    }
+    .brand:hover .brandLogo{
+      opacity: .9;
+      transform: translateY(-0.5px);
+    }
 
     .nav{
       flex:1;
@@ -208,12 +130,11 @@
       transform: translateY(-1px);
     }
 
-
     .headerCtas{
       display:flex; align-items:center; gap:10px;
       white-space: nowrap;
+      margin-left: auto; /* ✅ FIX: always align CTAs to the right (mobile too) */
     }
-
 
     /* Buttons (dstudio-like pills) */
     .btn{
@@ -237,15 +158,19 @@
       color:#fff;
     }
     .btnBlack:hover{ filter: brightness(1.05); }
-    .btnOutline{
-      background:#fff;
-    }
+    .btnOutline{ background:#fff; }
     .btnOutline:hover{ border-color: rgba(7,107,88,.35); }
     .btnAccent{
       border-color: rgba(7,107,88,.28);
       background: rgba(7,107,88,.08);
     }
 
+    /* ✅ Smaller secondary CTA (reduces CTA “pressure”) */
+    .btnSmall{
+      height: 38px;
+      padding: 0 12px;
+      font-size: 12.5px;
+    }
 
     /* Sections */
     .section{
@@ -256,7 +181,6 @@
       position:relative;
     }
     .section:last-child{ border-bottom:none; }
-
 
     /* Hero */
     .hero{
@@ -286,11 +210,6 @@
       flex-wrap:wrap;
     }
 
-
-
-
-
-
     /* Split */
     .split{
       display:grid;
@@ -313,7 +232,6 @@
       color: var(--muted2);
     }
 
-
     .rightCol{
       display:grid;
       grid-template-columns: 1fr;
@@ -325,8 +243,7 @@
       font-size: 13px;
     }
 
-
-    /* New: ecosystem map */
+    /* Ecosystem map (orbits only) */
     .ecoWrap{
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -334,6 +251,9 @@
       padding: 18px;
       overflow:hidden;
       position:relative;
+      width: 100%;
+      justify-self: stretch;
+      min-width: 0;
     }
     .ecoWrap:before{
       content:"";
@@ -368,7 +288,6 @@
       max-width: 80ch;
     }
 
-
     .ecoGrid{
       position:relative;
       margin-top: 16px;
@@ -376,12 +295,14 @@
       grid-template-columns: 1fr;
       gap: 12px;
       align-items:stretch;
+      min-width: 0;
     }
     .ecoCenter{
       border-radius: 22px;
       border: 1px solid var(--line);
       background: var(--paper);
       padding: 16px;
+      min-width: 0;
     }
     .ecoBadge{
       display:inline-flex;
@@ -427,9 +348,11 @@
       box-shadow: 0 14px 30px rgba(7,107,88,.16);
       flex:0 0 10px;
     }
+
     .ecoOrbits{
       display:grid;
       gap: 12px;
+      min-width: 0;
     }
     .orbit{
       border-radius: 22px;
@@ -437,6 +360,7 @@
       background: #fff;
       padding: 16px;
       transition: .22s var(--ease);
+      min-width: 0;
     }
     .orbit:hover{ transform: translateY(-2px); box-shadow: 0 22px 60px rgba(4,39,39,.10); border-color: rgba(7,107,88,.22); }
     .orbitK{
@@ -459,8 +383,218 @@
       line-height: 1.65;
     }
 
+    /* Accordion (for mobile simplification) */
+    details.acc{
+      position:relative;
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      overflow: hidden;
+    }
+    summary.accSum{
+      list-style:none;
+      cursor:pointer;
+      padding: 12px 14px;
+      font-weight: 760;
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      user-select:none;
+    }
+    summary.accSum::-webkit-details-marker{ display:none; }
+    summary.accSum:after{
+      content:"＋";
+      font-weight: 780;
+      opacity:.65;
+    }
+    details[open] summary.accSum:after{ content:"—"; }
+    details.acc > *:not(summary){ padding: 0 14px 14px; }
 
-    /* Case tiles (now: web-focused examples) */
+    /* ===== VIDEO RAIL (base) ===== */
+    .video-rail{
+      position: relative;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+      margin-top: 14px;
+    }
+    .railControls{
+      position:absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 6;
+      display:flex;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(8px);
+    }
+    .railBtn{
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+      transition: .22s var(--ease);
+      font-weight: 760;
+      line-height: 1;
+    }
+    .railBtn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+
+    .rail-track{
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      will-change: transform;
+      animation: railScroll 28s linear infinite;
+    }
+    #videoRailLandscape { animation-duration: 28s; }
+    #videoRailVertical  { animation-duration: 40s; }
+
+    .video-rail:hover .rail-track,
+    .video-rail:focus-within .rail-track,
+    .video-rail.manualPause .rail-track{
+      animation-play-state: paused;
+    }
+
+    .vcard{
+      flex: 0 0 auto;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+      transition: .22s var(--ease);
+    }
+    .vcard[data-orient="landscape"]{ width: 320px; }
+    .vcard[data-orient="portrait"]{ width: 220px; }
+    .vcard:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 22px 60px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+
+    .vthumb{
+      position: relative;
+      display: block;
+      width: 100%;
+      border: 0;
+      padding: 0;
+      background: #000;
+      cursor: pointer;
+      overflow:hidden;
+    }
+    .vcard[data-orient="landscape"] .vthumb{ aspect-ratio: 16 / 9; }
+    .vcard[data-orient="portrait"]  .vthumb{ aspect-ratio: 9 / 16; }
+
+    .vthumb img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: .92;
+      transform: scale(1.01);
+      transition: .25s var(--ease);
+    }
+    .vcard:hover .vthumb img{
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    .vplay{
+      position:absolute;
+      inset:auto auto 12px 12px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(8px);
+      z-index: 3;
+      transition: .22s var(--ease);
+    }
+    .vplay:before{
+      content:"";
+      position:absolute;
+      left: 17px;
+      top: 13px;
+      width: 0; height: 0;
+      border-left: 14px solid #fff;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      opacity: .95;
+    }
+
+    .vclose{
+      position:absolute;
+      top: 10px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(8px);
+      color:#fff;
+      font-weight: 760;
+      cursor:pointer;
+      z-index: 4;
+      display:none;
+      transition: .22s var(--ease);
+    }
+    .vthumb.playing .vclose{ display:grid; place-items:center; }
+    .vthumb.playing .vplay{ opacity:0; transform: scale(.96); }
+
+    .vmeta{ padding: 10px 12px 12px; }
+    .vtitle{
+      font-weight: 760;
+      letter-spacing:-0.03em;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+    .vsub{
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted2);
+    }
+
+    .vframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      z-index: 2;
+    }
+
+    @keyframes railScroll{
+      from{ transform: translateX(0); }
+      to{ transform: translateX(-50%); }
+    }
+
+    @media (max-width: 900px){
+      .rail-track{ animation-duration: 36s; }
+      .vcard[data-orient="landscape"]{ width: 280px; }
+      .vcard[data-orient="portrait"]{ width: 200px; }
+      .railControls{ top: 8px; right: 8px; }
+
+      #videoRailLandscape { animation-duration: 48s; }
+      #videoRailVertical  { animation-duration: 36s; }
+    }
+
+    /* Case tiles */
     .caseHeader{
       display:flex;
       justify-content:space-between;
@@ -476,6 +610,7 @@
       font-weight: 780;
     }
     .caseHeader h2 em{ font-style: italic; font-weight: 650; }
+
     .caseGrid{
       display:grid;
       grid-template-columns: 1fr;
@@ -493,14 +628,26 @@
       box-shadow: 0 22px 60px rgba(4,39,39,.10);
       border-color: rgba(7,107,88,.28);
     }
+
     .preview{
-      height: 220px;
-      background:
-        radial-gradient(1000px circle at 10% 20%, rgba(7,107,88,.25), transparent 45%),
-        radial-gradient(1000px circle at 90% 70%, rgba(11,50,75,.25), transparent 48%),
-        linear-gradient(135deg, rgba(0,0,0,.06), rgba(0,0,0,.02));
-      position:relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 0;
     }
+    .preview img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+    }
+
     .caseBody{ padding: 16px 16px 18px; }
     .caseKicker{
       font-size: 12px;
@@ -526,8 +673,7 @@
     .case:hover .caseLink{ opacity:1; transform: translateX(1px); }
     .arrow{ font-weight: 750; }
 
-
-    /* Mosaic: remove fake metrics, keep offer + testimonial */
+    /* Mosaic */
     .mosaic{
       display:grid;
       grid-template-columns: 1fr;
@@ -579,7 +725,6 @@
       font-size: 12px;
       color: rgba(11,11,11,.82);
     }
-
 
     /* Contact form */
     .formWrap{
@@ -643,61 +788,28 @@
       line-height: 1.5;
     }
 
-
     /* Reveal */
     .reveal{ opacity:0; transform: translateY(10px); transition: .75s var(--ease); }
     .reveal.on{ opacity:1; transform:none; }
 
+    /* FIX: не даём гриду раздуваться и "съезжать" вправо */
+    .split > * { min-width: 0; }
+    .rightCol { min-width: 0; }
 
-
-
-
-
-/* FIX: не даём гриду раздуваться и "съезжать" вправо */
-.split > * { min-width: 0; }
-.rightCol { min-width: 0; }
-
-
-.ecoWrap{
-  width: 100%;
-  justify-self: stretch;
-  min-width: 0;
-}
-.ecoGrid{ min-width: 0; }
-.ecoCenter, .ecoOrbits, .orbit{ min-width: 0; }
-
-
-
-
-.wrap{ overflow-x: hidden; }
-
-
-
-
-
-
-    /* Responsive */
+    /* Responsive desktop */
     @media (min-width: 960px){
       .nav{ display:flex; }
       .h1{ font-size: 74px; }
       .sub{ font-size: 16px; }
 
-
       .split{ grid-template-columns: 1.1fr .9fr; gap: 36px; }
-
 
       .ecoGrid{
         grid-template-columns: 1fr 1fr;
         gap: 14px;
       }
-      .ecoOrbits{
-        grid-template-columns: 1fr;
-      }
-
 
       .caseGrid{ grid-template-columns: 1fr 1fr; }
-      .preview{ height: 260px; }
-
 
       .mosaic{
         grid-template-columns: 1.1fr .9fr .9fr;
@@ -707,43 +819,227 @@
       .tile.offerTile{ grid-column: 3 / 4; background:#fff; }
       .tile.fastTile{ grid-column: 1 / 3; background:#fff; }
 
-
       .formGrid{ grid-template-columns: 1fr 1fr; }
       .full{ grid-column: 1 / -1; }
+
+      /* desktop: accordion behaves like normal (always visible content) */
+      details.acc{ border: 0; background: transparent; }
+      details.acc > summary{ display:none; }
+      details.acc > *:not(summary){ padding: 0; }
+      details.acc[open] > summary{ display:none; }
+    }
+
+    /* ✅ HARD FIX: black buttons always readable */
+    .btnBlack,
+    .btnBlack *{
+      color:#fff !important;
+    }
+    button.btnBlack{
+      -webkit-text-fill-color:#fff;
+    }
+
+    /* =========================
+       MOBILE SIMPLIFY PACK
+       ========================= */
+    @media (max-width: 560px){
+      .wrap{ border-radius: 14px; }
+      .section{ padding: 44px 14px; }
+      .hero{ padding-top: 56px; padding-bottom: 22px; }
+
+      .h1{
+        font-size: 34px;
+        line-height: 1.06;
+        letter-spacing: -0.04em;
+      }
+      .sub{
+        font-size: 14px;
+        line-height: 1.65;
+        margin-top: 14px;
+      }
+      .bigLine{
+        font-size: 22px;
+        line-height: 1.18;
+      }
+
+      .ecoTitle h2,
+      .caseHeader h2{
+        font-size: 24px;
+        line-height: 1.1;
+      }
+      .ecoH{ font-size: 18px; }
+      .caseTitle{ font-size: 17px; }
+      .tileH{ font-size: 18px; }
+      .quote{ font-size: 16px; line-height: 1.35; }
+      .caseBody{ padding: 14px 14px 16px; }
+
+      :root{ --btnH: 40px; }
+      .btn{ padding: 0 14px; font-size: 13px; }
+
+      .brand{ min-width: unset; }
+      .brandText{ display:none; }     /* ✅ hide text on mobile */
+      .brandLogo{ height: 24px; }     /* ✅ smaller logo on mobile */
+
+      .headerInner{ padding: 10px 12px; gap: 10px; }
+      .headerCtas .btn{ padding: 0 12px; }
+
+      /* on mobile: keep only main CTA in header */
+      .headerCtas a.btnAccent{ display:none; }
+
+      .caseGrid{ gap: 14px; }
+      .mosaic{ gap: 12px; }
+      .tile{ padding: 14px; border-radius: 18px; }
+      .ecoWrap{ padding: 14px; border-radius: 18px; }
+      .ecoCenter, .orbit{ padding: 14px; border-radius: 18px; }
+
+      /* video: calm mode for mobile */
+      .railControls{ display:none; }
+      .rail-track{ animation: none !important; }
+      .video-rail{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .rail-track{ padding: 12px; }
+
+      /* snap for swipe */
+      .rail-track{ scroll-snap-type: x mandatory; }
+      .vcard{ scroll-snap-align: start; }
+      .vcard[data-orient="landscape"]{ width: 260px; }
+      .vcard[data-orient="portrait"]{ width: 190px; }
+
+      /* mobile: show only vertical rail block */
+      .railLandscape{ display:none; }
+    }
+
+    /* Core list: desktop vs mobile */
+    .coreListMobile{ display:none; }
+    .coreListDesktop{ display:grid; }
+
+    @media (max-width: 560px){
+      .coreListDesktop{ display:none; }
+      .coreListMobile{ display:block; }
+    }
+
+    /* ===== OFFERS GRID ===== */
+    .offersGrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 960px){
+      .offersGrid{
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+      }
+    }
+
+    /* ===== PRIMARY vs SECONDARY ===== */
+    .primaryOffer{
+      border-color: rgba(7,107,88,.35);
+      background:
+        radial-gradient(600px circle at 20% 0%, rgba(7,107,88,.12), transparent 60%),
+        #fff;
+      box-shadow: 0 30px 80px rgba(4,39,39,.14);
+      transform: translateY(-4px);
+    }
+
+    .secondaryOffer{
+      background: #fff;
+    }
+
+    /* ===== BADGES ===== */
+    .offerBadge{
+      display:inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 760;
+      background: rgba(7,107,88,.12);
+      color: #054B4D;
+    }
+
+    .offerBadge.muted{
+      background: rgba(11,11,11,.06);
+      color: rgba(11,11,11,.65);
+    }
+
+    @media (min-width: 960px){
+      .mosaic.offersGrid{
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto !important;
+      }
+
+      .mosaic.offersGrid .tile.offerTile,
+      .mosaic.offersGrid .tile.fastTile,
+      .mosaic.offersGrid .tile{
+        grid-column: auto !important;
+      }
+    }
+
+    /* LinkedIn icon button */
+    .socialBtn{
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: .22s var(--ease);
+    }
+    .socialBtn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+    .socialBtn svg{
+      width: 18px;
+      height: 18px;
+      display:block;
+      opacity: .9;
+    }
+    @media (max-width: 560px){
+      .socialBtn{ display:none; }
     }
   </style>
-
 
   <div class="wrap gridBg">
     <!-- HEADER -->
     <div class="header">
       <div class="headerInner">
-        <div class="brand">
-          <div class="mark"><span class="dot"></span></div>
-          <span>erewhile.digital</span>
-
-
-
-
-        </div>
-
+        <!-- ✅ UPDATED: logo + text (desktop), logo only (mobile) -->
+        <a class="brand" href="/" aria-label="Erewhile Digital">
+          <img
+            class="brandLogo"
+            src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
+            alt="Erewhile Digital"
+            loading="eager"
+            decoding="async"
+          >
+          <span class="brandText">erewhile.digital</span>
+        </a>
 
         <nav class="nav">
-          <a href="#ew-ecosystem">Экосистема</a>
           <a href="#ew-web">Сайты</a>
           <a href="#ew-work">Работы</a>
           <a href="#ew-contact">Контакт</a>
         </nav>
 
-
         <div class="headerCtas">
-          <!-- opens separate page in new tab -->
-          <a class="btn btnAccent" href="fast-website.html" target="_blank" rel="noopener">Сайт за 100–150€</a>
-          <a class="btn btnBlack" href="#ew-contact">Запросить сайт</a>
+          <a class="socialBtn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Erewhile Digital в LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/>
+            </svg>
+          </a>
+
+          <a class="btn btnAccent" href="fast-website.html" target="_blank" rel="noopener">Быстрый сайт за 150€</a>
+          <a class="btn btnBlack" href="#ew-contact">Обсудить проект</a>
         </div>
       </div>
     </div>
-
 
     <!-- HERO -->
     <section class="section hero">
@@ -751,57 +1047,17 @@
         Сайт как центр<br>цифровой экосистемы
       </h1>
 
-
       <p class="sub reveal" style="transition-delay:120ms;">
         Мы проектируем и запускаем сайты, которые собирают заявки и объясняют ценность.
-        А дальше — выстраиваем вокруг них систему: контент, соцсети, реклама, аналитика и интеграции,
+        А дальше — при необходимости — подключаем контент, аналитику и интеграции,
         чтобы всё работало как единый механизм.
       </p>
 
-
       <div class="heroCtas reveal" style="transition-delay:180ms;">
-        <a class="btn btnBlack" href="#ew-contact">Обсудить сайт</a>
-        <a class="btn btnOutline" href="#ew-ecosystem">Как устроена экосистема <span class="arrow">›</span></a>
+        <a class="btn btnBlack" href="#ew-contact">Обсудить проект</a>
+        <a class="btn btnOutline" href="#ew-orbits">Как усиливаем сайт <span class="arrow">›</span></a>
       </div>
     </section>
-
-
-<section class="section video-showcase" id="ew-video">
-  <div class="video-inner">
-    <div class="video-text">
-      <h2>Контент & <em>видео</em></h2>
-      <p>
-        Снимаем и собираем материалы, которые усиливают сайт: объясняют продукт,
-        повышают доверие и улучшают конверсию.
-      </p>
-
-
-      <div class="heroCtas" style="justify-content:flex-start; margin-top:16px;">
-        <a class="btn btnBlack" href="#ew-contact">Обсудить видео</a>
-        <a class="btn btnOutline" href="#ew-work">Смотреть работы <span class="arrow">›</span></a>
-      </div>
-    </div>
-
-
-    <div class="video-frame">
-<iframe
-  referrerpolicy="strict-origin-when-cross-origin"
-  src="https://www.youtube.com/embed/QCebk7f6iC4"
-  title="Erewhile video showcase"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
 
     <!-- ABOUT / POSITIONING -->
     <section class="section" id="ew-web">
@@ -811,12 +1067,13 @@
             Мы делаем <b>сайты для бизнеса</b>, личных брендов и НКО — так, чтобы они
             <em>вели к действию</em>: заявка, звонок, запись, донат.
           </div>
-          <div class="sideLabel reveal" style="transition-delay:100ms;">WEBSITES • STRATEGY • SYSTEM</div>
+          <div class="sideLabel reveal" style="transition-delay:100ms;">WEBSITES • UX • CONVERSION</div>
+
+          <!-- ✅ softened CTA (secondary, smaller) -->
           <div style="margin-top:18px;" class="reveal">
-            <a class="btn btnBlack" href="#ew-contact">Запросить оценку</a>
+            <a class="btn btnOutline btnSmall" href="#ew-contact">Запросить оценку</a>
           </div>
         </div>
-
 
         <div class="rightCol">
           <p class="p reveal">
@@ -824,225 +1081,401 @@
             Сайт становится точкой сборки: туда ведёт трафик, там понятна ценность, там происходит конверсия.
           </p>
           <p class="p reveal" style="transition-delay:120ms;">
-            Дальше подключаем “орбиты”: контент и видео для доверия, соцсети для охвата,
-            рекламу для масштабирования, аналитику и интеграции для контроля.
+            Дальше можно подключить “орбиты” — контент, соцсети, аналитику и интеграции —
+            но главный продукт здесь: <b>сайт, который работает</b>.
           </p>
+        </div>
+      </div>
 
+      <!-- Orbits block -->
+      <div id="ew-orbits" class="ecoWrap reveal" style="transition-delay:180ms; margin-top:22px;">
+        <div class="ecoTitle">
+          <h2>Ядро + <em>орбиты</em></h2>
+          <!-- ✅ softened CTA -->
+          <a class="btn btnOutline btnSmall" href="#ew-contact">Обсудить задачу</a>
+        </div>
+        <div class="ecoSub">
+          В центре — сайт. Вокруг — всё, что можно подключить позже, если нужно усилить эффективность и управляемость маркетинга.
+        </div>
 
-          <div class="ecoWrap reveal" style="transition-delay:180ms;">
-            <div class="ecoTitle">
-              <h2>Ядро + <em>орбиты</em></h2>
-              <a class="btn btnOutline" href="#ew-contact">Запустить</a>
-            </div>
-            <div class="ecoSub">
-              В центре — сайт. Вокруг — всё, что усиливает его эффективность и делает маркетинг управляемым.
-            </div>
+        <div class="ecoGrid" style="margin-top:14px;">
+          <div class="ecoCenter">
+            <span class="ecoBadge">Ядро: WEBSITE</span>
+            <div class="ecoH">Сайт, который работает</div>
 
+            <!-- DESKTOP: list always visible -->
+            <ul class="ecoList coreListDesktop">
+              <li class="ecoItem"><span class="pillDot"></span><span>Структура под задачу: заявки, запись, продажа, донаты</span></li>
+              <li class="ecoItem"><span class="pillDot"></span><span>Дизайн + UX: понятно, быстро, аккуратно</span></li>
+              <li class="ecoItem"><span class="pillDot"></span><span>Формы / CTA / посадочные под кампании</span></li>
+              <li class="ecoItem"><span class="pillDot"></span><span>Базовая аналитика, SEO-основа, подготовка к росту</span></li>
+            </ul>
 
-            <div class="ecoGrid" style="margin-top:14px;">
-              <div class="ecoCenter">
-                <span class="ecoBadge">Ядро: WEBSITE</span>
-                <div class="ecoH">Сайт, который работает</div>
-                <ul class="ecoList">
-                  <li class="ecoItem"><span class="pillDot"></span><span>Структура под задачу: заявки, запись, продажа, донаты</span></li>
-                  <li class="ecoItem"><span class="pillDot"></span><span>Дизайн + UX: понятно, быстро, аккуратно</span></li>
-                  <li class="ecoItem"><span class="pillDot"></span><span>Формы / CTA / посадочные под кампании</span></li>
-                  <li class="ecoItem"><span class="pillDot"></span><span>Базовая аналитика, SEO-основа, подготовка к росту</span></li>
-                </ul>
+            <!-- MOBILE: collapsible -->
+            <details class="acc accCore coreListMobile">
+              <summary class="accSum">Показать, что входит (4)</summary>
+              <ul class="ecoList">
+                <li class="ecoItem"><span class="pillDot"></span><span>Структура под задачу: заявки, запись, продажа, донаты</span></li>
+                <li class="ecoItem"><span class="pillDot"></span><span>Дизайн + UX: понятно, быстро, аккуратно</span></li>
+                <li class="ecoItem"><span class="pillDot"></span><span>Формы / CTA / посадочные под кампании</span></li>
+                <li class="ecoItem"><span class="pillDot"></span><span>Базовая аналитика, SEO-основа, подготовка к росту</span></li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Orbits: mobile collapsible -->
+          <details class="acc accOrbits" open>
+            <summary class="accSum">Орбиты (4)</summary>
+            <div class="ecoOrbits">
+              <div class="orbit">
+                <div class="orbitK">Orbit 01</div>
+                <div class="orbitT">Контент & видео</div>
+                <div class="orbitP">
+                  Материалы, которые усиливают конверсию: объясняют продукт, повышают доверие, помогают продавать.
+                </div>
               </div>
 
-
-              <div class="ecoOrbits">
-                <div class="orbit">
-                  <div class="orbitK">Orbit 01</div>
-                  <div class="orbitT">Контент & видео</div>
-                  <div class="orbitP">Снимаем и собираем материалы, которые усиливают сайт: объясняют продукт, повышают доверие, улучшают конверсию.</div>
-                </div>
-                <div class="orbit">
-                  <div class="orbitK">Orbit 02</div>
-                  <div class="orbitT">Соцсети & дистрибуция</div>
-                  <div class="orbitP">Упаковываем контент под площадки и ведём аудиторию на сайт по понятному сценарию.</div>
-                </div>
-                <div class="orbit">
-                  <div class="orbitK">Orbit 03</div>
-                  <div class="orbitT">Реклама & аналитика</div>
-                  <div class="orbitP">Под кампании делаем посадочные, подключаем аналитику и фокусируемся на управляемых действиях.</div>
-                </div>
-                <div class="orbit">
-                  <div class="orbitK">Orbit 04</div>
-                  <div class="orbitT">Интеграции & автоматизация</div>
-                  <div class="orbitP">Формы, CRM, уведомления, заявки — чтобы сайт был не “витриной”, а рабочим инструментом.</div>
-                </div>
+              <div class="orbit">
+                <div class="orbitK">Orbit 02</div>
+                <div class="orbitT">Соцсети & дистрибуция</div>
+                <div class="orbitP">Если нужно расширять охват — упаковываем контент и ведём аудиторию к целевым страницам.</div>
               </div>
-            </div><!-- /ecoGrid -->
-          </div><!-- /ecoWrap -->
-        </div>
-      </div>
+
+              <div class="orbit">
+                <div class="orbitK">Orbit 03</div>
+                <div class="orbitT">Реклама & аналитика</div>
+                <div class="orbitP">Под кампании делаем посадочные и настраиваем измеримые действия: заявки/записи/покупки.</div>
+              </div>
+
+              <div class="orbit">
+                <div class="orbitK">Orbit 04</div>
+                <div class="orbitT">Интеграции & автоматизация</div>
+                <div class="orbitP">Формы, CRM, уведомления, теги и простые процессы — чтобы сайт был инструментом, а не витриной.</div>
+              </div>
+            </div>
+          </details>
+        </div><!-- /ecoGrid -->
+      </div><!-- /ecoWrap -->
     </section>
-
-
-    <!-- ECOSYSTEM SECTION -->
-    <section class="section" id="ew-ecosystem">
-      <div class="caseHeader">
-        <h2 class="reveal">Экосистема вокруг <em>сайта</em></h2>
-        <a class="btn btnOutline reveal" href="#ew-contact" style="transition-delay:120ms;">Обсудить</a>
-      </div>
-
-
-      <div class="caseGrid">
-        <div class="case reveal">
-          <div class="preview"></div>
-          <div class="caseBody">
-            <div class="caseKicker">База</div>
-            <div class="caseTitle">Сайт: структура, дизайн, конверсия</div>
-            <a class="caseLink" href="#ew-contact">Запросить бриф <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-
-        <div class="case reveal" style="transition-delay:80ms;">
-          <div class="preview" style="background:
-            radial-gradient(1000px circle at 20% 30%, rgba(11,50,75,.30), transparent 50%),
-            radial-gradient(1000px circle at 80% 70%, rgba(7,107,88,.22), transparent 48%),
-            linear-gradient(135deg, rgba(0,0,0,.06), rgba(0,0,0,.02));
-          "></div>
-          <div class="caseBody">
-            <div class="caseKicker">Усиление</div>
-            <div class="caseTitle">Контент и видео, которые ведут на сайт</div>
-            <a class="caseLink" href="#ew-contact">Подобрать формат <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-
-        <div class="case reveal">
-          <div class="preview" style="background:
-            radial-gradient(900px circle at 20% 20%, rgba(7,107,88,.25), transparent 52%),
-            radial-gradient(900px circle at 90% 70%, rgba(11,50,75,.22), transparent 50%),
-            linear-gradient(135deg, rgba(0,0,0,.06), rgba(0,0,0,.02));
-          "></div>
-          <div class="caseBody">
-            <div class="caseKicker">Система</div>
-            <div class="caseTitle">Аналитика, интеграции, заявки</div>
-            <a class="caseLink" href="#ew-contact">Собрать стек <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-
-        <div class="case reveal" style="transition-delay:80ms;">
-          <div class="preview" style="background:
-            radial-gradient(900px circle at 15% 20%, rgba(11,50,75,.28), transparent 55%),
-            radial-gradient(900px circle at 85% 70%, rgba(7,107,88,.20), transparent 50%),
-            linear-gradient(135deg, rgba(0,0,0,.06), rgba(0,0,0,.02));
-          "></div>
-          <div class="caseBody">
-            <div class="caseKicker">Поддержка</div>
-            <div class="caseTitle">Развитие сайта и контента (ретейнер)</div>
-            <a class="caseLink" href="#ew-contact">Узнать условия <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <!-- WORK (web-first) -->
     <section class="section" id="ew-work">
       <div class="caseHeader">
         <h2 class="reveal">Примеры работ <em>(веб-фокус)</em></h2>
-        <a class="btn btnBlack reveal" href="#ew-contact" style="transition-delay:120ms;">Запросить портфолио</a>
       </div>
-
 
       <div class="caseGrid">
         <div class="case reveal">
-          <div class="preview" style="height:320px;"></div>
+          <div class="preview">
+            <img loading="lazy" alt="Сайт НКО — превью" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/5_pvmwox.png">
+          </div>
           <div class="caseBody">
-            <div class="caseKicker">Website</div>
-            <div class="caseTitle">Сервисный сайт: оффер → доверие → заявка</div>
-            <a class="caseLink" href="#ew-contact">Попросить примеры <span class="arrow">→</span></a>
+            <div class="caseKicker">Сайт НКО</div>
+            <div class="caseTitle">Некоммерческая организация — структура, доверие, действия</div>
+            <a class="caseLink" href="http://untu.ngo" target="_blank" rel="noopener">Открыть сайт <span class="arrow">→</span></a>
           </div>
         </div>
 
+        <div class="case reveal" style="transition-delay:90ms;">
+          <div class="preview">
+            <img loading="lazy" alt="Форма записи к психотерапевту — превью" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333933/therapy_zoh9hu.png">
+          </div>
+          <div class="caseBody">
+            <div class="caseKicker">Форма записи</div>
+            <div class="caseTitle">Запись к эксперту — короткий путь до заявки</div>
+            <a class="caseLink" href="#ew-contact">Запросить детали <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="case reveal">
+          <div class="preview">
+            <img loading="lazy" alt="Мини-CRM система — превью" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/7_ci8bnw.png">
+          </div>
+          <div class="caseBody">
+            <div class="caseKicker">Мини-CRM</div>
+            <div class="caseTitle">Внутренняя CRM-система — заявки, статусы, понятный учёт</div>
+            <a class="caseLink" href="#ew-contact">Запросить детали <span class="arrow">→</span></a>
+          </div>
+        </div>
 
         <div class="case reveal" style="transition-delay:90ms;">
-          <div class="preview" style="height:320px;background:
-            radial-gradient(900px circle at 30% 30%, rgba(7,107,88,.30), transparent 55%),
-            radial-gradient(900px circle at 80% 60%, rgba(11,50,75,.30), transparent 55%),
-            linear-gradient(135deg, rgba(0,0,0,.06), rgba(0,0,0,.02));
-          "></div>
+          <div class="preview">
+            <img loading="lazy" alt="Сайт для коворкинга — превью" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333596/4_b6vjrg.png">
+          </div>
           <div class="caseBody">
-            <div class="caseKicker">Landing + Content</div>
-            <div class="caseTitle">Посадочная под кампанию + видео для страницы</div>
-            <a class="caseLink" href="#ew-contact">Собрать пакет <span class="arrow">→</span></a>
+            <div class="caseKicker">Сайт коворкинга</div>
+            <div class="caseTitle">Коворкинг — тарифы, преимущества, заявки и контакты</div>
+            <a class="caseLink" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Открыть сайт <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO (mobile simplified): keep ONLY vertical rail on mobile -->
+      <div class="ecoWrap reveal" style="margin-top:22px;">
+        <div class="ecoTitle">
+          <h2>Видео <em>для сайта</em></h2>
+          <a class="btn btnOutline btnSmall" href="#ew-contact">Запросить формат</a>
+        </div>
+        <div class="ecoSub">
+          Два формата: горизонтальные — для презентации и доверия, вертикальные — для мобильных платформ и охватов.
+          На мобильной версии мы показываем вертикальные, чтобы страница не перегружалась.
+        </div>
+
+        <!-- LANDSCAPE (hidden on mobile via .railLandscape) -->
+        <div class="railBlock railLandscape" style="position:relative; margin-top:16px;">
+          <div class="orbitK" style="position:relative;">Горизонтальные • 16:9</div>
+          <div class="orbitT" style="position:relative; margin-top:8px;">Презентация бизнеса, графические explainers, интервью</div>
+          <div class="orbitP" style="position:relative;">
+            Для главной и лендингов: объяснить ценность, показать продукт, усилить доверие и конверсию.
+          </div>
+
+          <div class="video-rail" aria-label="Горизонтальные видео (16:9)">
+            <div class="railControls" aria-label="Управление лентой">
+              <button class="railBtn" type="button" data-rail="prev" aria-label="Назад">‹</button>
+              <button class="railBtn" type="button" data-rail="next" aria-label="Вперёд">›</button>
+            </div>
+
+            <div class="rail-track" id="videoRailLandscape">
+              <article class="vcard" data-video="a-VGPkJdKiw" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/a-VGPkJdKiw/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Toyota RAV4 | Car Presentation</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="GZeQtel0e60" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Ozo Golf Club | Event video</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="8SpJwdUtNQI" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8SpJwdUtNQI/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Motion Design Case Study: SelfGrow.me</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="QCebk7f6iC4" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/QCebk7f6iC4/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">SHIFT Movement | Event Video</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="41O2sQ7U2gU" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/41O2sQ7U2gU/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Taycan Stories | David Shulman</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="8z5p8zUraFw" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8z5p8zUraFw/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">[Название можно уточнить]</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="qdVzzfr3yL4" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/qdVzzfr3yL4/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Mile Logistics | Presentation Video</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- VERTICAL (always visible) -->
+        <div class="railBlock railVertical" style="position:relative; margin-top:18px;">
+          <div class="orbitK" style="position:relative;">Вертикальные • 9:16</div>
+          <div class="orbitT" style="position:relative; margin-top:8px;">Виральный эффект на экране смартфона</div>
+          <div class="orbitP" style="position:relative;">
+            Адаптация под экраны и платформы: Reels, TikTok, YouTube Shorts. Быстрый хук → удержание → переход на сайт.
+          </div>
+
+          <div class="video-rail" aria-label="Вертикальные видео (9:16)">
+            <div class="railControls" aria-label="Управление лентой">
+              <button class="railBtn" type="button" data-rail="prev" aria-label="Назад">‹</button>
+              <button class="railBtn" type="button" data-rail="next" aria-label="Вперёд">›</button>
+            </div>
+
+            <div class="rail-track" id="videoRailVertical">
+              <article class="vcard" data-video="Wd3h4jD56Qw" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="lazy" src="https://i.ytimg.com/vi/Wd3h4jD56Qw/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Every curve of the road feels like a dance</div>
+                  <div class="vsub">YouTube Shorts • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="_i7sXoJ9nrs" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="lazy" src="https://i.ytimg.com/vi/_i7sXoJ9nrs/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Porsche Tequipment | Talking-head video</div>
+                  <div class="vsub">Instagram Reels • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="fm_ghLUm2as" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="lazy" src="https://i.ytimg.com/vi/fm_ghLUm2as/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Advertising Reel for local brand Mada Riga</div>
+                  <div class="vsub">TikTok • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="lREFWSxRvqo" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="lazy" src="https://i.ytimg.com/vi/lREFWSxRvqo/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Powerful women. Powerful message.</div>
+                  <div class="vsub">YouTube Shorts • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="OC-2y-kTyBA" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="lazy" src="https://i.ytimg.com/vi/OC-2y-kTyBA/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">DeWalt Racing Event</div>
+                  <div class="vsub">Instagram Reels • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="Zpmgzr-uXlQ" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Видео превью" loading="eager" decoding="async" src="https://i.ytimg.com/vi/Zpmgzr-uXlQ/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Закрыть">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">New content for ThinkClearly</div>
+                  <div class="vsub">TikTok • 9:16</div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- MOSAIC (no fake metrics) -->
+    <!-- OFFERS -->
     <section class="section">
-      <div class="mosaic">
-        <div class="tile quoteTile reveal">
-          <div class="quote">“Очень быстро собрали структуру и запустили сайт — стало проще объяснять ценность и собирать заявки.”</div>
-          <div class="who"><b>Отзыв клиента</b></div>
-        </div>
+      <div class="mosaic offersGrid">
+        <div class="tile offerTile reveal primaryOffer">
+          <span class="offerBadge">Основной</span>
 
-
-        <div class="tile offerTile reveal" style="transition-delay:90ms;">
           <div class="tileH">Основной сайт</div>
           <div class="tileP">
-            Проектирование, дизайн и запуск сайта как ядра экосистемы.
-            Подойдёт, если вам нужен результат “надолго”, а не просто страница.
+            Проектирование, дизайн и запуск сайта как ядра цифровой экосистемы.
+            Подойдёт, если нужен результат надолго, рост и масштабирование.
           </div>
+
           <div class="chipRow">
             <span class="chip">структура</span>
             <span class="chip">дизайн</span>
             <span class="chip">анимации</span>
             <span class="chip">аналитика</span>
           </div>
+
+          <div style="margin-top:16px;">
+            <a class="btn btnBlack" href="#ew-contact">Обсудить основной сайт</a>
+          </div>
         </div>
 
+        <div class="tile fastTile reveal secondaryOffer">
+          <span class="offerBadge muted">Быстрый старт</span>
 
-        <div class="tile fastTile reveal" style="background:#fff;">
-          <div class="tileH">Бюджетный сайт (100–150€)</div>
+          <div class="tileH">Бюджетный сайт (150€)</div>
           <div class="tileP">
-            Быстрый одностраничник для старта: аккуратно, понятно, с формой заявки.
-            Открывается отдельной страницей, чтобы не мешать главному офферу.
+            Простой сайт-визитка под ключ. Понятно объясняет, чем вы занимаетесь,
+            и сразу собирает заявки.
           </div>
+
           <div class="chipRow">
-            <span class="chip">1 страница</span>
-            <span class="chip">форма заявки</span>
-            <span class="chip">адаптив</span>
-            <span class="chip">быстрый запуск</span>
+            <span class="chip">сайт-визитка</span>
+            <span class="chip">под ключ (150€)</span>
+            <span class="chip">заявки на email</span>
+            <span class="chip">быстро для старта</span>
           </div>
-          <div style="margin-top:14px;">
-            <a class="btn btnAccent" href="fast-website.html" target="_blank" rel="noopener">Открыть страницу пакета</a>
+
+          <div style="margin-top:16px;">
+            <a class="btn btnAccent" href="fast-website.html" target="_blank" rel="noopener">
+              Открыть страницу пакета
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-
     <!-- CONTACT FORM -->
     <section class="section" id="ew-contact">
       <div class="formWrap reveal">
-        <h3 class="formTitle">Запросить сайт</h3>
+        <h3 class="formTitle">Обсудить задачу</h3>
         <div class="formDesc">
-          Опиши нишу, цель и сроки — мы ответим с планом и оценкой. Если нужно — предложим экосистему вокруг сайта.
+          Опиши нишу и цель — мы ответим с планом и оценкой. Можно просто записаться на консультацию и разобрать ситуацию.
         </div>
 
-
-        <!--
-          Стандартная форма.
-          Самый простой вариант отправки: formsubmit.co
-          1) Замени YOUR_EMAIL на свой email
-          2) formsubmit обычно просит подтвердить почту один раз
-        -->
         <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
           <input type="hidden" name="_subject" value="New request — erewhile.digital">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
-
 
           <div class="formGrid">
             <div>
@@ -1050,37 +1483,33 @@
               <input name="name" required placeholder="Как к вам обращаться">
             </div>
 
-
             <div>
               <label>Email</label>
               <input name="email" type="email" required placeholder="you@company.com">
             </div>
 
-
             <div class="full">
               <label>Что нужно</label>
               <select name="service" required>
-                <option value="Website (ecosystem)">Сайт + экосистема</option>
+                <option value="Consultation">Консультация (разбор задачи)</option>
                 <option value="Website (custom)">Сайт (индивидуальный)</option>
-                <option value="Fast Website Package">Бюджетный сайт (100–150€)</option>
-                <option value="Content for website">Контент/видео для сайта</option>
+                <option value="Fast Website Package">Бюджетный сайт (150€)</option>
+                <option value="Content">Контент/видео</option>
                 <option value="Integrations & analytics">Интеграции/аналитика</option>
                 <option value="Other">Другое</option>
               </select>
             </div>
 
-
             <div class="full">
               <label>Сообщение</label>
-              <textarea name="message" placeholder="Коротко: ниша, цель сайта, что продаёте/предлагаете, сроки, примеры (если есть)"></textarea>
+              <textarea name="message" placeholder="Коротко: ниша, цель, что продаёте/предлагаете, сроки, примеры (если есть)"></textarea>
             </div>
           </div>
-
 
           <div class="formActions">
             <button class="btn btnBlack" type="submit">Отправить</button>
             <div class="fine">
-              Обычно отвечаем в течение 24–48 часов. Если срочно — укажи дедлайн.
+              Обычно отвечаем в течение 24 часов. Если срочно — укажи дедлайн.
             </div>
           </div>
         </form>
@@ -1088,11 +1517,9 @@
     </section>
   </div>
 
-
   <script>
     (function(){
       const root = document.getElementById("erewhile-dstudio");
-
 
       // smooth anchors inside embed
       root.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -1105,7 +1532,6 @@
         });
       });
 
-
       // reveal on scroll
       const io = new IntersectionObserver((entries)=>{
         entries.forEach(en=>{
@@ -1116,10 +1542,114 @@
         });
       }, { threshold: 0.14 });
 
-
       root.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+
+      // ===== VIDEO RAILS (multiple): seamless loop + click-to-play + close + arrows =====
+      (function initVideoRails(){
+        function initOneRail(trackId){
+          const track = root.querySelector("#" + trackId);
+          const rail = track ? track.closest(".video-rail") : null;
+          if(!track || !rail) return;
+
+          // 1) clone children for seamless animation (desktop). On mobile animation is disabled via CSS.
+          const originals = Array.from(track.children);
+          originals.forEach(node => track.appendChild(node.cloneNode(true)));
+
+          function stopAllVideos(){
+            track.querySelectorAll(".vthumb.playing").forEach(btn=>{
+              btn.classList.remove("playing");
+            });
+            track.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
+          }
+
+          function manualPause(ms=2400){
+            rail.classList.add("manualPause");
+            window.clearTimeout(rail.__pauseT);
+            rail.__pauseT = window.setTimeout(()=> rail.classList.remove("manualPause"), ms);
+          }
+
+          // 2) click handling: play / close
+          track.addEventListener("click", (e) => {
+            const close = e.target.closest(".vclose");
+            const thumb = e.target.closest(".vthumb");
+
+            // close
+            if(close){
+              e.preventDefault();
+              const btn = close.closest(".vthumb");
+              if(!btn) return;
+              btn.classList.remove("playing");
+              btn.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
+              manualPause(1200);
+              return;
+            }
+
+            // play
+            if(!thumb) return;
+
+            const card = thumb.closest(".vcard");
+            if(!card) return;
+
+            const vid = card.getAttribute("data-video");
+            if(!vid) return;
+
+            // already playing
+            if(thumb.querySelector("iframe.vframe")) return;
+
+            stopAllVideos();
+            manualPause(3000);
+
+            const iframe = document.createElement("iframe");
+            iframe.className = "vframe";
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+            iframe.setAttribute(
+              "allow",
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            );
+
+            iframe.src =
+              "https://www.youtube.com/embed/" + encodeURIComponent(vid) +
+              "?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1";
+
+            thumb.classList.add("playing");
+            thumb.appendChild(iframe);
+          });
+
+          // 3) arrows: scroll container left/right (desktop). On mobile controls are hidden.
+          rail.addEventListener("click", (e)=>{
+            const btn = e.target.closest("[data-rail]");
+            if(!btn) return;
+
+            stopAllVideos();
+            manualPause(2600);
+
+            const firstCard = track.querySelector(".vcard");
+            const step = firstCard ? Math.round(firstCard.getBoundingClientRect().width * 0.9) : 280;
+
+            const host = rail;
+            const prevOverflow = host.style.overflowX;
+            host.style.overflowX = "auto";
+            host.style.scrollBehavior = "smooth";
+
+            const dir = btn.getAttribute("data-rail");
+            host.scrollBy({ left: dir === "prev" ? -step : step, behavior: "smooth" });
+
+            window.setTimeout(()=>{
+              host.style.overflowX = prevOverflow || "";
+              host.style.scrollBehavior = "";
+            }, 300);
+          });
+
+          rail.addEventListener("touchstart", ()=> manualPause(2600), { passive:true });
+        }
+
+        initOneRail("videoRailLandscape");
+        initOneRail("videoRailVertical");
+      })();
     })();
   </script>
-
 </div>
 
+</body>
+</html>
