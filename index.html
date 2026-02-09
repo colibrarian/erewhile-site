@@ -1612,48 +1612,46 @@
 
         <!-- ✅ Fixed: sending to your email -->
         <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
-          <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <!-- Optional redirect after submit (create this page later if you want) -->
-          <input type="hidden" name="_next" value="https://erewhile.digital/en/thanks.html">
+  <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
 
-          <div class="formGrid">
-            <div>
-              <label>Name</label>
-              <input name="name" required placeholder="How should we address you?">
-            </div>
+  <div class="formGrid">
+    <div>
+      <label>Name</label>
+      <input name="name" required placeholder="How should we address you?">
+    </div>
 
-            <div>
-              <label>Email</label>
-              <input name="email" type="email" required placeholder="you@company.com">
-            </div>
+    <div>
+      <label>Email</label>
+      <input name="_replyto" type="email" required placeholder="you@company.com">
+    </div>
 
-            <div class="full">
-              <label>What do you need?</label>
-              <select name="service" required>
-                <option value="Consultation">Consultation (project discovery)</option>
-                <option value="Website (custom)">Website (custom)</option>
-                <option value="Fast Website Package">Budget website (€150)</option>
-                <option value="Content">Content / video</option>
-                <option value="Integrations & analytics">Integrations / analytics</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+    <div class="full">
+      <label>What do you need?</label>
+      <select name="service" required>
+        <option value="Consultation">Consultation (project discovery)</option>
+        <option value="Website (custom)">Website (custom)</option>
+        <option value="Fast Website Package">Budget website (€150)</option>
+        <option value="Content">Content / video</option>
+        <option value="Integrations & analytics">Integrations / analytics</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
 
-            <div class="full">
-              <label>Message</label>
-              <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
-            </div>
-          </div>
+    <div class="full">
+      <label>Message</label>
+      <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
+    </div>
+  </div>
 
-          <div class="formActions">
-            <button class="btn btnBlack" type="submit">Send request</button>
-            <div class="fine">
-              We typically reply within 24 hours. If it’s urgent — add your deadline.
-            </div>
-          </div>
-        </form>
+  <div class="formActions">
+    <button class="btn btnBlack" type="submit">Send request</button>
+    <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
+  </div>
+</form>
+
       </div>
     </section>
 
