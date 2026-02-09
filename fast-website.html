@@ -374,17 +374,27 @@
       color: var(--muted2);
       margin-bottom: 6px;
     }
+
+    /* ✅ FIX: unify font metrics for inputs + textarea (Message) */
     input, textarea{
       width:100%;
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 12px 12px;
-      font-size: 14px;
+      font-family: inherit;          /* <-- important */
+      font-size: 14px;              /* <-- same as others */
+      line-height: 1.45;            /* <-- prevents perceived mismatch */
       outline:none;
       transition: .2s var(--ease);
       background:#fff;
+      -webkit-text-size-adjust: 100%;
     }
-    textarea{ min-height: 130px; resize: vertical; }
+
+    textarea{
+      min-height: 130px;
+      resize: vertical;
+    }
+
     input:focus, textarea:focus{
       border-color: rgba(7,107,88,.42);
       box-shadow: 0 0 0 4px rgba(7,107,88,.10);
