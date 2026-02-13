@@ -9,13 +9,13 @@
   <meta name="description" content="Erewhile Digital builds conversion-focused websites and landing pages, with optional content production, analytics, CRM automation and AI integrations. Turn your website into a revenue-generating digital ecosystem." />
 
   <!-- Canonical (adjust if needed) -->
-  <link rel="canonical" href="https://erewhile.digital/" />
+  <link rel="canonical" href="https://erewhile.digital/en/" />
 
   <!-- Hreflang (RU/LV pages can be created later) -->
   <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/" />
   <link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/" />
   <link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/" />
-  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/" />
+  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/" />
 
   <!-- ✅ Favicons / App Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
@@ -27,7 +27,7 @@
   <meta property="og:title" content="Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)" />
   <meta property="og:description" content="Conversion-focused websites + content, analytics, CRM automation and AI integrations. A website that works as your digital ecosystem." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://erewhile.digital/" />
+  <meta property="og:url" content="https://erewhile.digital/en/" />
   <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -1139,9 +1139,6 @@
 
 .langSwitch { display: none !important; }
 
-.reveal{ opacity:1 !important; transform:none !important; }
-
-    
   </style>
 
   <div class="wrap gridBg">
@@ -1182,7 +1179,7 @@
             <a class="langLink" href="/ru/" hreflang="ru" lang="ru">RU</a>
           </div>
 
-          <a class="btn btnAccent" href="fast-website.html">Fast website €150</a>
+          <a class="btn btnAccent" href="fast-website.html" target="_blank" rel="noopener">Fast website €150</a>
           <a class="btn btnBlack" href="#ew-contact">Get a quote</a>
         </div>
       </div>
@@ -1312,10 +1309,7 @@
           <div class="caseBody">
             <div class="caseKicker">NGO website</div>
             <div class="caseTitle">Non-profit website — structure, trust, and clear actions</div>
-            <a class="btn btnAccent" href="fast-website.html">
-  Open package page
-</a>
-
+            <a class="caseLink" href="http://untu.ngo" target="_blank" rel="noopener">Open website <span class="arrow">→</span></a>
           </div>
         </div>
 
@@ -1599,10 +1593,9 @@
           </div>
 
           <div style="margin-top:16px;">
-        <a class="btn btnAccent" href="fast-website.html">
-  Open package page
-</a>
-
+            <a class="btn btnAccent" href="fast-website.html" target="_blank" rel="noopener">
+              Open package page
+            </a>
           </div>
         </div>
       </div>
@@ -1626,4 +1619,214 @@
 
   <div class="formGrid">
     <div>
+      <label>Name</label>
+      <input name="name" required placeholder="How should we address you?">
+    </div>
 
+    <div>
+      <label>Email</label>
+      <input name="_replyto" type="email" required placeholder="you@company.com">
+    </div>
+
+    <div class="full">
+      <label>What do you need?</label>
+      <select name="service" required>
+        <option value="Consultation">Consultation (project discovery)</option>
+        <option value="Website (custom)">Website (custom)</option>
+        <option value="Fast Website Package">Budget website (€150)</option>
+        <option value="Content">Content / video</option>
+        <option value="Integrations & analytics">Integrations / analytics</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="full">
+      <label>Message</label>
+      <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
+    </div>
+  </div>
+
+  <div class="formActions">
+    <button class="btn btnBlack" type="submit">Send request</button>
+    <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
+  </div>
+</form>
+
+      </div>
+    </section>
+
+    <!-- FOOTER (contacts) -->
+    <footer class="siteFooter" aria-label="Contacts">
+      <div class="footerCard reveal footerMini">
+        <a class="footerMiniLink" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
+        <span class="footerMiniSep">•</span>
+        <a class="footerMiniLink" href="tel:+37120579106">+371 20579106</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function(){
+      const root = document.getElementById("erewhile-dstudio");
+
+      // smooth anchors inside embed
+      root.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener("click", (e)=>{
+          const id = a.getAttribute("href");
+          const t = root.querySelector(id);
+          if(!t) return;
+          e.preventDefault();
+          t.scrollIntoView({ behavior:"smooth", block:"start" });
+        });
+      });
+
+      // reveal on scroll
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            en.target.classList.add("on");
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      root.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+
+      // ===== VIDEO RAILS =====
+      (function initVideoRails(){
+        function initOneRail(trackId){
+          const track = root.querySelector("#" + trackId);
+          const rail = track ? track.closest(".video-rail") : null;
+          if(!track || !rail) return;
+
+          // Wrap track into viewport (scroll container)
+          let viewport = track.parentElement;
+          if(!viewport || !viewport.classList.contains("rail-viewport")){
+            viewport = document.createElement("div");
+            viewport.className = "rail-viewport";
+            track.parentNode.insertBefore(viewport, track);
+            viewport.appendChild(track);
+          }
+
+          // clone children for seamless animation
+          const originals = Array.from(track.children);
+          originals.forEach(node => track.appendChild(node.cloneNode(true)));
+
+          // Infinite manual scroll wrap (on viewport)
+          let half = 0;
+          let lastX = 0;
+
+          function recomputeHalf(){
+            half = Math.floor(track.scrollWidth / 2);
+          }
+          requestAnimationFrame(recomputeHalf);
+          window.addEventListener("resize", recomputeHalf);
+
+          viewport.addEventListener("scroll", () => {
+            if(!half) return;
+            const x = viewport.scrollLeft;
+
+            if(x > lastX && x >= half){
+              viewport.scrollLeft = x - half;
+              lastX = viewport.scrollLeft;
+              return;
+            }
+
+            if(x < lastX && x <= 1){
+              viewport.scrollLeft = x + half;
+              lastX = viewport.scrollLeft;
+              return;
+            }
+
+            lastX = x;
+          }, { passive:true });
+
+          function stopAllVideos(){
+            track.querySelectorAll(".vthumb.playing").forEach(btn=>{
+              btn.classList.remove("playing");
+            });
+            track.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
+          }
+
+          function manualPause(ms=2400){
+            rail.classList.add("manualPause");
+            window.clearTimeout(rail.__pauseT);
+            rail.__pauseT = window.setTimeout(()=> rail.classList.remove("manualPause"), ms);
+          }
+
+          track.addEventListener("click", (e) => {
+            const close = e.target.closest(".vclose");
+            const thumb = e.target.closest(".vthumb");
+
+            if(close){
+              e.preventDefault();
+              const btn = close.closest(".vthumb");
+              if(!btn) return;
+              btn.classList.remove("playing");
+              btn.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
+              manualPause(1200);
+              return;
+            }
+
+            if(!thumb) return;
+
+            const card = thumb.closest(".vcard");
+            if(!card) return;
+
+            const vid = card.getAttribute("data-video");
+            if(!vid) return;
+
+            if(thumb.querySelector("iframe.vframe")) return;
+
+            stopAllVideos();
+            manualPause(3000);
+
+            const iframe = document.createElement("iframe");
+            iframe.className = "vframe";
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+            iframe.setAttribute(
+              "allow",
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            );
+
+            iframe.src =
+              "https://www.youtube.com/embed/" + encodeURIComponent(vid) +
+              "?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1";
+
+            thumb.classList.add("playing");
+            thumb.appendChild(iframe);
+          });
+
+          rail.addEventListener("click", (e)=>{
+            const btn = e.target.closest("[data-rail]");
+            if(!btn) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            stopAllVideos();
+            manualPause(2600);
+
+            const firstCard = track.querySelector(".vcard");
+            const step = firstCard ? Math.round(firstCard.getBoundingClientRect().width * 0.95) : 280;
+
+            const dir = btn.getAttribute("data-rail");
+            viewport.scrollBy({ left: dir === "prev" ? -step : step, behavior: "smooth" });
+
+            window.setTimeout(()=>{ lastX = viewport.scrollLeft; }, 350);
+          });
+
+          rail.addEventListener("touchstart", ()=> manualPause(2600), { passive:true });
+        }
+
+        initOneRail("videoRailLandscape");
+        initOneRail("videoRailVertical");
+      })();
+    })();
+  </script>
+</div>
+
+</body>
+</html>
