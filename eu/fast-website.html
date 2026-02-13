@@ -381,9 +381,9 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 12px 12px;
-      font-family: inherit;          /* <-- important */
-      font-size: 14px;              /* <-- same as others */
-      line-height: 1.45;            /* <-- prevents perceived mismatch */
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 1.45;
       outline:none;
       transition: .2s var(--ease);
       background:#fff;
@@ -412,7 +412,7 @@
       line-height: 1.5;
     }
 
-    /* Footer: desktop inline centered, mobile stacked centered */
+    /* Footer */
     .footerCard{
       margin-top: 14px;
       border: 1px solid var(--line);
@@ -519,8 +519,8 @@
   <div class="header">
     <div class="headerInner">
 
-      <!-- ✅ ИЗМЕНЕНО: было href="/en/" → стало href="index.html" -->
-      <a class="brand" href="index.html" aria-label="Back to erewhile.digital">
+      <!-- ✅ FIXED: go to /en/ (not index.html) -->
+      <a class="brand" href="/en/" aria-label="Back to erewhile.digital">
         <img
           class="brandLogo"
           src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
@@ -538,8 +538,8 @@
       </nav>
 
       <div class="headerCtas">
-        <!-- ✅ ИЗМЕНЕНО: было href="/en/" → стало href="index.html" -->
-        <a class="btn btnOutline" href="index.html">Home</a>
+        <!-- ✅ FIXED: go to /en/ (not index.html) -->
+        <a class="btn btnOutline" href="/en/">Home</a>
         <a class="btn btnBlack" href="#order">Order for €150</a>
       </div>
 
@@ -554,7 +554,6 @@
           <h1 class="h1 reveal" style="transition-delay:80ms;">Fast One-Page Website for €150</h1>
           <p class="sub reveal" style="transition-delay:140ms;">
             A clean landing page to start quickly: clear structure, mobile-friendly layout, and a lead form that sends requests to your email.
-        
           </p>
 
           <div class="ctaRow reveal" style="transition-delay:200ms;">
@@ -625,7 +624,8 @@
                 If you already know your preferred domain name, include it in the message.
               </div>
 
-              <form action="https://formsubmit.co/3a023fde5cd6b4fb1407e589a53a3dde" method="POST">
+              <!-- ✅ FIXED: send to your email (same as main page) -->
+              <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
                 <input type="hidden" name="_subject" value="Fast Website (€150) — erewhile.digital (EN)">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
@@ -666,7 +666,7 @@
         </section>
       </div>
 
-      <!-- Footer (desktop inline centered; mobile stacked centered) -->
+      <!-- Footer -->
       <div class="footerCard" aria-label="Contacts">
         <a class="footerMiniLink" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
         <span class="footerMiniSep" aria-hidden="true">•</span>
