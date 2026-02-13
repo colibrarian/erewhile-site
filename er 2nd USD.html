@@ -1,0 +1,736 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <!-- SEO -->
+  <title>Fast One-Page Website for $199 (Domain Included up to $20) — Erewhile Digital</title>
+  <meta name="description" content="Order a fast, clean one-page website for $199. Mobile-ready, lead form included, and domain purchase is included up to $20. Launch quickly with Erewhile Digital." />
+
+
+  <link rel="canonical" href="https://erewhile.digital/en/fast-website.html" />
+  <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/fast-website.html" />
+  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/fast-website.html" />
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fast One-Page Website for $199 — Erewhile Digital" />
+  <meta property="og:description" content="A clean one-page website built fast: mobile-ready, lead form included, and domain purchase included up to $20." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://erewhile.digital/en/fast-website.html" />
+  <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,650;0,750;1,400;1,650&display=swap" rel="stylesheet">
+
+
+  <style>
+    :root{
+      --a:#076B58;
+      --t1:#054B4D;
+      --t2:#0B324B;
+
+
+      --bg:#ffffff;
+      --paper:#fbfbfb;
+      --ink:#0b0b0b;
+      --muted:rgba(11,11,11,.64);
+      --muted2:rgba(11,11,11,.48);
+      --line:rgba(11,11,11,.10);
+      --line2:rgba(11,11,11,.06);
+
+
+      --btnH:42px;
+      --r:999px;
+      --ease:cubic-bezier(.16,1,.3,1);
+    }
+
+
+    /* ✅ HARD FIX: stop horizontal jitter */
+    html, body{ width:100%; max-width:100%; overflow-x:hidden; }
+    body{
+      margin:0;
+      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background: var(--bg);
+      overscroll-behavior-x: none;
+    }
+    *{ box-sizing:border-box; max-width:100%; }
+    a{ color:inherit; text-decoration:none; }
+
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      overflow-x:hidden;
+    }
+    .headerInner{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      min-width:0;
+    }
+
+
+    /* Brand */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      min-width:0;
+    }
+    .brandLogo{
+      height: 28px;
+      width:auto;
+      display:block;
+      transition: .2s var(--ease);
+      flex:0 0 auto;
+    }
+    .brandText{
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      display:inline;
+    }
+    .brand:hover .brandLogo{
+      opacity:.92;
+      transform: translateY(-0.5px);
+    }
+
+
+    .nav{
+      flex:1;
+      display:none;
+      justify-content:center;
+      gap: 22px;
+      font-size: 13px;
+      color: var(--muted);
+      min-width:0;
+    }
+    .nav a{
+      padding: 8px 10px;
+      border-radius: 12px;
+      transition: .22s var(--ease);
+      white-space: nowrap;
+    }
+    .nav a:hover{
+      background: rgba(7,107,88,.06);
+      color: var(--ink);
+      transform: translateY(-1px);
+    }
+
+
+    .headerCtas{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex:0 0 auto;
+      min-width:0;
+      white-space: nowrap;
+    }
+
+
+    /* Buttons */
+    .btn{
+      height: var(--btnH);
+      padding: 0 16px;
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      background: #fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 650;
+      font-size: 13px;
+      transition: .22s var(--ease);
+      cursor:pointer;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 18px 45px rgba(4,39,39,.10); }
+    .btnBlack{
+      background: var(--ink);
+      border-color: var(--ink);
+      color:#fff;
+    }
+    .btnBlack:hover{ filter: brightness(1.05); }
+    .btnAccent{
+      border-color: rgba(7,107,88,.28);
+      background: rgba(7,107,88,.08);
+    }
+    .btnOutline{ background:#fff; }
+    .btnOutline:hover{ border-color: rgba(7,107,88,.35); }
+
+
+    .wrap{
+      min-height:100%;
+      background:
+        linear-gradient(to right, var(--line2) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--line2) 1px, transparent 1px);
+      background-size: 120px 120px;
+      background-position: center;
+      position:relative;
+      overflow-x:hidden;
+    }
+    .wrap:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px circle at 50% 0%, rgba(7,107,88,.10), transparent 55%),
+        radial-gradient(900px circle at 85% 20%, rgba(11,50,75,.08), transparent 60%);
+      pointer-events:none;
+    }
+
+
+    .container{
+      position:relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px;
+      overflow-x:hidden;
+    }
+
+
+    .card{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background:#fff;
+      overflow:hidden;
+      box-shadow: 0 18px 55px rgba(4,39,39,.06);
+    }
+
+
+    .hero{
+      padding: 34px 18px 18px;
+      text-align:center;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(7,107,88,.20);
+      background: rgba(7,107,88,.08);
+      font-size: 12px;
+      font-weight: 650;
+      color: rgba(11,11,11,.88);
+    }
+    .h1{
+      margin: 16px 0 0;
+      font-size: 40px;
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      font-weight: 780;
+    }
+    .sub{
+      margin: 14px auto 0;
+      max-width: 72ch;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .ctaRow{
+      margin-top: 18px;
+      display:flex;
+      gap: 12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+
+    .content{
+      padding: 18px;
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items:start;
+      min-width:0;
+    }
+    .block{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background:#fff;
+      padding: 16px;
+      min-width:0;
+    }
+    .blockH{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:-0.03em;
+      font-weight: 760;
+      line-height: 1.15;
+    }
+    .blockP{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+
+    ul.clean{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background:#fff;
+      min-width:0;
+    }
+    .dot2{
+      width:10px; height:10px; border-radius:999px; margin-top:4px;
+      background: rgba(7,107,88,.65);
+      box-shadow: 0 14px 30px rgba(7,107,88,.16);
+      flex:0 0 10px;
+    }
+
+
+    .priceBox{
+      border-radius: 22px;
+      border: 1px solid rgba(7,107,88,.22);
+      background:
+        radial-gradient(600px circle at 25% 25%, rgba(7,107,88,.14), transparent 55%),
+        radial-gradient(700px circle at 85% 75%, rgba(11,50,75,.10), transparent 60%),
+        #fff;
+      padding: 16px;
+    }
+    .price{
+      font-size: 34px;
+      letter-spacing:-0.05em;
+      font-weight: 780;
+      line-height:1;
+    }
+    .priceSub{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .chips{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background:#fff;
+      font-size: 12px;
+      color: rgba(11,11,11,.82);
+      white-space: nowrap;
+    }
+
+
+    /* Form */
+    .formWrap{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      padding: 16px;
+      min-width:0;
+    }
+    .formTitle{
+      margin:0;
+      font-size: 22px;
+      letter-spacing:-0.04em;
+      font-weight: 780;
+      line-height: 1.1;
+    }
+    .formDesc{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+    .formGrid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      min-width:0;
+    }
+    label{
+      display:block;
+      font-size: 12px;
+      letter-spacing: .02em;
+      color: var(--muted2);
+      margin-bottom: 6px;
+    }
+    input, textarea{
+      width:100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 12px;
+      font-size: 14px;
+      outline:none;
+      transition: .2s var(--ease);
+      background:#fff;
+    }
+    textarea{ min-height: 130px; resize: vertical; }
+    input:focus, textarea:focus{
+      border-color: rgba(7,107,88,.42);
+      box-shadow: 0 0 0 4px rgba(7,107,88,.10);
+    }
+    .formActions{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+    .fine{
+      font-size: 12px;
+      color: var(--muted2);
+      line-height: 1.5;
+    }
+
+
+    /* Footer: desktop inline centered, mobile stacked centered */
+    .footerCard{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      padding: 14px 16px;
+
+
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+
+
+      width: 100%;
+    }
+    .footerMiniLink{
+      font-weight: 650;
+      font-size: 13px;
+      color: rgba(11,11,11,.86);
+      border-bottom: 1px solid rgba(11,11,11,.18);
+      padding-bottom: 1px;
+      transition: .2s var(--ease);
+      white-space: nowrap;
+    }
+    .footerMiniLink:hover{
+      border-bottom-color: rgba(7,107,88,.45);
+      color: var(--ink);
+      transform: translateY(-1px);
+    }
+    .footerMiniSep{
+      opacity:.35;
+      user-select:none;
+    }
+
+
+    /* Reveal */
+    .reveal{ opacity:0; transform: translateY(10px); transition: .75s var(--ease); }
+    .reveal.on{ opacity:1; transform:none; }
+
+
+    @media (min-width: 960px){
+      .nav{ display:flex; }
+      .h1{ font-size: 54px; }
+      .grid{ grid-template-columns: 1.05fr .95fr; }
+      .formGrid{ grid-template-columns: 1fr 1fr; }
+      .full{ grid-column: 1 / -1; }
+    }
+
+
+    /* ✅ Mobile tuning */
+    @media (max-width: 560px){
+      :root{ --btnH: 40px; }
+
+
+      .headerInner{ padding: 10px 12px; }
+
+
+      /* Header: mobile shows brand text, hides logo */
+      .brandLogo{ display:none; }
+      .brandText{ display:inline; font-weight: 750; }
+
+
+      .btn{ padding: 0 12px; font-size: 13px; }
+      .headerCtas .btnOutline{ display:none; } /* hide "Home" on mobile */
+
+
+      /* Smaller headings on mobile */
+      .h1{
+        font-size: 30px;
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+      .blockH{ font-size: 16px; }
+      .formTitle{ font-size: 20px; }
+
+
+      /* Footer: stacked + centered */
+      .footerCard{
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        gap: 8px;
+        text-align:center;
+      }
+      .footerMiniSep{ display:none; }
+    }
+  </style>
+
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fast One-Page Website ($199)",
+    "provider": {
+      "@type": "Organization",
+      "name": "Erewhile Digital",
+      "url": "https://erewhile.digital/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "199",
+      "url": "https://erewhile.digital/en/fast-website.html",
+      "description": "Fast one-page website, mobile-ready, lead form included. Domain purchase included up to $20."
+    }
+  }
+  </script>
+</head>
+
+
+<body>
+  <div class="header">
+    <div class="headerInner">
+      <a class="brand" href="/en/" aria-label="Back to erewhile.digital">
+        <img
+          class="brandLogo"
+          src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
+          alt="Erewhile Digital"
+          loading="eager"
+          decoding="async"
+        >
+        <span class="brandText">erewhile.digital</span>
+      </a>
+
+
+      <nav class="nav" aria-label="Page navigation">
+        <a href="#included">What’s included</a>
+        <a href="#limits">Limitations</a>
+        <a href="#order">Order</a>
+      </nav>
+
+
+      <div class="headerCtas">
+        <a class="btn btnOutline" href="/en/">Home</a>
+        <a class="btn btnBlack" href="#order">Order for $199</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="wrap">
+    <div class="container">
+      <div class="card">
+        <section class="hero">
+          <span class="kicker reveal">Fast launch • fixed price</span>
+          <h1 class="h1 reveal" style="transition-delay:80ms;">Fast One-Page Website for $199</h1>
+          <p class="sub reveal" style="transition-delay:140ms;">
+            A clean landing page to start quickly: clear structure, mobile-friendly layout, and a lead form that sends requests to your email.
+            <b>Domain purchase is included</b> (domain price up to <b>$20</b>).
+          </p>
+
+
+          <div class="ctaRow reveal" style="transition-delay:200ms;">
+            <a class="btn btnBlack" href="#order">Order now</a>
+            <a class="btn btnAccent" href="#included">See what’s included</a>
+          </div>
+        </section>
+
+
+        <section class="content">
+          <div class="grid">
+            <div class="block reveal" id="included">
+              <h2 class="blockH">What’s included in $199</h2>
+              <p class="blockP">
+                This package is designed for speed and clarity — so you can collect leads and validate demand without overbuilding.
+              </p>
+
+
+              <ul class="clean">
+                <li class="li"><span class="dot2"></span><span><b>One-page website</b> (landing page) with a clear structure</span></li>
+                <li class="li"><span class="dot2"></span><span><b>Clean design</b> aligned with your brand (no clutter)</span></li>
+                <li class="li"><span class="dot2"></span><span><b>Responsive layout</b> for mobile, tablet and desktop</span></li>
+                <li class="li"><span class="dot2"></span><span><b>Lead form</b> that sends submissions to your email</span></li>
+                <li class="li"><span class="dot2"></span><span><b>Domain purchase included</b> (domain price up to <b>$20</b>)</span></li>
+                <li class="li"><span class="dot2"></span><span>Basic copy support (if you need help phrasing your offer)</span></li>
+              </ul>
+            </div>
+
+
+            <div class="block reveal" style="transition-delay:90ms;">
+              <div class="priceBox">
+                <div class="price">$199</div>
+                <div class="priceSub">
+                  Fixed price for a fast, conversion-oriented one-pager.<br>
+                  Domain purchase included up to <b>$20</b> (if the domain costs more — you pay the difference).
+                </div>
+                <div class="chips">
+                  <span class="chip">one-page</span>
+                  <span class="chip">mobile-ready</span>
+                  <span class="chip">lead form</span>
+                  <span class="chip">domain included*</span>
+                </div>
+              </div>
+
+
+              <div class="block" style="margin-top:14px; background:#fff;">
+                <h2 class="blockH">Who it’s for</h2>
+                <p class="blockP">
+                  Local services, small business, events, NGOs, personal experts — and anyone who needs a simple page “yesterday”.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="block reveal" id="limits">
+              <h2 class="blockH">Limitations (important)</h2>
+              <p class="blockP">
+                To keep the price low and delivery fast, this package has clear boundaries.
+              </p>
+
+
+              <ul class="clean">
+                <li class="li"><span class="dot2"></span><span>No multi-page structure (it’s a single landing page)</span></li>
+                <li class="li"><span class="dot2"></span><span>No e-commerce, catalogs, memberships, dashboards</span></li>
+                <li class="li"><span class="dot2"></span><span>No complex integrations (CRM, payments, automation workflows)</span></li>
+                <li class="li"><span class="dot2"></span><span>One revision round included (additional changes by agreement)</span></li>
+              </ul>
+            </div>
+
+
+            <div class="formWrap reveal" id="order" style="transition-delay:90ms;">
+              <h3 class="formTitle">Order your $199 website</h3>
+              <div class="formDesc">
+                Fill out the form — we’ll confirm the scope and reply with the next steps.
+                If you already know your preferred domain name, include it in the message.
+              </div>
+
+
+              <form action="https://formsubmit.co/3a023fde5cd6b4fb1407e589a53a3dde" method="POST">
+                <input type="hidden" name="_subject" value="Fast Website ($199) — erewhile.digital (EN)">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+
+
+                <input type="hidden" name="service" value="Fast One-Page Website ($199)">
+
+
+                <div class="formGrid">
+                  <div>
+                    <label>Name</label>
+                    <input name="name" required placeholder="How should we address you?">
+                  </div>
+
+
+                  <div>
+                    <label>Email</label>
+                    <input name="_replyto" type="email" required placeholder="you@company.com">
+                  </div>
+
+
+                  <div class="full">
+                    <label>Website niche / link (optional)</label>
+                    <input name="link" placeholder="Your Instagram/website or a short description">
+                  </div>
+
+
+                  <div class="full">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="What you offer, goal of the page, deadline, required blocks, preferred domain (if any)"></textarea>
+                  </div>
+                </div>
+
+
+                <div class="formActions">
+                  <button class="btn btnBlack" type="submit">Send request</button>
+                  <div class="fine">We typically reply within 24.</div>
+                </div>
+              </form>
+            </div>
+
+
+          </div>
+        </section>
+      </div>
+
+
+      <!-- Footer (desktop inline centered; mobile stacked centered) -->
+      <div class="footerCard" aria-label="Contacts">
+        <a class="footerMiniLink" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    (function(){
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            en.target.classList.add("on");
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+
+      document.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+    })();
+  </script>
+</body>
+</html>
