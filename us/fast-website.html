@@ -1,46 +1,41 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
   <!-- SEO -->
   <title>Fast One-Page Website for $199 (Domain Included up to $20) — Erewhile Digital</title>
   <meta name="description" content="Order a fast, clean one-page website for $199. Mobile-ready, lead form included, and domain purchase is included up to $20. Launch quickly with Erewhile Digital." />
 
+  <!-- ✅ FIXED: no /en/ in canonical because the public URL is /fast-website.html -->
+  <link rel="canonical" href="https://erewhile.digital/fast-website.html" />
 
-  <link rel="canonical" href="https://erewhile.digital/en/fast-website.html" />
-  <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/fast-website.html" />
-  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/fast-website.html" />
-
+  <!-- ✅ Optional (safe): keep only x-default to avoid wrong language paths -->
+  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/fast-website.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Fast One-Page Website for $199 — Erewhile Digital" />
   <meta property="og:description" content="A clean one-page website built fast: mobile-ready, lead form included, and domain purchase included up to $20." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://erewhile.digital/en/fast-website.html" />
+  <meta property="og:url" content="https://erewhile.digital/fast-website.html" />
   <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
-
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,650;0,750;1,400;1,650&display=swap" rel="stylesheet">
 
-
   <style>
     :root{
       --a:#076B58;
       --t1:#054B4D;
       --t2:#0B324B;
-
 
       --bg:#ffffff;
       --paper:#fbfbfb;
@@ -50,12 +45,10 @@
       --line:rgba(11,11,11,.10);
       --line2:rgba(11,11,11,.06);
 
-
       --btnH:42px;
       --r:999px;
       --ease:cubic-bezier(.16,1,.3,1);
     }
-
 
     /* ✅ HARD FIX: stop horizontal jitter */
     html, body{ width:100%; max-width:100%; overflow-x:hidden; }
@@ -68,7 +61,6 @@
     }
     *{ box-sizing:border-box; max-width:100%; }
     a{ color:inherit; text-decoration:none; }
-
 
     .header{
       position:sticky;
@@ -89,7 +81,6 @@
       gap: 12px;
       min-width:0;
     }
-
 
     /* Brand */
     .brand{
@@ -118,7 +109,6 @@
       transform: translateY(-0.5px);
     }
 
-
     .nav{
       flex:1;
       display:none;
@@ -140,7 +130,6 @@
       transform: translateY(-1px);
     }
 
-
     .headerCtas{
       display:flex;
       align-items:center;
@@ -149,7 +138,6 @@
       min-width:0;
       white-space: nowrap;
     }
-
 
     /* Buttons */
     .btn{
@@ -181,7 +169,6 @@
     .btnOutline{ background:#fff; }
     .btnOutline:hover{ border-color: rgba(7,107,88,.35); }
 
-
     .wrap{
       min-height:100%;
       background:
@@ -201,7 +188,6 @@
       pointer-events:none;
     }
 
-
     .container{
       position:relative;
       max-width: 980px;
@@ -210,7 +196,6 @@
       overflow-x:hidden;
     }
 
-
     .card{
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -218,7 +203,6 @@
       overflow:hidden;
       box-shadow: 0 18px 55px rgba(4,39,39,.06);
     }
-
 
     .hero{
       padding: 34px 18px 18px;
@@ -258,13 +242,11 @@
       flex-wrap:wrap;
     }
 
-
     .content{
       padding: 18px;
       border-top: 1px solid var(--line);
       background: var(--paper);
     }
-
 
     .grid{
       display:grid;
@@ -294,7 +276,6 @@
       line-height: 1.65;
     }
 
-
     ul.clean{
       margin: 12px 0 0;
       padding: 0;
@@ -321,7 +302,6 @@
       box-shadow: 0 14px 30px rgba(7,107,88,.16);
       flex:0 0 10px;
     }
-
 
     .priceBox{
       border-radius: 22px;
@@ -359,7 +339,6 @@
       color: rgba(11,11,11,.82);
       white-space: nowrap;
     }
-
 
     /* Form */
     .formWrap{
@@ -425,7 +404,6 @@
       line-height: 1.5;
     }
 
-
     /* Footer: desktop inline centered, mobile stacked centered */
     .footerCard{
       margin-top: 14px;
@@ -434,13 +412,11 @@
       background: #fff;
       padding: 14px 16px;
 
-
       display:flex;
       flex-direction: row;
       align-items:center;
       justify-content:center;
       gap: 12px;
-
 
       width: 100%;
     }
@@ -463,11 +439,9 @@
       user-select:none;
     }
 
-
     /* Reveal */
     .reveal{ opacity:0; transform: translateY(10px); transition: .75s var(--ease); }
     .reveal.on{ opacity:1; transform:none; }
-
 
     @media (min-width: 960px){
       .nav{ display:flex; }
@@ -477,23 +451,18 @@
       .full{ grid-column: 1 / -1; }
     }
 
-
     /* ✅ Mobile tuning */
     @media (max-width: 560px){
       :root{ --btnH: 40px; }
 
-
       .headerInner{ padding: 10px 12px; }
-
 
       /* Header: mobile shows brand text, hides logo */
       .brandLogo{ display:none; }
       .brandText{ display:inline; font-weight: 750; }
 
-
       .btn{ padding: 0 12px; font-size: 13px; }
       .headerCtas .btnOutline{ display:none; } /* hide "Home" on mobile */
-
 
       /* Smaller headings on mobile */
       .h1{
@@ -503,7 +472,6 @@
       }
       .blockH{ font-size: 16px; }
       .formTitle{ font-size: 20px; }
-
 
       /* Footer: stacked + centered */
       .footerCard{
@@ -516,7 +484,6 @@
       .footerMiniSep{ display:none; }
     }
   </style>
-
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -533,18 +500,18 @@
       "@type": "Offer",
       "priceCurrency": "USD",
       "price": "199",
-      "url": "https://erewhile.digital/en/fast-website.html",
+      "url": "https://erewhile.digital/fast-website.html",
       "description": "Fast one-page website, mobile-ready, lead form included. Domain purchase included up to $20."
     }
   }
   </script>
 </head>
 
-
 <body>
   <div class="header">
     <div class="headerInner">
-      <a class="brand" href="/en/" aria-label="Back to erewhile.digital">
+      <!-- ✅ FIXED: brand link goes to / (not /en/) -->
+      <a class="brand" href="/" aria-label="Back to erewhile.digital">
         <img
           class="brandLogo"
           src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
@@ -555,21 +522,19 @@
         <span class="brandText">erewhile.digital</span>
       </a>
 
-
       <nav class="nav" aria-label="Page navigation">
         <a href="#included">What’s included</a>
         <a href="#limits">Limitations</a>
         <a href="#order">Order</a>
       </nav>
 
-
       <div class="headerCtas">
-        <a class="btn btnOutline" href="/en/">Home</a>
+        <!-- ✅ FIXED: Home points to / -->
+        <a class="btn btnOutline" href="/">Home</a>
         <a class="btn btnBlack" href="#order">Order for $199</a>
       </div>
     </div>
   </div>
-
 
   <div class="wrap">
     <div class="container">
@@ -582,13 +547,11 @@
             <b>Domain purchase is included</b> (domain price up to <b>$20</b>).
           </p>
 
-
           <div class="ctaRow reveal" style="transition-delay:200ms;">
             <a class="btn btnBlack" href="#order">Order now</a>
             <a class="btn btnAccent" href="#included">See what’s included</a>
           </div>
         </section>
-
 
         <section class="content">
           <div class="grid">
@@ -597,7 +560,6 @@
               <p class="blockP">
                 This package is designed for speed and clarity — so you can collect leads and validate demand without overbuilding.
               </p>
-
 
               <ul class="clean">
                 <li class="li"><span class="dot2"></span><span><b>One-page website</b> (landing page) with a clear structure</span></li>
@@ -608,7 +570,6 @@
                 <li class="li"><span class="dot2"></span><span>Basic copy support (if you need help phrasing your offer)</span></li>
               </ul>
             </div>
-
 
             <div class="block reveal" style="transition-delay:90ms;">
               <div class="priceBox">
@@ -625,7 +586,6 @@
                 </div>
               </div>
 
-
               <div class="block" style="margin-top:14px; background:#fff;">
                 <h2 class="blockH">Who it’s for</h2>
                 <p class="blockP">
@@ -634,13 +594,11 @@
               </div>
             </div>
 
-
             <div class="block reveal" id="limits">
               <h2 class="blockH">Limitations (important)</h2>
               <p class="blockP">
                 To keep the price low and delivery fast, this package has clear boundaries.
               </p>
-
 
               <ul class="clean">
                 <li class="li"><span class="dot2"></span><span>No multi-page structure (it’s a single landing page)</span></li>
@@ -650,7 +608,6 @@
               </ul>
             </div>
 
-
             <div class="formWrap reveal" id="order" style="transition-delay:90ms;">
               <h3 class="formTitle">Order your $199 website</h3>
               <div class="formDesc">
@@ -658,16 +615,13 @@
                 If you already know your preferred domain name, include it in the message.
               </div>
 
-
               <form action="https://formsubmit.co/3a023fde5cd6b4fb1407e589a53a3dde" method="POST">
                 <input type="hidden" name="_subject" value="Fast Website ($199) — erewhile.digital (EN)">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <input type="text" name="_honey" style="display:none">
 
-
                 <input type="hidden" name="service" value="Fast One-Page Website ($199)">
-
 
                 <div class="formGrid">
                   <div>
@@ -675,25 +629,21 @@
                     <input name="name" required placeholder="How should we address you?">
                   </div>
 
-
                   <div>
                     <label>Email</label>
                     <input name="_replyto" type="email" required placeholder="you@company.com">
                   </div>
-
 
                   <div class="full">
                     <label>Website niche / link (optional)</label>
                     <input name="link" placeholder="Your Instagram/website or a short description">
                   </div>
 
-
                   <div class="full">
                     <label>Message</label>
                     <textarea name="message" placeholder="What you offer, goal of the page, deadline, required blocks, preferred domain (if any)"></textarea>
                   </div>
                 </div>
-
 
                 <div class="formActions">
                   <button class="btn btnBlack" type="submit">Send request</button>
@@ -702,20 +652,16 @@
               </form>
             </div>
 
-
           </div>
         </section>
       </div>
 
-
-      <!-- Footer (desktop inline centered; mobile stacked centered) -->
+      <!-- Footer -->
       <div class="footerCard" aria-label="Contacts">
         <a class="footerMiniLink" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
-        
       </div>
     </div>
   </div>
-
 
   <script>
     (function(){
@@ -727,7 +673,6 @@
           }
         });
       }, { threshold: 0.14 });
-
 
       document.querySelectorAll(".reveal").forEach(el=> io.observe(el));
     })();
