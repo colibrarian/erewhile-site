@@ -1,25 +1,15 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-
   <!-- SEO: Title + Description -->
   <title>Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)</title>
   <meta name="description" content="Erewhile Digital builds conversion-focused websites and landing pages, with optional content production, analytics, CRM automation and AI integrations. Turn your website into a revenue-generating digital ecosystem." />
 
-
-  <!-- Canonical (adjust if needed) -->
-  <link rel="canonical" href="https://erewhile.digital/en/" />
-
-
-  <!-- Hreflang (RU/LV pages can be created later) -->
-  <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/" />
-  <link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/" />
-  <link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/" />
-  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/" />
-
+  <!-- Canonical (NO /en/; because geo-routing serves versions from /) -->
+  <link rel="canonical" href="https://erewhile.digital/" />
 
   <!-- ✅ Favicons / App Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
@@ -27,16 +17,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636901/favicon-16x16_zqhiri.png">
   <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
 
-
   <!-- Open Graph -->
   <meta property="og:title" content="Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)" />
   <meta property="og:description" content="Conversion-focused websites + content, analytics, CRM automation and AI integrations. A website that works as your digital ecosystem." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://erewhile.digital/en/" />
+  <meta property="og:url" content="https://erewhile.digital/" />
   <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-
 
   <!-- Optional: Twitter cards -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -44,13 +32,11 @@
 </head>
 <body>
 
-
 <div id="erewhile-dstudio">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,650;0,750;1,400;1,650&display=swap" rel="stylesheet">
-
 
   <style>
     :root{
@@ -59,7 +45,6 @@
       --t1:#054B4D;
       --t2:#0B324B;
       --shadow:#042727;
-
 
       /* White-page system */
       --bg:#ffffff;
@@ -70,13 +55,11 @@
       --line:rgba(11,11,11,.10);
       --line2:rgba(11,11,11,.06);
 
-
       /* Buttons */
       --btnH:42px;
       --r:999px;
       --ease:cubic-bezier(.16,1,.3,1);
     }
-
 
     #erewhile-dstudio{
       font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -84,7 +67,6 @@
     }
     #erewhile-dstudio *{ box-sizing:border-box; }
     #erewhile-dstudio a{ color:inherit; text-decoration:none; }
-
 
     /* Outer frame */
     .wrap{
@@ -94,7 +76,6 @@
       overflow:hidden;
       overflow-x:hidden;
     }
-
 
     /* Subtle grid background like the reference */
     .gridBg{
@@ -114,7 +95,6 @@
       pointer-events:none;
     }
 
-
     /* Header (sticky) */
     .header{
       position:sticky;
@@ -132,7 +112,6 @@
       align-items:center;
       gap: 16px;
     }
-
 
     /* BRAND */
     .brand{
@@ -157,7 +136,6 @@
       transform: translateY(-0.5px);
     }
 
-
     .nav{
       flex:1;
       display:none;
@@ -177,13 +155,11 @@
       transform: translateY(-1px);
     }
 
-
     .headerCtas{
       display:flex; align-items:center; gap:10px;
       white-space: nowrap;
       margin-left: auto;
     }
-
 
     /* Buttons */
     .btn{
@@ -219,7 +195,6 @@
       font-size: 12.5px;
     }
 
-
     /* Sections */
     .section{
       max-width: 1180px;
@@ -229,7 +204,6 @@
       position:relative;
     }
     .section:last-child{ border-bottom:none; }
-
 
     /* Hero */
     .hero{
@@ -259,7 +233,6 @@
       flex-wrap:wrap;
     }
 
-
     /* Split */
     .split{
       display:grid;
@@ -282,7 +255,6 @@
       color: var(--muted2);
     }
 
-
     .rightCol{
       display:grid;
       grid-template-columns: 1fr;
@@ -293,7 +265,6 @@
       line-height: 1.75;
       font-size: 13px;
     }
-
 
     /* Ecosystem map */
     .ecoWrap{
@@ -339,7 +310,6 @@
       line-height: 1.65;
       max-width: 80ch;
     }
-
 
     .ecoGrid{
       position:relative;
@@ -402,7 +372,6 @@
       flex:0 0 10px;
     }
 
-
     .ecoOrbits{
       display:grid;
       gap: 12px;
@@ -437,7 +406,6 @@
       line-height: 1.65;
     }
 
-
     /* Accordion */
     details.acc{
       position:relative;
@@ -467,7 +435,6 @@
     details[open] summary.accSum:after{ content:"—"; }
     details.acc > *:not(summary){ padding: 0 14px 14px; }
 
-
     /* ===== VIDEO RAIL (base) ===== */
     .video-rail{
       position: relative;
@@ -478,7 +445,6 @@
       overflow: hidden;
       margin-top: 14px;
     }
-
 
     .railControls{
       position:absolute;
@@ -512,7 +478,6 @@
       border-color: rgba(7,107,88,.28);
     }
 
-
     .rail-viewport{
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -521,7 +486,6 @@
       scrollbar-width: none;
     }
     .rail-viewport::-webkit-scrollbar{ display:none; }
-
 
     .rail-track{
       display: flex;
@@ -533,13 +497,11 @@
     #videoRailLandscape { animation-duration: 28s; }
     #videoRailVertical  { animation-duration: 40s; }
 
-
     .video-rail:hover .rail-track,
     .video-rail:focus-within .rail-track,
     .video-rail.manualPause .rail-track{
       animation-play-state: paused;
     }
-
 
     .vcard{
       flex: 0 0 auto;
@@ -557,7 +519,6 @@
       border-color: rgba(7,107,88,.28);
     }
 
-
     .vthumb{
       position: relative;
       display: block;
@@ -570,7 +531,6 @@
     }
     .vcard[data-orient="landscape"] .vthumb{ aspect-ratio: 16 / 9; }
     .vcard[data-orient="portrait"]  .vthumb{ aspect-ratio: 9 / 16; }
-
 
     .vthumb img{
       width: 100%;
@@ -585,7 +545,6 @@
       opacity: 1;
       transform: scale(1.03);
     }
-
 
     .vplay{
       position:absolute;
@@ -611,7 +570,6 @@
       opacity: .95;
     }
 
-
     .vclose{
       position:absolute;
       top: 10px;
@@ -632,7 +590,6 @@
     .vthumb.playing .vclose{ display:grid; place-items:center; }
     .vthumb.playing .vplay{ opacity:0; transform: scale(.96); }
 
-
     .vmeta{ padding: 10px 12px 12px; }
     .vtitle{
       font-weight: 760;
@@ -646,7 +603,6 @@
       color: var(--muted2);
     }
 
-
     .vframe{
       position: absolute;
       inset: 0;
@@ -656,12 +612,10 @@
       z-index: 2;
     }
 
-
     @keyframes railScroll{
       from{ transform: translateX(0); }
       to{ transform: translateX(-50%); }
     }
-
 
     @media (max-width: 900px){
       .rail-track{ animation-duration: 36s; }
@@ -669,11 +623,9 @@
       .vcard[data-orient="portrait"]{ width: 200px; }
       .railControls{ top: 8px; right: 8px; }
 
-
       #videoRailLandscape { animation-duration: 48s; }
       #videoRailVertical  { animation-duration: 36s; }
     }
-
 
     /* Case tiles */
     .caseHeader{
@@ -691,7 +643,6 @@
       font-weight: 780;
     }
     .caseHeader h2 em{ font-style: italic; font-weight: 650; }
-
 
     .caseGrid{
       display:grid;
@@ -711,7 +662,6 @@
       border-color: rgba(7,107,88,.28);
     }
 
-
     .preview{
       width: 100%;
       aspect-ratio: 4 / 3;
@@ -730,7 +680,6 @@
       background: transparent;
       border: 0;
     }
-
 
     .caseBody{ padding: 16px 16px 18px; }
     .caseKicker{
@@ -756,7 +705,6 @@
     }
     .case:hover .caseLink{ opacity:1; transform: translateX(1px); }
     .arrow{ font-weight: 750; }
-
 
     /* Mosaic */
     .mosaic{
@@ -810,7 +758,6 @@
       font-size: 12px;
       color: rgba(11,11,11,.82);
     }
-
 
     /* Contact form */
     .formWrap{
@@ -874,16 +821,13 @@
       line-height: 1.5;
     }
 
-
     /* Reveal */
     .reveal{ opacity:0; transform: translateY(10px); transition: .75s var(--ease); }
     .reveal.on{ opacity:1; transform:none; }
 
-
     /* FIX: grid width */
     .split > * { min-width: 0; }
     .rightCol { min-width: 0; }
-
 
     /* Responsive desktop */
     @media (min-width: 960px){
@@ -891,18 +835,14 @@
       .h1{ font-size: 74px; }
       .sub{ font-size: 16px; }
 
-
       .split{ grid-template-columns: 1.1fr .9fr; gap: 36px; }
-
 
       .ecoGrid{
         grid-template-columns: 1fr 1fr;
         gap: 14px;
       }
 
-
       .caseGrid{ grid-template-columns: 1fr 1fr; }
-
 
       .mosaic{
         grid-template-columns: 1.1fr .9fr .9fr;
@@ -912,10 +852,8 @@
       .tile.offerTile{ grid-column: 3 / 4; background:#fff; }
       .tile.Tile{ grid-column: 1 / 3; background:#fff; }
 
-
       .formGrid{ grid-template-columns: 1fr 1fr; }
       .full{ grid-column: 1 / -1; }
-
 
       /* desktop: accordion behaves like normal */
       details.acc{ border: 0; background: transparent; }
@@ -923,7 +861,6 @@
       details.acc > *:not(summary){ padding: 0; }
       details.acc[open] > summary{ display:none; }
     }
-
 
     /* ✅ HARD FIX: black buttons always readable */
     .btnBlack,
@@ -934,7 +871,6 @@
       -webkit-text-fill-color:#fff;
     }
 
-
     /* =========================
        MOBILE SIMPLIFY PACK
        ========================= */
@@ -942,7 +878,6 @@
       .wrap{ border-radius: 14px; }
       .section{ padding: 44px 14px; }
       .hero{ padding-top: 56px; padding-bottom: 22px; }
-
 
       .h1{
         font-size: 34px;
@@ -959,7 +894,6 @@
         line-height: 1.18;
       }
 
-
       .ecoTitle h2,
       .caseHeader h2{
         font-size: 24px;
@@ -971,27 +905,21 @@
       .quote{ font-size: 16px; line-height: 1.35; }
       .caseBody{ padding: 14px 14px 16px; }
 
-
       :root{ --btnH: 40px; }
       .btn{ padding: 0 14px; font-size: 13px; }
 
-
       .brand{ min-width: unset; }
-
 
       /* ✅ requested: mobile shows text erewhile.digital, hides logo */
       .brandLogo{ display:none; }
       .brandTextDesktop{ display:none; }
       .brandTextMobile{ display:inline; }
 
-
       .headerInner{ padding: 10px 12px; gap: 10px; }
       .headerCtas .btn{ padding: 0 12px; }
 
-
       /* on mobile: keep only main CTA in header */
       .headerCtas a.btnAccent{ display:none; }
-
 
       .caseGrid{ gap: 14px; }
       .mosaic{ gap: 12px; }
@@ -999,12 +927,10 @@
       .ecoWrap{ padding: 14px; border-radius: 18px; }
       .ecoCenter, .orbit{ padding: 14px; border-radius: 18px; }
 
-
       /* video: calm mode for mobile */
       .railControls{ display:none; }
       .rail-track{ animation: none !important; }
       .rail-viewport{ overflow-x: auto; }
-
 
       /* snap for swipe */
       .rail-viewport{ scroll-snap-type: x mandatory; }
@@ -1012,22 +938,18 @@
       .vcard[data-orient="landscape"]{ width: 260px; }
       .vcard[data-orient="portrait"]{ width: 190px; }
 
-
       /* mobile: show only vertical rail block */
       .railLandscape{ display:none; }
     }
-
 
     /* Core list: desktop vs mobile */
     .coreListMobile{ display:none; }
     .coreListDesktop{ display:grid; }
 
-
     @media (max-width: 560px){
       .coreListDesktop{ display:none; }
       .coreListMobile{ display:block; }
     }
-
 
     /* ===== OFFERS GRID ===== */
     .offersGrid{
@@ -1036,14 +958,12 @@
       gap: 18px;
     }
 
-
     @media (min-width: 960px){
       .offersGrid{
         grid-template-columns: 1fr 1fr;
         align-items: stretch;
       }
     }
-
 
     /* ===== PRIMARY vs SECONDARY ===== */
     .primaryOffer{
@@ -1055,11 +975,9 @@
       transform: translateY(-4px);
     }
 
-
     .secondaryOffer{
       background: #fff;
     }
-
 
     /* ===== BADGES ===== */
     .offerBadge{
@@ -1075,12 +993,10 @@
       color: #054B4D;
     }
 
-
     .offerBadge.muted{
       background: rgba(11,11,11,.06);
       color: rgba(11,11,11,.65);
     }
-
 
     @media (min-width: 960px){
       .mosaic.offersGrid{
@@ -1088,14 +1004,12 @@
         grid-template-rows: auto !important;
       }
 
-
       .mosaic.offersGrid .tile.offerTile,
       .mosaic.offersGrid .tile.Tile,
       .mosaic.offersGrid .tile{
         grid-column: auto !important;
       }
     }
-
 
     /* LinkedIn icon button */
     .socialBtn{
@@ -1125,7 +1039,6 @@
       .socialBtn{ display:none; }
     }
 
-
     /* ===== FOOTER ===== */
     .siteFooter{
       max-width: 1180px;
@@ -1153,7 +1066,6 @@
       .siteFooter{ padding: 34px 14px; }
       .footerCard{ border-radius: 18px; padding: 14px; }
     }
-
 
     /* ✅ FOOTER: minimal contacts only */
     .footerMini{
@@ -1183,57 +1095,14 @@
       user-select:none;
       position:relative;
     }
-
-
-    /* ✅ Language switch */
-    .langSwitch{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      margin-left: 8px;
-    }
-    .langLink{
-      height: 32px;
-      padding: 0 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      display:inline-flex;
-      align-items:center;
-      font-size: 12px;
-      font-weight: 650;
-      color: rgba(11,11,11,.78);
-      background:#fff;
-      transition: .22s var(--ease);
-    }
-    .langLink:hover{
-      transform: translateY(-1px);
-      border-color: rgba(7,107,88,.28);
-      box-shadow: 0 18px 45px rgba(4,39,39,.08);
-      color: var(--ink);
-    }
-    .langLink.isActive{
-      background: rgba(7,107,88,.08);
-      border-color: rgba(7,107,88,.22);
-      color: rgba(11,11,11,.88);
-    }
-    @media (max-width: 560px){
-      .langSwitch{ display:none; } /* keep header clean on mobile */
-    }
-
-
-.langSwitch { display: none !important; }
-
-
   </style>
-
 
   <div class="wrap gridBg">
     <!-- HEADER -->
     <div class="header">
       <div class="headerInner">
-
-
-        <a class="brand" href="/en/" aria-label="Erewhile Digital">
+        <!-- ✅ FIXED: NO /en/ -->
+        <a class="brand" href="/" aria-label="Erewhile Digital">
           <img
             class="brandLogo"
             src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
@@ -1245,13 +1114,11 @@
           <span class="brandText brandTextMobile">erewhile.digital</span>
         </a>
 
-
         <nav class="nav" aria-label="Primary navigation">
           <a href="#ew-web">Websites</a>
           <a href="#ew-work">Work</a>
           <a href="#ew-contact">Contact</a>
         </nav>
-
 
         <div class="headerCtas">
           <a class="socialBtn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener noreferrer"
@@ -1261,21 +1128,11 @@
             </svg>
           </a>
 
-
-          <!-- Language links (placeholders until you create them) -->
-          <div class="langSwitch" aria-label="Language switch">
-            <a class="langLink isActive" href="/en/" hreflang="en" lang="en">EN</a>
-            <a class="langLink" href="/lv/" hreflang="lv" lang="lv">LV</a>
-            <a class="langLink" href="/ru/" hreflang="ru" lang="ru">RU</a>
-          </div>
-
-
           <a class="btn btnAccent" href="/fast-website.html" target="_blank" rel="noopener">Fast website $199</a>
           <a class="btn btnBlack" href="#ew-contact">Get a quote</a>
         </div>
       </div>
     </div>
-
 
     <!-- HERO -->
     <section class="section hero">
@@ -1283,19 +1140,16 @@
         Your website as the hub<br>of a digital ecosystem
       </h1>
 
-
       <p class="sub reveal" style="transition-delay:120ms;">
         We design and launch conversion-focused websites that generate leads and communicate value.
         When needed, we add content, analytics and integrations — so everything works as one measurable growth system.
       </p>
-
 
       <div class="heroCtas reveal" style="transition-delay:180ms;">
         <a class="btn btnBlack" href="#ew-contact">Discuss your project</a>
         <a class="btn btnOutline" href="#ew-orbits">How we scale performance <span class="arrow">›</span></a>
       </div>
     </section>
-
 
     <!-- ABOUT / POSITIONING -->
     <section class="section" id="ew-web">
@@ -1307,12 +1161,10 @@
           </div>
           <div class="sideLabel reveal" style="transition-delay:100ms;">WEBSITE DESIGN • WEB DEVELOPMENT • CONVERSION RATE OPTIMIZATION</div>
 
-
           <div style="margin-top:18px;" class="reveal">
             <a class="btn btnOutline btnSmall" href="#ew-contact">Request an estimate</a>
           </div>
         </div>
-
 
         <div class="rightCol">
           <p class="p reveal">
@@ -1326,7 +1178,6 @@
         </div>
       </div>
 
-
       <!-- Orbits block -->
       <div id="ew-orbits" class="ecoWrap reveal" style="transition-delay:180ms; margin-top:22px;">
         <div class="ecoTitle">
@@ -1336,12 +1187,10 @@
           The website is the core. Around it — modular services you can add later to improve visibility, conversion and operations.
         </div>
 
-
         <div class="ecoGrid" style="margin-top:14px;">
           <div class="ecoCenter">
             <span class="ecoBadge">CORE: WEBSITE</span>
             <div class="ecoH">A conversion-ready website</div>
-
 
             <ul class="ecoList coreListDesktop">
               <li class="ecoItem"><span class="pillDot"></span><span>Goal-driven structure: lead generation, bookings, sales, donations</span></li>
@@ -1349,7 +1198,6 @@
               <li class="ecoItem"><span class="pillDot"></span><span>Landing pages, CTAs and forms built for campaigns</span></li>
               <li class="ecoItem"><span class="pillDot"></span><span>SEO foundations + analytics setup, ready to scale</span></li>
             </ul>
-
 
             <details class="acc accCore coreListMobile">
               <summary class="accSum">Show what’s included (4)</summary>
@@ -1362,7 +1210,6 @@
             </details>
           </div>
 
-
           <details class="acc accOrbits" open>
             <summary class="accSum">Orbits (4)</summary>
             <div class="ecoOrbits">
@@ -1374,20 +1221,17 @@
                 </div>
               </div>
 
-
               <div class="orbit">
                 <div class="orbitK">Orbit 02</div>
                 <div class="orbitT">Social distribution</div>
                 <div class="orbitP">If you need more reach — we package content and drive qualified traffic to key landing pages.</div>
               </div>
 
-
               <div class="orbit">
                 <div class="orbitK">Orbit 03</div>
                 <div class="orbitT">Ads & analytics</div>
                 <div class="orbitP">Campaign landing pages + measurable events: leads, bookings, purchases — tracked end to end.</div>
               </div>
-
 
               <div class="orbit">
                 <div class="orbitK">Orbit 04</div>
@@ -1400,13 +1244,11 @@
       </div>
     </section>
 
-
     <!-- WORK (web-first) -->
     <section class="section" id="ew-work">
       <div class="caseHeader">
         <h2 class="reveal">Selected work <em>(web-first)</em></h2>
       </div>
-
 
       <div class="caseGrid">
         <div class="case reveal">
@@ -1420,7 +1262,6 @@
           </div>
         </div>
 
-
         <div class="case reveal" style="transition-delay:90ms;">
           <div class="preview">
             <img loading="lazy" alt="Therapist booking flow — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333933/therapy_zoh9hu.png">
@@ -1432,7 +1273,6 @@
           </div>
         </div>
 
-
         <div class="case reveal">
           <div class="preview">
             <img loading="lazy" alt="Mini CRM system — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/7_ci8bnw.png">
@@ -1443,7 +1283,6 @@
             <a class="caseLink" href="#ew-contact">Request details <span class="arrow">→</span></a>
           </div>
         </div>
-
 
         <div class="case reveal" style="transition-delay:90ms;">
           <div class="preview">
@@ -1457,7 +1296,6 @@
         </div>
       </div>
 
-
       <!-- VIDEO -->
       <div class="ecoWrap reveal" style="margin-top:22px;">
         <div class="ecoTitle">
@@ -1469,7 +1307,6 @@
           On mobile, we prioritize vertical to keep the page lightweight.
         </div>
 
-
         <!-- LANDSCAPE -->
         <div class="railBlock railLandscape" style="position:relative; margin-top:16px;">
           <div class="orbitK" style="position:relative;">Landscape • 16:9</div>
@@ -1478,13 +1315,11 @@
             Perfect for homepages and landing pages: explain value, showcase the product, increase trust and improve conversion.
           </div>
 
-
           <div class="video-rail" aria-label="Landscape videos (16:9)">
             <div class="railControls" aria-label="Rail controls">
               <button class="railBtn" type="button" data-rail="prev" aria-label="Previous">‹</button>
               <button class="railBtn" type="button" data-rail="next" aria-label="Next">›</button>
             </div>
-
 
             <div class="rail-track" id="videoRailLandscape">
               <article class="vcard" data-video="a-VGPkJdKiw" data-orient="landscape">
@@ -1499,7 +1334,6 @@
                 </div>
               </article>
 
-
               <article class="vcard" data-video="GZeQtel0e60" data-orient="landscape">
                 <button class="vthumb" type="button" aria-label="Play video">
                   <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg">
@@ -1511,7 +1345,6 @@
                   <div class="vsub">YouTube • 16:9</div>
                 </div>
               </article>
-
 
               <article class="vcard" data-video="8SpJwdUtNQI" data-orient="landscape">
                 <button class="vthumb" type="button" aria-label="Play video">
@@ -1525,7 +1358,6 @@
                 </div>
               </article>
 
-
               <article class="vcard" data-video="QCebk7f6iC4" data-orient="landscape">
                 <button class="vthumb" type="button" aria-label="Play video">
                   <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/QCebk7f6iC4/hqdefault.jpg">
@@ -1537,7 +1369,6 @@
                   <div class="vsub">YouTube • 16:9</div>
                 </div>
               </article>
-
 
               <article class="vcard" data-video="41O2sQ7U2gU" data-orient="landscape">
                 <button class="vthumb" type="button" aria-label="Play video">
@@ -1551,7 +1382,6 @@
                 </div>
               </article>
 
-
               <article class="vcard" data-video="8z5p8zUraFw" data-orient="landscape">
                 <button class="vthumb" type="button" aria-label="Play video">
                   <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8z5p8zUraFw/hqdefault.jpg">
@@ -1563,7 +1393,6 @@
                   <div class="vsub">YouTube • 16:9</div>
                 </div>
               </article>
-
 
               <article class="vcard" data-video="qdVzzfr3yL4" data-orient="landscape">
                 <button class="vthumb" type="button" aria-label="Play video">
@@ -1580,7 +1409,6 @@
           </div>
         </div>
 
-
         <!-- VERTICAL -->
         <div class="railBlock railVertical" style="position:relative; margin-top:18px;">
           <div class="orbitK" style="position:relative;">Vertical • 9:16</div>
@@ -1589,13 +1417,11 @@
             Optimized for Reels, TikTok and YouTube Shorts. Strong hook → retention → click-through to your site.
           </div>
 
-
           <div class="video-rail" aria-label="Vertical videos (9:16)">
             <div class="railControls" aria-label="Rail controls">
               <button class="railBtn" type="button" data-rail="prev" aria-label="Previous">‹</button>
               <button class="railBtn" type="button" data-rail="next" aria-label="Next">›</button>
             </div>
-
 
             <div class="rail-track" id="videoRailVertical">
               <article class="vcard" data-video="Wd3h4jD56Qw" data-orient="portrait">
@@ -1610,7 +1436,6 @@
                 </div>
               </article>
 
-
               <article class="vcard" data-video="_i7sXoJ9nrs" data-orient="portrait">
                 <button class="vthumb" type="button" aria-label="Play video">
                   <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/_i7sXoJ9nrs/hqdefault.jpg">
@@ -1622,7 +1447,6 @@
                   <div class="vsub">Instagram Reels • 9:16</div>
                 </div>
               </article>
-
 
               <article class="vcard" data-video="fm_ghLUm2as" data-orient="portrait">
                 <button class="vthumb" type="button" aria-label="Play video">
@@ -1636,7 +1460,6 @@
                 </div>
               </article>
 
-
               <article class="vcard" data-video="lREFWSxRvqo" data-orient="portrait">
                 <button class="vthumb" type="button" aria-label="Play video">
                   <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/lREFWSxRvqo/hqdefault.jpg">
@@ -1649,7 +1472,6 @@
                 </div>
               </article>
 
-
               <article class="vcard" data-video="OC-2y-kTyBA" data-orient="portrait">
                 <button class="vthumb" type="button" aria-label="Play video">
                   <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/OC-2y-kTyBA/hqdefault.jpg">
@@ -1661,7 +1483,6 @@
                   <div class="vsub">Instagram Reels • 9:16</div>
                 </div>
               </article>
-
 
               <article class="vcard" data-video="Zpmgzr-uXlQ" data-orient="portrait">
                 <button class="vthumb" type="button" aria-label="Play video">
@@ -1678,10 +1499,8 @@
           </div>
         </div>
 
-
       </div>
     </section>
-
 
     <!-- OFFERS -->
     <section class="section">
@@ -1689,13 +1508,11 @@
         <div class="tile offerTile reveal primaryOffer">
           <span class="offerBadge">Primary</span>
 
-
           <div class="tileH">Main website</div>
           <div class="tileP">
             Strategy, design and development of a website as the core of your digital ecosystem.
             Best if you want long-term results, SEO growth and scalable marketing.
           </div>
-
 
           <div class="chipRow">
             <span class="chip">information architecture</span>
@@ -1704,22 +1521,18 @@
             <span class="chip">analytics</span>
           </div>
 
-
           <div style="margin-top:16px;">
             <a class="btn btnBlack" href="#ew-contact">Discuss the main website</a>
           </div>
         </div>
 
-
         <div class="tile fastTile reveal secondaryOffer">
           <span class="offerBadge muted">Quick start</span>
-
 
           <div class="tileH">Budget website ($199)</div>
           <div class="tileP">
             A clean one-page website built fast. It explains what you do and captures leads immediately.
           </div>
-
 
           <div class="chipRow">
             <span class="chip">one-page website</span>
@@ -1727,7 +1540,6 @@
             <span class="chip">leads to email</span>
             <span class="chip">fast launch</span>
           </div>
-
 
           <div style="margin-top:16px;">
             <a class="btn btnAccent" href="/fast-website.html" target="_blank" rel="noopener">
@@ -1738,7 +1550,6 @@
       </div>
     </section>
 
-
     <!-- CONTACT FORM -->
     <section class="section" id="ew-contact">
       <div class="formWrap reveal">
@@ -1748,58 +1559,50 @@
           If you prefer, book a consultation and we’ll break it down together.
         </div>
 
-
         <!-- ✅ Fixed: sending to your email -->
         <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
-  <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
 
+          <div class="formGrid">
+            <div>
+              <label>Name</label>
+              <input name="name" required placeholder="How should we address you?">
+            </div>
 
-  <div class="formGrid">
-    <div>
-      <label>Name</label>
-      <input name="name" required placeholder="How should we address you?">
-    </div>
+            <div>
+              <label>Email</label>
+              <input name="_replyto" type="email" required placeholder="you@company.com">
+            </div>
 
+            <div class="full">
+              <label>What do you need?</label>
+              <select name="service" required>
+                <option value="Consultation">Consultation (project discovery)</option>
+                <option value="Website (custom)">Website (custom)</option>
+                <option value="Fast Website Package">Budget website ($199)</option>
+                <option value="Content">Content / video</option>
+                <option value="Integrations & analytics">Integrations / analytics</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-    <div>
-      <label>Email</label>
-      <input name="_replyto" type="email" required placeholder="you@company.com">
-    </div>
+            <div class="full">
+              <label>Message</label>
+              <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
+            </div>
+          </div>
 
-
-    <div class="full">
-      <label>What do you need?</label>
-      <select name="service" required>
-        <option value="Consultation">Consultation (project discovery)</option>
-        <option value="Website (custom)">Website (custom)</option>
-        <option value="Fast Website Package">Budget website ($199)</option>
-        <option value="Content">Content / video</option>
-        <option value="Integrations & analytics">Integrations / analytics</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-
-
-    <div class="full">
-      <label>Message</label>
-      <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
-    </div>
-  </div>
-
-
-  <div class="formActions">
-    <button class="btn btnBlack" type="submit">Send request</button>
-    <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
-  </div>
-</form>
-
+          <div class="formActions">
+            <button class="btn btnBlack" type="submit">Send request</button>
+            <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
+          </div>
+        </form>
 
       </div>
     </section>
-
 
     <!-- FOOTER (contacts) -->
     <footer class="siteFooter" aria-label="Contacts">
@@ -1810,14 +1613,11 @@
       </div>
     </footer>
 
-
   </div>
-
 
   <script>
     (function(){
       const root = document.getElementById("erewhile-dstudio");
-
 
       // smooth anchors inside embed
       root.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -1830,7 +1630,6 @@
         });
       });
 
-
       // reveal on scroll
       const io = new IntersectionObserver((entries)=>{
         entries.forEach(en=>{
@@ -1841,9 +1640,7 @@
         });
       }, { threshold: 0.14 });
 
-
       root.querySelectorAll(".reveal").forEach(el=> io.observe(el));
-
 
       // ===== VIDEO RAILS =====
       (function initVideoRails(){
@@ -1851,7 +1648,6 @@
           const track = root.querySelector("#" + trackId);
           const rail = track ? track.closest(".video-rail") : null;
           if(!track || !rail) return;
-
 
           // Wrap track into viewport (scroll container)
           let viewport = track.parentElement;
@@ -1862,16 +1658,13 @@
             viewport.appendChild(track);
           }
 
-
           // clone children for seamless animation
           const originals = Array.from(track.children);
           originals.forEach(node => track.appendChild(node.cloneNode(true)));
 
-
           // Infinite manual scroll wrap (on viewport)
           let half = 0;
           let lastX = 0;
-
 
           function recomputeHalf(){
             half = Math.floor(track.scrollWidth / 2);
@@ -1879,11 +1672,9 @@
           requestAnimationFrame(recomputeHalf);
           window.addEventListener("resize", recomputeHalf);
 
-
           viewport.addEventListener("scroll", () => {
             if(!half) return;
             const x = viewport.scrollLeft;
-
 
             if(x > lastX && x >= half){
               viewport.scrollLeft = x - half;
@@ -1891,17 +1682,14 @@
               return;
             }
 
-
             if(x < lastX && x <= 1){
               viewport.scrollLeft = x + half;
               lastX = viewport.scrollLeft;
               return;
             }
 
-
             lastX = x;
           }, { passive:true });
-
 
           function stopAllVideos(){
             track.querySelectorAll(".vthumb.playing").forEach(btn=>{
@@ -1910,18 +1698,15 @@
             track.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
           }
 
-
           function manualPause(ms=2400){
             rail.classList.add("manualPause");
             window.clearTimeout(rail.__pauseT);
             rail.__pauseT = window.setTimeout(()=> rail.classList.remove("manualPause"), ms);
           }
 
-
           track.addEventListener("click", (e) => {
             const close = e.target.closest(".vclose");
             const thumb = e.target.closest(".vthumb");
-
 
             if(close){
               e.preventDefault();
@@ -1933,24 +1718,18 @@
               return;
             }
 
-
             if(!thumb) return;
-
 
             const card = thumb.closest(".vcard");
             if(!card) return;
 
-
             const vid = card.getAttribute("data-video");
             if(!vid) return;
 
-
             if(thumb.querySelector("iframe.vframe")) return;
-
 
             stopAllVideos();
             manualPause(3000);
-
 
             const iframe = document.createElement("iframe");
             iframe.className = "vframe";
@@ -1961,45 +1740,35 @@
               "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             );
 
-
             iframe.src =
               "https://www.youtube.com/embed/" + encodeURIComponent(vid) +
               "?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1";
-
 
             thumb.classList.add("playing");
             thumb.appendChild(iframe);
           });
 
-
           rail.addEventListener("click", (e)=>{
             const btn = e.target.closest("[data-rail]");
             if(!btn) return;
 
-
             e.preventDefault();
             e.stopPropagation();
-
 
             stopAllVideos();
             manualPause(2600);
 
-
             const firstCard = track.querySelector(".vcard");
             const step = firstCard ? Math.round(firstCard.getBoundingClientRect().width * 0.95) : 280;
-
 
             const dir = btn.getAttribute("data-rail");
             viewport.scrollBy({ left: dir === "prev" ? -step : step, behavior: "smooth" });
 
-
             window.setTimeout(()=>{ lastX = viewport.scrollLeft; }, 350);
           });
 
-
           rail.addEventListener("touchstart", ()=> manualPause(2600), { passive:true });
         }
-
 
         initOneRail("videoRailLandscape");
         initOneRail("videoRailVertical");
@@ -2008,7 +1777,5 @@
   </script>
 </div>
 
-
 </body>
 </html>
-
