@@ -1,0 +1,1832 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- SEO: Title + Description -->
+  <title>Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)</title>
+  <meta name="description" content="Erewhile Digital builds conversion-focused websites and landing pages, with optional content production, analytics, CRM automation and AI integrations. Turn your website into a revenue-generating digital ecosystem." />
+
+  <!-- Canonical (adjust if needed) -->
+  <link rel="canonical" href="https://erewhile.digital/en/" />
+
+  <!-- Hreflang (RU/LV pages can be created later) -->
+  <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/" />
+  <link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/" />
+  <link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/" />
+  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/" />
+
+  <!-- ✅ Favicons / App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636901/favicon-16x16_zqhiri.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)" />
+  <meta property="og:description" content="Conversion-focused websites + content, analytics, CRM automation and AI integrations. A website that works as your digital ecosystem." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://erewhile.digital/en/" />
+  <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Optional: Twitter cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
+</head>
+<body>
+
+<div id="erewhile-dstudio">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,650;0,750;1,400;1,650&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Brand palette */
+      --a:#076B58;
+      --t1:#054B4D;
+      --t2:#0B324B;
+      --shadow:#042727;
+
+      /* White-page system */
+      --bg:#ffffff;
+      --paper:#fbfbfb;
+      --ink:#0b0b0b;
+      --muted:rgba(11,11,11,.64);
+      --muted2:rgba(11,11,11,.48);
+      --line:rgba(11,11,11,.10);
+      --line2:rgba(11,11,11,.06);
+
+      /* Buttons */
+      --btnH:42px;
+      --r:999px;
+      --ease:cubic-bezier(.16,1,.3,1);
+    }
+
+    #erewhile-dstudio{
+      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+    }
+    #erewhile-dstudio *{ box-sizing:border-box; }
+    #erewhile-dstudio a{ color:inherit; text-decoration:none; }
+
+    /* Outer frame */
+    .wrap{
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow:hidden;
+      overflow-x:hidden;
+    }
+
+    /* Subtle grid background like the reference */
+    .gridBg{
+      position:relative;
+      background:
+        linear-gradient(to right, var(--line2) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--line2) 1px, transparent 1px);
+      background-size: 120px 120px;
+      background-position: center;
+    }
+    .gridBg:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px circle at 50% 0%, rgba(7,107,88,.10), transparent 55%),
+        radial-gradient(900px circle at 85% 20%, rgba(11,50,75,.08), transparent 60%);
+      pointer-events:none;
+    }
+
+    /* Header (sticky) */
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .headerInner{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      gap: 16px;
+    }
+
+    /* BRAND */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+    .brandLogo{
+      height: 28px;
+      width: auto;
+      display:block;
+      transition: .2s var(--ease);
+    }
+    .brandText{ white-space: nowrap; }
+    .brandTextDesktop{ display:inline; }
+    .brandTextMobile{ display:none; }
+    .brand:hover .brandLogo{
+      opacity: .9;
+      transform: translateY(-0.5px);
+    }
+
+    .nav{
+      flex:1;
+      display:none;
+      justify-content:center;
+      gap: 22px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .nav a{
+      padding: 8px 10px;
+      border-radius: 12px;
+      transition: .22s var(--ease);
+    }
+    .nav a:hover{
+      background: rgba(7,107,88,.06);
+      color: var(--ink);
+      transform: translateY(-1px);
+    }
+
+    .headerCtas{
+      display:flex; align-items:center; gap:10px;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    /* Buttons */
+    .btn{
+      height: var(--btnH);
+      padding: 0 16px;
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      background: #fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 650;
+      font-size: 13px;
+      transition: .22s var(--ease);
+      cursor:pointer;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 18px 45px rgba(4,39,39,.10); }
+    .btnBlack{
+      background: var(--ink);
+      border-color: var(--ink);
+      color:#fff;
+    }
+    .btnBlack:hover{ filter: brightness(1.05); }
+    .btnOutline{ background:#fff; }
+    .btnOutline:hover{ border-color: rgba(7,107,88,.35); }
+    .btnAccent{
+      border-color: rgba(7,107,88,.28);
+      background: rgba(7,107,88,.08);
+    }
+    .btnSmall{
+      height: 38px;
+      padding: 0 12px;
+      font-size: 12.5px;
+    }
+
+    /* Sections */
+    .section{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 74px 18px;
+      border-bottom: 1px solid var(--line);
+      position:relative;
+    }
+    .section:last-child{ border-bottom:none; }
+
+    /* Hero */
+    .hero{
+      text-align:center;
+      padding-top: 84px;
+      padding-bottom: 36px;
+    }
+    .h1{
+      margin:0;
+      font-size: 46px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      font-weight: 780;
+    }
+    .sub{
+      margin: 18px auto 0;
+      max-width: 74ch;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .heroCtas{
+      margin-top: 26px;
+      display:flex;
+      gap: 12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    /* Split */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items:start;
+    }
+    .bigLine{
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      font-weight: 740;
+    }
+    .bigLine em{ font-style: italic; font-weight: 650; }
+    .sideLabel{
+      margin-top: 18px;
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted2);
+    }
+
+    .rightCol{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .p{
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 13px;
+    }
+
+    /* Ecosystem map */
+    .ecoWrap{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      padding: 18px;
+      overflow:hidden;
+      position:relative;
+      width: 100%;
+      justify-self: stretch;
+      min-width: 0;
+    }
+    .ecoWrap:before{
+      content:"";
+      position:absolute; inset:-20%;
+      background:
+        radial-gradient(600px circle at 20% 25%, rgba(7,107,88,.18), transparent 55%),
+        radial-gradient(650px circle at 80% 70%, rgba(11,50,75,.14), transparent 60%);
+      pointer-events:none;
+      opacity:.85;
+    }
+    .ecoTitle{
+      position:relative;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:14px;
+      margin-bottom: 14px;
+    }
+    .ecoTitle h2{
+      margin:0;
+      font-size: 34px;
+      line-height: 1.05;
+      letter-spacing:-0.05em;
+      font-weight: 780;
+    }
+    .ecoTitle h2 em{ font-style: italic; font-weight: 650; }
+    .ecoSub{
+      position:relative;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      max-width: 80ch;
+    }
+
+    .ecoGrid{
+      position:relative;
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-items:stretch;
+      min-width: 0;
+    }
+    .ecoCenter{
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 16px;
+      min-width: 0;
+    }
+    .ecoBadge{
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(7,107,88,.20);
+      background: rgba(7,107,88,.08);
+      font-size: 12px;
+      font-weight: 650;
+      color: rgba(11,11,11,.88);
+    }
+    .ecoH{
+      margin: 12px 0 6px;
+      font-size: 20px;
+      letter-spacing:-0.03em;
+      font-weight: 760;
+      line-height: 1.15;
+    }
+    .ecoList{
+      margin: 10px 0 0;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .ecoItem{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background:#fff;
+    }
+    .pillDot{
+      width:10px; height:10px; border-radius:999px; margin-top:4px;
+      background: rgba(7,107,88,.65);
+      box-shadow: 0 14px 30px rgba(7,107,88,.16);
+      flex:0 0 10px;
+    }
+
+    .ecoOrbits{
+      display:grid;
+      gap: 12px;
+      min-width: 0;
+    }
+    .orbit{
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 16px;
+      transition: .22s var(--ease);
+      min-width: 0;
+    }
+    .orbit:hover{ transform: translateY(-2px); box-shadow: 0 22px 60px rgba(4,39,39,.10); border-color: rgba(7,107,88,.22); }
+    .orbitK{
+      font-size: 12px;
+      color: var(--muted2);
+      letter-spacing:.14em;
+      text-transform: uppercase;
+    }
+    .orbitT{
+      margin-top: 10px;
+      font-weight: 760;
+      letter-spacing:-0.03em;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+    .orbitP{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    /* Accordion */
+    details.acc{
+      position:relative;
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      overflow: hidden;
+    }
+    summary.accSum{
+      list-style:none;
+      cursor:pointer;
+      padding: 12px 14px;
+      font-weight: 760;
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      user-select:none;
+    }
+    summary.accSum::-webkit-details-marker{ display:none; }
+    summary.accSum:after{
+      content:"＋";
+      font-weight: 780;
+      opacity:.65;
+    }
+    details[open] summary.accSum:after{ content:"—"; }
+    details.acc > *:not(summary){ padding: 0 14px 14px; }
+
+    /* ===== VIDEO RAIL (base) ===== */
+    .video-rail{
+      position: relative;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+      margin-top: 14px;
+    }
+
+    .railControls{
+      position:absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 6;
+      display:flex;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(8px);
+    }
+    .railBtn{
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+      transition: .22s var(--ease);
+      font-weight: 760;
+      line-height: 1;
+    }
+    .railBtn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+
+    .rail-viewport{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+    }
+    .rail-viewport::-webkit-scrollbar{ display:none; }
+
+    .rail-track{
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      will-change: transform;
+      animation: railScroll 28s linear infinite;
+    }
+    #videoRailLandscape { animation-duration: 28s; }
+    #videoRailVertical  { animation-duration: 40s; }
+
+    .video-rail:hover .rail-track,
+    .video-rail:focus-within .rail-track,
+    .video-rail.manualPause .rail-track{
+      animation-play-state: paused;
+    }
+
+    .vcard{
+      flex: 0 0 auto;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+      transition: .22s var(--ease);
+    }
+    .vcard[data-orient="landscape"]{ width: 320px; }
+    .vcard[data-orient="portrait"]{ width: 220px; }
+    .vcard:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 22px 60px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+
+    .vthumb{
+      position: relative;
+      display: block;
+      width: 100%;
+      border: 0;
+      padding: 0;
+      background: #000;
+      cursor: pointer;
+      overflow:hidden;
+    }
+    .vcard[data-orient="landscape"] .vthumb{ aspect-ratio: 16 / 9; }
+    .vcard[data-orient="portrait"]  .vthumb{ aspect-ratio: 9 / 16; }
+
+    .vthumb img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: .92;
+      transform: scale(1.01);
+      transition: .25s var(--ease);
+    }
+    .vcard:hover .vthumb img{
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    .vplay{
+      position:absolute;
+      inset:auto auto 12px 12px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(8px);
+      z-index: 3;
+      transition: .22s var(--ease);
+    }
+    .vplay:before{
+      content:"";
+      position:absolute;
+      left: 17px;
+      top: 13px;
+      width: 0; height: 0;
+      border-left: 14px solid #fff;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      opacity: .95;
+    }
+
+    .vclose{
+      position:absolute;
+      top: 10px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(8px);
+      color:#fff;
+      font-weight: 760;
+      cursor:pointer;
+      z-index: 4;
+      display:none;
+      transition: .22s var(--ease);
+    }
+    .vthumb.playing .vclose{ display:grid; place-items:center; }
+    .vthumb.playing .vplay{ opacity:0; transform: scale(.96); }
+
+    .vmeta{ padding: 10px 12px 12px; }
+    .vtitle{
+      font-weight: 760;
+      letter-spacing:-0.03em;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+    .vsub{
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted2);
+    }
+
+    .vframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      z-index: 2;
+    }
+
+    @keyframes railScroll{
+      from{ transform: translateX(0); }
+      to{ transform: translateX(-50%); }
+    }
+
+    @media (max-width: 900px){
+      .rail-track{ animation-duration: 36s; }
+      .vcard[data-orient="landscape"]{ width: 280px; }
+      .vcard[data-orient="portrait"]{ width: 200px; }
+      .railControls{ top: 8px; right: 8px; }
+
+      #videoRailLandscape { animation-duration: 48s; }
+      #videoRailVertical  { animation-duration: 36s; }
+    }
+
+    /* Case tiles */
+    .caseHeader{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .caseHeader h2{
+      margin:0;
+      font-size: 34px;
+      line-height: 1.05;
+      letter-spacing:-0.05em;
+      font-weight: 780;
+    }
+    .caseHeader h2 em{ font-style: italic; font-weight: 650; }
+
+    .caseGrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .case{
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      overflow:hidden;
+      background:#fff;
+      transition: .25s var(--ease);
+    }
+    .case:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 22px 60px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+
+    .preview{
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 0;
+    }
+    .preview img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+    }
+
+    .caseBody{ padding: 16px 16px 18px; }
+    .caseKicker{
+      font-size: 12px;
+      color: var(--muted2);
+      margin-bottom: 8px;
+    }
+    .caseTitle{
+      font-weight: 760;
+      letter-spacing:-0.03em;
+      font-size: 20px;
+      line-height: 1.15;
+    }
+    .caseLink{
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--ink);
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      opacity: .85;
+      transition: .2s var(--ease);
+    }
+    .case:hover .caseLink{ opacity:1; transform: translateX(1px); }
+    .arrow{ font-weight: 750; }
+
+    /* Mosaic */
+    .mosaic{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .tile{
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 18px;
+      transition: .22s var(--ease);
+    }
+    .tile:hover{ transform: translateY(-2px); box-shadow: 0 22px 60px rgba(4,39,39,.10); }
+    .quote{
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing:-0.03em;
+      font-weight: 650;
+    }
+    .who{
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .tileH{
+      font-size: 22px;
+      letter-spacing:-0.04em;
+      font-weight: 780;
+      line-height:1.1;
+    }
+    .tileP{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      max-width: 80ch;
+    }
+    .chipRow{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background:#fff;
+      font-size: 12px;
+      color: rgba(11,11,11,.82);
+    }
+
+    /* Contact form */
+    .formWrap{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      padding: 18px;
+    }
+    .formTitle{
+      margin:0;
+      font-size: 26px;
+      letter-spacing:-0.04em;
+      font-weight: 780;
+      line-height: 1.05;
+    }
+    .formDesc{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+    .formGrid{
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    label{
+      display:block;
+      font-size: 12px;
+      letter-spacing: .02em;
+      color: var(--muted2);
+      margin-bottom: 6px;
+    }
+    input, select, textarea{
+      width:100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 12px;
+      font-size: 14px;
+      outline:none;
+      transition: .2s var(--ease);
+      background:#fff;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(7,107,88,.42);
+      box-shadow: 0 0 0 4px rgba(7,107,88,.10);
+    }
+    .formActions{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+    .fine{
+      font-size: 12px;
+      color: var(--muted2);
+      line-height: 1.5;
+    }
+
+    /* Reveal */
+    .reveal{ opacity:0; transform: translateY(10px); transition: .75s var(--ease); }
+    .reveal.on{ opacity:1; transform:none; }
+
+    /* FIX: grid width */
+    .split > * { min-width: 0; }
+    .rightCol { min-width: 0; }
+
+    /* Responsive desktop */
+    @media (min-width: 960px){
+      .nav{ display:flex; }
+      .h1{ font-size: 74px; }
+      .sub{ font-size: 16px; }
+
+      .split{ grid-template-columns: 1.1fr .9fr; gap: 36px; }
+
+      .ecoGrid{
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .caseGrid{ grid-template-columns: 1fr 1fr; }
+
+      .mosaic{
+        grid-template-columns: 1.1fr .9fr .9fr;
+        grid-template-rows: auto auto;
+      }
+      .tile.quoteTile{ grid-column: 1 / 3; }
+      .tile.offerTile{ grid-column: 3 / 4; background:#fff; }
+      .tile.fastTile{ grid-column: 1 / 3; background:#fff; }
+
+      .formGrid{ grid-template-columns: 1fr 1fr; }
+      .full{ grid-column: 1 / -1; }
+
+      /* desktop: accordion behaves like normal */
+      details.acc{ border: 0; background: transparent; }
+      details.acc > summary{ display:none; }
+      details.acc > *:not(summary){ padding: 0; }
+      details.acc[open] > summary{ display:none; }
+    }
+
+    /* ✅ HARD FIX: black buttons always readable */
+    .btnBlack,
+    .btnBlack *{
+      color:#fff !important;
+    }
+    button.btnBlack{
+      -webkit-text-fill-color:#fff;
+    }
+
+    /* =========================
+       MOBILE SIMPLIFY PACK
+       ========================= */
+    @media (max-width: 560px){
+      .wrap{ border-radius: 14px; }
+      .section{ padding: 44px 14px; }
+      .hero{ padding-top: 56px; padding-bottom: 22px; }
+
+      .h1{
+        font-size: 34px;
+        line-height: 1.06;
+        letter-spacing: -0.04em;
+      }
+      .sub{
+        font-size: 14px;
+        line-height: 1.65;
+        margin-top: 14px;
+      }
+      .bigLine{
+        font-size: 22px;
+        line-height: 1.18;
+      }
+
+      .ecoTitle h2,
+      .caseHeader h2{
+        font-size: 24px;
+        line-height: 1.1;
+      }
+      .ecoH{ font-size: 18px; }
+      .caseTitle{ font-size: 17px; }
+      .tileH{ font-size: 18px; }
+      .quote{ font-size: 16px; line-height: 1.35; }
+      .caseBody{ padding: 14px 14px 16px; }
+
+      :root{ --btnH: 40px; }
+      .btn{ padding: 0 14px; font-size: 13px; }
+
+      .brand{ min-width: unset; }
+
+      /* ✅ requested: mobile shows text erewhile.digital, hides logo */
+      .brandLogo{ display:none; }
+      .brandTextDesktop{ display:none; }
+      .brandTextMobile{ display:inline; }
+
+      .headerInner{ padding: 10px 12px; gap: 10px; }
+      .headerCtas .btn{ padding: 0 12px; }
+
+      /* on mobile: keep only main CTA in header */
+      .headerCtas a.btnAccent{ display:none; }
+
+      .caseGrid{ gap: 14px; }
+      .mosaic{ gap: 12px; }
+      .tile{ padding: 14px; border-radius: 18px; }
+      .ecoWrap{ padding: 14px; border-radius: 18px; }
+      .ecoCenter, .orbit{ padding: 14px; border-radius: 18px; }
+
+      /* video: calm mode for mobile */
+      .railControls{ display:none; }
+      .rail-track{ animation: none !important; }
+      .rail-viewport{ overflow-x: auto; }
+
+      /* snap for swipe */
+      .rail-viewport{ scroll-snap-type: x mandatory; }
+      .vcard{ scroll-snap-align: start; }
+      .vcard[data-orient="landscape"]{ width: 260px; }
+      .vcard[data-orient="portrait"]{ width: 190px; }
+
+      /* mobile: show only vertical rail block */
+      .railLandscape{ display:none; }
+    }
+
+    /* Core list: desktop vs mobile */
+    .coreListMobile{ display:none; }
+    .coreListDesktop{ display:grid; }
+
+    @media (max-width: 560px){
+      .coreListDesktop{ display:none; }
+      .coreListMobile{ display:block; }
+    }
+
+    /* ===== OFFERS GRID ===== */
+    .offersGrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 960px){
+      .offersGrid{
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+      }
+    }
+
+    /* ===== PRIMARY vs SECONDARY ===== */
+    .primaryOffer{
+      border-color: rgba(7,107,88,.35);
+      background:
+        radial-gradient(600px circle at 20% 0%, rgba(7,107,88,.12), transparent 60%),
+        #fff;
+      box-shadow: 0 30px 80px rgba(4,39,39,.14);
+      transform: translateY(-4px);
+    }
+
+    .secondaryOffer{
+      background: #fff;
+    }
+
+    /* ===== BADGES ===== */
+    .offerBadge{
+      display:inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 760;
+      background: rgba(7,107,88,.12);
+      color: #054B4D;
+    }
+
+    .offerBadge.muted{
+      background: rgba(11,11,11,.06);
+      color: rgba(11,11,11,.65);
+    }
+
+    @media (min-width: 960px){
+      .mosaic.offersGrid{
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto !important;
+      }
+
+      .mosaic.offersGrid .tile.offerTile,
+      .mosaic.offersGrid .tile.fastTile,
+      .mosaic.offersGrid .tile{
+        grid-column: auto !important;
+      }
+    }
+
+    /* LinkedIn icon button */
+    .socialBtn{
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: .22s var(--ease);
+    }
+    .socialBtn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(4,39,39,.10);
+      border-color: rgba(7,107,88,.28);
+    }
+    .socialBtn svg{
+      width: 18px;
+      height: 18px;
+      display:block;
+      opacity: .9;
+    }
+    @media (max-width: 560px){
+      .socialBtn{ display:none; }
+    }
+
+    /* ===== FOOTER ===== */
+    .siteFooter{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px 18px;
+    }
+    .footerCard{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .footerCard:before{
+      content:"";
+      position:absolute; inset:-20%;
+      background:
+        radial-gradient(520px circle at 15% 10%, rgba(7,107,88,.10), transparent 55%),
+        radial-gradient(560px circle at 85% 80%, rgba(11,50,75,.08), transparent 60%);
+      pointer-events:none;
+      opacity:.8;
+    }
+    @media (max-width: 560px){
+      .siteFooter{ padding: 34px 14px; }
+      .footerCard{ border-radius: 18px; padding: 14px; }
+    }
+
+    /* ✅ FOOTER: minimal contacts only */
+    .footerMini{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+      padding: 14px 16px;
+      position:relative;
+    }
+    .footerMiniLink{
+      position:relative;
+      font-weight: 650;
+      font-size: 13px;
+      color: rgba(11,11,11,.86);
+      border-bottom: 1px solid rgba(11,11,11,.18);
+      padding-bottom: 1px;
+      transition: .2s var(--ease);
+    }
+    .footerMiniLink:hover{
+      border-bottom-color: rgba(7,107,88,.45);
+      color: var(--ink);
+      transform: translateY(-1px);
+    }
+    .footerMiniSep{
+      opacity: .35;
+      user-select:none;
+      position:relative;
+    }
+
+    /* ✅ Language switch */
+    .langSwitch{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      margin-left: 8px;
+    }
+    .langLink{
+      height: 32px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      display:inline-flex;
+      align-items:center;
+      font-size: 12px;
+      font-weight: 650;
+      color: rgba(11,11,11,.78);
+      background:#fff;
+      transition: .22s var(--ease);
+    }
+    .langLink:hover{
+      transform: translateY(-1px);
+      border-color: rgba(7,107,88,.28);
+      box-shadow: 0 18px 45px rgba(4,39,39,.08);
+      color: var(--ink);
+    }
+    .langLink.isActive{
+      background: rgba(7,107,88,.08);
+      border-color: rgba(7,107,88,.22);
+      color: rgba(11,11,11,.88);
+    }
+    @media (max-width: 560px){
+      .langSwitch{ display:none; } /* keep header clean on mobile */
+    }
+
+.langSwitch { display: none !important; }
+
+  </style>
+
+  <div class="wrap gridBg">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="headerInner">
+
+        <a class="brand" href="/en/" aria-label="Erewhile Digital">
+          <img
+            class="brandLogo"
+            src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
+            alt="Erewhile Digital"
+            loading="eager"
+            decoding="async"
+          >
+          <span class="brandText brandTextDesktop">erewhile.digital</span>
+          <span class="brandText brandTextMobile">erewhile.digital</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#ew-web">Websites</a>
+          <a href="#ew-work">Work</a>
+          <a href="#ew-contact">Contact</a>
+        </nav>
+
+        <div class="headerCtas">
+          <a class="socialBtn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Erewhile Digital on LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/>
+            </svg>
+          </a>
+
+          <!-- Language links (placeholders until you create them) -->
+          <div class="langSwitch" aria-label="Language switch">
+            <a class="langLink isActive" href="/en/" hreflang="en" lang="en">EN</a>
+            <a class="langLink" href="/lv/" hreflang="lv" lang="lv">LV</a>
+            <a class="langLink" href="/ru/" hreflang="ru" lang="ru">RU</a>
+          </div>
+
+          <a class="btn btnAccent" href="/en/fast-website.html" target="_blank" rel="noopener">Fast website €150</a>
+          <a class="btn btnBlack" href="#ew-contact">Get a quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <h1 class="h1 reveal">
+        Your website as the hub<br>of a digital ecosystem
+      </h1>
+
+      <p class="sub reveal" style="transition-delay:120ms;">
+        We design and launch conversion-focused websites that generate leads and communicate value.
+        When needed, we add content, analytics and integrations — so everything works as one measurable growth system.
+      </p>
+
+      <div class="heroCtas reveal" style="transition-delay:180ms;">
+        <a class="btn btnBlack" href="#ew-contact">Discuss your project</a>
+        <a class="btn btnOutline" href="#ew-orbits">How we scale performance <span class="arrow">›</span></a>
+      </div>
+    </section>
+
+    <!-- ABOUT / POSITIONING -->
+    <section class="section" id="ew-web">
+      <div class="split">
+        <div>
+          <div class="bigLine reveal">
+            We build <b>business websites</b>, personal brand sites and NGO pages — designed to
+            <em>drive action</em>: leads, calls, bookings or donations.
+          </div>
+          <div class="sideLabel reveal" style="transition-delay:100ms;">WEBSITE DESIGN • WEB DEVELOPMENT • CONVERSION RATE OPTIMIZATION</div>
+
+          <div style="margin-top:18px;" class="reveal">
+            <a class="btn btnOutline btnSmall" href="#ew-contact">Request an estimate</a>
+          </div>
+        </div>
+
+        <div class="rightCol">
+          <p class="p reveal">
+            We start with the fundamentals: structure, positioning and a clear user journey.
+            Your website becomes the central touchpoint — traffic lands there, value is obvious, and conversion is the goal.
+          </p>
+          <p class="p reveal" style="transition-delay:120ms;">
+            Then we can add “orbits”: content, social distribution, analytics and automation —
+            but the core product stays the same: <b>a website that performs</b>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Orbits block -->
+      <div id="ew-orbits" class="ecoWrap reveal" style="transition-delay:180ms; margin-top:22px;">
+        <div class="ecoTitle">
+          <h2>Core + <em>orbits</em></h2>
+        </div>
+        <div class="ecoSub">
+          The website is the core. Around it — modular services you can add later to improve visibility, conversion and operations.
+        </div>
+
+        <div class="ecoGrid" style="margin-top:14px;">
+          <div class="ecoCenter">
+            <span class="ecoBadge">CORE: WEBSITE</span>
+            <div class="ecoH">A conversion-ready website</div>
+
+            <ul class="ecoList coreListDesktop">
+              <li class="ecoItem"><span class="pillDot"></span><span>Goal-driven structure: lead generation, bookings, sales, donations</span></li>
+              <li class="ecoItem"><span class="pillDot"></span><span>UI/UX design: fast, clear, premium feel</span></li>
+              <li class="ecoItem"><span class="pillDot"></span><span>Landing pages, CTAs and forms built for campaigns</span></li>
+              <li class="ecoItem"><span class="pillDot"></span><span>SEO foundations + analytics setup, ready to scale</span></li>
+            </ul>
+
+            <details class="acc accCore coreListMobile">
+              <summary class="accSum">Show what’s included (4)</summary>
+              <ul class="ecoList">
+                <li class="ecoItem"><span class="pillDot"></span><span>Goal-driven structure: lead generation, bookings, sales, donations</span></li>
+                <li class="ecoItem"><span class="pillDot"></span><span>UI/UX design: fast, clear, premium feel</span></li>
+                <li class="ecoItem"><span class="pillDot"></span><span>Landing pages, CTAs and forms built for campaigns</span></li>
+                <li class="ecoItem"><span class="pillDot"></span><span>SEO foundations + analytics setup, ready to scale</span></li>
+              </ul>
+            </details>
+          </div>
+
+          <details class="acc accOrbits" open>
+            <summary class="accSum">Orbits (4)</summary>
+            <div class="ecoOrbits">
+              <div class="orbit">
+                <div class="orbitK">Orbit 01</div>
+                <div class="orbitT">Content & video production</div>
+                <div class="orbitP">
+                  Performance content that increases trust and conversion: explainers, showcases and credibility assets.
+                </div>
+              </div>
+
+              <div class="orbit">
+                <div class="orbitK">Orbit 02</div>
+                <div class="orbitT">Social distribution</div>
+                <div class="orbitP">If you need more reach — we package content and drive qualified traffic to key landing pages.</div>
+              </div>
+
+              <div class="orbit">
+                <div class="orbitK">Orbit 03</div>
+                <div class="orbitT">Ads & analytics</div>
+                <div class="orbitP">Campaign landing pages + measurable events: leads, bookings, purchases — tracked end to end.</div>
+              </div>
+
+              <div class="orbit">
+                <div class="orbitK">Orbit 04</div>
+                <div class="orbitT">Integrations & automation</div>
+                <div class="orbitP">Forms, CRM, notifications and simple workflows — so the website is a tool, not a brochure.</div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK (web-first) -->
+    <section class="section" id="ew-work">
+      <div class="caseHeader">
+        <h2 class="reveal">Selected work <em>(web-first)</em></h2>
+      </div>
+
+      <div class="caseGrid">
+        <div class="case reveal">
+          <div class="preview">
+            <img loading="lazy" alt="NGO website — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/5_pvmwox.png">
+          </div>
+          <div class="caseBody">
+            <div class="caseKicker">NGO website</div>
+            <div class="caseTitle">Non-profit website — structure, trust, and clear actions</div>
+            <a class="caseLink" href="http://untu.ngo" target="_blank" rel="noopener">Open website <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="case reveal" style="transition-delay:90ms;">
+          <div class="preview">
+            <img loading="lazy" alt="Therapist booking flow — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333933/therapy_zoh9hu.png">
+          </div>
+          <div class="caseBody">
+            <div class="caseKicker">Booking flow</div>
+            <div class="caseTitle">Expert booking — a short path to conversion</div>
+            <a class="caseLink" href="#ew-contact">Request details <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="case reveal">
+          <div class="preview">
+            <img loading="lazy" alt="Mini CRM system — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/7_ci8bnw.png">
+          </div>
+          <div class="caseBody">
+            <div class="caseKicker">Mini CRM</div>
+            <div class="caseTitle">Internal CRM — leads, statuses, and simple workflow</div>
+            <a class="caseLink" href="#ew-contact">Request details <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="case reveal" style="transition-delay:90ms;">
+          <div class="preview">
+            <img loading="lazy" alt="Coworking website — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333596/4_b6vjrg.png">
+          </div>
+          <div class="caseBody">
+            <div class="caseKicker">Coworking website</div>
+            <div class="caseTitle">Coworking — pricing, value props, and lead capture</div>
+            <a class="caseLink" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open website <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="ecoWrap reveal" style="margin-top:22px;">
+        <div class="ecoTitle">
+          <h2>Video <em>for websites</em></h2>
+          <a class="btn btnOutline btnSmall" href="#ew-contact">Request a format</a>
+        </div>
+        <div class="ecoSub">
+          Two formats: landscape for presentations and trust-building; vertical for mobile platforms and reach.
+          On mobile, we prioritize vertical to keep the page lightweight.
+        </div>
+
+        <!-- LANDSCAPE -->
+        <div class="railBlock railLandscape" style="position:relative; margin-top:16px;">
+          <div class="orbitK" style="position:relative;">Landscape • 16:9</div>
+          <div class="orbitT" style="position:relative; margin-top:8px;">Brand presentations, explainers, interviews</div>
+          <div class="orbitP" style="position:relative;">
+            Perfect for homepages and landing pages: explain value, showcase the product, increase trust and improve conversion.
+          </div>
+
+          <div class="video-rail" aria-label="Landscape videos (16:9)">
+            <div class="railControls" aria-label="Rail controls">
+              <button class="railBtn" type="button" data-rail="prev" aria-label="Previous">‹</button>
+              <button class="railBtn" type="button" data-rail="next" aria-label="Next">›</button>
+            </div>
+
+            <div class="rail-track" id="videoRailLandscape">
+              <article class="vcard" data-video="a-VGPkJdKiw" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/a-VGPkJdKiw/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Toyota RAV4 | Car Presentation</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="GZeQtel0e60" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Ozo Golf Club | Event video</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="8SpJwdUtNQI" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8SpJwdUtNQI/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Motion Design Case Study: SelfGrow.me</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="QCebk7f6iC4" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/QCebk7f6iC4/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">SHIFT Movement | Event Video</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="41O2sQ7U2gU" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/41O2sQ7U2gU/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Taycan Stories | David Shulman</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="8z5p8zUraFw" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8z5p8zUraFw/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Event video | Egg Power</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="qdVzzfr3yL4" data-orient="landscape">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/qdVzzfr3yL4/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Mile Logistics | Presentation Video</div>
+                  <div class="vsub">YouTube • 16:9</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- VERTICAL -->
+        <div class="railBlock railVertical" style="position:relative; margin-top:18px;">
+          <div class="orbitK" style="position:relative;">Vertical • 9:16</div>
+          <div class="orbitT" style="position:relative; margin-top:8px;">Maximum impact on mobile</div>
+          <div class="orbitP" style="position:relative;">
+            Optimized for Reels, TikTok and YouTube Shorts. Strong hook → retention → click-through to your site.
+          </div>
+
+          <div class="video-rail" aria-label="Vertical videos (9:16)">
+            <div class="railControls" aria-label="Rail controls">
+              <button class="railBtn" type="button" data-rail="prev" aria-label="Previous">‹</button>
+              <button class="railBtn" type="button" data-rail="next" aria-label="Next">›</button>
+            </div>
+
+            <div class="rail-track" id="videoRailVertical">
+              <article class="vcard" data-video="Wd3h4jD56Qw" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/Wd3h4jD56Qw/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Every curve of the road feels like a dance</div>
+                  <div class="vsub">YouTube Shorts • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="_i7sXoJ9nrs" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/_i7sXoJ9nrs/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Porsche Tequipment | Talking-head video</div>
+                  <div class="vsub">Instagram Reels • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="fm_ghLUm2as" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/fm_ghLUm2as/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Advertising Reel for local brand Mada Riga</div>
+                  <div class="vsub">TikTok • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="lREFWSxRvqo" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/lREFWSxRvqo/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">Powerful women. Powerful message.</div>
+                  <div class="vsub">YouTube Shorts • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="OC-2y-kTyBA" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/OC-2y-kTyBA/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">DeWalt Racing Event</div>
+                  <div class="vsub">Instagram Reels • 9:16</div>
+                </div>
+              </article>
+
+              <article class="vcard" data-video="Zpmgzr-uXlQ" data-orient="portrait">
+                <button class="vthumb" type="button" aria-label="Play video">
+                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/Zpmgzr-uXlQ/hqdefault.jpg">
+                  <span class="vplay" aria-hidden="true"></span>
+                  <span class="vclose" role="button" aria-label="Close">×</span>
+                </button>
+                <div class="vmeta">
+                  <div class="vtitle">New content for ThinkClearly</div>
+                  <div class="vsub">TikTok • 9:16</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section class="section">
+      <div class="mosaic offersGrid">
+        <div class="tile offerTile reveal primaryOffer">
+          <span class="offerBadge">Primary</span>
+
+          <div class="tileH">Main website</div>
+          <div class="tileP">
+            Strategy, design and development of a website as the core of your digital ecosystem.
+            Best if you want long-term results, SEO growth and scalable marketing.
+          </div>
+
+          <div class="chipRow">
+            <span class="chip">information architecture</span>
+            <span class="chip">UI/UX design</span>
+            <span class="chip">animations</span>
+            <span class="chip">analytics</span>
+          </div>
+
+          <div style="margin-top:16px;">
+            <a class="btn btnBlack" href="#ew-contact">Discuss the main website</a>
+          </div>
+        </div>
+
+        <div class="tile fastTile reveal secondaryOffer">
+          <span class="offerBadge muted">Quick start</span>
+
+          <div class="tileH">Budget website (€150)</div>
+          <div class="tileP">
+            A clean one-page website built fast. It explains what you do and captures leads immediately.
+          </div>
+
+          <div class="chipRow">
+            <span class="chip">one-page website</span>
+            <span class="chip">turnkey (€150)</span>
+            <span class="chip">leads to email</span>
+            <span class="chip">fast launch</span>
+          </div>
+
+          <div style="margin-top:16px;">
+            <a class="btn btnAccent" href="/en/fast-website.html" target="_blank" rel="noopener">
+              Open package page
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="section" id="ew-contact">
+      <div class="formWrap reveal">
+        <h3 class="formTitle">Request a quote</h3>
+        <div class="formDesc">
+          Tell us your niche and goal — we’ll reply with a plan, timeline and estimate.
+          If you prefer, book a consultation and we’ll break it down together.
+        </div>
+
+        <!-- ✅ Fixed: sending to your email -->
+        <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
+  <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
+
+  <div class="formGrid">
+    <div>
+      <label>Name</label>
+      <input name="name" required placeholder="How should we address you?">
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input name="_replyto" type="email" required placeholder="you@company.com">
+    </div>
+
+    <div class="full">
+      <label>What do you need?</label>
+      <select name="service" required>
+        <option value="Consultation">Consultation (project discovery)</option>
+        <option value="Website (custom)">Website (custom)</option>
+        <option value="Fast Website Package">Budget website (€150)</option>
+        <option value="Content">Content / video</option>
+        <option value="Integrations & analytics">Integrations / analytics</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="full">
+      <label>Message</label>
+      <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
+    </div>
+  </div>
+
+  <div class="formActions">
+    <button class="btn btnBlack" type="submit">Send request</button>
+    <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
+  </div>
+</form>
+
+      </div>
+    </section>
+
+    <!-- FOOTER (contacts) -->
+    <footer class="siteFooter" aria-label="Contacts">
+      <div class="footerCard reveal footerMini">
+        <a class="footerMiniLink" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
+        <span class="footerMiniSep">•</span>
+        <a class="footerMiniLink" href="tel:+37120579106">+371 20579106</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function(){
+      const root = document.getElementById("erewhile-dstudio");
+
+      // smooth anchors inside embed
+      root.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener("click", (e)=>{
+          const id = a.getAttribute("href");
+          const t = root.querySelector(id);
+          if(!t) return;
+          e.preventDefault();
+          t.scrollIntoView({ behavior:"smooth", block:"start" });
+        });
+      });
+
+      // reveal on scroll
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            en.target.classList.add("on");
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      root.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+
+      // ===== VIDEO RAILS =====
+      (function initVideoRails(){
+        function initOneRail(trackId){
+          const track = root.querySelector("#" + trackId);
+          const rail = track ? track.closest(".video-rail") : null;
+          if(!track || !rail) return;
+
+          // Wrap track into viewport (scroll container)
+          let viewport = track.parentElement;
+          if(!viewport || !viewport.classList.contains("rail-viewport")){
+            viewport = document.createElement("div");
+            viewport.className = "rail-viewport";
+            track.parentNode.insertBefore(viewport, track);
+            viewport.appendChild(track);
+          }
+
+          // clone children for seamless animation
+          const originals = Array.from(track.children);
+          originals.forEach(node => track.appendChild(node.cloneNode(true)));
+
+          // Infinite manual scroll wrap (on viewport)
+          let half = 0;
+          let lastX = 0;
+
+          function recomputeHalf(){
+            half = Math.floor(track.scrollWidth / 2);
+          }
+          requestAnimationFrame(recomputeHalf);
+          window.addEventListener("resize", recomputeHalf);
+
+          viewport.addEventListener("scroll", () => {
+            if(!half) return;
+            const x = viewport.scrollLeft;
+
+            if(x > lastX && x >= half){
+              viewport.scrollLeft = x - half;
+              lastX = viewport.scrollLeft;
+              return;
+            }
+
+            if(x < lastX && x <= 1){
+              viewport.scrollLeft = x + half;
+              lastX = viewport.scrollLeft;
+              return;
+            }
+
+            lastX = x;
+          }, { passive:true });
+
+          function stopAllVideos(){
+            track.querySelectorAll(".vthumb.playing").forEach(btn=>{
+              btn.classList.remove("playing");
+            });
+            track.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
+          }
+
+          function manualPause(ms=2400){
+            rail.classList.add("manualPause");
+            window.clearTimeout(rail.__pauseT);
+            rail.__pauseT = window.setTimeout(()=> rail.classList.remove("manualPause"), ms);
+          }
+
+          track.addEventListener("click", (e) => {
+            const close = e.target.closest(".vclose");
+            const thumb = e.target.closest(".vthumb");
+
+            if(close){
+              e.preventDefault();
+              const btn = close.closest(".vthumb");
+              if(!btn) return;
+              btn.classList.remove("playing");
+              btn.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
+              manualPause(1200);
+              return;
+            }
+
+            if(!thumb) return;
+
+            const card = thumb.closest(".vcard");
+            if(!card) return;
+
+            const vid = card.getAttribute("data-video");
+            if(!vid) return;
+
+            if(thumb.querySelector("iframe.vframe")) return;
+
+            stopAllVideos();
+            manualPause(3000);
+
+            const iframe = document.createElement("iframe");
+            iframe.className = "vframe";
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+            iframe.setAttribute(
+              "allow",
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            );
+
+            iframe.src =
+              "https://www.youtube.com/embed/" + encodeURIComponent(vid) +
+              "?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1";
+
+            thumb.classList.add("playing");
+            thumb.appendChild(iframe);
+          });
+
+          rail.addEventListener("click", (e)=>{
+            const btn = e.target.closest("[data-rail]");
+            if(!btn) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            stopAllVideos();
+            manualPause(2600);
+
+            const firstCard = track.querySelector(".vcard");
+            const step = firstCard ? Math.round(firstCard.getBoundingClientRect().width * 0.95) : 280;
+
+            const dir = btn.getAttribute("data-rail");
+            viewport.scrollBy({ left: dir === "prev" ? -step : step, behavior: "smooth" });
+
+            window.setTimeout(()=>{ lastX = viewport.scrollLeft; }, 350);
+          });
+
+          rail.addEventListener("touchstart", ()=> manualPause(2600), { passive:true });
+        }
+
+        initOneRail("videoRailLandscape");
+        initOneRail("videoRailVertical");
+      })();
+    })();
+  </script>
+</div>
+
+</body>
+</html>
