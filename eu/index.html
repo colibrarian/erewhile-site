@@ -8,10 +8,10 @@
   <title>Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)</title>
   <meta name="description" content="Erewhile Digital builds conversion-focused websites and landing pages, with optional content production, analytics, CRM automation and AI integrations. Turn your website into a revenue-generating digital ecosystem." />
 
-  <!-- Canonical (adjust if needed) -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://erewhile.digital/en/" />
 
-  <!-- Hreflang (RU/LV pages can be created later) -->
+  <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/" />
   <link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/" />
   <link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/" />
@@ -32,7 +32,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- Optional: Twitter cards -->
+  <!-- Twitter cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636275/og_d0d1z2.png" />
 </head>
@@ -83,7 +83,7 @@
       overflow-x:hidden;
     }
 
-    /* Subtle grid background like the reference */
+    /* Subtle grid background */
     .gridBg{
       position:relative;
       background:
@@ -916,7 +916,7 @@
 
       .brand{ min-width: unset; }
 
-      /* ✅ requested: mobile shows text erewhile.digital, hides logo */
+      /* mobile shows text erewhile.digital, hides logo */
       .brandLogo{ display:none; }
       .brandTextDesktop{ display:none; }
       .brandTextMobile{ display:inline; }
@@ -1073,7 +1073,7 @@
       .footerCard{ border-radius: 18px; padding: 14px; }
     }
 
-    /* ✅ FOOTER: minimal contacts only */
+    /* Footer: minimal contacts */
     .footerMini{
       display:flex;
       align-items:center;
@@ -1102,7 +1102,7 @@
       position:relative;
     }
 
-    /* ✅ Language switch */
+    /* Language switch */
     .langSwitch{
       display:flex;
       gap:8px;
@@ -1134,20 +1134,19 @@
       color: rgba(11,11,11,.88);
     }
     @media (max-width: 560px){
-      .langSwitch{ display:none; } /* keep header clean on mobile */
+      .langSwitch{ display:none; }
     }
 
-.langSwitch { display: none !important; }
-
+    /* keep hidden as in your original */
+    .langSwitch { display: none !important; }
   </style>
 
   <div class="wrap gridBg">
     <!-- HEADER -->
     <div class="header">
       <div class="headerInner">
-
-       <a class="brand" href="index.html" aria-label="Erewhile Digital">
-
+        <!-- ✅ FIXED: brand goes to /en/ (not index.html) -->
+        <a class="brand" href="/en/" aria-label="Erewhile Digital">
           <img
             class="brandLogo"
             src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
@@ -1173,15 +1172,15 @@
             </svg>
           </a>
 
-          <!-- Language links (placeholders until you create them) -->
+          <!-- Language links (hidden by CSS) -->
           <div class="langSwitch" aria-label="Language switch">
             <a class="langLink isActive" href="/en/" hreflang="en" lang="en">EN</a>
             <a class="langLink" href="/lv/" hreflang="lv" lang="lv">LV</a>
             <a class="langLink" href="/ru/" hreflang="ru" lang="ru">RU</a>
           </div>
 
-          <a class="btn btnAccent" href="/fast-website.html">Fast website €150</a>
-
+          <!-- ✅ FIXED: point to /en/fast-website.html -->
+          <a class="btn btnAccent" href="/en/fast-website.html">Fast website €150</a>
           <a class="btn btnBlack" href="#ew-contact">Get a quote</a>
         </div>
       </div>
@@ -1595,10 +1594,8 @@
           </div>
 
           <div style="margin-top:16px;">
-        <a class="btn btnAccent" href="/fast-website.html">
-  Open package page
-
-            </a>
+            <!-- ✅ FIXED: point to /en/fast-website.html -->
+            <a class="btn btnAccent" href="/en/fast-website.html">Open package page</a>
           </div>
         </div>
       </div>
@@ -1613,48 +1610,46 @@
           If you prefer, book a consultation and we’ll break it down together.
         </div>
 
-        <!-- ✅ Fixed: sending to your email -->
         <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
-  <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
 
-  <div class="formGrid">
-    <div>
-      <label>Name</label>
-      <input name="name" required placeholder="How should we address you?">
-    </div>
+          <div class="formGrid">
+            <div>
+              <label>Name</label>
+              <input name="name" required placeholder="How should we address you?">
+            </div>
 
-    <div>
-      <label>Email</label>
-      <input name="_replyto" type="email" required placeholder="you@company.com">
-    </div>
+            <div>
+              <label>Email</label>
+              <input name="_replyto" type="email" required placeholder="you@company.com">
+            </div>
 
-    <div class="full">
-      <label>What do you need?</label>
-      <select name="service" required>
-        <option value="Consultation">Consultation (project discovery)</option>
-        <option value="Website (custom)">Website (custom)</option>
-        <option value="Fast Website Package">Budget website (€150)</option>
-        <option value="Content">Content / video</option>
-        <option value="Integrations & analytics">Integrations / analytics</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
+            <div class="full">
+              <label>What do you need?</label>
+              <select name="service" required>
+                <option value="Consultation">Consultation (project discovery)</option>
+                <option value="Website (custom)">Website (custom)</option>
+                <option value="Fast Website Package">Budget website (€150)</option>
+                <option value="Content">Content / video</option>
+                <option value="Integrations & analytics">Integrations / analytics</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-    <div class="full">
-      <label>Message</label>
-      <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
-    </div>
-  </div>
+            <div class="full">
+              <label>Message</label>
+              <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
+            </div>
+          </div>
 
-  <div class="formActions">
-    <button class="btn btnBlack" type="submit">Send request</button>
-    <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
-  </div>
-</form>
-
+          <div class="formActions">
+            <button class="btn btnBlack" type="submit">Send request</button>
+            <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -1833,7 +1828,3 @@
 
 </body>
 </html>
-
-
-
-
