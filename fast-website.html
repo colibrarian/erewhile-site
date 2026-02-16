@@ -7,14 +7,16 @@
   <title>Fast One-Page Website for €150 (Domain Included up to €15) — Erewhile Digital</title>
   <meta name="description" content="Order a fast, clean one-page website for €150. Mobile-ready, lead form included, and domain purchase is included up to €15. Launch quickly with Erewhile Digital." />
 
-  <link rel="canonical" href="https://erewhile.digital/fast-website.html" />
-  <link rel="alternate" hreflang="en" href="https://erewhile.digital/fast-website.html" />
-  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/fast-website.html" />
+<link rel="canonical" href="https://erewhile.digital/en/fast-website.html" />
+<link rel="alternate" hreflang="en" href="https://erewhile.digital/en/fast-website.html" />
+<link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/vienas-lapas-majaslapa-150.html" />
+<link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/fast-website.html" />
+
 
   <meta property="og:title" content="Fast One-Page Website for €150 — Erewhile Digital" />
   <meta property="og:description" content="A clean one-page website built fast: mobile-ready, lead form included, and domain purchase included up to €15." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://erewhile.digital/fast-website.html" />
+  <meta property="og:url" content="https://erewhile.digital/en/fast-website.html" />
   <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1771030818/fast_one_page_ys3lkh.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -456,6 +458,42 @@
       .btn{ padding: 0 12px; font-size: 13px; }
       .headerCtas .btnOutline{ display:none; }
 
+.langSwitch{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-left: 8px;
+}
+
+.langLink{
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  display:inline-flex;
+  align-items:center;
+  font-size: 12px;
+  font-weight: 650;
+  color: rgba(11,11,11,.78);
+  background:#fff;
+  transition: .22s var(--ease);
+  white-space: nowrap;
+}
+
+.langLink:hover{
+  transform: translateY(-1px);
+  border-color: rgba(7,107,88,.28);
+  box-shadow: 0 18px 45px rgba(4,39,39,.08);
+  color: var(--ink);
+}
+
+.langLink.isActive{
+  background: rgba(7,107,88,.08);
+  border-color: rgba(7,107,88,.22);
+  color: rgba(11,11,11,.88);
+}
+
+      
       .h1{
         font-size: 30px;
         line-height: 1.08;
@@ -489,7 +527,7 @@
       "@type": "Offer",
       "priceCurrency": "EUR",
       "price": "150",
-      "url": "https://erewhile.digital/fast-website.html",
+      "url": "https://erewhile.digital/en/fast-website.html",
       "description": "Fast one-page website, mobile-ready, lead form included. Domain purchase included up to €15."
     }
   }
@@ -517,9 +555,16 @@
       </nav>
 
       <div class="headerCtas">
-        <a class="btn btnOutline" href="/">Home</a>
-        <a class="btn btnBlack" href="#order">Order for €150</a>
-      </div>
+  <a class="btn btnOutline" href="/en/">Home</a>
+
+  <div class="langSwitch" aria-label="Language switch">
+    <a class="langLink isActive" href="/en/fast-website.html" hreflang="en" lang="en">EN</a>
+    <a class="langLink" href="/lv/vienas-lapas-majaslapa-150.html" hreflang="lv" lang="lv">LV</a>
+  </div>
+
+  <a class="btn btnBlack" href="#order">Order for €150</a>
+</div>
+
     </div>
   </div>
 
