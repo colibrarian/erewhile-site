@@ -3,1771 +3,1470 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)</title>
   <meta name="description" content="Erewhile Digital builds conversion-focused websites and landing pages, with optional content production, analytics, CRM automation and AI integrations. Turn your website into a revenue-generating digital ecosystem." />
-
   <link rel="canonical" href="https://erewhile.digital/en/" />
-
   <link rel="alternate" hreflang="en" href="https://erewhile.digital/en/" />
   <link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/" />
   <link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/" />
   <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/en/" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636901/favicon-16x16_zqhiri.png">
-  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
-
   <meta property="og:title" content="Erewhile Digital — Website Design & Development, Content, Integrations (CRM & AI)" />
-  <meta property="og:description" content="Conversion-focused websites + content, analytics, CRM automation and AI integrations. A website that works as your digital ecosystem." />
+  <meta property="og:description" content="Conversion-focused websites + content, analytics, CRM automation and AI integrations." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://erewhile.digital/en/" />
-  <meta property="og:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1771023291/og_erewhile_llfrja.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
+  <meta property="og:image" content="https://ik.imagekit.io/erewhile/erewhile/og%20erewhile.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://res.cloudinary.com/da4ctmwz5/image/upload/v1771023291/og_erewhile_llfrja.png" />
+  <meta name="twitter:image" content="https://ik.imagekit.io/erewhile/erewhile/og%20erewhile.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <style>
+    /* ════════════════════════════════════════════
+       TOKENS
+    ════════════════════════════════════════════ */
+    :root {
+      --bg:        #060a0a;
+      --bg2:       #0b1313;
+      --bg3:       #0f1919;
+      --teal:      #0cc9a4;
+      --teal2:     #076B58;
+      --teal-dim:  rgba(12,201,164,0.12);
+      --teal-line: rgba(12,201,164,0.20);
+      --teal-glow: rgba(12,201,164,0.30);
+      --white:     #edf5f3;
+      --muted:     rgba(237,245,243,0.52);
+      --muted2:    rgba(237,245,243,0.30);
+      --line:      rgba(237,245,243,0.07);
+      --line2:     rgba(237,245,243,0.035);
+
+      /* glass */
+      --glass-bg:      rgba(14,22,22,0.55);
+      --glass-bg2:     rgba(18,30,30,0.60);
+      --glass-border:  rgba(237,245,243,0.10);
+      --glass-shadow:  0 8px 32px rgba(0,0,0,0.45);
+      --glass-blur:    blur(20px);
+
+      --ease: cubic-bezier(.16,1,.3,1);
+      --font: 'Montserrat', system-ui, sans-serif;
+    }
+
+    /* ════════════════════════════════════════════
+       RESET + BASE
+    ════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: var(--font); cursor: pointer; }
+
+    /* ════════════════════════════════════════════
+       AMBIENT BACKGROUND
+    ════════════════════════════════════════════ */
+    .ambient {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(130px); opacity: 0.16;
+      animation: orbDrift 18s ease-in-out infinite alternate;
+    }
+    .orb1 { width: 700px; height: 700px; background: radial-gradient(circle, #076B58, transparent 70%); top: -220px; left: -160px; }
+    .orb2 { width: 500px; height: 500px; background: radial-gradient(circle, #054B4D, transparent 70%); top: 35%; right: -180px; animation-delay: -6s; animation-duration: 22s; opacity: 0.12; }
+    .orb3 { width: 420px; height: 420px; background: radial-gradient(circle, #0d9e82, transparent 70%); bottom: 5%; left: 28%; animation-delay: -12s; animation-duration: 26s; opacity: 0.10; }
+    @keyframes orbDrift {
+      from { transform: translate(0,0) scale(1); }
+      to   { transform: translate(40px,-50px) scale(1.1); }
+    }
+
+    /* Fine grid overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(var(--line2) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line2) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ════════════════════════════════════════════
+       GLASSMORPHISM MIXINS (reused classes)
+    ════════════════════════════════════════════ */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+    }
+    .glass-bright {
+      background: var(--glass-bg2);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(237,245,243,0.13);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+    }
+
+    /* ════════════════════════════════════════════
+       HEADER
+    ════════════════════════════════════════════ */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(6,10,10,0.72);
+      backdrop-filter: blur(28px) saturate(1.4);
+      -webkit-backdrop-filter: blur(28px) saturate(1.4);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 1px 0 rgba(12,201,164,0.06);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px);
+      height: 66px;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 14px; letter-spacing: 0.01em;
+      min-width: 180px;
+      transition: opacity .2s;
+    }
+    .brand:hover { opacity: .8; }
+    .brand-logo {
+      height: 26px; width: auto;
+      transition: transform .3s var(--ease), opacity .3s var(--ease);
+    }
+    .brand:hover .brand-logo {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    nav { flex: 1; display: flex; justify-content: center; gap: 2px; }
+    nav a {
+      font-size: 12.5px; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--muted); padding: 8px 14px; border-radius: 10px;
+      transition: all .2s;
+    }
+    nav a:hover { color: var(--white); background: rgba(237,245,243,0.06); }
+
+    .header-ctas { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+
+    /* ════════════════════════════════════════════
+       BUTTONS
+    ════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 20px; border-radius: 100px;
+      font-family: var(--font); font-size: 12.5px; font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all .25s var(--ease);
+      white-space: nowrap; position: relative; overflow: hidden;
+    }
+    .btn::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg,rgba(255,255,255,0.08),transparent);
+      opacity: 0; transition: opacity .25s;
+    }
+    .btn:hover::after { opacity: 1; }
+
+    .btn-ghost {
+      background: rgba(237,245,243,0.06);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      color: var(--muted);
+    }
+    .btn-ghost:hover { border-color: var(--teal-line); color: var(--white); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+    .btn-teal {
+      background: linear-gradient(135deg, var(--teal2), #09897a);
+      border: 1px solid rgba(12,201,164,0.25);
+      color: #fff; font-weight: 700;
+      box-shadow: 0 0 0 0 rgba(12,201,164,0);
+    }
+    .btn-teal:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(12,201,164,0.35), 0 0 0 1px rgba(12,201,164,0.2); }
+
+    .btn-white {
+      background: rgba(237,245,243,0.92);
+      backdrop-filter: blur(10px);
+      color: #060a0a; font-weight: 700;
+      border: 1px solid rgba(237,245,243,0.6);
+    }
+    .btn-white:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(237,245,243,0.18); background: #fff; }
+
+    .btn-outline-teal {
+      background: rgba(12,201,164,0.07);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--teal-line);
+      color: var(--teal);
+    }
+    .btn-outline-teal:hover { background: rgba(12,201,164,0.14); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(12,201,164,0.15); }
+
+    .btn-sm { padding: 8px 16px; font-size: 12px; }
+
+    /* ════════════════════════════════════════════
+       LANG + SOCIAL
+    ════════════════════════════════════════════ */
+    .lang-switch { display: flex; gap: 5px; }
+    .lang-link {
+      height: 30px; padding: 0 10px; border-radius: 100px;
+      background: rgba(237,245,243,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.07em;
+      color: var(--muted2);
+      display: inline-flex; align-items: center;
+      transition: all .2s;
+    }
+    .lang-link:hover, .lang-link.active { border-color: var(--teal-line); color: var(--teal); background: rgba(12,201,164,0.07); }
+
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 100px;
+      background: rgba(237,245,243,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: all .2s;
+    }
+    .social-btn:hover { border-color: var(--teal-line); transform: translateY(-1px); }
+    .social-btn svg { width: 15px; height: 15px; fill: var(--muted); transition: fill .2s; }
+    .social-btn:hover svg { fill: var(--teal); }
+
+    /* ════════════════════════════════════════════
+       LAYOUT
+    ════════════════════════════════════════════ */
+    .section {
+      max-width: 1200px; margin: 0 auto;
+      padding: clamp(64px,8vw,110px) clamp(16px,4vw,48px);
+      position: relative; z-index: 1;
+    }
+    .divider {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px);
+      position: relative; z-index: 1;
+    }
+    .divider::after { content: ''; display: block; border-bottom: 1px solid var(--line); }
+
+    /* ════════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════════ */
+    .hero {
+      text-align: center;
+      padding-top: clamp(90px,11vw,150px);
+      padding-bottom: clamp(64px,8vw,110px);
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 16px; border-radius: 100px;
+      background: rgba(12,201,164,0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--teal-line);
+      font-size: 10.5px; font-weight: 700;
+      letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal);
+      margin-bottom: 36px;
+      opacity: 0; animation: floatUp .8s var(--ease) .1s forwards;
+    }
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 8px var(--teal);
+      animation: blink 2.2s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.75)} }
+
+    h1 {
+      font-family: var(--font);
+      font-size: clamp(40px,7.5vw,92px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      color: var(--white);
+      opacity: 0; animation: floatUp .9s var(--ease) .2s forwards;
+    }
+    h1 .light  { font-weight: 300; color: var(--muted); }
+    h1 .italic { font-style: italic; font-weight: 700; }
+    h1 .accent { color: var(--teal); font-weight: 900; }
+
+    .hero-sub {
+      max-width: 580px; margin: 26px auto 0;
+      font-size: clamp(14px,1.4vw,16px); font-weight: 400;
+      line-height: 1.8; color: var(--muted);
+      opacity: 0; animation: floatUp .9s var(--ease) .35s forwards;
+    }
+    .hero-ctas {
+      margin-top: 40px; display: flex; gap: 12px;
+      justify-content: center; flex-wrap: wrap;
+      opacity: 0; animation: floatUp .9s var(--ease) .5s forwards;
+    }
+    @keyframes floatUp {
+      from { opacity:0; transform:translateY(18px); }
+      to   { opacity:1; transform:none; }
+    }
+
+    /* ════════════════════════════════════════════
+       MARQUEE
+    ════════════════════════════════════════════ */
+    .marquee-wrap {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      background: rgba(11,19,19,0.85);
+      backdrop-filter: blur(12px);
+      overflow: hidden; padding: 13px 0;
+    }
+    .marquee-track {
+      display: flex; width: max-content;
+      animation: marqueeScroll 24s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--muted2);
+      padding: 0 32px; white-space: nowrap;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .marquee-item::after { content:'◆'; font-size:5px; color:var(--teal); opacity:.8; }
+    @keyframes marqueeScroll {
+      from{transform:translateX(0)} to{transform:translateX(-50%)}
+    }
+
+    /* ════════════════════════════════════════════
+       WEBSITE SECTION — STATEMENT + ECO
+    ════════════════════════════════════════════ */
+    .split-2 {
+      display: grid; grid-template-columns: 1.15fr 1fr;
+      gap: clamp(40px,6vw,90px); align-items: start;
+    }
+    @media(max-width:880px){ .split-2{grid-template-columns:1fr;gap:32px} }
+
+    .h2-serif {
+      font-size: clamp(26px,3.5vw,40px);
+      font-weight: 800; line-height: 1.1; letter-spacing: -0.04em;
+    }
+    .h2-serif em { font-style: italic; font-weight: 500; color: var(--teal); }
+    .h2-serif b  { font-weight: 900; }
+
+    .side-label {
+      margin-top: 16px; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted2);
+      line-height: 1.9;
+    }
+
+    .body-text p { font-size: 14px; font-weight: 400; color: var(--muted); line-height: 1.85; }
+    .body-text p + p { margin-top: 14px; }
+    .body-text b { color: var(--white); font-weight: 600; }
+
+    /* ─── Eco glass card ─── */
+    .eco-card {
+      margin-top: 44px; border-radius: 24px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.3);
+      -webkit-backdrop-filter: blur(28px) saturate(1.3);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(237,245,243,0.05);
+      padding: clamp(24px,4vw,48px);
+      position: relative; overflow: hidden;
+    }
+    .eco-card::before {
+      content: ''; position: absolute; inset: -50%;
+      background:
+        radial-gradient(600px circle at 20% 30%, rgba(12,201,164,0.06), transparent 55%),
+        radial-gradient(500px circle at 80% 70%, rgba(5,75,77,0.07), transparent 60%);
+      pointer-events: none;
+    }
+
+    .eco-head { position: relative; margin-bottom: 14px; }
+    .eco-head h3 {
+      font-size: clamp(22px,3vw,36px); font-weight: 800;
+      letter-spacing: -0.04em; line-height: 1.05;
+    }
+    .eco-head h3 em { font-style: italic; font-weight: 600; color: var(--teal); }
+
+    .eco-sub { position: relative; color: var(--muted); font-size: 13.5px; line-height: 1.75; max-width: 70ch; }
+
+    .eco-grid {
+      position: relative; margin-top: 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    @media(max-width:700px){.eco-grid{grid-template-columns:1fr}}
+
+    /* Core box */
+    .core-box {
+      border-radius: 18px;
+      background: rgba(12,201,164,0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(12,201,164,0.18);
+      padding: 22px;
+      box-shadow: inset 0 1px 0 rgba(12,201,164,0.08);
+    }
+    .core-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 100px;
+      background: rgba(12,201,164,0.1);
+      border: 1px solid var(--teal-line);
+      font-size: 10px; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--teal);
+    }
+    .core-box h4 {
+      font-size: 18px; font-weight: 800; letter-spacing: -0.03em;
+      margin: 13px 0 8px; line-height: 1.15;
+    }
+    .core-list { list-style: none; display: grid; gap: 7px; margin-top: 12px; }
+    .core-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 13px; border-radius: 12px;
+      background: rgba(237,245,243,0.03);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+      font-size: 12.5px; color: var(--muted); line-height: 1.55;
+    }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--teal); box-shadow: 0 0 8px rgba(12,201,164,0.6);
+      flex: 0 0 7px; margin-top: 5px;
+    }
+
+    /* Orbits */
+    .orbits-col { display: grid; gap: 10px; }
+    .orbit-card {
+      border-radius: 16px;
+      background: rgba(237,245,243,0.03);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      padding: 16px 18px;
+      box-shadow: inset 0 1px 0 rgba(237,245,243,0.04);
+      transition: all .25s var(--ease);
+    }
+    .orbit-card:hover {
+      border-color: var(--teal-line);
+      background: rgba(12,201,164,0.05);
+      transform: translateX(4px);
+      box-shadow: inset 0 1px 0 rgba(12,201,164,0.06), -4px 0 16px rgba(12,201,164,0.06);
+    }
+    .orbit-num { font-size: 10px; font-weight: 800; letter-spacing: 0.18em; color: var(--teal); text-transform: uppercase; }
+    .orbit-title { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; margin: 7px 0 5px; }
+    .orbit-desc { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+
+    /* ════════════════════════════════════════════
+       WORK SECTION
+    ════════════════════════════════════════════ */
+    .section-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 20px; margin-bottom: 32px;
+    }
+    .section-head h2 {
+      font-size: clamp(28px,4vw,52px); font-weight: 800;
+      letter-spacing: -0.05em; line-height: 1.0;
+    }
+    .section-head h2 em { font-style: italic; font-weight: 500; color: var(--teal); }
+
+    .case-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    @media(max-width:720px){.case-grid{grid-template-columns:1fr}}
+
+    .case-card {
+      border-radius: 20px; overflow: hidden;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      transition: all .3s var(--ease);
+      position: relative;
+    }
+    .case-card::before {
+      content: ''; position: absolute; inset: 0;
+      border-radius: 20px; border: 1px solid var(--teal-line);
+      opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 2;
+    }
+    .case-card:hover { transform: translateY(-5px); box-shadow: 0 28px 70px rgba(0,0,0,0.5); }
+    .case-card:hover::before { opacity: 1; }
+
+    .case-preview { width: 100%; aspect-ratio: 16/10; background: var(--bg3); overflow: hidden; }
+    .case-preview img { width:100%; height:100%; object-fit:cover; display:block; opacity:.88; transform:scale(1.01); transition:all .6s var(--ease); }
+    .case-card:hover .case-preview img { opacity:1; transform:scale(1.05); }
+
+    .case-body { padding: 18px 20px 22px; }
+    .case-kicker { font-size: 10px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+    .case-title  { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; }
+    .case-link   { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 12.5px; font-weight: 500; color: var(--muted); transition: all .2s; }
+    .case-card:hover .case-link { color: var(--teal); }
+    .case-link .arr { transition: transform .2s; }
+    .case-card:hover .case-link .arr { transform: translateX(3px); }
+
+    /* ════════════════════════════════════════════
+       VIDEO SECTION
+    ════════════════════════════════════════════ */
+    .video-wrap {
+      margin-top: 44px; border-radius: 24px; overflow: hidden;
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(237,245,243,0.04);
+      padding: clamp(22px,4vw,40px);
+      position: relative;
+    }
+    .video-wrap::before {
+      content: ''; position: absolute; inset: -50%;
+      background: radial-gradient(500px circle at 80% 15%, rgba(12,201,164,0.05), transparent 60%);
+      pointer-events: none;
+    }
+
+    .video-rail {
+      position: relative; border-radius: 16px;
+      background: rgba(237,245,243,0.025);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      overflow: hidden; margin-top: 18px;
+    }
+    .rail-controls {
+      position: absolute; top: 10px; right: 10px; z-index: 6;
+      display: flex; gap: 6px; padding: 5px; border-radius: 100px;
+      background: rgba(6,10,10,0.7); backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+    }
+    .rail-btn {
+      width: 32px; height: 32px; border-radius: 100px;
+      background: rgba(237,245,243,0.07); backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border);
+      color: var(--muted); font-size: 15px; font-weight: 700; font-family: var(--font);
+      display: grid; place-items: center;
+      transition: all .2s var(--ease);
+    }
+    .rail-btn:hover { border-color: var(--teal-line); color: var(--teal); transform: translateY(-1px); }
+
+    .rail-viewport { overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; overscroll-behavior-x: contain; }
+    .rail-viewport::-webkit-scrollbar { display: none; }
+    .rail-track {
+      display: flex; gap: 10px; padding: 10px;
+      will-change: transform; animation: railAuto 28s linear infinite; width: max-content;
+    }
+    .video-rail:hover .rail-track,
+    .video-rail.manualPause .rail-track { animation-play-state: paused; }
+    #videoRailVertical { animation-duration: 42s; }
+    @keyframes railAuto { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    .vcard {
+      flex: 0 0 auto; border-radius: 14px; overflow: hidden;
+      background: rgba(237,245,243,0.04);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      transition: all .25s var(--ease);
+    }
+    .vcard[data-orient="landscape"] { width: 295px; }
+    .vcard[data-orient="portrait"]  { width: 195px; }
+    .vcard:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0,0,0,0.45); border-color: var(--teal-line); }
+
+    .vthumb { position: relative; display: block; width: 100%; border:0; padding:0; background:#000; cursor:pointer; overflow:hidden; }
+    .vcard[data-orient="landscape"] .vthumb { aspect-ratio: 16/9; }
+    .vcard[data-orient="portrait"]  .vthumb { aspect-ratio: 9/16; }
+    .vthumb img { width:100%; height:100%; object-fit:cover; display:block; opacity:.82; transform:scale(1.01); transition:all .3s var(--ease); }
+    .vcard:hover .vthumb img { opacity:1; transform:scale(1.04); }
+    .vplay {
+      position:absolute; inset: auto auto 10px 10px;
+      width:40px; height:40px; border-radius:100px;
+      border:1px solid rgba(255,255,255,0.2);
+      background:rgba(0,0,0,0.55); backdrop-filter:blur(8px); z-index:3;
+    }
+    .vplay::before {
+      content:''; position:absolute; left:15px; top:12px;
+      width:0; height:0;
+      border-left:13px solid #fff; border-top:8px solid transparent; border-bottom:8px solid transparent;
+    }
+    .vclose {
+      position:absolute; top:8px; right:8px; width:32px; height:32px; border-radius:100px;
+      border:1px solid rgba(255,255,255,0.2); background:rgba(0,0,0,0.55); backdrop-filter:blur(8px);
+      color:#fff; font-weight:700; cursor:pointer; z-index:4; display:none; place-items:center; font-size:15px;
+    }
+    .vthumb.playing .vclose { display:grid; }
+    .vthumb.playing .vplay  { opacity:0; }
+    .vmeta { padding:9px 12px 11px; }
+    .vtitle { font-size:12px; font-weight:700; letter-spacing:-0.01em; line-height:1.3; }
+    .vsub   { margin-top:3px; font-size:11px; color:var(--muted2); font-weight:500; }
+    .vframe { position:absolute; inset:0; width:100%; height:100%; border:0; z-index:2; }
+
+    .rail-label { font-size:10px; font-weight:800; letter-spacing:0.18em; color:var(--teal); text-transform:uppercase; position:relative; }
+    .rail-title { font-size:17px; font-weight:700; letter-spacing:-0.03em; position:relative; margin:7px 0 5px; }
+    .rail-desc  { font-size:13px; color:var(--muted); line-height:1.65; position:relative; max-width:58ch; font-weight:400; }
+    .rail-block + .rail-block { margin-top:28px; }
+
+    /* ════════════════════════════════════════════
+       OFFERS
+    ════════════════════════════════════════════ */
+    .offers-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    @media(max-width:720px){.offers-grid{grid-template-columns:1fr}}
+
+    .offer-card {
+      border-radius: 22px; padding: clamp(22px,3vw,38px);
+      background: var(--glass-bg);
+      backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      transition: all .3s var(--ease); position: relative; overflow: hidden;
+    }
+    .offer-card::before {
+      content:''; position:absolute; inset:0; border-radius:22px;
+      background: linear-gradient(135deg, rgba(237,245,243,0.03), transparent 60%);
+      pointer-events:none;
+    }
+    .offer-card.primary {
+      border-color: rgba(12,201,164,0.22);
+      background: linear-gradient(145deg, rgba(12,201,164,0.07) 0%, rgba(14,22,22,0.6) 55%);
+      box-shadow: 0 0 0 1px rgba(12,201,164,0.15), 0 32px 70px rgba(0,0,0,0.4);
+      transform: translateY(-5px);
+    }
+    .offer-card:hover { transform: translateY(-7px); box-shadow: 0 36px 80px rgba(0,0,0,0.5); }
+    .offer-card.primary:hover { transform: translateY(-9px); }
+
+    .offer-badge {
+      display: inline-block; padding: 5px 13px; border-radius: 100px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 16px; backdrop-filter: blur(8px);
+    }
+    .offer-badge.primary { background: rgba(12,201,164,0.12); color: var(--teal); border: 1px solid var(--teal-line); }
+    .offer-badge.muted   { background: rgba(237,245,243,0.06); color: var(--muted2); border: 1px solid var(--line); }
+
+    .offer-title { font-size: clamp(20px,2.5vw,26px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; }
+    .offer-desc  { margin-top:12px; color:var(--muted); font-size:13.5px; line-height:1.75; font-weight:400; }
+
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:15px; }
+    .chip {
+      padding:6px 13px; border-radius:100px;
+      background: rgba(237,245,243,0.04); backdrop-filter:blur(8px);
+      border:1px solid var(--line);
+      font-size:11px; font-weight:600; color:var(--muted); letter-spacing:0.01em;
+    }
+    .offer-card.primary .chip { border-color:rgba(12,201,164,0.14); }
+    .offer-actions { margin-top:22px; }
+
+    /* ════════════════════════════════════════════
+       CONTACT FORM
+    ════════════════════════════════════════════ */
+    .form-card {
+      border-radius: 26px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(237,245,243,0.05);
+      padding: clamp(26px,4vw,52px);
+      position: relative; overflow: hidden;
+    }
+    .form-card::before {
+      content:''; position:absolute; inset:-50%;
+      background: radial-gradient(450px circle at 10% 15%, rgba(12,201,164,0.05), transparent 55%);
+      pointer-events:none;
+    }
+    .form-card h3 { font-size:clamp(22px,3vw,34px); font-weight:800; letter-spacing:-0.05em; line-height:1.05; position:relative; }
+    .form-desc    { margin-top:10px; color:var(--muted); font-size:13.5px; line-height:1.75; max-width:58ch; position:relative; font-weight:400; }
+
+    .form-grid { margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:13px; position:relative; }
+    @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+    .full { grid-column:1/-1; }
+
+    label { display:block; font-size:10px; font-weight:800; letter-spacing:0.1em; color:var(--muted2); margin-bottom:7px; text-transform:uppercase; }
+    input, select, textarea {
+      width:100%;
+      background: rgba(237,245,243,0.04); backdrop-filter:blur(8px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px; padding:12px 14px;
+      font-size:13.5px; font-family:var(--font); font-weight:500;
+      color:var(--white); outline:none;
+      transition:all .2s var(--ease);
+      box-shadow: inset 0 1px 0 rgba(237,245,243,0.03);
+    }
+    input::placeholder, textarea::placeholder { color:var(--muted2); font-weight:400; }
+    textarea { min-height:130px; resize:vertical; }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--teal-line);
+      box-shadow: 0 0 0 3px rgba(12,201,164,0.08), inset 0 1px 0 rgba(12,201,164,0.05);
+      background: rgba(12,201,164,0.04);
+    }
+    select option { background: var(--bg2); font-family:var(--font); }
+
+    .form-actions { margin-top:16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; position:relative; }
+    .fine { font-size:11.5px; color:var(--muted2); line-height:1.55; font-weight:400; }
+
+    /* ════════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════ */
+    footer { max-width:1200px; margin:0 auto; padding:36px clamp(16px,4vw,48px); position:relative; z-index:1; }
+    .footer-card {
+      border-radius:20px;
+      background: var(--glass-bg); backdrop-filter:blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      padding:18px 28px;
+      display:flex; align-items:center; justify-content:center; gap:14px;
+      position:relative; overflow:hidden;
+    }
+    .footer-card::before {
+      content:''; position:absolute; inset:-50%;
+      background: radial-gradient(350px circle at 50% 50%, rgba(12,201,164,0.04), transparent 60%);
+      pointer-events:none;
+    }
+    .footer-link {
+      font-size:13.5px; font-weight:600; color:var(--muted);
+      border-bottom:1px solid rgba(237,245,243,0.12); padding-bottom:1px;
+      transition:all .2s; position:relative;
+    }
+    .footer-link:hover { color:var(--teal); border-bottom-color:var(--teal-line); transform:translateY(-1px); }
+    .footer-sep { color:var(--muted2); opacity:.45; position:relative; }
+
+    .footer-legal {
+      display:flex; gap:18px; justify-content:center;
+      margin-top:16px; position:relative;
+    }
+    .footer-legal-link {
+      font-size:11px; font-weight:600; letter-spacing:0.04em;
+      color:var(--muted2); border-bottom:1px solid transparent;
+      transition:all .2s; cursor:pointer;
+    }
+    .footer-legal-link:hover { color:var(--teal); border-bottom-color:var(--teal-line); }
+
+    /* ════════════════════════════════════════════
+       REVEAL
+    ════════════════════════════════════════════ */
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .8s var(--ease),transform .8s var(--ease); }
+    .reveal.on { opacity:1; transform:none; }
+
+    /* ════════════════════════════════════════════
+       COOKIE BANNER
+    ════════════════════════════════════════════ */
+    #cookie-banner {
+      position:fixed; bottom:0; left:0; right:0; z-index:1000;
+      padding: clamp(12px,2vw,20px) clamp(16px,4vw,48px);
+      background: rgba(8,14,14,0.85);
+      backdrop-filter: blur(32px) saturate(1.4);
+      -webkit-backdrop-filter: blur(32px) saturate(1.4);
+      border-top: 1px solid var(--glass-border);
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.5);
+      transform: translateY(100%);
+      transition: transform .6s var(--ease);
+    }
+    #cookie-banner.visible { transform: translateY(0); }
+    .cookie-inner {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; gap:clamp(12px,3vw,32px); flex-wrap:wrap;
+    }
+    .cookie-text { flex:1; font-size:12.5px; color:var(--muted); line-height:1.65; font-weight:400; min-width:200px; }
+    .cookie-text b { color:var(--white); font-weight:700; }
+    .cookie-text a { color:var(--teal); border-bottom:1px solid var(--teal-line); padding-bottom:1px; }
+    .cookie-text a:hover { opacity:.8; }
+    .cookie-actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .btn-cookie-accept {
+      padding:9px 22px; border-radius:100px;
+      background: linear-gradient(135deg, var(--teal2), #09897a);
+      border: 1px solid rgba(12,201,164,0.25);
+      color:#fff; font-size:12px; font-weight:700; font-family:var(--font);
+      cursor:pointer; letter-spacing:0.02em;
+      transition:all .25s var(--ease);
+    }
+    .btn-cookie-accept:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(12,201,164,0.3); }
+    .btn-cookie-decline {
+      padding:9px 18px; border-radius:100px;
+      background: rgba(237,245,243,0.06); backdrop-filter:blur(8px);
+      border: 1px solid var(--glass-border);
+      color:var(--muted2); font-size:12px; font-weight:600; font-family:var(--font);
+      cursor:pointer; letter-spacing:0.02em;
+      transition:all .2s;
+    }
+    .btn-cookie-decline:hover { color:var(--white); border-color:var(--line); }
+
+    /* ════════════════════════════════════════════
+       MODAL (Terms / Privacy / Cookies)
+    ════════════════════════════════════════════ */
+    .modal-overlay {
+      position:fixed; inset:0; z-index:1100;
+      background: rgba(6,10,10,0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display:flex; align-items:center; justify-content:center;
+      padding:16px;
+      opacity:0; pointer-events:none;
+      transition:opacity .35s var(--ease);
+    }
+    .modal-overlay.open { opacity:1; pointer-events:all; }
+    .modal-box {
+      width:100%; max-width:720px; max-height:82vh; min-height:0;
+      border-radius:24px;
+      background: rgba(11,19,19,0.92);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+      border:1px solid var(--glass-border);
+      box-shadow: 0 32px 90px rgba(0,0,0,0.7), inset 0 1px 0 rgba(237,245,243,0.06);
+      display:flex; flex-direction:column;
+      transform:scale(.96) translateY(10px);
+      transition: transform .35s var(--ease);
+    }
+    .modal-overlay.open .modal-box { transform:scale(1) translateY(0); }
+
+    .modal-header {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:22px 28px 18px;
+      border-bottom:1px solid var(--line);
+      flex-shrink:0;
+    }
+    .modal-header h3 { font-size:18px; font-weight:800; letter-spacing:-0.03em; }
+    .modal-close {
+      width:34px; height:34px; border-radius:100px;
+      background:rgba(237,245,243,0.06); backdrop-filter:blur(8px);
+      border:1px solid var(--glass-border);
+      color:var(--muted); font-size:18px; font-weight:400;
+      display:grid; place-items:center; cursor:pointer;
+      transition:all .2s; line-height:1;
+      flex-shrink:0;
+    }
+    .modal-close:hover { color:var(--white); border-color:var(--line); }
+
+    .modal-body {
+      padding:24px 28px 32px;
+      overflow-y:auto;
+      flex:1 1 auto;
+      min-height:0;
+      scrollbar-width:thin; scrollbar-color:rgba(237,245,243,0.15) transparent;
+    }
+    .modal-body::-webkit-scrollbar { width:5px; }
+    .modal-body::-webkit-scrollbar-track { background:transparent; }
+    .modal-body::-webkit-scrollbar-thumb { background:rgba(237,245,243,0.15); border-radius:4px; }
+
+    .modal-body h4 { font-size:13px; font-weight:800; letter-spacing:0.03em; color:var(--white); margin:22px 0 8px; text-transform:uppercase; }
+    .modal-body h4:first-child { margin-top:0; }
+    .modal-body p  { font-size:13px; color:var(--muted); line-height:1.8; font-weight:400; margin-bottom:8px; }
+    .modal-body a  { color:var(--teal); border-bottom:1px solid var(--teal-line); }
+    .modal-body ul { margin:6px 0 8px 16px; }
+    .modal-body li { font-size:13px; color:var(--muted); line-height:1.75; font-weight:400; }
+    .modal-body .effective { font-size:11px; color:var(--muted2); font-weight:600; letter-spacing:0.05em; margin-bottom:18px; }
+
+    /* ════════════════════════════════════════════
+       FORM CONSENT CHECKBOX
+    ════════════════════════════════════════════ */
+    .consent-row {
+      display:flex; align-items:flex-start; gap:11px;
+      margin-top:14px; position:relative;
+    }
+    .consent-check {
+      width:18px; height:18px; border-radius:5px; flex:0 0 18px; margin-top:1px;
+      background:rgba(237,245,243,0.06); backdrop-filter:blur(8px);
+      border:1.5px solid var(--glass-border);
+      appearance:none; -webkit-appearance:none; cursor:pointer;
+      transition:all .2s; position:relative;
+    }
+    .consent-check:checked { background:var(--teal2); border-color:var(--teal); }
+    .consent-check:checked::after {
+      content:''; position:absolute; left:4px; top:1px;
+      width:6px; height:10px;
+      border-right:2px solid #fff; border-bottom:2px solid #fff;
+      transform:rotate(45deg);
+    }
+    .consent-check:focus { box-shadow:0 0 0 3px rgba(12,201,164,0.15); }
+    .consent-label { font-size:12px; color:var(--muted); line-height:1.65; font-weight:400; }
+    .consent-label a { color:var(--teal); border-bottom:1px solid var(--teal-line); cursor:pointer; }
+    .consent-label a:hover { opacity:.8; }
+
+    /* ════════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════ */
+    @media(max-width:880px){ nav{display:none} }
+    @media(max-width:540px){
+      .lang-switch{display:none}
+      .social-btn{display:none}
+      .header-ctas .btn-ghost{display:none}
+      .brand-logo{display:none}
+      .vcard[data-orient="landscape"]{width:255px}
+      .vcard[data-orient="portrait"]{width:178px}
+    }
+  </style>
 </head>
 <body>
 
-<div id="erewhile-dstudio">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,650;0,750;1,400;1,650&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --a:#076B58;
-      --t1:#054B4D;
-      --t2:#0B324B;
-      --shadow:#042727;
-
-      --bg:#ffffff;
-      --paper:#fbfbfb;
-      --ink:#0b0b0b;
-      --muted:rgba(11,11,11,.64);
-      --muted2:rgba(11,11,11,.48);
-      --line:rgba(11,11,11,.10);
-      --line2:rgba(11,11,11,.06);
-
-      --btnH:42px;
-      --r:999px;
-      --ease:cubic-bezier(.16,1,.3,1);
-    }
-
-    #erewhile-dstudio{
-      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-    }
-    #erewhile-dstudio *{ box-sizing:border-box; }
-    #erewhile-dstudio a{ color:inherit; text-decoration:none; }
-
-    .wrap{
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      overflow:hidden;
-      overflow-x:hidden;
-    }
-
-    .gridBg{
-      position:relative;
-      background:
-        linear-gradient(to right, var(--line2) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--line2) 1px, transparent 1px);
-      background-size: 120px 120px;
-      background-position: center;
-    }
-    .gridBg:before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        radial-gradient(900px circle at 50% 0%, rgba(7,107,88,.10), transparent 55%),
-        radial-gradient(900px circle at 85% 20%, rgba(11,50,75,.08), transparent 60%);
-      pointer-events:none;
-    }
-
-    .header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background: rgba(255,255,255,.86);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-    .headerInner{
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 14px 18px;
-      display:flex;
-      align-items:center;
-      gap: 16px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width: 220px;
-      font-weight: 750;
-      letter-spacing: -0.02em;
-    }
-    .brandLogo{
-      height: 28px;
-      width: auto;
-      display:block;
-      transition: .2s var(--ease);
-    }
-    .brandText{ white-space: nowrap; }
-    .brandTextDesktop{ display:inline; }
-    .brandTextMobile{ display:none; }
-    .brand:hover .brandLogo{
-      opacity: .9;
-      transform: translateY(-0.5px);
-    }
-
-    .nav{
-      flex:1;
-      display:none;
-      justify-content:center;
-      gap: 22px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .nav a{
-      padding: 8px 10px;
-      border-radius: 12px;
-      transition: .22s var(--ease);
-    }
-    .nav a:hover{
-      background: rgba(7,107,88,.06);
-      color: var(--ink);
-      transform: translateY(-1px);
-    }
-
-    .headerCtas{
-      display:flex; align-items:center; gap:10px;
-      white-space: nowrap;
-      margin-left: auto;
-    }
-
-    .btn{
-      height: var(--btnH);
-      padding: 0 16px;
-      border-radius: var(--r);
-      border: 1px solid var(--line);
-      background: #fff;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      font-weight: 650;
-      font-size: 13px;
-      transition: .22s var(--ease);
-      cursor:pointer;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: 0 18px 45px rgba(4,39,39,.10); }
-    .btnBlack{
-      background: var(--ink);
-      border-color: var(--ink);
-      color:#fff;
-    }
-    .btnBlack:hover{ filter: brightness(1.05); }
-    .btnOutline{ background:#fff; }
-    .btnOutline:hover{ border-color: rgba(7,107,88,.35); }
-    .btnAccent{
-      border-color: rgba(7,107,88,.28);
-      background: rgba(7,107,88,.08);
-    }
-    .btnSmall{
-      height: 38px;
-      padding: 0 12px;
-      font-size: 12.5px;
-    }
-
-    .section{
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 74px 18px;
-      border-bottom: 1px solid var(--line);
-      position:relative;
-    }
-    .section:last-child{ border-bottom:none; }
-
-    .hero{
-      text-align:center;
-      padding-top: 84px;
-      padding-bottom: 36px;
-    }
-    .h1{
-      margin:0;
-      font-size: 46px;
-      line-height: 1.02;
-      letter-spacing: -0.05em;
-      font-weight: 780;
-    }
-    .sub{
-      margin: 18px auto 0;
-      max-width: 74ch;
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-    .heroCtas{
-      margin-top: 26px;
-      display:flex;
-      gap: 12px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
-      align-items:start;
-    }
-    .bigLine{
-      font-size: 30px;
-      line-height: 1.12;
-      letter-spacing: -0.04em;
-      font-weight: 740;
-    }
-    .bigLine em{ font-style: italic; font-weight: 650; }
-    .sideLabel{
-      margin-top: 18px;
-      font-size: 12px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted2);
-    }
-
-    .rightCol{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    .p{
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 13px;
-    }
-
-    .ecoWrap{
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: #fff;
-      padding: 18px;
-      overflow:hidden;
-      position:relative;
-      width: 100%;
-      justify-self: stretch;
-      min-width: 0;
-    }
-    .ecoWrap:before{
-      content:"";
-      position:absolute; inset:-20%;
-      background:
-        radial-gradient(600px circle at 20% 25%, rgba(7,107,88,.18), transparent 55%),
-        radial-gradient(650px circle at 80% 70%, rgba(11,50,75,.14), transparent 60%);
-      pointer-events:none;
-      opacity:.85;
-    }
-    .ecoTitle{
-      position:relative;
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-end;
-      gap:14px;
-      margin-bottom: 14px;
-    }
-    .ecoTitle h2{
-      margin:0;
-      font-size: 34px;
-      line-height: 1.05;
-      letter-spacing:-0.05em;
-      font-weight: 780;
-    }
-    .ecoTitle h2 em{ font-style: italic; font-weight: 650; }
-    .ecoSub{
-      position:relative;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
-      max-width: 80ch;
-    }
-
-    .ecoGrid{
-      position:relative;
-      margin-top: 16px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      align-items:stretch;
-      min-width: 0;
-    }
-    .ecoCenter{
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: var(--paper);
-      padding: 16px;
-      min-width: 0;
-    }
-    .ecoBadge{
-      display:inline-flex;
-      gap: 8px;
-      align-items:center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(7,107,88,.20);
-      background: rgba(7,107,88,.08);
-      font-size: 12px;
-      font-weight: 650;
-      color: rgba(11,11,11,.88);
-    }
-    .ecoH{
-      margin: 12px 0 6px;
-      font-size: 20px;
-      letter-spacing:-0.03em;
-      font-weight: 760;
-      line-height: 1.15;
-    }
-    .ecoList{
-      margin: 10px 0 0;
-      padding: 0;
-      list-style:none;
-      display:grid;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.55;
-    }
-    .ecoItem{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-      padding: 10px 12px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background:#fff;
-    }
-    .pillDot{
-      width:10px; height:10px; border-radius:999px; margin-top:4px;
-      background: rgba(7,107,88,.65);
-      box-shadow: 0 14px 30px rgba(7,107,88,.16);
-      flex:0 0 10px;
-    }
-
-    .ecoOrbits{
-      display:grid;
-      gap: 12px;
-      min-width: 0;
-    }
-    .orbit{
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 16px;
-      transition: .22s var(--ease);
-      min-width: 0;
-    }
-    .orbit:hover{ transform: translateY(-2px); box-shadow: 0 22px 60px rgba(4,39,39,.10); border-color: rgba(7,107,88,.22); }
-    .orbitK{
-      font-size: 12px;
-      color: var(--muted2);
-      letter-spacing:.14em;
-      text-transform: uppercase;
-    }
-    .orbitT{
-      margin-top: 10px;
-      font-weight: 760;
-      letter-spacing:-0.03em;
-      font-size: 18px;
-      line-height: 1.15;
-    }
-    .orbitP{
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
-    }
-
-    details.acc{
-      position:relative;
-      margin-top: 12px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: #fff;
-      overflow: hidden;
-    }
-    summary.accSum{
-      list-style:none;
-      cursor:pointer;
-      padding: 12px 14px;
-      font-weight: 760;
-      font-size: 13px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      user-select:none;
-    }
-    summary.accSum::-webkit-details-marker{ display:none; }
-    summary.accSum:after{
-      content:"＋";
-      font-weight: 780;
-      opacity:.65;
-    }
-    details[open] summary.accSum:after{ content:"—"; }
-    details.acc > *:not(summary){ padding: 0 14px 14px; }
-
-    .video-rail{
-      position: relative;
-      width: 100%;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #fff;
-      overflow: hidden;
-      margin-top: 14px;
-    }
-
-    .railControls{
-      position:absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 6;
-      display:flex;
-      gap: 8px;
-      padding: 6px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(8px);
-    }
-    .railBtn{
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      cursor:pointer;
-      display:grid;
-      place-items:center;
-      transition: .22s var(--ease);
-      font-weight: 760;
-      line-height: 1;
-    }
-    .railBtn:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 18px 45px rgba(4,39,39,.10);
-      border-color: rgba(7,107,88,.28);
-    }
-
-    .rail-viewport{
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-      overscroll-behavior-x: contain;
-      scrollbar-width: none;
-    }
-    .rail-viewport::-webkit-scrollbar{ display:none; }
-
-    .rail-track{
-      display: flex;
-      gap: 12px;
-      padding: 12px;
-      will-change: transform;
-      animation: railScroll 28s linear infinite;
-    }
-    #videoRailLandscape { animation-duration: 28s; }
-    #videoRailVertical  { animation-duration: 40s; }
-
-    .video-rail:hover .rail-track,
-    .video-rail:focus-within .rail-track,
-    .video-rail.manualPause .rail-track{
-      animation-play-state: paused;
-    }
-
-    .vcard{
-      flex: 0 0 auto;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #fff;
-      overflow: hidden;
-      transition: .22s var(--ease);
-    }
-    .vcard[data-orient="landscape"]{ width: 320px; }
-    .vcard[data-orient="portrait"]{ width: 220px; }
-    .vcard:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 22px 60px rgba(4,39,39,.10);
-      border-color: rgba(7,107,88,.28);
-    }
-
-    .vthumb{
-      position: relative;
-      display: block;
-      width: 100%;
-      border: 0;
-      padding: 0;
-      background: #000;
-      cursor: pointer;
-      overflow:hidden;
-    }
-    .vcard[data-orient="landscape"] .vthumb{ aspect-ratio: 16 / 9; }
-    .vcard[data-orient="portrait"]  .vthumb{ aspect-ratio: 9 / 16; }
-
-    .vthumb img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      opacity: .92;
-      transform: scale(1.01);
-      transition: .25s var(--ease);
-    }
-    .vcard:hover .vthumb img{
-      opacity: 1;
-      transform: scale(1.03);
-    }
-
-    .vplay{
-      position:absolute;
-      inset:auto auto 12px 12px;
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.35);
-      background: rgba(0,0,0,.45);
-      backdrop-filter: blur(8px);
-      z-index: 3;
-      transition: .22s var(--ease);
-    }
-    .vplay:before{
-      content:"";
-      position:absolute;
-      left: 17px;
-      top: 13px;
-      width: 0; height: 0;
-      border-left: 14px solid #fff;
-      border-top: 9px solid transparent;
-      border-bottom: 9px solid transparent;
-      opacity: .95;
-    }
-
-    .vclose{
-      position:absolute;
-      top: 10px;
-      right: 10px;
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.35);
-      background: rgba(0,0,0,.45);
-      backdrop-filter: blur(8px);
-      color:#fff;
-      font-weight: 760;
-      cursor:pointer;
-      z-index: 4;
-      display:none;
-      transition: .22s var(--ease);
-    }
-    .vthumb.playing .vclose{ display:grid; place-items:center; }
-    .vthumb.playing .vplay{ opacity:0; transform: scale(.96); }
-
-    .vmeta{ padding: 10px 12px 12px; }
-    .vtitle{
-      font-weight: 760;
-      letter-spacing:-0.03em;
-      font-size: 13px;
-      line-height: 1.25;
-    }
-    .vsub{
-      margin-top: 6px;
-      font-size: 12px;
-      color: var(--muted2);
-    }
-
-    .vframe{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      z-index: 2;
-    }
-
-    @keyframes railScroll{
-      from{ transform: translateX(0); }
-      to{ transform: translateX(-50%); }
-    }
-
-    @media (max-width: 900px){
-      .rail-track{ animation-duration: 36s; }
-      .vcard[data-orient="landscape"]{ width: 280px; }
-      .vcard[data-orient="portrait"]{ width: 200px; }
-      .railControls{ top: 8px; right: 8px; }
-
-      #videoRailLandscape { animation-duration: 48s; }
-      #videoRailVertical  { animation-duration: 36s; }
-    }
-
-    .caseHeader{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-end;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-    .caseHeader h2{
-      margin:0;
-      font-size: 34px;
-      line-height: 1.05;
-      letter-spacing:-0.05em;
-      font-weight: 780;
-    }
-    .caseHeader h2 em{ font-style: italic; font-weight: 650; }
-
-    .caseGrid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-    .case{
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      overflow:hidden;
-      background:#fff;
-      transition: .25s var(--ease);
-    }
-    .case:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 22px 60px rgba(4,39,39,.10);
-      border-color: rgba(7,107,88,.28);
-    }
-
-    .preview{
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      background: #000;
-      position: relative;
-      overflow: hidden;
-      display: block;
-      padding: 0;
-    }
-    .preview img{
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      border-radius: 0;
-      background: transparent;
-      border: 0;
-    }
-
-    .caseBody{ padding: 16px 16px 18px; }
-    .caseKicker{
-      font-size: 12px;
-      color: var(--muted2);
-      margin-bottom: 8px;
-    }
-    .caseTitle{
-      font-weight: 760;
-      letter-spacing:-0.03em;
-      font-size: 20px;
-      line-height: 1.15;
-    }
-    .caseLink{
-      margin-top: 12px;
-      font-size: 13px;
-      color: var(--ink);
-      display:inline-flex;
-      gap: 8px;
-      align-items:center;
-      opacity: .85;
-      transition: .2s var(--ease);
-    }
-    .case:hover .caseLink{ opacity:1; transform: translateX(1px); }
-    .arrow{ font-weight: 750; }
-
-    .mosaic{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    .tile{
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: var(--paper);
-      padding: 18px;
-      transition: .22s var(--ease);
-    }
-    .tile:hover{ transform: translateY(-2px); box-shadow: 0 22px 60px rgba(4,39,39,.10); }
-    .quote{
-      font-size: 18px;
-      line-height: 1.35;
-      letter-spacing:-0.03em;
-      font-weight: 650;
-    }
-    .who{
-      margin-top: 14px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .tileH{
-      font-size: 22px;
-      letter-spacing:-0.04em;
-      font-weight: 780;
-      line-height:1.1;
-    }
-    .tileP{
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
-      max-width: 80ch;
-    }
-    .chipRow{
-      margin-top: 12px;
-      display:flex;
-      gap: 10px;
-      flex-wrap:wrap;
-    }
-    .chip{
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background:#fff;
-      font-size: 12px;
-      color: rgba(11,11,11,.82);
-    }
-
-    .formWrap{
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: #fff;
-      padding: 18px;
-    }
-    .formTitle{
-      margin:0;
-      font-size: 26px;
-      letter-spacing:-0.04em;
-      font-weight: 780;
-      line-height: 1.05;
-    }
-    .formDesc{
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
-      max-width: 70ch;
-    }
-    .formGrid{
-      margin-top: 16px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    label{
-      display:block;
-      font-size: 12px;
-      letter-spacing: .02em;
-      color: var(--muted2);
-      margin-bottom: 6px;
-    }
-    input, select, textarea{
-      width:100%;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px 12px;
-      font-size: 14px;
-      font-family: inherit;
-      line-height: 1.4;
-      outline:none;
-      transition: .2s var(--ease);
-      background:#fff;
-    }
-    textarea{ min-height: 140px; resize: vertical; }
-    input:focus, select:focus, textarea:focus{
-      border-color: rgba(7,107,88,.42);
-      box-shadow: 0 0 0 4px rgba(7,107,88,.10);
-    }
-    input::placeholder, textarea::placeholder{
-      color: rgba(11,11,11,.45);
-    }
-    .formActions{
-      margin-top: 12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      align-items:center;
-    }
-    .fine{
-      font-size: 12px;
-      color: var(--muted2);
-      line-height: 1.5;
-    }
-
-    .reveal{ opacity:0; transform: translateY(10px); transition: .75s var(--ease); }
-    .reveal.on{ opacity:1; transform:none; }
-
-    .split > * { min-width: 0; }
-    .rightCol { min-width: 0; }
-
-    @media (min-width: 960px){
-      .nav{ display:flex; }
-      .h1{ font-size: 74px; }
-      .sub{ font-size: 16px; }
-
-      .split{ grid-template-columns: 1.1fr .9fr; gap: 36px; }
-
-      .ecoGrid{
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-
-      .caseGrid{ grid-template-columns: 1fr 1fr; }
-
-      .mosaic{
-        grid-template-columns: 1.1fr .9fr .9fr;
-        grid-template-rows: auto auto;
-      }
-      .tile.quoteTile{ grid-column: 1 / 3; }
-      .tile.offerTile{ grid-column: 3 / 4; background:#fff; }
-      .tile.fastTile{ grid-column: 1 / 3; background:#fff; }
-
-      .formGrid{ grid-template-columns: 1fr 1fr; }
-      .full{ grid-column: 1 / -1; }
-
-      details.acc{ border: 0; background: transparent; }
-      details.acc > summary{ display:none; }
-      details.acc > *:not(summary){ padding: 0; }
-      details.acc[open] > summary{ display:none; }
-    }
-
-    .btnBlack,
-    .btnBlack *{
-      color:#fff !important;
-    }
-    button.btnBlack{
-      -webkit-text-fill-color:#fff;
-    }
-
-    @media (max-width: 560px){
-      .wrap{ border-radius: 14px; }
-      .section{ padding: 44px 14px; }
-      .hero{ padding-top: 56px; padding-bottom: 22px; }
-
-      .h1{
-        font-size: 34px;
-        line-height: 1.06;
-        letter-spacing: -0.04em;
-      }
-      .sub{
-        font-size: 14px;
-        line-height: 1.65;
-        margin-top: 14px;
-      }
-      .bigLine{
-        font-size: 22px;
-        line-height: 1.18;
-      }
-
-      .ecoTitle h2,
-      .caseHeader h2{
-        font-size: 24px;
-        line-height: 1.1;
-      }
-      .ecoH{ font-size: 18px; }
-      .caseTitle{ font-size: 17px; }
-      .tileH{ font-size: 18px; }
-      .quote{ font-size: 16px; line-height: 1.35; }
-      .caseBody{ padding: 14px 14px 16px; }
-
-      :root{ --btnH: 40px; }
-      .btn{ padding: 0 14px; font-size: 13px; }
-
-      .brand{ min-width: unset; }
-
-      .brandLogo{ display:none; }
-      .brandTextDesktop{ display:none; }
-      .brandTextMobile{ display:inline; }
-
-      .headerInner{ padding: 10px 12px; gap: 10px; }
-      .headerCtas .btn{ padding: 0 12px; }
-
-      .headerCtas a.btnAccent{ display:none; }
-
-      .caseGrid{ gap: 14px; }
-      .mosaic{ gap: 12px; }
-      .tile{ padding: 14px; border-radius: 18px; }
-      .ecoWrap{ padding: 14px; border-radius: 18px; }
-      .ecoCenter, .orbit{ padding: 14px; border-radius: 18px; }
-
-      .railControls{ display:none; }
-      .rail-track{ animation: none !important; }
-      .rail-viewport{ overflow-x: auto; }
-
-      .rail-viewport{ scroll-snap-type: x mandatory; }
-      .vcard{ scroll-snap-align: start; }
-      .vcard[data-orient="landscape"]{ width: 260px; }
-      .vcard[data-orient="portrait"]{ width: 190px; }
-
-      .railLandscape{ display:none; }
-    }
-
-    .coreListMobile{ display:none; }
-    .coreListDesktop{ display:grid; }
-
-    @media (max-width: 560px){
-      .coreListDesktop{ display:none; }
-      .coreListMobile{ display:block; }
-    }
-
-    .offersGrid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    @media (min-width: 960px){
-      .offersGrid{
-        grid-template-columns: 1fr 1fr;
-        align-items: stretch;
-      }
-    }
-
-    .primaryOffer{
-      border-color: rgba(7,107,88,.35);
-      background:
-        radial-gradient(600px circle at 20% 0%, rgba(7,107,88,.12), transparent 60%),
-        #fff;
-      box-shadow: 0 30px 80px rgba(4,39,39,.14);
-      transform: translateY(-4px);
-    }
-
-    .secondaryOffer{
-      background: #fff;
-    }
-
-    .offerBadge{
-      display:inline-block;
-      margin-bottom: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 11px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-weight: 760;
-      background: rgba(7,107,88,.12);
-      color: #054B4D;
-    }
-
-    .offerBadge.muted{
-      background: rgba(11,11,11,.06);
-      color: rgba(11,11,11,.65);
-    }
-
-    @media (min-width: 960px){
-      .mosaic.offersGrid{
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto !important;
-      }
-
-      .mosaic.offersGrid .tile.offerTile,
-      .mosaic.offersGrid .tile.fastTile,
-      .mosaic.offersGrid .tile{
-        grid-column: auto !important;
-      }
-    }
-
-    .socialBtn{
-      width: 42px;
-      height: 42px;
-      padding: 0;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: .22s var(--ease);
-    }
-    .socialBtn:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 18px 45px rgba(4,39,39,.10);
-      border-color: rgba(7,107,88,.28);
-    }
-    .socialBtn svg{
-      width: 18px;
-      height: 18px;
-      display:block;
-      opacity: .9;
-    }
-    @media (max-width: 560px){
-      .socialBtn{ display:none; }
-    }
-
-    .siteFooter{
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 44px 18px;
-    }
-    .footerCard{
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: #fff;
-      padding: 18px;
-      position:relative;
-      overflow:hidden;
-    }
-    .footerCard:before{
-      content:"";
-      position:absolute; inset:-20%;
-      background:
-        radial-gradient(520px circle at 15% 10%, rgba(7,107,88,.10), transparent 55%),
-        radial-gradient(560px circle at 85% 80%, rgba(11,50,75,.08), transparent 60%);
-      pointer-events:none;
-      opacity:.8;
-    }
-    @media (max-width: 560px){
-      .siteFooter{ padding: 34px 14px; }
-      .footerCard{ border-radius: 18px; padding: 14px; }
-    }
-
-    .footerMini{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap: 12px;
-      padding: 14px 16px;
-      position:relative;
-    }
-    .footerMiniLink{
-      position:relative;
-      font-weight: 650;
-      font-size: 13px;
-      color: rgba(11,11,11,.86);
-      border-bottom: 1px solid rgba(11,11,11,.18);
-      padding-bottom: 1px;
-      transition: .2s var(--ease);
-    }
-    .footerMiniLink:hover{
-      border-bottom-color: rgba(7,107,88,.45);
-      color: var(--ink);
-      transform: translateY(-1px);
-    }
-    .footerMiniSep{
-      opacity: .35;
-      user-select:none;
-      position:relative;
-    }
-
-    .langSwitch{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      margin-left: 8px;
-    }
-    .langLink{
-      height: 32px;
-      padding: 0 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      display:inline-flex;
-      align-items:center;
-      font-size: 12px;
-      font-weight: 650;
-      color: rgba(11,11,11,.78);
-      background:#fff;
-      transition: .22s var(--ease);
-    }
-    .langLink:hover{
-      transform: translateY(-1px);
-      border-color: rgba(7,107,88,.28);
-      box-shadow: 0 18px 45px rgba(4,39,39,.08);
-      color: var(--ink);
-    }
-    .langLink.isActive{
-      background: rgba(7,107,88,.08);
-      border-color: rgba(7,107,88,.22);
-      color: rgba(11,11,11,.88);
-    }
-    @media (max-width: 560px){
-      .langSwitch{ display:none; }
-    }
-
-  
-
-  </style>
-
-  <div class="wrap gridBg">
-    <div class="header">
-      <div class="headerInner">
-
-        <a class="brand" href="/en/" aria-label="Erewhile Digital">
-          <img
-            class="brandLogo"
-            src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770410043/logo_erewhile_o4gv8z.png"
-            alt="Erewhile Digital"
-            loading="eager"
-            decoding="async"
-          >
-          <span class="brandText brandTextDesktop">erewhile.digital</span>
-          <span class="brandText brandTextMobile">erewhile.digital</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#ew-web">Websites</a>
-          <a href="#ew-work">Work</a>
-          <a href="#ew-contact">Contact</a>
-        </nav>
-
-        <div class="headerCtas">
-          <a class="socialBtn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener noreferrer"
-             aria-label="Erewhile Digital on LinkedIn" title="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/>
-            </svg>
-          </a>
-
-          <div class="langSwitch" aria-label="Language switch">
-  <a class="langLink isActive" href="/en/" hreflang="en" lang="en">EN</a>
-  <a class="langLink" href="/lv/" hreflang="lv" lang="lv">LV</a>
+<!-- Ambient -->
+<div class="ambient" aria-hidden="true">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
 </div>
 
-          <a class="btn btnAccent" href="/en/fast-website.html">Fast website €150</a>
+<!-- ════════ HEADER ════════ -->
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/en/" aria-label="Erewhile Digital">
+      <img class="brand-logo" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital" loading="eager" decoding="async">
+      <span>erewhile.digital</span>
+    </a>
 
-          <a class="btn btnBlack" href="#ew-contact">Get a quote</a>
+    <nav aria-label="Primary navigation">
+      <a href="#ew-web">Websites</a>
+      <a href="#ew-work">Work</a>
+      <a href="#ew-contact">Contact</a>
+    </nav>
+
+    <div class="header-ctas">
+      <a class="social-btn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/>
+        </svg>
+      </a>
+      <div class="lang-switch" aria-label="Language switch">
+        <!-- <a class="lang-link active" href="/en/" hreflang="en" lang="en">EN</a> -->
+        <!-- <a class="lang-link" href="/lv/" hreflang="lv" lang="lv">LV</a> -->
+      </div>
+      <a class="btn btn-ghost btn-sm" href="/en/fast-website.html">Landing page from €250</a>
+      <a class="btn btn-teal btn-sm" href="#ew-contact">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- ════════ HERO ════════ -->
+<section class="section hero" id="top">
+  <div class="hero-badge">Digital Agency · Riga</div>
+  <h1>
+    Your website<br>
+    <span class="light">as the hub</span> of a<br>
+    <span class="italic">digital</span> <span class="accent">ecosystem</span>
+  </h1>
+  <p class="hero-sub">
+    We design and launch conversion-focused websites that generate leads and communicate value.
+    When needed, we add content, analytics and integrations — so everything works as one measurable growth system.
+  </p>
+  <div class="hero-ctas">
+    <a class="btn btn-white" href="#ew-contact">Discuss your project</a>
+    <a class="btn btn-ghost" href="#ew-orbits">How we scale performance <span style="margin-left:3px;">›</span></a>
+  </div>
+</section>
+
+<!-- ════════ MARQUEE ════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track" aria-hidden="true">
+    <span class="marquee-item">Website Design</span>
+    <span class="marquee-item">Web Development</span>
+    <span class="marquee-item">CRM Automation</span>
+    <span class="marquee-item">AI Integrations</span>
+    <span class="marquee-item">Video Content</span>
+    <span class="marquee-item">Analytics</span>
+    <span class="marquee-item">Conversion Rate Optimization</span>
+    <span class="marquee-item">SEO Foundations</span>
+    <span class="marquee-item">Landing Pages</span>
+    <span class="marquee-item">Website Design</span>
+    <span class="marquee-item">Web Development</span>
+    <span class="marquee-item">CRM Automation</span>
+    <span class="marquee-item">AI Integrations</span>
+    <span class="marquee-item">Video Content</span>
+    <span class="marquee-item">Analytics</span>
+    <span class="marquee-item">Conversion Rate Optimization</span>
+    <span class="marquee-item">SEO Foundations</span>
+    <span class="marquee-item">Landing Pages</span>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- ════════ WEB SECTION ════════ -->
+<section class="section" id="ew-web">
+  <div class="split-2">
+    <div>
+      <div class="h2-serif reveal">
+        We build <b>business websites</b>, personal brand sites and NGO pages — designed to
+        <em>drive action</em>: leads, calls, bookings or donations.
+      </div>
+      <div class="side-label reveal" style="transition-delay:.1s;">WEBSITE DESIGN • WEB DEVELOPMENT • CONVERSION RATE OPTIMIZATION</div>
+      <a class="btn btn-outline-teal reveal" href="#ew-contact" style="margin-top:26px;transition-delay:.15s;">Request an estimate</a>
+    </div>
+    <div class="body-text">
+      <p class="reveal">
+        We start with the fundamentals: structure, positioning and a clear user journey.
+        Your website becomes the central touchpoint — traffic lands there, value is obvious, and conversion is the goal.
+      </p>
+      <p class="reveal" style="transition-delay:.12s;">
+        Then we can add "orbits": content, social distribution, analytics and automation —
+        but the core product stays the same: <b>a website that performs</b>.
+      </p>
+    </div>
+  </div>
+
+  <div class="eco-card reveal" id="ew-orbits" style="transition-delay:.18s;">
+    <div class="eco-head">
+      <h3>Core + <em>orbits</em></h3>
+    </div>
+    <p class="eco-sub">
+      The website is the core. Around it — modular services you can add later to improve visibility, conversion and operations.
+    </p>
+    <div class="eco-grid">
+      <div class="core-box">
+        <span class="core-badge">CORE: WEBSITE</span>
+        <h4>A conversion-ready website</h4>
+        <ul class="core-list">
+          <li class="core-item"><span class="dot"></span><span>Goal-driven structure: lead generation, bookings, sales, donations</span></li>
+          <li class="core-item"><span class="dot"></span><span>UI/UX design: fast, clear, premium feel</span></li>
+          <li class="core-item"><span class="dot"></span><span>Landing pages, CTAs and forms built for campaigns</span></li>
+          <li class="core-item"><span class="dot"></span><span>SEO foundations + analytics setup, ready to scale</span></li>
+        </ul>
+      </div>
+      <div class="orbits-col">
+        <div class="orbit-card"><div class="orbit-num">Orbit 01</div><div class="orbit-title">Content & video production</div><div class="orbit-desc">Performance content that increases trust and conversion: explainers, showcases and credibility assets.</div></div>
+        <div class="orbit-card"><div class="orbit-num">Orbit 02</div><div class="orbit-title">Social distribution</div><div class="orbit-desc">If you need more reach — we package content and drive qualified traffic to key landing pages.</div></div>
+        <div class="orbit-card"><div class="orbit-num">Orbit 03</div><div class="orbit-title">Ads & analytics</div><div class="orbit-desc">Campaign landing pages + measurable events: leads, bookings, purchases — tracked end to end.</div></div>
+        <div class="orbit-card"><div class="orbit-num">Orbit 04</div><div class="orbit-title">Integrations & automation</div><div class="orbit-desc">Forms, CRM, notifications and simple workflows — so the website is a tool, not a brochure.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ WORK ════════ -->
+<div class="divider"></div>
+<section class="section" id="ew-work">
+  <div class="section-head">
+    <h2 class="reveal">Selected work <em>(web-first)</em></h2>
+  </div>
+  <div class="case-grid">
+    <div class="case-card reveal">
+      <div class="case-preview"><img loading="lazy" alt="NGO website" src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366"></div>
+      <div class="case-body"><div class="case-kicker">NGO website</div><div class="case-title">Non-profit website — structure, trust, and clear actions</div><a class="case-link" href="http://untu.ngo" target="_blank" rel="noopener">Open website <span class="arr">→</span></a></div>
+    </div>
+    <div class="case-card reveal" style="transition-delay:.1s;">
+      <div class="case-preview"><img loading="lazy" alt="Booking flow" src="https://ik.imagekit.io/erewhile/erewhile/therapy%20erewhile.png?updatedAt=1777368269354"></div>
+      <div class="case-body"><div class="case-kicker">Booking flow</div><div class="case-title">Expert booking — a short path to conversion</div><a class="case-link" href="#ew-contact">Request details <span class="arr">→</span></a></div>
+    </div>
+    <div class="case-card reveal" style="transition-delay:.05s;">
+      <div class="case-preview"><img loading="lazy" alt="Mini CRM" src="https://ik.imagekit.io/erewhile/erewhile/dashboard.png?updatedAt=1777368268999"></div>
+      <div class="case-body"><div class="case-kicker">Mini CRM</div><div class="case-title">Internal CRM — leads, statuses, and simple workflow</div><a class="case-link" href="#ew-contact">Request details <span class="arr">→</span></a></div>
+    </div>
+    <div class="case-card reveal" style="transition-delay:.15s;">
+      <div class="case-preview"><img loading="lazy" alt="Coworking website" src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266"></div>
+      <div class="case-body"><div class="case-kicker">Coworking website</div><div class="case-title">Coworking — pricing, value props, and lead capture</div><a class="case-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open website <span class="arr">→</span></a></div>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <div class="video-wrap reveal" style="transition-delay:.1s;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:12px;position:relative;">
+      <h3 style="font-size:clamp(20px,2.5vw,30px);font-weight:800;letter-spacing:-0.04em;">Video <em style="font-style:italic;font-weight:500;color:var(--teal);">for websites</em></h3>
+      <a class="btn btn-ghost btn-sm" href="#ew-contact" style="flex-shrink:0;">Request a format</a>
+    </div>
+    <p class="eco-sub" style="position:relative;">Two formats: landscape for presentations and trust-building; vertical for mobile platforms and reach. On mobile, we prioritize vertical to keep the page lightweight.</p>
+
+    <div class="rail-block" style="margin-top:22px;">
+      <div class="rail-label">Landscape • 16:9</div>
+      <div class="rail-title">Brand presentations, explainers, interviews</div>
+      <div class="rail-desc">Perfect for homepages and landing pages: explain value, showcase the product, increase trust and improve conversion.</div>
+      <div class="video-rail" aria-label="Landscape videos (16:9)">
+        <div class="rail-controls"><button class="rail-btn" data-rail="prev" aria-label="Previous">‹</button><button class="rail-btn" data-rail="next" aria-label="Next">›</button></div>
+        <div class="rail-viewport">
+          <div class="rail-track" id="videoRailLandscape">
+            <article class="vcard" data-video="a-VGPkJdKiw" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Toyota RAV4" loading="eager" src="https://i.ytimg.com/vi/a-VGPkJdKiw/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Toyota RAV4 | Car Presentation</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="GZeQtel0e60" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Ozo Golf Club" loading="eager" src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Ozo Golf Club | Event video</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="8SpJwdUtNQI" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="SelfGrow.me" loading="eager" src="https://i.ytimg.com/vi/8SpJwdUtNQI/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Motion Design Case Study: SelfGrow.me</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="QCebk7f6iC4" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="SHIFT Movement" loading="eager" src="https://i.ytimg.com/vi/QCebk7f6iC4/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">SHIFT Movement | Event Video</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="41O2sQ7U2gU" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Taycan Stories" loading="eager" src="https://i.ytimg.com/vi/41O2sQ7U2gU/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Taycan Stories | David Shulman</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="8z5p8zUraFw" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Egg Power" loading="eager" src="https://i.ytimg.com/vi/8z5p8zUraFw/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Event video | Egg Power</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="qdVzzfr3yL4" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Mile Logistics" loading="eager" src="https://i.ytimg.com/vi/qdVzzfr3yL4/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Mile Logistics | Presentation Video</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <!-- dup for loop -->
+            <article class="vcard" data-video="a-VGPkJdKiw" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Toyota RAV4" loading="lazy" src="https://i.ytimg.com/vi/a-VGPkJdKiw/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Toyota RAV4 | Car Presentation</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="GZeQtel0e60" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="Ozo Golf Club" loading="lazy" src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Ozo Golf Club | Event video</div><div class="vsub">YouTube • 16:9</div></div></article>
+            <article class="vcard" data-video="8SpJwdUtNQI" data-orient="landscape"><button class="vthumb" type="button" aria-label="Play video"><img alt="SelfGrow.me" loading="lazy" src="https://i.ytimg.com/vi/8SpJwdUtNQI/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Motion Design Case Study: SelfGrow.me</div><div class="vsub">YouTube • 16:9</div></div></article>
+          </div>
         </div>
       </div>
     </div>
 
-    <section class="section hero">
-      <h1 class="h1 reveal">
-        Your website as the hub<br>of a digital ecosystem
-      </h1>
-
-      <p class="sub reveal" style="transition-delay:120ms;">
-        We design and launch conversion-focused websites that generate leads and communicate value.
-        When needed, we add content, analytics and integrations — so everything works as one measurable growth system.
-      </p>
-
-      <div class="heroCtas reveal" style="transition-delay:180ms;">
-        <a class="btn btnBlack" href="#ew-contact">Discuss your project</a>
-        <a class="btn btnOutline" href="#ew-orbits">How we scale performance <span class="arrow">›</span></a>
-      </div>
-    </section>
-
-    <section class="section" id="ew-web">
-      <div class="split">
-        <div>
-          <div class="bigLine reveal">
-            We build <b>business websites</b>, personal brand sites and NGO pages — designed to
-            <em>drive action</em>: leads, calls, bookings or donations.
-          </div>
-          <div class="sideLabel reveal" style="transition-delay:100ms;">WEBSITE DESIGN • WEB DEVELOPMENT • CONVERSION RATE OPTIMIZATION</div>
-
-          <div style="margin-top:18px;" class="reveal">
-            <a class="btn btnOutline btnSmall" href="#ew-contact">Request an estimate</a>
-          </div>
-        </div>
-
-        <div class="rightCol">
-          <p class="p reveal">
-            We start with the fundamentals: structure, positioning and a clear user journey.
-            Your website becomes the central touchpoint — traffic lands there, value is obvious, and conversion is the goal.
-          </p>
-          <p class="p reveal" style="transition-delay:120ms;">
-            Then we can add “orbits”: content, social distribution, analytics and automation —
-            but the core product stays the same: <b>a website that performs</b>.
-          </p>
-        </div>
-      </div>
-
-      <div id="ew-orbits" class="ecoWrap reveal" style="transition-delay:180ms; margin-top:22px;">
-        <div class="ecoTitle">
-          <h2>Core + <em>orbits</em></h2>
-        </div>
-        <div class="ecoSub">
-          The website is the core. Around it — modular services you can add later to improve visibility, conversion and operations.
-        </div>
-
-        <div class="ecoGrid" style="margin-top:14px;">
-          <div class="ecoCenter">
-            <span class="ecoBadge">CORE: WEBSITE</span>
-            <div class="ecoH">A conversion-ready website</div>
-
-            <ul class="ecoList coreListDesktop">
-              <li class="ecoItem"><span class="pillDot"></span><span>Goal-driven structure: lead generation, bookings, sales, donations</span></li>
-              <li class="ecoItem"><span class="pillDot"></span><span>UI/UX design: fast, clear, premium feel</span></li>
-              <li class="ecoItem"><span class="pillDot"></span><span>Landing pages, CTAs and forms built for campaigns</span></li>
-              <li class="ecoItem"><span class="pillDot"></span><span>SEO foundations + analytics setup, ready to scale</span></li>
-            </ul>
-
-            <details class="acc accCore coreListMobile">
-              <summary class="accSum">Show what’s included (4)</summary>
-              <ul class="ecoList">
-                <li class="ecoItem"><span class="pillDot"></span><span>Goal-driven structure: lead generation, bookings, sales, donations</span></li>
-                <li class="ecoItem"><span class="pillDot"></span><span>UI/UX design: fast, clear, premium feel</span></li>
-                <li class="ecoItem"><span class="pillDot"></span><span>Landing pages, CTAs and forms built for campaigns</span></li>
-                <li class="ecoItem"><span class="pillDot"></span><span>SEO foundations + analytics setup, ready to scale</span></li>
-              </ul>
-            </details>
-          </div>
-
-          <details class="acc accOrbits" open>
-            <summary class="accSum">Orbits (4)</summary>
-            <div class="ecoOrbits">
-              <div class="orbit">
-                <div class="orbitK">Orbit 01</div>
-                <div class="orbitT">Content & video production</div>
-                <div class="orbitP">
-                  Performance content that increases trust and conversion: explainers, showcases and credibility assets.
-                </div>
-              </div>
-
-              <div class="orbit">
-                <div class="orbitK">Orbit 02</div>
-                <div class="orbitT">Social distribution</div>
-                <div class="orbitP">If you need more reach — we package content and drive qualified traffic to key landing pages.</div>
-              </div>
-
-              <div class="orbit">
-                <div class="orbitK">Orbit 03</div>
-                <div class="orbitT">Ads & analytics</div>
-                <div class="orbitP">Campaign landing pages + measurable events: leads, bookings, purchases — tracked end to end.</div>
-              </div>
-
-              <div class="orbit">
-                <div class="orbitK">Orbit 04</div>
-                <div class="orbitT">Integrations & automation</div>
-                <div class="orbitP">Forms, CRM, notifications and simple workflows — so the website is a tool, not a brochure.</div>
-              </div>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ew-work">
-      <div class="caseHeader">
-        <h2 class="reveal">Selected work <em>(web-first)</em></h2>
-      </div>
-
-      <div class="caseGrid">
-        <div class="case reveal">
-          <div class="preview">
-            <img loading="lazy" alt="NGO website — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/5_pvmwox.png">
-          </div>
-          <div class="caseBody">
-            <div class="caseKicker">NGO website</div>
-            <div class="caseTitle">Non-profit website — structure, trust, and clear actions</div>
-            <a class="caseLink" href="http://untu.ngo" target="_blank" rel="noopener">Open website <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-        <div class="case reveal" style="transition-delay:90ms;">
-          <div class="preview">
-            <img loading="lazy" alt="Therapist booking flow — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333933/therapy_zoh9hu.png">
-          </div>
-          <div class="caseBody">
-            <div class="caseKicker">Booking flow</div>
-            <div class="caseTitle">Expert booking — a short path to conversion</div>
-            <a class="caseLink" href="#ew-contact">Request details <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-        <div class="case reveal">
-          <div class="preview">
-            <img loading="lazy" alt="Mini CRM system — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333597/7_ci8bnw.png">
-          </div>
-          <div class="caseBody">
-            <div class="caseKicker">Mini CRM</div>
-            <div class="caseTitle">Internal CRM — leads, statuses, and simple workflow</div>
-            <a class="caseLink" href="#ew-contact">Request details <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-        <div class="case reveal" style="transition-delay:90ms;">
-          <div class="preview">
-            <img loading="lazy" alt="Coworking website — preview" src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770333596/4_b6vjrg.png">
-          </div>
-          <div class="caseBody">
-            <div class="caseKicker">Coworking website</div>
-            <div class="caseTitle">Coworking — pricing, value props, and lead capture</div>
-            <a class="caseLink" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open website <span class="arrow">→</span></a>
+    <div class="rail-block">
+      <div class="rail-label">Vertical • 9:16</div>
+      <div class="rail-title">Maximum impact on mobile</div>
+      <div class="rail-desc">Optimized for Reels, TikTok and YouTube Shorts. Strong hook → retention → click-through to your site.</div>
+      <div class="video-rail" aria-label="Vertical videos (9:16)">
+        <div class="rail-controls"><button class="rail-btn" data-rail="prev" aria-label="Previous">‹</button><button class="rail-btn" data-rail="next" aria-label="Next">›</button></div>
+        <div class="rail-viewport">
+          <div class="rail-track" id="videoRailVertical">
+            <article class="vcard" data-video="Wd3h4jD56Qw" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Car dance" loading="lazy" src="https://i.ytimg.com/vi/Wd3h4jD56Qw/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Every curve of the road feels like a dance</div><div class="vsub">YouTube Shorts • 9:16</div></div></article>
+            <article class="vcard" data-video="_i7sXoJ9nrs" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Porsche Tequipment" loading="lazy" src="https://i.ytimg.com/vi/_i7sXoJ9nrs/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Porsche Tequipment | Talking-head video</div><div class="vsub">Instagram Reels • 9:16</div></div></article>
+            <article class="vcard" data-video="fm_ghLUm2as" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Mada Riga" loading="lazy" src="https://i.ytimg.com/vi/fm_ghLUm2as/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Advertising Reel for local brand Mada Riga</div><div class="vsub">TikTok • 9:16</div></div></article>
+            <article class="vcard" data-video="lREFWSxRvqo" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Powerful women" loading="lazy" src="https://i.ytimg.com/vi/lREFWSxRvqo/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Powerful women. Powerful message.</div><div class="vsub">YouTube Shorts • 9:16</div></div></article>
+            <article class="vcard" data-video="OC-2y-kTyBA" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="DeWalt Racing" loading="lazy" src="https://i.ytimg.com/vi/OC-2y-kTyBA/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">DeWalt Racing Event</div><div class="vsub">Instagram Reels • 9:16</div></div></article>
+            <article class="vcard" data-video="Zpmgzr-uXlQ" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="ThinkClearly" loading="eager" src="https://i.ytimg.com/vi/Zpmgzr-uXlQ/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">New content for ThinkClearly</div><div class="vsub">TikTok • 9:16</div></div></article>
+            <!-- dup -->
+            <article class="vcard" data-video="Wd3h4jD56Qw" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Car dance" loading="lazy" src="https://i.ytimg.com/vi/Wd3h4jD56Qw/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Every curve of the road feels like a dance</div><div class="vsub">YouTube Shorts • 9:16</div></div></article>
+            <article class="vcard" data-video="_i7sXoJ9nrs" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Porsche Tequipment" loading="lazy" src="https://i.ytimg.com/vi/_i7sXoJ9nrs/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Porsche Tequipment | Talking-head video</div><div class="vsub">Instagram Reels • 9:16</div></div></article>
+            <article class="vcard" data-video="fm_ghLUm2as" data-orient="portrait"><button class="vthumb" type="button" aria-label="Play video"><img alt="Mada Riga" loading="lazy" src="https://i.ytimg.com/vi/fm_ghLUm2as/hqdefault.jpg"><span class="vplay" aria-hidden="true"></span><span class="vclose" role="button" aria-label="Close">×</span></button><div class="vmeta"><div class="vtitle">Advertising Reel for local brand Mada Riga</div><div class="vsub">TikTok • 9:16</div></div></article>
           </div>
         </div>
       </div>
-
-      <div class="ecoWrap reveal" style="margin-top:22px;">
-        <div class="ecoTitle">
-          <h2>Video <em>for websites</em></h2>
-          <a class="btn btnOutline btnSmall" href="#ew-contact">Request a format</a>
-        </div>
-        <div class="ecoSub">
-          Two formats: landscape for presentations and trust-building; vertical for mobile platforms and reach.
-          On mobile, we prioritize vertical to keep the page lightweight.
-        </div>
-
-        <div class="railBlock railLandscape" style="position:relative; margin-top:16px;">
-          <div class="orbitK" style="position:relative;">Landscape • 16:9</div>
-          <div class="orbitT" style="position:relative; margin-top:8px;">Brand presentations, explainers, interviews</div>
-          <div class="orbitP" style="position:relative;">
-            Perfect for homepages and landing pages: explain value, showcase the product, increase trust and improve conversion.
-          </div>
-
-          <div class="video-rail" aria-label="Landscape videos (16:9)">
-            <div class="railControls" aria-label="Rail controls">
-              <button class="railBtn" type="button" data-rail="prev" aria-label="Previous">‹</button>
-              <button class="railBtn" type="button" data-rail="next" aria-label="Next">›</button>
-            </div>
-
-            <div class="rail-track" id="videoRailLandscape">
-              <article class="vcard" data-video="a-VGPkJdKiw" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/a-VGPkJdKiw/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Toyota RAV4 | Car Presentation</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="GZeQtel0e60" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Ozo Golf Club | Event video</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="8SpJwdUtNQI" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8SpJwdUtNQI/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Motion Design Case Study: SelfGrow.me</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="QCebk7f6iC4" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/QCebk7f6iC4/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">SHIFT Movement | Event Video</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="41O2sQ7U2gU" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/41O2sQ7U2gU/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Taycan Stories | David Shulman</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="8z5p8zUraFw" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/8z5p8zUraFw/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Event video | Egg Power</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="qdVzzfr3yL4" data-orient="landscape">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/qdVzzfr3yL4/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Mile Logistics | Presentation Video</div>
-                  <div class="vsub">YouTube • 16:9</div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <div class="railBlock railVertical" style="position:relative; margin-top:18px;">
-          <div class="orbitK" style="position:relative;">Vertical • 9:16</div>
-          <div class="orbitT" style="position:relative; margin-top:8px;">Maximum impact on mobile</div>
-          <div class="orbitP" style="position:relative;">
-            Optimized for Reels, TikTok and YouTube Shorts. Strong hook → retention → click-through to your site.
-          </div>
-
-          <div class="video-rail" aria-label="Vertical videos (9:16)">
-            <div class="railControls" aria-label="Rail controls">
-              <button class="railBtn" type="button" data-rail="prev" aria-label="Previous">‹</button>
-              <button class="railBtn" type="button" data-rail="next" aria-label="Next">›</button>
-            </div>
-
-            <div class="rail-track" id="videoRailVertical">
-              <article class="vcard" data-video="Wd3h4jD56Qw" data-orient="portrait">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/Wd3h4jD56Qw/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Every curve of the road feels like a dance</div>
-                  <div class="vsub">YouTube Shorts • 9:16</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="_i7sXoJ9nrs" data-orient="portrait">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/_i7sXoJ9nrs/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Porsche Tequipment | Talking-head video</div>
-                  <div class="vsub">Instagram Reels • 9:16</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="fm_ghLUm2as" data-orient="portrait">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/fm_ghLUm2as/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Advertising Reel for local brand Mada Riga</div>
-                  <div class="vsub">TikTok • 9:16</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="lREFWSxRvqo" data-orient="portrait">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/lREFWSxRvqo/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">Powerful women. Powerful message.</div>
-                  <div class="vsub">YouTube Shorts • 9:16</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="OC-2y-kTyBA" data-orient="portrait">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="lazy" src="https://i.ytimg.com/vi/OC-2y-kTyBA/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">DeWalt Racing Event</div>
-                  <div class="vsub">Instagram Reels • 9:16</div>
-                </div>
-              </article>
-
-              <article class="vcard" data-video="Zpmgzr-uXlQ" data-orient="portrait">
-                <button class="vthumb" type="button" aria-label="Play video">
-                  <img alt="Video thumbnail" loading="eager" decoding="async" src="https://i.ytimg.com/vi/Zpmgzr-uXlQ/hqdefault.jpg">
-                  <span class="vplay" aria-hidden="true"></span>
-                  <span class="vclose" role="button" aria-label="Close">×</span>
-                </button>
-                <div class="vmeta">
-                  <div class="vtitle">New content for ThinkClearly</div>
-                  <div class="vsub">TikTok • 9:16</div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="mosaic offersGrid">
-        <div class="tile offerTile reveal primaryOffer">
-          <span class="offerBadge">Primary</span>
-
-          <div class="tileH">Main website</div>
-          <div class="tileP">
-            Strategy, design and development of a website as the core of your digital ecosystem.
-            Best if you want long-term results, SEO growth and scalable marketing.
-          </div>
-
-          <div class="chipRow">
-            <span class="chip">information architecture</span>
-            <span class="chip">UI/UX design</span>
-            <span class="chip">animations</span>
-            <span class="chip">analytics</span>
-          </div>
-
-          <div style="margin-top:16px;">
-            <a class="btn btnBlack" href="#ew-contact">Discuss the main website</a>
-          </div>
-        </div>
-
-        <div class="tile fastTile reveal secondaryOffer">
-          <span class="offerBadge muted">Quick start</span>
-
-          <div class="tileH">Budget website (€150)</div>
-          <div class="tileP">
-            A clean one-page website built fast. It explains what you do and captures leads immediately.
-          </div>
-
-          <div class="chipRow">
-            <span class="chip">one-page website</span>
-            <span class="chip">turnkey (€150)</span>
-            <span class="chip">leads to email</span>
-            <span class="chip">fast launch</span>
-          </div>
-
-          <div style="margin-top:16px;">
-            <a class="btn btnAccent" href="/en/fast-website.html">Open package page</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ew-contact">
-      <div class="formWrap reveal">
-        <h3 class="formTitle">Request a quote</h3>
-        <div class="formDesc">
-          Tell us your niche and goal — we’ll reply with a plan, timeline and estimate.
-          If you prefer, book a consultation and we’ll break it down together.
-        </div>
-
-        <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
-          <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
-
-          <div class="formGrid">
-            <div>
-              <label>Name</label>
-              <input name="name" required placeholder="How should we address you?">
-            </div>
-
-            <div>
-              <label>Email</label>
-              <input name="_replyto" type="email" required placeholder="you@company.com">
-            </div>
-
-            <div class="full">
-              <label>What do you need?</label>
-              <select name="service" required>
-                <option value="Consultation">Consultation (project discovery)</option>
-                <option value="Website (custom)">Website (custom)</option>
-                <option value="Fast Website Package">Budget website (€150)</option>
-                <option value="Content">Content / video</option>
-                <option value="Integrations & analytics">Integrations / analytics</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div class="full">
-              <label>Message</label>
-              <textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea>
-            </div>
-          </div>
-
-          <div class="formActions">
-            <button class="btn btnBlack" type="submit">Send request</button>
-            <div class="fine">We typically reply within 24 hours. If it’s urgent — add your deadline.</div>
-          </div>
-        </form>
-
-      </div>
-    </section>
-
-    <footer class="siteFooter" aria-label="Contacts">
-      <div class="footerCard reveal footerMini">
-        <a class="footerMiniLink" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
-        <span class="footerMiniSep">•</span>
-        <a class="footerMiniLink" href="tel:+37120579106">+371 20579106</a>
-      </div>
-    </footer>
-
+    </div>
   </div>
+</section>
 
-  <script>
-    (function(){
-      const root = document.getElementById("erewhile-dstudio");
+<!-- ════════ OFFERS ════════ -->
+<div class="divider"></div>
+<section class="section">
+  <div class="offers-grid">
+    <div class="offer-card primary reveal">
+      <span class="offer-badge primary">Primary</span>
+      <div class="offer-title">Main website</div>
+      <div class="offer-desc">Strategy, design and development of a website as the core of your digital ecosystem. Best if you want long-term results, SEO growth and scalable marketing.</div>
+      <div class="chips">
+        <span class="chip">information architecture</span>
+        <span class="chip">UI/UX design</span>
+        <span class="chip">animations</span>
+        <span class="chip">analytics</span>
+      </div>
+      <div class="offer-actions"><a class="btn btn-white" href="#ew-contact">Discuss the main website</a></div>
+    </div>
+    <div class="offer-card reveal" style="transition-delay:.1s;">
+      <span class="offer-badge muted">Quick start</span>
+      <div class="offer-title">Landing page from €250</div>
+      <div class="offer-desc">A clean, professional landing page built fast. Explains what you do, builds trust and captures leads immediately. Price depends on scope — starts at €250.</div>
+      <div class="chips">
+        <span class="chip">landing page</span>
+        <span class="chip">from €250</span>
+        <span class="chip">leads to email</span>
+        <span class="chip">fast launch</span>
+      </div>
+      <div class="offer-actions"><a class="btn btn-outline-teal" href="/en/fast-website.html">See the package →</a></div>
+    </div>
+  </div>
+</section>
 
-      root.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener("click", (e)=>{
-          const id = a.getAttribute("href");
-          const t = root.querySelector(id);
-          if(!t) return;
-          e.preventDefault();
-          t.scrollIntoView({ behavior:"smooth", block:"start" });
-        });
-      });
+<!-- ════════ CONTACT ════════ -->
+<div class="divider"></div>
+<section class="section" id="ew-contact">
+  <div class="form-card reveal">
+    <h3>Request a quote</h3>
+    <div class="form-desc">Tell us your niche and goal — we'll reply with a plan, timeline and estimate. If you prefer, book a consultation and we'll break it down together.</div>
+    <form id="main-form" action="https://formsubmit.co/web@erewhile.digital" method="POST">
+      <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-grid">
+        <div><label>Name</label><input name="name" required placeholder="How should we address you?"></div>
+        <div><label>Email</label><input name="_replyto" type="email" required placeholder="you@company.com"></div>
+        <div class="full">
+          <label>What do you need?</label>
+          <select name="service" required>
+            <option value="Consultation">Consultation (project discovery)</option>
+            <option value="Website (custom)">Website (custom)</option>
+            <option value="Fast Website Package">Budget website (€250)</option>
+            <option value="Content">Content / video</option>
+            <option value="Integrations & analytics">Integrations / analytics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="full"><label>Message</label><textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea></div>
+      </div>
 
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(en=>{
-          if(en.isIntersecting){
-            en.target.classList.add("on");
-            io.unobserve(en.target);
-          }
-        });
-      }, { threshold: 0.14 });
+      <!-- Consent checkbox -->
+      <div class="consent-row">
+        <input type="checkbox" class="consent-check" id="consent" required>
+        <label class="consent-label" for="consent" style="text-transform:none;letter-spacing:0;font-size:12px;color:var(--muted);font-weight:400;">
+          I agree to the
+          <a tabindex="0" onclick="openModal('terms')">Terms & Conditions</a>,
+          <a tabindex="0" onclick="openModal('privacy')">Privacy Policy</a>
+          and the use of cookies as described in our
+          <a tabindex="0" onclick="openModal('cookies')">Cookie Policy</a>.
+          My email will only be used to respond to this inquiry.
+        </label>
+      </div>
 
-      root.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+      <div class="form-actions" style="margin-top:18px;">
+        <button class="btn btn-teal" type="submit">Send request</button>
+        <div class="fine">We typically reply within 24 hours. If it's urgent — add your deadline.</div>
+      </div>
+    </form>
+  </div>
+</section>
 
-      (function initVideoRails(){
-        function initOneRail(trackId){
-          const track = root.querySelector("#" + trackId);
-          const rail = track ? track.closest(".video-rail") : null;
-          if(!track || !rail) return;
+<!-- ════════ FOOTER ════════ -->
+<footer aria-label="Contacts">
+  <div class="footer-card reveal">
+    <a class="footer-link" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
+    <span class="footer-sep">•</span>
+    <a class="footer-link" href="tel:+37120579106">+371 20579106</a>
+  </div>
+  <div class="footer-legal">
+    <span class="footer-legal-link" onclick="openModal('terms')">Terms & Conditions</span>
+    <span class="footer-legal-link" onclick="openModal('privacy')">Privacy Policy</span>
+    <span class="footer-legal-link" onclick="openModal('cookies')">Cookie Policy</span>
+  </div>
+</footer>
 
-          let viewport = track.parentElement;
-          if(!viewport || !viewport.classList.contains("rail-viewport")){
-            viewport = document.createElement("div");
-            viewport.className = "rail-viewport";
-            track.parentNode.insertBefore(viewport, track);
-            viewport.appendChild(track);
-          }
-
-          const originals = Array.from(track.children);
-          originals.forEach(node => track.appendChild(node.cloneNode(true)));
-
-          let half = 0;
-          let lastX = 0;
-
-          function recomputeHalf(){
-            half = Math.floor(track.scrollWidth / 2);
-          }
-          requestAnimationFrame(recomputeHalf);
-          window.addEventListener("resize", recomputeHalf);
-
-          viewport.addEventListener("scroll", () => {
-            if(!half) return;
-            const x = viewport.scrollLeft;
-
-            if(x > lastX && x >= half){
-              viewport.scrollLeft = x - half;
-              lastX = viewport.scrollLeft;
-              return;
-            }
-
-            if(x < lastX && x <= 1){
-              viewport.scrollLeft = x + half;
-              lastX = viewport.scrollLeft;
-              return;
-            }
-
-            lastX = x;
-          }, { passive:true });
-
-          function stopAllVideos(){
-            track.querySelectorAll(".vthumb.playing").forEach(btn=>{
-              btn.classList.remove("playing");
-            });
-            track.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
-          }
-
-          function manualPause(ms=2400){
-            rail.classList.add("manualPause");
-            window.clearTimeout(rail.__pauseT);
-            rail.__pauseT = window.setTimeout(()=> rail.classList.remove("manualPause"), ms);
-          }
-
-          track.addEventListener("click", (e) => {
-            const close = e.target.closest(".vclose");
-            const thumb = e.target.closest(".vthumb");
-
-            if(close){
-              e.preventDefault();
-              const btn = close.closest(".vthumb");
-              if(!btn) return;
-              btn.classList.remove("playing");
-              btn.querySelectorAll("iframe.vframe").forEach(fr => fr.remove());
-              manualPause(1200);
-              return;
-            }
-
-            if(!thumb) return;
-
-            const card = thumb.closest(".vcard");
-            if(!card) return;
-
-            const vid = card.getAttribute("data-video");
-            if(!vid) return;
-
-            if(thumb.querySelector("iframe.vframe")) return;
-
-            stopAllVideos();
-            manualPause(3000);
-
-            const iframe = document.createElement("iframe");
-            iframe.className = "vframe";
-            iframe.setAttribute("allowfullscreen", "");
-            iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-            iframe.setAttribute(
-              "allow",
-              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            );
-
-            iframe.src =
-              "https://www.youtube.com/embed/" + encodeURIComponent(vid) +
-              "?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1";
-
-            thumb.classList.add("playing");
-            thumb.appendChild(iframe);
-          });
-
-          rail.addEventListener("click", (e)=>{
-            const btn = e.target.closest("[data-rail]");
-            if(!btn) return;
-
-            e.preventDefault();
-            e.stopPropagation();
-
-            stopAllVideos();
-            manualPause(2600);
-
-            const firstCard = track.querySelector(".vcard");
-            const step = firstCard ? Math.round(firstCard.getBoundingClientRect().width * 0.95) : 280;
-
-            const dir = btn.getAttribute("data-rail");
-            viewport.scrollBy({ left: dir === "prev" ? -step : step, behavior: "smooth" });
-
-            window.setTimeout(()=>{ lastX = viewport.scrollLeft; }, 350);
-          });
-
-          rail.addEventListener("touchstart", ()=> manualPause(2600), { passive:true });
-        }
-
-        initOneRail("videoRailLandscape");
-        initOneRail("videoRailVertical");
-      })();
-    })();
-  </script>
+<!-- ════════ COOKIE BANNER ════════ -->
+<div id="cookie-banner" role="region" aria-label="Cookie notice">
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      <b>We use cookies</b> only to ensure this website functions correctly. We do not track you, sell your data, or use third-party advertising cookies. By clicking <b>Accept</b>, you agree to our <a tabindex="0" onclick="openModal('cookies')">Cookie Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn-cookie-decline" id="cookieDecline">Decline</button>
+      <button class="btn-cookie-accept" id="cookieAccept">Accept cookies</button>
+    </div>
+  </div>
 </div>
 
+<!-- ════════ MODALS ════════ -->
+
+<!-- Terms & Conditions -->
+<div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="terms-title">Terms & Conditions</h3>
+      <button class="modal-close" onclick="closeModal('terms')" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
+
+      <h4>1. Acceptance</h4>
+      <p>By accessing erewhile.digital and submitting any inquiry form, you agree to these Terms & Conditions. If you do not agree, please do not use this website.</p>
+
+      <h4>2. Services described</h4>
+      <p>This website is a presentation of services offered by Erewhile Digital (sole trader / freelance agency, Riga, Latvia). Services include website design & development, content production, video, CRM automation and AI integrations. All descriptions are informational; final scope and pricing are confirmed in a separate written agreement.</p>
+
+      <h4>3. Inquiries & quotes</h4>
+      <p>Submitting an inquiry form does not constitute a binding contract. A project begins only after both parties have signed (or confirmed via email) an individual agreement or statement of work. Erewhile Digital reserves the right to decline any project without explanation.</p>
+
+      <h4>4. Intellectual property</h4>
+      <p>All content on this website — including text, design and code — is the property of Erewhile Digital unless stated otherwise. You may not reproduce or repurpose any materials without prior written consent.</p>
+
+      <h4>5. Limitation of liability</h4>
+      <p>This website is provided "as is". Erewhile Digital makes no warranties regarding uptime or uninterrupted access. We are not liable for any indirect or consequential damages arising from use of this website.</p>
+
+      <h4>6. Governing law</h4>
+      <p>These Terms are governed by the laws of the Republic of Latvia. Any disputes shall be resolved in the courts of Riga, Latvia.</p>
+
+      <h4>7. Contact</h4>
+      <p>Questions about these Terms: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Privacy Policy -->
+<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="privacy-title">Privacy Policy</h3>
+      <button class="modal-close" onclick="closeModal('privacy')" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
+
+      <h4>1. Who we are</h4>
+      <p>Erewhile Digital is a digital agency based in Riga, Latvia. This policy explains how we handle personal data collected through this website.</p>
+
+      <h4>2. What data we collect</h4>
+      <p>We collect only the information you voluntarily submit via the contact form:</p>
+      <ul>
+        <li>Your name</li>
+        <li>Your email address</li>
+        <li>Your message / project description</li>
+      </ul>
+      <p>We do not collect payment data, sensitive personal data, or any information beyond what you actively provide.</p>
+
+      <h4>3. How we use your data</h4>
+      <p>Your data is used <b>exclusively</b> to respond to your inquiry. We do not use it for marketing without your explicit consent, and we do not share it with any third parties.</p>
+
+      <h4>4. Data storage</h4>
+      <p>Submissions are processed via <a href="https://formsubmit.co" target="_blank" rel="noopener">FormSubmit.co</a> and delivered to our email inbox. We retain your email correspondence for as long as is necessary for business purposes, and no longer than 3 years unless required by law.</p>
+
+      <h4>5. Your rights (GDPR)</h4>
+      <p>You have the right to: access your data, request correction or deletion, restrict processing, and lodge a complaint with the Latvian Data State Inspectorate (Datu valsts inspekcija, <a href="https://www.dvi.gov.lv" target="_blank" rel="noopener">dvi.gov.lv</a>).</p>
+      <p>To exercise any of these rights, email us at <a href="mailto:web@erewhile.digital">web@erewhile.digital</a>.</p>
+
+      <h4>6. Cookies</h4>
+      <p>We use only strictly necessary functional cookies. See our Cookie Policy for details.</p>
+
+      <h4>7. Changes to this policy</h4>
+      <p>We may update this policy from time to time. Material changes will be reflected by updating the effective date above.</p>
+
+      <h4>8. Contact</h4>
+      <p>Data controller: Erewhile Digital, Riga, Latvia · <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Policy -->
+<div class="modal-overlay" id="modal-cookies" role="dialog" aria-modal="true" aria-labelledby="cookies-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="cookies-title">Cookie Policy</h3>
+      <button class="modal-close" onclick="closeModal('cookies')" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
+
+      <h4>What are cookies?</h4>
+      <p>Cookies are small text files stored on your device when you visit a website. They help the site remember certain information about your visit.</p>
+
+      <h4>What cookies do we use?</h4>
+      <p>Erewhile Digital uses <b>only strictly necessary functional cookies</b>. These are required for the website to operate correctly (e.g. remembering your cookie consent choice). We do not use:</p>
+      <ul>
+        <li>Analytics or tracking cookies</li>
+        <li>Advertising or remarketing cookies</li>
+        <li>Social media tracking pixels</li>
+        <li>Any third-party cookies that profile your behaviour</li>
+      </ul>
+
+      <h4>Cookie we set</h4>
+      <p><b>ew_cookie_consent</b> — stores your accept/decline choice for this banner. Expires after 180 days. No personal data is stored inside this cookie.</p>
+
+      <h4>Third-party services</h4>
+      <p>The contact form uses <a href="https://formsubmit.co" target="_blank" rel="noopener">FormSubmit.co</a> to deliver your message to our inbox. FormSubmit may set a functional cookie solely to prevent spam (CSRF protection). No data collected by FormSubmit is shared with us beyond your form submission.</p>
+      <p>Video thumbnails and players are loaded from YouTube (Google). If you click a play button, YouTube may set its own cookies subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We have no control over those cookies.</p>
+
+      <h4>Your choices</h4>
+      <p>You may decline cookies via the banner at the bottom of this page. Note that declining cookies will not affect your ability to use this website. You can also delete cookies at any time via your browser settings.</p>
+
+      <h4>Contact</h4>
+      <p>Questions about cookies: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SCRIPTS ════════ -->
+<script>
+/* ── Modals — глобальные функции (должны быть доступны до DOMContentLoaded) ── */
+function openModal(id) {
+  var el = document.getElementById('modal-' + id);
+  if (!el) return;
+  el.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  var el = document.getElementById('modal-' + id);
+  if (!el) return;
+  el.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+(function(){
+  /* ── Smooth scroll ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (!t) return; e.preventDefault();
+      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* ── Reveal on scroll ── */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('on'); io.unobserve(en.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ── Cookie banner ── */
+  const banner  = document.getElementById('cookie-banner');
+  const consent = localStorage.getItem('ew_cookie_consent');
+  if (!consent) {
+    setTimeout(() => banner.classList.add('visible'), 1200);
+  }
+  document.getElementById('cookieAccept').addEventListener('click', () => {
+    localStorage.setItem('ew_cookie_consent', 'accepted');
+    banner.classList.remove('visible');
+  });
+  document.getElementById('cookieDecline').addEventListener('click', () => {
+    localStorage.setItem('ew_cookie_consent', 'declined');
+    banner.classList.remove('visible');
+  });
+
+  /* ── Modal: close on overlay click ── */
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+  /* ── Modal: close on Escape ── */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => {
+        m.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
+  /* ── Video rails ── */
+  function initRail(trackId) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const rail     = track.closest('.video-rail');
+    const viewport = track.closest('.rail-viewport');
+    if (!rail || !viewport) return;
+
+    let lastX = 0, half = 0;
+    function setHalf() { half = Math.floor(track.scrollWidth / 2); }
+    requestAnimationFrame(setHalf);
+    window.addEventListener('resize', setHalf);
+
+    viewport.addEventListener('scroll', () => {
+      if (!half) return;
+      const x = viewport.scrollLeft;
+      if (x > lastX && x >= half) { viewport.scrollLeft = x - half; lastX = viewport.scrollLeft; return; }
+      if (x < lastX && x <= 1)   { viewport.scrollLeft = x + half; lastX = viewport.scrollLeft; return; }
+      lastX = x;
+    }, { passive: true });
+
+    function stopAll() {
+      track.querySelectorAll('.vthumb.playing').forEach(b => b.classList.remove('playing'));
+      track.querySelectorAll('iframe.vframe').forEach(f => f.remove());
+    }
+    function pause(ms = 2400) {
+      rail.classList.add('manualPause');
+      clearTimeout(rail._t);
+      rail._t = setTimeout(() => rail.classList.remove('manualPause'), ms);
+    }
+
+    track.addEventListener('click', e => {
+      const close = e.target.closest('.vclose');
+      const thumb = e.target.closest('.vthumb');
+      if (close) {
+        e.preventDefault();
+        const btn = close.closest('.vthumb');
+        if (!btn) return;
+        btn.classList.remove('playing');
+        btn.querySelectorAll('iframe.vframe').forEach(f => f.remove());
+        pause(1200); return;
+      }
+      if (!thumb) return;
+      const card = thumb.closest('.vcard');
+      if (!card) return;
+      const vid = card.getAttribute('data-video');
+      if (!vid || thumb.querySelector('iframe.vframe')) return;
+      stopAll(); pause(3000);
+      const iframe = document.createElement('iframe');
+      iframe.className = 'vframe';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(vid) + '?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1';
+      thumb.classList.add('playing');
+      thumb.appendChild(iframe);
+    });
+
+    rail.addEventListener('click', e => {
+      const btn = e.target.closest('[data-rail]');
+      if (!btn) return;
+      e.preventDefault(); e.stopPropagation();
+      stopAll(); pause(2600);
+      const firstCard = track.querySelector('.vcard');
+      const step = firstCard ? Math.round(firstCard.getBoundingClientRect().width * 0.95) : 280;
+      viewport.scrollBy({ left: btn.getAttribute('data-rail') === 'prev' ? -step : step, behavior: 'smooth' });
+      setTimeout(() => { lastX = viewport.scrollLeft; }, 350);
+    });
+
+    rail.addEventListener('touchstart', () => pause(2600), { passive: true });
+  }
+
+  initRail('videoRailLandscape');
+  initRail('videoRailVertical');
+})();
+</script>
 </body>
 </html>
-
-
