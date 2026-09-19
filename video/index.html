@@ -114,39 +114,51 @@
       max-width:1200px;margin:0 auto;
       padding:0 clamp(16px,4vw,48px) clamp(60px,7vw,100px);
       position:relative;z-index:1;
+      isolation:isolate;
     }
     .masonry{
-      columns:3 280px;
-      column-gap:14px;
+      position:relative;
+      width:100%;
     }
-    @media(max-width:600px){.masonry{columns:2 160px;column-gap:10px}}
-    @media(max-width:360px){.masonry{columns:1}}
+    /* cards positioned by JS */
+    .gallery-card{
+      position:absolute;
+      width:calc(33.333% - 10px);
+    }
+    @media(max-width:760px){
+      .gallery-card{ width:calc(50% - 7px); }
+    }
+    @media(max-width:440px){
+      .gallery-card{ position:relative !important;
+        left:auto !important; top:auto !important;
+        width:100% !important; margin-bottom:14px;
+      }
+      .masonry{ height:auto !important; }
+    }
 
     .gallery-card{
-      break-inside:avoid;
       margin-bottom:14px;
       border-radius:16px;
-      overflow:hidden;
-      background:var(--glass-bg);
-      backdrop-filter:blur(16px);
-      border:1px solid var(--glass-border);
-      box-shadow:var(--glass-shadow);
+      overflow:visible;
+      background:rgba(255,255,255,0.92);
+      border:1px solid rgba(220,228,224,0.9);
+      box-shadow:0 2px 12px rgba(0,0,0,0.06),0 1px 3px rgba(0,0,0,0.04);
       cursor:pointer;
-      opacity:0;
-      transform:translateY(20px);
+      opacity:1;
+      transform:translateZ(0);
       transition:
-        opacity .6s var(--ease),
-        transform .6s var(--ease),
+        transform .3s var(--ease),
         box-shadow .3s,
         border-color .3s;
-      position:relative;
+      z-index:1;
     }
-    .gallery-card.on{opacity:1;transform:none}
+    .gallery-card.on{ opacity:1; }
+/* .on handled in gallery-card.on block above */
     .gallery-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 20px 50px rgba(0,0,0,0.12);
+      transform:translateY(-5px) translateZ(0);
+      box-shadow:0 16px 40px rgba(0,0,0,0.11),0 4px 12px rgba(0,0,0,0.05);
       border-color:rgba(7,107,88,0.2);
-      z-index:2;
+      z-index:10;
     }
     /* hide cards by category */
     .gallery-card.hidden{display:none}
@@ -155,6 +167,7 @@
       width:100%;display:block;
       background:#e0e7e4;
       position:relative;overflow:hidden;
+      border-radius:15px 15px 0 0;
     }
     .card-thumb img{
       width:100%;height:100%;
@@ -206,7 +219,7 @@
       box-shadow:0 2px 8px rgba(0,0,0,0.08);
     }
 
-    .card-body{padding:13px 15px 15px}
+    .card-body{padding:13px 15px 15px;border-radius:0 0 15px 15px;background:rgba(255,255,255,0.92);position:relative;}
     .card-cat{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
     .card-title{font-size:13.5px;font-weight:700;letter-spacing:-.02em;line-height:1.25;color:var(--ink)}
     .card-sub{font-size:11px;color:var(--muted);margin-top:3px}
@@ -555,24 +568,7 @@ document.getElementById('burgerBtn').addEventListener('click',function(){
   document.body.style.overflow=open?'hidden':'';
 });
 
-/* ── Reveal cards on scroll ── */
-(function(){
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e,i){
-      if(e.isIntersecting){
-        var el=e.target;
-        var delay=parseInt(el.dataset.delay||0);
-        setTimeout(function(){el.classList.add('on')},delay);
-        io.unobserve(el);
-      }
-    });
-  },{threshold:0.08});
-  var cards=document.querySelectorAll('.gallery-card');
-  cards.forEach(function(c,i){
-    c.dataset.delay=Math.min(i%4,3)*80; // stagger per row, max 3 steps
-    io.observe(c);
-  });
-})();
+/* ── Cards always visible, no scroll reveal needed ── */
 
 /* ── Filter ── */
 document.querySelectorAll('.filter-pill').forEach(function(pill){
@@ -665,6 +661,56 @@ document.querySelectorAll('.filter-pill').forEach(function(pill){
     if(e.key==='ArrowRight'&&currentIdx<cards.length-1)openVideo(currentIdx+1);
   });
 })();
+
+/* ── JS Masonry layout ── */
+(function(){
+  function layout(){
+    var isMobile = window.innerWidth <= 440;
+    if(isMobile) return; // CSS handles mobile
+
+    var gallery = document.getElementById('gallery');
+    if(!gallery) return;
+
+    var cols = window.innerWidth <= 760 ? 2 : 3;
+    var gap  = 14;
+    var totalW = gallery.offsetWidth;
+    var colW = (totalW - gap * (cols - 1)) / cols;
+
+    // column heights tracker
+    var colH = [];
+    for(var c=0;c<cols;c++) colH[c]=0;
+
+    var cards = Array.from(gallery.querySelectorAll('.gallery-card:not(.hidden)'));
+
+    cards.forEach(function(card){
+      // find shortest column
+      var minH = Math.min.apply(null, colH);
+      var col  = colH.indexOf(minH);
+
+      card.style.position = 'absolute';
+      card.style.width    = colW + 'px';
+      card.style.left     = (col * (colW + gap)) + 'px';
+      card.style.top      = colH[col] + 'px';
+
+      colH[col] += card.offsetHeight + gap;
+    });
+
+    // set container height
+    gallery.style.height = Math.max.apply(null, colH) + 'px';
+  }
+
+  // Run after images may have loaded
+  window.addEventListener('load', layout);
+  window.addEventListener('resize', layout);
+  // Also run immediately and after short delay for fonts/images
+  layout();
+  setTimeout(layout, 300);
+  setTimeout(layout, 800);
+
+  // Re-run after filter changes
+  window._masonryLayout = layout;
+})();
+
 </script>
 </body>
 </html>
