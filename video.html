@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Video Production — Erewhile Digital</title>
+  <meta name="description" content="Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Riga."/>
+  <link rel="canonical" href="https://erewhile.digital/en/video.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#0a0a0a; --ink2:#2a2a2a;
+      --muted:rgba(10,10,10,0.50); --muted2:rgba(10,10,10,0.30);
+      --teal:#076B58; --teal-line:rgba(7,107,88,0.22); --teal-dim:rgba(7,107,88,0.07);
+      --bg:#f7f7f5; --line:rgba(10,10,10,0.08); --line2:rgba(10,10,10,0.04);
+      --glass-bg:rgba(255,255,255,0.70); --glass-border:rgba(255,255,255,0.88);
+      --glass-shadow:0 4px 24px rgba(0,0,0,0.07),0 1px 4px rgba(0,0,0,0.04);
+      --ease:cubic-bezier(.16,1,.3,1); --font:'Montserrat',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font-family:var(--font);cursor:pointer}
+
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+      background-size:64px 64px}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.15;animation:blobDrift 22s ease-in-out infinite alternate}
+    .blob1{width:500px;height:500px;background:radial-gradient(circle,rgba(7,107,88,0.4),transparent 70%);top:-160px;right:-80px}
+    .blob2{width:350px;height:350px;background:radial-gradient(circle,rgba(7,107,88,0.25),transparent 70%);bottom:8%;left:-60px;animation-delay:-9s;animation-duration:28s}
+    @keyframes blobDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(28px,-36px) scale(1.07)}}
+
+    /* ── HEADER ── */
+    header{position:sticky;top:0;z-index:200;background:rgba(247,247,245,0.88);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid var(--line)}
+    .header-inner{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px);height:64px;display:flex;align-items:center;gap:14px}
+    .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:13.5px;letter-spacing:.01em;min-width:160px;transition:opacity .2s}
+    .brand:hover{opacity:.7}
+    .brand-logo{height:24px;width:auto}
+    nav{flex:1;display:flex;justify-content:center;gap:2px}
+    nav a{font-size:12.5px;font-weight:500;color:var(--muted);padding:7px 13px;border-radius:8px;transition:all .2s}
+    nav a:hover{color:var(--ink);background:var(--line2)}
+    nav a.active{color:var(--teal);font-weight:600}
+    .header-ctas{display:flex;align-items:center;gap:9px;margin-left:auto}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:100px;font-family:var(--font);font-size:12.5px;font-weight:600;transition:all .22s var(--ease);white-space:nowrap;cursor:pointer}
+    .btn-ghost{border:1px solid var(--line);background:var(--glass-bg);backdrop-filter:blur(16px);color:var(--muted)}
+    .btn-ghost:hover{border-color:var(--teal-line);color:var(--teal);background:var(--teal-dim)}
+    .btn-teal{background:var(--teal);color:#fff;border:1px solid transparent}
+    .btn-teal:hover{background:#065a49;transform:translateY(-1px);box-shadow:0 8px 24px rgba(7,107,88,0.28)}
+    .btn-sm{padding:7px 14px;font-size:12px}
+    .social-btn{width:36px;height:36px;border-radius:100px;background:var(--glass-bg);backdrop-filter:blur(16px);border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;transition:all .2s}
+    .social-btn:hover{border-color:var(--teal-line);transform:translateY(-1px)}
+    .social-btn svg{width:15px;height:15px;fill:var(--muted);transition:fill .2s}
+    .social-btn:hover svg{fill:var(--teal)}
+
+    /* ── BURGER ── */
+    .burger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;border:none;background:transparent;border-radius:8px;transition:background .2s}
+    .burger:hover{background:var(--line2)}
+    .burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s var(--ease)}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-nav{display:none;position:fixed;inset:64px 0 0;background:rgba(247,247,245,0.97);backdrop-filter:blur(20px);z-index:190;padding:24px clamp(16px,4vw,48px);flex-direction:column;gap:4px}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
+    .mobile-nav a:hover{color:var(--teal)}
+    .mobile-nav .m-ctas{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    @media(max-width:880px){nav{display:none}.burger{display:flex}}
+    @media(max-width:540px){.social-btn{display:none}.header-ctas .btn-ghost{display:none}.brand-logo{display:none}}
+
+    /* ── HERO ── */
+    .hero{
+      max-width:1200px;margin:0 auto;
+      padding:clamp(72px,9vw,120px) clamp(16px,4vw,48px) clamp(32px,4vw,56px);
+      position:relative;z-index:1;
+    }
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;opacity:0;animation:fadeUp .7s var(--ease) .05s forwards}
+    .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px rgba(7,107,88,0.5);animation:pulse 2.5s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+    h1{font-size:clamp(38px,6.5vw,82px);font-weight:800;line-height:1.0;letter-spacing:-.04em;color:var(--ink);opacity:0;animation:fadeUp .85s var(--ease) .15s forwards}
+    h1 em{font-style:italic;font-weight:600;color:var(--teal)}
+    h1 .thin{font-weight:300;color:var(--muted)}
+    .hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-top:20px;opacity:0;animation:fadeUp .85s var(--ease) .28s forwards}
+    .hero-sub{font-size:clamp(13px,1.3vw,15px);font-weight:400;color:var(--muted);line-height:1.75;max-width:480px}
+    .hero-meta{display:flex;gap:20px;flex-wrap:wrap;flex-shrink:0}
+    .hero-stat{text-align:center}
+    .hero-stat-num{font-size:28px;font-weight:900;letter-spacing:-.04em;color:var(--ink)}
+    .hero-stat-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);margin-top:2px}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+    /* ── FILTER PILLS ── */
+    .filter-bar{
+      max-width:1200px;margin:0 auto;
+      padding:0 clamp(16px,4vw,48px) clamp(20px,3vw,32px);
+      display:flex;gap:8px;flex-wrap:wrap;
+      position:relative;z-index:1;
+    }
+    .filter-pill{
+      padding:8px 18px;border-radius:100px;
+      border:1px solid var(--line);
+      background:var(--glass-bg);backdrop-filter:blur(12px);
+      font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--muted);
+      cursor:pointer;transition:all .2s var(--ease);
+    }
+    .filter-pill:hover{border-color:var(--teal-line);color:var(--teal);background:var(--teal-dim)}
+    .filter-pill.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+    /* ── MASONRY GALLERY ── */
+    .gallery-wrap{
+      max-width:1200px;margin:0 auto;
+      padding:0 clamp(16px,4vw,48px) clamp(60px,7vw,100px);
+      position:relative;z-index:1;
+    }
+    .masonry{
+      columns:3 280px;
+      column-gap:14px;
+    }
+    @media(max-width:600px){.masonry{columns:2 160px;column-gap:10px}}
+    @media(max-width:360px){.masonry{columns:1}}
+
+    .gallery-card{
+      break-inside:avoid;
+      margin-bottom:14px;
+      border-radius:16px;
+      overflow:hidden;
+      background:var(--glass-bg);
+      backdrop-filter:blur(16px);
+      border:1px solid var(--glass-border);
+      box-shadow:var(--glass-shadow);
+      cursor:pointer;
+      opacity:0;
+      transform:translateY(20px);
+      transition:
+        opacity .6s var(--ease),
+        transform .6s var(--ease),
+        box-shadow .3s,
+        border-color .3s;
+      position:relative;
+    }
+    .gallery-card.on{opacity:1;transform:none}
+    .gallery-card:hover{
+      transform:translateY(-4px) scale(1.01);
+      box-shadow:0 20px 50px rgba(0,0,0,0.12);
+      border-color:rgba(7,107,88,0.2);
+      z-index:2;
+    }
+    /* hide cards by category */
+    .gallery-card.hidden{display:none}
+
+    .card-thumb{
+      width:100%;display:block;
+      background:#e0e7e4;
+      position:relative;overflow:hidden;
+    }
+    .card-thumb img{
+      width:100%;height:100%;
+      object-fit:cover;display:block;
+      transition:transform .5s var(--ease);
+    }
+    .gallery-card:hover .card-thumb img{transform:scale(1.05)}
+
+    /* aspect ratios */
+    .ratio-16-9{aspect-ratio:16/9}
+    .ratio-9-16{aspect-ratio:9/16}
+    .ratio-4-3{aspect-ratio:4/3}
+    .ratio-1-1{aspect-ratio:1/1}
+
+    /* play button overlay */
+    .play-btn{
+      position:absolute;inset:0;
+      display:flex;align-items:center;justify-content:center;
+      background:rgba(10,10,10,0);
+      transition:background .3s;
+    }
+    .gallery-card:hover .play-btn{background:rgba(10,10,10,0.18)}
+    .play-circle{
+      width:52px;height:52px;border-radius:50%;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(8px);
+      display:flex;align-items:center;justify-content:center;
+      opacity:0;transform:scale(.8);
+      transition:all .3s var(--ease);
+      box-shadow:0 4px 20px rgba(0,0,0,0.2);
+    }
+    .gallery-card:hover .play-circle{opacity:1;transform:scale(1)}
+    .play-circle::after{
+      content:'';
+      border-left:18px solid var(--ink);
+      border-top:11px solid transparent;
+      border-bottom:11px solid transparent;
+      margin-left:4px;
+    }
+
+    /* format badge */
+    .format-badge{
+      position:absolute;top:10px;left:10px;
+      padding:4px 10px;border-radius:100px;
+      background:rgba(247,247,245,0.88);
+      backdrop-filter:blur(8px);
+      font-size:10px;font-weight:700;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--teal);
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .card-body{padding:13px 15px 15px}
+    .card-cat{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+    .card-title{font-size:13.5px;font-weight:700;letter-spacing:-.02em;line-height:1.25;color:var(--ink)}
+    .card-sub{font-size:11px;color:var(--muted);margin-top:3px}
+
+    /* ── VIDEO MODAL ── */
+    .vmodal{
+      position:fixed;inset:0;z-index:1000;
+      background:rgba(10,10,10,0.92);
+      backdrop-filter:blur(20px);
+      display:flex;align-items:center;justify-content:center;
+      padding:20px;
+      opacity:0;pointer-events:none;
+      transition:opacity .35s var(--ease);
+    }
+    .vmodal.open{opacity:1;pointer-events:all}
+    .vmodal-inner{
+      position:relative;
+      width:100%;
+      max-width:900px;
+      opacity:0;transform:scale(.94);
+      transition:all .4s var(--ease);
+    }
+    .vmodal.open .vmodal-inner{opacity:1;transform:scale(1)}
+
+    /* dynamic aspect ratio set by JS */
+    .vmodal-frame{
+      position:relative;width:100%;
+      background:#000;border-radius:16px;overflow:hidden;
+    }
+    .vmodal-frame iframe{
+      position:absolute;inset:0;width:100%;height:100%;border:0;
+    }
+
+    /* Portrait modal smaller */
+    .vmodal-inner.portrait{max-width:420px}
+
+    .vmodal-close{
+      position:absolute;top:-44px;right:0;
+      width:36px;height:36px;border-radius:100px;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
+      color:#fff;font-size:20px;font-weight:300;
+      display:grid;place-items:center;cursor:pointer;
+      transition:all .2s;
+    }
+    .vmodal-close:hover{background:rgba(255,255,255,0.2)}
+
+    .vmodal-meta{
+      margin-top:14px;
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:10px;
+    }
+    .vmodal-title{font-size:15px;font-weight:700;letter-spacing:-.02em;color:#fff}
+    .vmodal-sub{font-size:12px;color:rgba(255,255,255,0.5);margin-top:2px}
+    .vmodal-nav{display:flex;gap:8px}
+    .vmodal-nav-btn{
+      width:36px;height:36px;border-radius:100px;
+      border:1px solid rgba(255,255,255,0.2);
+      background:rgba(255,255,255,0.07);
+      color:#fff;font-size:18px;font-weight:600;
+      display:grid;place-items:center;cursor:pointer;
+      transition:all .2s;
+    }
+    .vmodal-nav-btn:hover{background:rgba(255,255,255,0.15)}
+
+    /* ── CTA ── */
+    .cta-section{
+      max-width:1200px;margin:0 auto;
+      padding:0 clamp(16px,4vw,48px) clamp(48px,6vw,80px);
+      position:relative;z-index:1;
+    }
+    .cta-card{
+      border-radius:22px;
+      background:var(--glass-bg);backdrop-filter:blur(18px);
+      border:1px solid var(--glass-border);
+      box-shadow:var(--glass-shadow);
+      padding:clamp(28px,4vw,48px);
+      display:flex;align-items:center;justify-content:space-between;
+      gap:24px;flex-wrap:wrap;
+      position:relative;overflow:hidden;
+    }
+    .cta-card::before{content:'';position:absolute;inset:-40%;background:radial-gradient(400px circle at 15% 50%,rgba(7,107,88,0.06),transparent 55%);pointer-events:none}
+    .cta-card h2{font-size:clamp(20px,2.5vw,30px);font-weight:800;letter-spacing:-.04em;position:relative}
+    .cta-card h2 em{font-style:italic;font-weight:500;color:var(--teal)}
+    .cta-card p{margin-top:6px;font-size:13.5px;color:var(--muted);line-height:1.65;max-width:50ch;font-weight:400;position:relative}
+    .cta-btn{flex-shrink:0;position:relative}
+
+    /* ── FOOTER ── */
+    footer{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 36px;position:relative;z-index:1}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+    .footer-link{font-size:13px;font-weight:600;color:var(--muted);border-bottom:1px solid rgba(10,10,10,0.12);padding-bottom:1px;transition:all .2s}
+    .footer-link:hover{color:var(--teal)}
+    .footer-sep{color:var(--muted2);opacity:.4}
+    .footer-copy{font-size:11px;color:var(--muted2);font-weight:500}
+  </style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><div class="blob blob1"></div><div class="blob blob2"></div></div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/en/">
+      <img class="brand-logo" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital" loading="eager">
+      <span>erewhile.digital</span>
+    </a>
+    <nav>
+      <a href="/en/">Websites</a>
+      <a href="/en/portfolio.html">Portfolio</a>
+      <a href="/en/video.html" class="active">Video</a>
+      <a href="/en/#ew-contact">Contact</a>
+    </nav>
+    <div class="header-ctas">
+      <a class="social-btn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/></svg>
+      </a>
+      <a class="btn btn-ghost btn-sm" href="/en/#ew-contact">Request a format</a>
+      <a class="btn btn-teal btn-sm" href="/en/#ew-contact">Get a quote</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="/en/">Websites</a>
+  <a href="/en/portfolio.html">Portfolio</a>
+  <a href="/en/video.html">Video</a>
+  <a href="/en/#ew-contact" onclick="closeMobileNav()">Contact</a>
+  <div class="m-ctas">
+    <a class="btn btn-teal btn-sm" href="/en/#ew-contact" onclick="closeMobileNav()">Get a quote</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Video production · Riga</div>
+  <h1>Content that <em>sells</em><br><span class="thin">your website</span></h1>
+  <div class="hero-row">
+    <p class="hero-sub">Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms.</p>
+    <div class="hero-meta">
+      <div class="hero-stat"><div class="hero-stat-num">16:9</div><div class="hero-stat-label">Landscape</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">9:16</div><div class="hero-stat-label">Vertical</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">13+</div><div class="hero-stat-label">Projects</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <button class="filter-pill active" data-filter="all">All</button>
+  <button class="filter-pill" data-filter="landscape">Landscape 16:9</button>
+  <button class="filter-pill" data-filter="vertical">Vertical 9:16</button>
+  <button class="filter-pill" data-filter="event">Event</button>
+  <button class="filter-pill" data-filter="brand">Brand</button>
+  <button class="filter-pill" data-filter="social">Social / Reels</button>
+</div>
+
+<!-- MASONRY GALLERY -->
+<div class="gallery-wrap">
+  <div class="masonry" id="gallery">
+
+    <div class="gallery-card" data-id="a-VGPkJdKiw" data-cat="landscape brand" data-title="Toyota RAV4 | Car Presentation" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-16-9">
+        <img src="https://i.ytimg.com/vi/a-VGPkJdKiw/hqdefault.jpg" alt="Toyota RAV4" loading="eager">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Brand</div><div class="card-title">Toyota RAV4 | Car Presentation</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="Wd3h4jD56Qw" data-cat="vertical social brand" data-title="Every curve of the road feels like a dance" data-sub="YouTube Shorts · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/6.jpg" alt="Car dance" loading="eager">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Social</div><div class="card-title">Every curve of the road feels like a dance</div><div class="card-sub">YouTube Shorts · Vertical</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="GZeQtel0e60" data-cat="landscape event" data-title="Ozo Golf Club | Event video" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-16-9">
+        <img src="https://i.ytimg.com/vi/GZeQtel0e60/hqdefault.jpg" alt="Ozo Golf Club" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Event</div><div class="card-title">Ozo Golf Club | Event video</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="_i7sXoJ9nrs" data-cat="vertical social brand" data-title="Porsche Tequipment | Talking-head video" data-sub="Instagram Reels · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/4.jpg" alt="Porsche Tequipment" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Social</div><div class="card-title">Porsche Tequipment | Talking-head</div><div class="card-sub">Instagram Reels · Vertical</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="8SpJwdUtNQI" data-cat="landscape brand" data-title="Motion Design Case Study: SelfGrow.me" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-4-3">
+        <img src="https://i.ytimg.com/vi/8SpJwdUtNQI/hqdefault.jpg" alt="SelfGrow.me" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Brand</div><div class="card-title">Motion Design Case Study: SelfGrow.me</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="fm_ghLUm2as" data-cat="vertical social" data-title="Advertising Reel for local brand Mada Riga" data-sub="TikTok · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/5.jpg" alt="Mada Riga" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Social</div><div class="card-title">Advertising Reel — Mada Riga</div><div class="card-sub">TikTok · Vertical</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="QCebk7f6iC4" data-cat="landscape event" data-title="SHIFT Movement | Event Video" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-16-9">
+        <img src="https://i.ytimg.com/vi/QCebk7f6iC4/hqdefault.jpg" alt="SHIFT Movement" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Event</div><div class="card-title">SHIFT Movement | Event Video</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="lREFWSxRvqo" data-cat="vertical social" data-title="Powerful women. Powerful message." data-sub="YouTube Shorts · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/3.jpg" alt="Powerful women" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Social</div><div class="card-title">Powerful women. Powerful message.</div><div class="card-sub">YouTube Shorts · Vertical</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="41O2sQ7U2gU" data-cat="landscape brand" data-title="Taycan Stories | David Shulman" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-16-9">
+        <img src="https://i.ytimg.com/vi/41O2sQ7U2gU/hqdefault.jpg" alt="Taycan Stories" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Brand</div><div class="card-title">Taycan Stories | David Shulman</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="OC-2y-kTyBA" data-cat="vertical social event" data-title="DeWalt Racing Event" data-sub="Instagram Reels · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/7.jpg" alt="DeWalt Racing" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Event</div><div class="card-title">DeWalt Racing Event</div><div class="card-sub">Instagram Reels · Vertical</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="8z5p8zUraFw" data-cat="landscape event" data-title="Event video | Egg Power" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-4-3">
+        <img src="https://i.ytimg.com/vi/8z5p8zUraFw/hqdefault.jpg" alt="Egg Power" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Event</div><div class="card-title">Event video | Egg Power</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="Zpmgzr-uXlQ" data-cat="vertical social brand" data-title="New content for ThinkClearly" data-sub="TikTok · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/2.jpg" alt="ThinkClearly" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Social</div><div class="card-title">New content for ThinkClearly</div><div class="card-sub">TikTok · Vertical</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="qdVzzfr3yL4" data-cat="landscape brand" data-title="Mile Logistics | Presentation Video" data-sub="YouTube · 16:9">
+      <div class="card-thumb ratio-16-9">
+        <img src="https://i.ytimg.com/vi/qdVzzfr3yL4/hqdefault.jpg" alt="Mile Logistics" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">16:9</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Brand</div><div class="card-title">Mile Logistics | Presentation Video</div><div class="card-sub">YouTube · Landscape</div></div>
+    </div>
+
+    <div class="gallery-card" data-id="sZCroEC_SAw" data-cat="vertical social brand" data-title="Porsche Taycan GTS | Talking-head video" data-sub="YouTube Shorts · 9:16">
+      <div class="card-thumb ratio-9-16">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/video%20portfolio/1.jpg" alt="Porsche Taycan GTS" loading="lazy">
+        <div class="play-btn"><div class="play-circle"></div></div>
+        <span class="format-badge">9:16</span>
+      </div>
+      <div class="card-body"><div class="card-cat">Social</div><div class="card-title">Porsche Taycan GTS | Talking-head video</div><div class="card-sub">YouTube Shorts · Vertical</div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-card">
+    <div>
+      <h2>Need video <em>for your site</em>?</h2>
+      <p>Tell us what you're building — we'll suggest the right format, budget and timeline.</p>
+    </div>
+    <div class="cta-btn">
+      <a class="btn btn-teal" href="/en/#ew-contact">Request a format →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-row">
+    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+      <a class="footer-link" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
+      <span class="footer-sep">·</span>
+      <a class="footer-link" href="tel:+37120579106">+371 20579106</a>
+    </div>
+    <span class="footer-copy">© 2025 Erewhile Digital, Riga</span>
+  </div>
+</footer>
+
+<!-- VIDEO MODAL -->
+<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="vmodal-inner" id="vmodalInner">
+    <button class="vmodal-close" id="vmodalClose" aria-label="Close">×</button>
+    <div class="vmodal-frame" id="vmodalFrame"></div>
+    <div class="vmodal-meta">
+      <div>
+        <div class="vmodal-title" id="vmodalTitle"></div>
+        <div class="vmodal-sub" id="vmodalSub"></div>
+      </div>
+      <div class="vmodal-nav">
+        <button class="vmodal-nav-btn" id="vmodalPrev" aria-label="Previous">‹</button>
+        <button class="vmodal-nav-btn" id="vmodalNext" aria-label="Next">›</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Mobile nav ── */
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+document.getElementById('burgerBtn').addEventListener('click',function(){
+  var open=this.classList.toggle('open');
+  document.getElementById('mobileNav').classList.toggle('open',open);
+  this.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+
+/* ── Reveal cards on scroll ── */
+(function(){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e,i){
+      if(e.isIntersecting){
+        var el=e.target;
+        var delay=parseInt(el.dataset.delay||0);
+        setTimeout(function(){el.classList.add('on')},delay);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:0.08});
+  var cards=document.querySelectorAll('.gallery-card');
+  cards.forEach(function(c,i){
+    c.dataset.delay=Math.min(i%4,3)*80; // stagger per row, max 3 steps
+    io.observe(c);
+  });
+})();
+
+/* ── Filter ── */
+document.querySelectorAll('.filter-pill').forEach(function(pill){
+  pill.addEventListener('click',function(){
+    document.querySelectorAll('.filter-pill').forEach(function(p){p.classList.remove('active')});
+    this.classList.add('active');
+    var filter=this.dataset.filter;
+    document.querySelectorAll('.gallery-card').forEach(function(card){
+      if(filter==='all'||card.dataset.cat.indexOf(filter)!==-1){
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+/* ── Video modal ── */
+(function(){
+  var modal     = document.getElementById('vmodal');
+  var inner     = document.getElementById('vmodalInner');
+  var frame     = document.getElementById('vmodalFrame');
+  var titleEl   = document.getElementById('vmodalTitle');
+  var subEl     = document.getElementById('vmodalSub');
+  var closeBtn  = document.getElementById('vmodalClose');
+  var prevBtn   = document.getElementById('vmodalPrev');
+  var nextBtn   = document.getElementById('vmodalNext');
+
+  var cards=[];
+  var currentIdx=0;
+
+  function getVisibleCards(){
+    return Array.from(document.querySelectorAll('.gallery-card:not(.hidden)'));
+  }
+
+  function openVideo(idx){
+    cards=getVisibleCards();
+    if(!cards[idx])return;
+    currentIdx=idx;
+    var card=cards[idx];
+    var id=card.dataset.id;
+    var title=card.dataset.title||'';
+    var sub=card.dataset.sub||'';
+    var isPortrait=card.querySelector('.ratio-9-16')!=null;
+
+    titleEl.textContent=title;
+    subEl.textContent=sub;
+
+    // Set aspect ratio on frame
+    frame.style.paddingBottom=isPortrait?'177.78%':'56.25%';
+    frame.style.position='relative';
+    inner.classList.toggle('portrait',isPortrait);
+
+    frame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>';
+
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+
+  function closeVideo(){
+    modal.classList.remove('open');
+    document.body.style.overflow='';
+    setTimeout(function(){frame.innerHTML=''},350);
+  }
+
+  // Card click
+  document.getElementById('gallery').addEventListener('click',function(e){
+    var card=e.target.closest('.gallery-card');
+    if(!card)return;
+    cards=getVisibleCards();
+    var idx=cards.indexOf(card);
+    if(idx!==-1)openVideo(idx);
+  });
+
+  // Prev / Next
+  prevBtn.addEventListener('click',function(){
+    if(currentIdx>0)openVideo(currentIdx-1);
+  });
+  nextBtn.addEventListener('click',function(){
+    if(currentIdx<cards.length-1)openVideo(currentIdx+1);
+  });
+
+  // Close
+  closeBtn.addEventListener('click',closeVideo);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeVideo()});
+  document.addEventListener('keydown',function(e){
+    if(!modal.classList.contains('open'))return;
+    if(e.key==='Escape')closeVideo();
+    if(e.key==='ArrowLeft'&&currentIdx>0)openVideo(currentIdx-1);
+    if(e.key==='ArrowRight'&&currentIdx<cards.length-1)openVideo(currentIdx+1);
+  });
+})();
+</script>
+</body>
+</html>
