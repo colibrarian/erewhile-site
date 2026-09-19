@@ -316,21 +316,31 @@
     @media (max-width: 700px) {
       .scatter-arena {
         height: auto !important;
-        display: flex;
-        flex-direction: column;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
         padding-bottom: 4px;
       }
-      .scard, #sc0, #sc3 {
+      .scard {
         position: relative !important;
         left: auto !important; top: auto !important;
         width: 100% !important;
-        transform: translateY(20px) !important;
+        transform: translateY(16px) !important;
         opacity: 0 !important;
         animation: none !important;
         border-radius: 14px;
       }
-      .scard.landed {
+      /* featured wide cards go full width on mobile */
+      #sc0, #sc3 {
+        grid-column: 1 / -1;
+        position: relative !important;
+        left: auto !important; top: auto !important;
+        width: 100% !important;
+        transform: translateY(16px) !important;
+        opacity: 0 !important;
+        animation: none !important;
+      }
+      .scard.landed, #sc0.landed, #sc3.landed {
         transform: none !important;
         opacity: 1 !important;
         animation: none !important;
@@ -698,9 +708,21 @@
       <img class="brand-logo" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital" loading="eager">
       <span>erewhile.digital</span>
     </a>
-    <a class="back-link" href="/">← Back to main</a>
-    <a class="btn-cta" href="#contact">Get a quote</a>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <a href="/">Websites</a>
+      <a href="/portfolio" class="active">Portfolio</a>
+      <a href="/video">Video</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-ctas">
+      <a class="social-btn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/></svg>
+      </a>
+      <a class="btn btn-teal btn-sm" href="#contact">Get a quote</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
@@ -708,10 +730,6 @@
   <a href="/portfolio" class="active">Portfolio</a>
   <a href="/video">Video</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
-  <div class="m-ctas">
-    <a style="padding:9px 18px;border-radius:100px;border:1px solid var(--line);font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--muted);" href="/fast-website">Landing page from €250</a>
-    <a style="padding:9px 18px;border-radius:100px;background:var(--teal);color:#fff;font-family:var(--font);font-size:12.5px;font-weight:600;" href="#contact" onclick="closeMobileNav()">Get a quote</a>
-  </div>
 </div>
 
 <!-- ── PAGE HERO ── -->
@@ -1265,9 +1283,10 @@ function closeModal(id) {
       if (entry.isIntersecting && !fired) {
         fired = true;
         if (isMobile()) {
-          // Mobile: simple stagger fade-up
+          // Mobile: grid stagger fade-up
           cards.forEach((card, i) => {
-            setTimeout(() => { card.classList.add('landed'); }, i * 120);
+            card.style.transition = 'opacity .5s ease, transform .5s ease';
+            setTimeout(() => { card.classList.add('landed'); }, i * 100);
           });
         } else {
           // Desktop: fly-in then float
