@@ -1,0 +1,1474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Erewhile Digital</title>
+  <meta name="description" content="Website portfolio — Erewhile Digital. Web design, landing pages, NGO sites, CRM dashboards and booking flows." />
+  <link rel="canonical" href="https://erewhile.digital/portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --ink:       #0a0a0a;
+      --ink2:      #3a3a3a;
+      --muted:     rgba(10,10,10,0.48);
+      --muted2:    rgba(10,10,10,0.28);
+      --teal:      #076B58;
+      --teal-line: rgba(7,107,88,0.22);
+      --teal-dim:  rgba(7,107,88,0.07);
+      --bg:        #f7f7f5;
+      --bg2:       #ffffff;
+      --line:      rgba(10,10,10,0.08);
+      --line2:     rgba(10,10,10,0.045);
+
+      /* glass — светлое стекло */
+      --glass-bg:      rgba(255,255,255,0.72);
+      --glass-border:  rgba(255,255,255,0.9);
+      --glass-shadow:  0 4px 24px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      --glass-blur:    blur(16px);
+
+      --ease: cubic-bezier(.16,1,.3,1);
+      --font: 'Montserrat', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: var(--font); cursor: pointer; }
+
+    /* ── Subtle grid ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(var(--line2) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line2) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* ── Ambient light blobs ── */
+    .ambient { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(100px); opacity: 0.22;
+      animation: blobDrift 20s ease-in-out infinite alternate;
+    }
+    .blob1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(7,107,88,0.35), transparent 70%); top: -150px; right: -100px; }
+    .blob2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(7,107,88,0.2), transparent 70%); bottom: 10%; left: -80px; animation-delay: -8s; animation-duration: 26s; }
+    @keyframes blobDrift {
+      from { transform: translate(0,0) scale(1); }
+      to   { transform: translate(30px,-40px) scale(1.06); }
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(247,247,245,0.82);
+      backdrop-filter: blur(24px) saturate(1.5);
+      -webkit-backdrop-filter: blur(24px) saturate(1.5);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px);
+      height: 64px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 9px;
+      font-weight: 700; font-size: 13.5px; letter-spacing: 0.01em;
+      color: var(--ink); transition: opacity .2s;
+    }
+    .brand:hover { opacity: .7; }
+    .brand-logo { height: 24px; width: auto; }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12.5px; font-weight: 600; color: var(--muted);
+      padding: 7px 14px; border-radius: 100px;
+      border: 1px solid var(--line);
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      transition: all .2s var(--ease);
+      margin-left: auto;
+    }
+    .back-link:hover { color: var(--teal); border-color: var(--teal-line); background: var(--teal-dim); }
+
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 20px; border-radius: 100px;
+      background: var(--ink); color: #fff;
+      font-size: 12.5px; font-weight: 700; letter-spacing: 0.02em;
+      border: 1px solid transparent;
+      transition: all .22s var(--ease);
+      white-space: nowrap;
+    }
+    .btn-cta:hover { background: var(--ink2); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      max-width: 1200px; margin: 0 auto;
+      padding: clamp(48px,6vw,80px) clamp(16px,4vw,48px) clamp(32px,4vw,48px);
+      position: relative; z-index: 1;
+    }
+    .page-hero-eyebrow {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 14px;
+      opacity: 0; animation: fadeUp .7s var(--ease) .05s forwards;
+    }
+    .page-hero h1 {
+      font-size: clamp(34px,5vw,64px);
+      font-weight: 800; letter-spacing: -0.04em; line-height: 1.0;
+      color: var(--ink);
+      opacity: 0; animation: fadeUp .8s var(--ease) .15s forwards;
+    }
+    .page-hero h1 em { font-style: italic; font-weight: 400; color: var(--muted); }
+    .page-hero-sub {
+      margin-top: 16px; max-width: 560px;
+      font-size: 14px; font-weight: 400; color: var(--muted); line-height: 1.75;
+      opacity: 0; animation: fadeUp .8s var(--ease) .25s forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ── SECTION / RAIL ── */
+    .portfolio-section {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 0 clamp(40px,5vw,64px);
+      position: relative; z-index: 1;
+    }
+
+    .section-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 16px;
+      padding: 0 clamp(16px,4vw,48px);
+      margin-bottom: 18px;
+    }
+    .section-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-size: clamp(18px,2.2vw,26px); font-weight: 800;
+      letter-spacing: -0.04em; line-height: 1.05; color: var(--ink);
+    }
+    .section-count {
+      font-size: 11px; font-weight: 600; color: var(--muted2);
+      letter-spacing: 0.04em; white-space: nowrap; padding-bottom: 4px;
+    }
+
+    /* ── RAIL ── */
+    .rail-wrap {
+      position: relative;
+    }
+    .rail-fade-left,
+    .rail-fade-right {
+      position: absolute; top: 0; bottom: 0; width: 60px;
+      pointer-events: none; z-index: 5;
+    }
+    .rail-fade-left  { left: 0;  background: linear-gradient(to right,  var(--bg), transparent); }
+    .rail-fade-right { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+
+    /* ── Animation A: auto-scroll rail ── */
+    .rail-auto .rail-track {
+      animation: railAutoScroll 32s linear infinite;
+    }
+    .rail-auto:hover .rail-track { animation-play-state: paused; }
+    @keyframes railAutoScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    /* Lift card on hover */
+    .rail-auto .bcard {
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+    }
+    .rail-auto .bcard:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 56px rgba(0,0,0,0.13), 0 4px 12px rgba(0,0,0,0.06);
+      border-color: rgba(7,107,88,0.22);
+    }
+
+    .rail-nav {
+      display: flex; gap: 8px;
+      padding: 0 clamp(16px,4vw,48px);
+      margin-top: 14px;
+    }
+    .rail-nav-btn {
+      width: 34px; height: 34px; border-radius: 100px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--line);
+      box-shadow: var(--glass-shadow);
+      color: var(--muted); font-size: 16px; font-weight: 700;
+      display: grid; place-items: center;
+      transition: all .2s var(--ease);
+    }
+    .rail-nav-btn:hover { border-color: var(--teal-line); color: var(--teal); transform: translateY(-1px); }
+
+    .rail-viewport {
+      overflow-x: auto; scrollbar-width: none;
+      scroll-behavior: smooth; overscroll-behavior-x: contain;
+      padding: 8px clamp(16px,4vw,48px) 16px;
+    }
+    .rail-viewport::-webkit-scrollbar { display: none; }
+    .rail-track {
+      display: flex; gap: 16px;
+      width: max-content;
+    }
+
+    /* ── Animation B: Fly-in scatter ── */
+    .scatter-section {
+      padding: 0 clamp(16px,4vw,48px);
+      position: relative; z-index: 1;
+    }
+
+    /* ── Desktop: overlap scatter ── */
+    .scatter-arena {
+      position: relative;
+      width: 100%;
+      height: 570px;
+      background: transparent;
+    }
+
+    /* Featured widths per card */
+    #sc0 { width: 320px; }
+    #sc2 { width: 280px; }
+    #sc4 { width: 320px; }
+
+    @keyframes floatCard {
+      0%   { translate: 0px 0px; }
+      33%  { translate: 2px -5px; }
+      66%  { translate: -2px 3px; }
+      100% { translate: 0px 0px; }
+    }
+
+    .scard {
+      position: absolute;
+      width: 260px;
+      border-radius: 18px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.09), 0 2px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      opacity: 0;
+      transform-origin: center center;
+      transition:
+        transform 0.75s cubic-bezier(.16,1,.3,1),
+        opacity   0.55s cubic-bezier(.16,1,.3,1),
+        box-shadow .3s,
+        border-color .3s;
+      will-change: transform, opacity;
+    }
+    .scard.landed {
+      opacity: 1;
+      animation: floatCard var(--float-dur, 6s) ease-in-out infinite;
+    }
+    .scard.landed:hover {
+      animation-play-state: paused;
+    }
+    .scard:hover {
+      border-color: var(--teal-line);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.16);
+      z-index: 20 !important;
+    }
+    .scard-img {
+      width: 100%; aspect-ratio: 16/10;
+      background: rgba(10,10,10,0.06);
+      overflow: hidden; display: block;
+    }
+    .scard-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .scard-body { padding: 13px 15px 15px; }
+    .scard-tag {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 5px;
+    }
+    .scard-name { font-size: 14px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; color: var(--ink); }
+    .scard-sub  { font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    .scard-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-top: 9px; font-size: 12px; font-weight: 600; color: var(--teal);
+      transition: gap .2s;
+    }
+    .scard:hover .scard-link { gap: 8px; }
+
+    /* ── Mobile: stagger column ── */
+    @media (max-width: 700px) {
+      .scatter-arena {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 4px;
+      }
+      .scard, #sc0, #sc3 {
+        position: relative !important;
+        left: auto !important; top: auto !important;
+        width: 100% !important;
+        transform: translateY(20px) !important;
+        opacity: 0 !important;
+        animation: none !important;
+        border-radius: 14px;
+      }
+      .scard.landed {
+        transform: none !important;
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .scard:hover { transform: none !important; }
+    }
+
+    /* ── BROWSER CARD ── */
+    .bcard {
+      flex: 0 0 auto;
+      width: 340px;
+      border-radius: 16px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      overflow: hidden;
+      transition: all .3s var(--ease);
+      position: relative;
+    }
+    .bcard:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.11), 0 2px 8px rgba(0,0,0,0.05);
+      border-color: rgba(7,107,88,0.18);
+    }
+
+    /* browser chrome */
+    .bcard-chrome {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 14px 9px;
+      background: rgba(245,245,243,0.9);
+      border-bottom: 1px solid var(--line);
+    }
+    .chrome-dots { display: flex; gap: 5px; }
+    .chrome-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .chrome-dot:nth-child(1) { background: #ff5f57; }
+    .chrome-dot:nth-child(2) { background: #ffbd2e; }
+    .chrome-dot:nth-child(3) { background: #28c840; }
+
+    .chrome-bar {
+      flex: 1;
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 10.5px; font-weight: 500; color: var(--muted2);
+      overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    }
+    .chrome-favicon {
+      width: 12px; height: 12px;
+      border-radius: 3px; flex-shrink: 0;
+      background: var(--teal-dim);
+      display: grid; place-items: center;
+      font-size: 8px;
+    }
+
+    /* preview image */
+    .bcard-preview {
+      width: 100%; aspect-ratio: 16/10;
+      background: #e8ede9; overflow: hidden;
+      display: block; position: relative;
+    }
+    .bcard-preview img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .5s var(--ease);
+    }
+    .bcard:hover .bcard-preview img { transform: scale(1.04); }
+
+    /* tag overlay */
+    .bcard-tag {
+      position: absolute; top: 10px; left: 10px;
+      padding: 4px 10px; border-radius: 100px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--teal);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    /* card body */
+    .bcard-body { padding: 14px 16px 16px; }
+    .bcard-title {
+      font-size: 15px; font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.25; color: var(--ink);
+    }
+    .bcard-desc {
+      margin-top: 5px;
+      font-size: 12px; font-weight: 400; color: var(--muted);
+      line-height: 1.6;
+    }
+    .bcard-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-top: 10px; font-size: 12px; font-weight: 600;
+      color: var(--teal); transition: gap .2s;
+    }
+    .bcard:hover .bcard-link { gap: 8px; }
+
+    /* ── WIDE CARD (Featured) ── */
+    .bcard-wide {
+      width: 500px;
+    }
+    .bcard-wide .bcard-preview { aspect-ratio: 16/9; }
+
+    /* ── SMALL CARD ── */
+    .bcard-sm {
+      width: 260px;
+    }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px);
+      position: relative; z-index: 1;
+    }
+    .section-divider::after { content: ''; display: block; border-bottom: 1px solid var(--line); margin-bottom: clamp(40px,5vw,64px); }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px) clamp(48px,6vw,80px);
+      position: relative; z-index: 1;
+    }
+
+    .cta-card {
+      border-radius: 24px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      padding: clamp(28px,4vw,52px);
+      position: relative; overflow: hidden;
+    }
+    .cta-card::before {
+      content: ''; position: absolute; inset: -50%;
+      background: radial-gradient(500px circle at 15% 30%, rgba(7,107,88,0.06), transparent 55%);
+      pointer-events: none;
+    }
+
+    .cta-card h2 {
+      font-size: clamp(22px,3vw,36px); font-weight: 800;
+      letter-spacing: -0.04em; line-height: 1.05;
+      position: relative;
+    }
+    .cta-card h2 em { font-style: italic; font-weight: 500; color: var(--teal); }
+    .cta-desc {
+      margin-top: 10px; color: var(--muted);
+      font-size: 14px; line-height: 1.75; max-width: 58ch;
+      font-weight: 400; position: relative;
+    }
+
+    .form-grid {
+      margin-top: 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      position: relative;
+    }
+    @media(max-width:580px){ .form-grid { grid-template-columns: 1fr; } }
+    .full { grid-column: 1/-1; }
+
+    label {
+      display: block; font-size: 10px; font-weight: 800;
+      letter-spacing: 0.1em; color: var(--muted2);
+      margin-bottom: 6px; text-transform: uppercase;
+    }
+    input, select, textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+      border-radius: 10px; padding: 11px 13px;
+      font-size: 13.5px; font-family: var(--font); font-weight: 500;
+      color: var(--ink); outline: none;
+      transition: all .2s var(--ease);
+    }
+    input::placeholder, textarea::placeholder { color: var(--muted2); font-weight: 400; }
+    textarea { min-height: 110px; resize: vertical; }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--teal-line);
+      box-shadow: 0 0 0 3px rgba(7,107,88,0.07);
+      background: #fff;
+    }
+    select option { background: #fff; }
+
+    /* consent */
+    .consent-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; position: relative; }
+    .consent-check {
+      width: 17px; height: 17px; border-radius: 5px; flex: 0 0 17px; margin-top: 2px;
+      background: rgba(255,255,255,0.8); border: 1.5px solid var(--line);
+      appearance: none; -webkit-appearance: none; cursor: pointer; transition: all .2s; position: relative;
+    }
+    .consent-check:checked { background: var(--teal); border-color: var(--teal); }
+    .consent-check:checked::after {
+      content: ''; position: absolute; left: 4px; top: 1px;
+      width: 6px; height: 9px;
+      border-right: 2px solid #fff; border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+    }
+    .consent-label { font-size: 11.5px; color: var(--muted); line-height: 1.6; font-weight: 400; }
+    .consent-label a { color: var(--teal); border-bottom: 1px solid var(--teal-line); cursor: pointer; }
+
+    .form-actions { margin-top: 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; position: relative; }
+    .fine { font-size: 11.5px; color: var(--muted2); line-height: 1.5; font-weight: 400; }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px) 36px;
+      position: relative; z-index: 1;
+    }
+    .footer-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      border-top: 1px solid var(--line); padding-top: 24px;
+    }
+    .footer-brand { font-size: 12px; font-weight: 600; color: var(--muted2); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-link {
+      font-size: 12px; font-weight: 500; color: var(--muted2);
+      transition: color .2s; cursor: pointer;
+    }
+    .footer-link:hover { color: var(--teal); }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
+    .reveal.on { opacity: 1; transform: none; }
+
+    /* ── MODALS ── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 1100;
+      background: rgba(10,10,10,0.55);
+      backdrop-filter: blur(12px);
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s var(--ease);
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-box {
+      width: 100%; max-width: 680px; max-height: 82vh; min-height: 0;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--line);
+      box-shadow: 0 32px 80px rgba(0,0,0,0.12);
+      display: flex; flex-direction: column;
+      transform: scale(.96) translateY(10px);
+      transition: transform .3s var(--ease);
+    }
+    .modal-overlay.open .modal-box { transform: scale(1) translateY(0); }
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 24px 16px; border-bottom: 1px solid var(--line); flex-shrink: 0;
+    }
+    .modal-header h3 { font-size: 17px; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); }
+    .modal-close {
+      width: 32px; height: 32px; border-radius: 100px;
+      background: rgba(10,10,10,0.05); border: 1px solid var(--line);
+      color: var(--muted); font-size: 17px; display: grid; place-items: center;
+      cursor: pointer; transition: all .2s; flex-shrink: 0;
+    }
+    .modal-close:hover { background: rgba(10,10,10,0.09); color: var(--ink); }
+    .modal-body {
+      padding: 22px 24px 28px;
+      overflow-y: auto; flex: 1 1 auto; min-height: 0;
+      scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+    }
+    .modal-body::-webkit-scrollbar { width: 4px; }
+    .modal-body::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+    .modal-body h4 { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; color: var(--ink); margin: 20px 0 7px; text-transform: uppercase; }
+    .modal-body h4:first-child { margin-top: 0; }
+    .modal-body p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 6px; }
+    .modal-body a { color: var(--teal); border-bottom: 1px solid var(--teal-line); }
+    .modal-body ul { margin: 6px 0 8px 16px; }
+    .modal-body li { font-size: 13px; color: var(--muted); line-height: 1.75; }
+    .modal-body .effective { font-size: 11px; color: var(--muted2); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 16px; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:880px){ .bcard-wide { width: 360px; } }
+    @media(max-width:560px){
+      .bcard { width: 280px; }
+      .bcard-wide { width: 300px; }
+      .bcard-sm { width: 220px; }
+    }
+  
+    /* ── Price Quiz (shared) ── */
+    .quiz-step { display:none; }
+    .quiz-step.active { display:block; animation: fadeUp .4s var(--ease) forwards; }
+    .quiz-q {
+      font-size: clamp(16px,2vw,21px); font-weight: 800;
+      letter-spacing: -0.03em; margin-bottom: 20px; color: var(--ink);
+    }
+    .quiz-options {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 10px;
+    }
+    .quiz-opt {
+      padding: 14px 16px; border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.75);
+      cursor: pointer; text-align: left;
+      transition: all .2s var(--ease);
+      font-family: var(--font);
+    }
+    .quiz-opt:hover { border-color: var(--teal-line); background: rgba(7,107,88,0.05); transform: translateY(-1px); }
+    .quiz-opt-label { font-size: 14px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+    .quiz-opt-sub   { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .quiz-nav { display:flex; align-items:center; gap:10px; margin-top:22px; }
+    .quiz-back {
+      padding: 9px 16px; border-radius: 100px;
+      border: 1px solid var(--line); background: transparent;
+      font-family: var(--font); font-size: 12.5px; font-weight: 600;
+      color: var(--muted); cursor: pointer; transition: all .2s;
+    }
+    .quiz-back:hover { color: var(--ink); border-color: rgba(10,10,10,0.2); }
+    .quiz-dot { height: 4px; border-radius: 2px; flex: 1; background: var(--line); transition: background .3s; }
+    .quiz-dot.done   { background: var(--teal); }
+    .quiz-dot.active { background: rgba(7,107,88,0.35); }
+    .result-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 0; font-size: 13px; color: var(--ink);
+      border-bottom: 1px solid var(--teal-line);
+    }
+    .result-item:last-child { border-bottom: none; }
+    .result-check { color: var(--teal); font-weight: 800; font-size: 14px; flex-shrink: 0; }
+    .result-meta-item { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; color: var(--muted); }
+    .result-meta-icon {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: rgba(7,107,88,0.07); border: 1px solid rgba(7,107,88,0.22);
+      display: grid; place-items: center; font-size: 13px;
+    }
+    @media(max-width:580px){ #resultLayout,#resultLayoutP { grid-template-columns: 1fr !important; } }
+
+  
+    /* ── Burger menu ── */
+    .burger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;border:none;background:transparent;border-radius:8px;transition:background .2s}
+    .burger:hover{background:var(--line2)}
+    .burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s var(--ease)}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-nav{display:none;position:fixed;inset:64px 0 0;background:rgba(247,247,245,0.97);backdrop-filter:blur(20px);z-index:190;padding:24px clamp(16px,4vw,48px);flex-direction:column;gap:4px}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
+    .mobile-nav a:hover{color:var(--teal)}
+    .mobile-nav .m-ctas{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    @media(max-width:880px){nav{display:none}.burger{display:flex}}
+    @media(max-width:540px){.social-btn{display:none}.header-ctas .btn-ghost{display:none}.brand-logo{display:none}}
+  </style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+</div>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital" loading="eager">
+      <span>erewhile.digital</span>
+    </a>
+    <a class="back-link" href="/">← Back to main</a>
+    <a class="btn-cta" href="#contact">Get a quote</a>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Websites</a>
+  <a href="/portfolio" class="active">Portfolio</a>
+  <a href="/video">Video</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <div class="m-ctas">
+    <a style="padding:9px 18px;border-radius:100px;border:1px solid var(--line);font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--muted);" href="/fast-website">Landing page from €250</a>
+    <a style="padding:9px 18px;border-radius:100px;background:var(--teal);color:#fff;font-family:var(--font);font-size:12.5px;font-weight:600;" href="#contact" onclick="closeMobileNav()">Get a quote</a>
+  </div>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Portfolio</div>
+  <h1>Websites we've <em>built</em><br>and launched</h1>
+  <p class="page-hero-sub">Business sites, NGO pages, booking flows, internal tools and landing pages — each one built to convert.</p>
+</div>
+
+<!-- ════════════════════════
+     RAIL 1 — WEBSITES
+════════════════════════ -->
+<section class="portfolio-section reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Websites</div>
+      <div class="section-title">Business, brand & NGO sites</div>
+    </div>
+  </div>
+
+  <div class="rail-wrap rail-auto">
+    <div class="rail-fade-left" aria-hidden="true"></div>
+    <div class="rail-fade-right" aria-hidden="true"></div>
+    <div class="rail-viewport">
+      <div class="rail-track" id="websitesTrack">
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">💄</span>solvatabeauty.lv</div>
+          </div>
+          <a href="https://solvatabeauty.lv" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/6.jpg" alt="Solvata Beauty" loading="eager">
+            <span class="bcard-tag">Beauty</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">Solvata Beauty</div>
+            <div class="bcard-desc">Website for a beauty studio — services, trust signals and online booking.</div>
+            <a class="bcard-link" href="https://solvatabeauty.lv" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">👨‍🍳</span>idchef13.com</div>
+          </div>
+          <a href="http://idchef13.com" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/5.jpg" alt="ID Chef personal brand" loading="eager">
+            <span class="bcard-tag">Personal brand</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">ID Chef — Personal Brand Site</div>
+            <div class="bcard-desc">Website for a chef and restaurant consultant — positioning, story, and contact flow.</div>
+            <a class="bcard-link" href="http://idchef13.com" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">🍖</span>grill-in.lv</div>
+          </div>
+          <a href="http://grill-in.lv" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/4.jpg" alt="Grill In restaurant" loading="lazy">
+            <span class="bcard-tag">Restaurant</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">Grill In — Restaurant Landing</div>
+            <div class="bcard-desc">One-page site for a grill restaurant: menu highlights, atmosphere and table reservations.</div>
+            <a class="bcard-link" href="http://grill-in.lv" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">👗</span>kondo.ee</div>
+          </div>
+          <a href="https://kondo.ee" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg" alt="Kondo clothing brand" loading="lazy">
+            <span class="bcard-tag">E-commerce</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">Kondo — Clothing Brand</div>
+            <div class="bcard-desc">Brand website with online ordering capability for an Estonian clothing label.</div>
+            <a class="bcard-link" href="https://kondo.ee" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">🌸</span>razalija.lv</div>
+          </div>
+          <a href="https://razalija.lv" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/1.jpg" alt="Razalija flower shop" loading="lazy">
+            <span class="bcard-tag">Local shop</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">Razalija — Flower Shop</div>
+            <div class="bcard-desc">Local flower shop with online order option — gallery, catalogue and easy checkout flow.</div>
+            <a class="bcard-link" href="https://razalija.lv" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">🏢</span>jelgavacoworking.lv</div>
+          </div>
+          <a href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="Jelgava Coworking" loading="lazy">
+            <span class="bcard-tag">Coworking</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">Jelgava Coworking</div>
+            <div class="bcard-desc">Pricing, value props and lead capture for a coworking space outside Riga.</div>
+            <a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">🌍</span>untu.ngo</div>
+          </div>
+          <a href="http://untu.ngo" target="_blank" rel="noopener" class="bcard-preview">
+            <img src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366" alt="UNTU NGO" loading="lazy">
+            <span class="bcard-tag">NGO</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">UNTU — Youth NGO</div>
+            <div class="bcard-desc">Non-profit website built around trust and clear calls to action: donate, volunteer, get involved.</div>
+            <a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Open site →</a>
+          </div>
+        </div>
+
+        <!-- Duplicate set for seamless infinite loop -->
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">💄</span>solvatabeauty.lv</div></div>
+          <a href="https://solvatabeauty.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/6.jpg" alt="" loading="lazy"><span class="bcard-tag">Beauty</span></a>
+          <div class="bcard-body"><div class="bcard-title">Solvata Beauty</div><div class="bcard-desc">Website for a beauty studio — services, trust signals and online booking.</div><a class="bcard-link" href="https://solvatabeauty.lv" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">👨‍🍳</span>idchef13.com</div></div>
+          <a href="http://idchef13.com" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/5.jpg" alt="" loading="lazy"><span class="bcard-tag">Personal brand</span></a>
+          <div class="bcard-body"><div class="bcard-title">ID Chef — Personal Brand Site</div><div class="bcard-desc">Website for a chef and restaurant consultant — positioning, story, and contact flow.</div><a class="bcard-link" href="http://idchef13.com" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🍖</span>grill-in.lv</div></div>
+          <a href="http://grill-in.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/4.jpg" alt="" loading="lazy"><span class="bcard-tag">Restaurant</span></a>
+          <div class="bcard-body"><div class="bcard-title">Grill In — Restaurant Landing</div><div class="bcard-desc">One-page site for a grill restaurant: menu highlights, atmosphere and table reservations.</div><a class="bcard-link" href="http://grill-in.lv" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">👗</span>kondo.ee</div></div>
+          <a href="https://kondo.ee" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg" alt="" loading="lazy"><span class="bcard-tag">E-commerce</span></a>
+          <div class="bcard-body"><div class="bcard-title">Kondo — Clothing Brand</div><div class="bcard-desc">Brand website with online ordering capability for an Estonian clothing label.</div><a class="bcard-link" href="https://kondo.ee" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌸</span>razalija.lv</div></div>
+          <a href="https://razalija.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/1.jpg" alt="" loading="lazy"><span class="bcard-tag">Local shop</span></a>
+          <div class="bcard-body"><div class="bcard-title">Razalija — Flower Shop</div><div class="bcard-desc">Local flower shop with online order option — gallery, catalogue and easy checkout flow.</div><a class="bcard-link" href="https://razalija.lv" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🏢</span>jelgavacoworking.lv</div></div>
+          <a href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="" loading="lazy"><span class="bcard-tag">Coworking</span></a>
+          <div class="bcard-body"><div class="bcard-title">Jelgava Coworking</div><div class="bcard-desc">Pricing, value props and lead capture for a coworking space outside Riga.</div><a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+        <div class="bcard" aria-hidden="true">
+          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌍</span>untu.ngo</div></div>
+          <a href="http://untu.ngo" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366" alt="" loading="lazy"><span class="bcard-tag">NGO</span></a>
+          <div class="bcard-body"><div class="bcard-title">UNTU — Youth NGO</div><div class="bcard-desc">Non-profit website built around trust and clear calls to action: donate, volunteer, get involved.</div><a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Open site →</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider reveal"></div>
+
+<!-- ════════════════════════
+     SECTION 2 — TOOLS & APPS (Fly-in)
+════════════════════════ -->
+<section class="portfolio-section reveal" id="toolsSection">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Tools & Apps</div>
+      <div class="section-title">Booking flows, dashboards & digital tools</div>
+    </div>
+  </div>
+
+  <div class="scatter-section">
+    <div class="scatter-arena" id="scatterArena">
+
+      <div class="scard" id="sc0" data-rot="-5">
+        <a href="#contact" class="scard-img">
+          <img src="https://ik.imagekit.io/erewhile/erewhile/therapy%20erewhile.png?updatedAt=1777368269354" alt="Expert Booking Flow" loading="lazy">
+        </a>
+        <div class="scard-body">
+          <div class="scard-tag">Booking flow</div>
+          <div class="scard-name">Expert Booking Flow</div>
+          <div class="scard-sub">Short path from landing to booked appointment</div>
+          <a class="scard-link" href="#contact">Request details →</a>
+        </div>
+      </div>
+
+      <div class="scard" id="sc1" data-rot="3">
+        <a href="https://untu.ngo/projects/fts" target="_blank" rel="noopener" class="scard-img">
+          <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/2.jpg" alt="From Thinking to Speaking" loading="lazy">
+        </a>
+        <div class="scard-body">
+          <div class="scard-tag">Erasmus+</div>
+          <div class="scard-name">From Thinking to Speaking</div>
+          <div class="scard-sub">Digital infopack · multilingual · UNTU</div>
+          <a class="scard-link" href="https://untu.ngo/projects/fts" target="_blank" rel="noopener">Open site →</a>
+        </div>
+      </div>
+
+      <div class="scard" id="sc2" data-rot="-8">
+        <a href="#contact" class="scard-img">
+          <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/7.jpg" alt="Digital Menu" loading="lazy">
+        </a>
+        <div class="scard-body">
+          <div class="scard-tag">Digital menu</div>
+          <div class="scard-name">Digital Menu — Grill Bar</div>
+          <div class="scard-sub">QR-accessible · no app needed</div>
+          <a class="scard-link" href="#contact">Request details →</a>
+        </div>
+      </div>
+
+      <div class="scard" id="sc3" data-rot="6">
+        <a href="https://untu.ngo/projects/dwcm" target="_blank" rel="noopener" class="scard-img">
+          <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/3.jpg" alt="DWCM Report" loading="lazy">
+        </a>
+        <div class="scard-body">
+          <div class="scard-tag">Erasmus+</div>
+          <div class="scard-name">DWCM — Project Report Site</div>
+          <div class="scard-sub">Multi-page microsite · structured docs</div>
+          <a class="scard-link" href="https://untu.ngo/projects/dwcm" target="_blank" rel="noopener">Open site →</a>
+        </div>
+      </div>
+
+      <div class="scard" id="sc4" data-rot="-4">
+        <a href="#contact" class="scard-img">
+          <img src="https://ik.imagekit.io/erewhile/erewhile/dashboard.png?updatedAt=1777368268999" alt="Internal CRM" loading="lazy">
+        </a>
+        <div class="scard-body">
+          <div class="scard-tag">Mini CRM</div>
+          <div class="scard-name">Internal CRM — Leads & Workflow</div>
+          <div class="scard-sub">Pipeline · status tracking · no fees</div>
+          <a class="scard-link" href="#contact">Request details →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider reveal"></div>
+
+<!-- ════════════════════════
+     SECTION 3 — PRICE QUIZ
+════════════════════════ -->
+<section class="portfolio-section reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Get an estimate</div>
+      <div class="section-title">How much does your project cost?</div>
+    </div>
+  </div>
+
+  <div style="padding:0 clamp(16px,4vw,48px);">
+    <div class="cta-card" id="priceQuizP">
+      <div style="position:relative;">
+        <div style="display:flex;gap:6px;margin-bottom:28px;" id="quizProgressP"></div>
+        <div id="quizStepsP"></div>
+        <div id="quizResultP" style="display:none;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;" id="resultLayoutP">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:8px;">Based on your answers</div>
+              <div style="font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-0.04em;line-height:1;color:var(--ink);" id="resultPriceP"></div>
+              <div style="margin-top:10px;font-size:13.5px;color:var(--muted);line-height:1.65;font-weight:400;" id="resultDescP"></div>
+              <div style="display:flex;gap:14px;margin-top:18px;flex-wrap:wrap;" id="resultMetaP"></div>
+            </div>
+            <div id="resultIncludesP" style="border-radius:14px;background:rgba(7,107,88,0.05);border:1px solid var(--teal-line);padding:20px;"></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;">
+            <a class="btn-cta" href="#contact">Get a precise quote →</a>
+            <button style="padding:9px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;" onclick="resetQuizP()">Start over</button>
+          </div>
+          <p style="margin-top:12px;font-size:11.5px;color:var(--muted2);font-weight:400;">Final price depends on content, integrations and scope. No surprises after we agree.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider reveal"></div>
+
+<!-- ── CTA / FORM ── -->
+<div class="cta-section" id="contact">
+  <div class="cta-card reveal">
+    <h2>Ready to build something <em>that works</em>?</h2>
+    <p class="cta-desc">Tell us what you need — website, landing page, tool or something else. We'll reply with a plan and estimate within 24 hours.</p>
+
+    <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
+      <input type="hidden" name="_subject" value="Portfolio page inquiry — erewhile.digital">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-grid">
+        <div><label>Name</label><input name="name" required placeholder="How should we address you?"></div>
+        <div><label>Email</label><input name="_replyto" type="email" required placeholder="you@company.com"></div>
+        <div class="full">
+          <label>What do you need?</label>
+          <select name="service" required>
+            <option value="Consultation">Consultation (project discovery)</option>
+            <option value="Website (custom)">Website (custom)</option>
+            <option value="Landing page">Landing page from €250</option>
+            <option value="Content">Content / video</option>
+            <option value="Integrations & analytics">Integrations / analytics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="full"><label>Message</label><textarea name="message" placeholder="Niche, goal, deadline — anything that helps us understand the project"></textarea></div>
+      </div>
+      <div class="consent-row">
+        <input type="checkbox" class="consent-check" id="consent" required>
+        <label class="consent-label" for="consent" style="text-transform:none;letter-spacing:0;">
+          I agree to the <a tabindex="0" onclick="openModal('terms')">Terms & Conditions</a>,
+          <a tabindex="0" onclick="openModal('privacy')">Privacy Policy</a> and
+          <a tabindex="0" onclick="openModal('cookies')">Cookie Policy</a>.
+          My email will only be used to respond to this inquiry.
+        </label>
+      </div>
+      <div class="form-actions">
+        <button class="btn-cta" type="submit">Send request</button>
+        <div class="fine">We reply within 24 h. Urgent? Add your deadline in the message.</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-row">
+    <span class="footer-brand">© 2025 Erewhile Digital, Riga, Latvia</span>
+    <div class="footer-links">
+      <span class="footer-link" onclick="openModal('terms')">Terms & Conditions</span>
+      <span class="footer-link" onclick="openModal('privacy')">Privacy Policy</span>
+      <span class="footer-link" onclick="openModal('cookies')">Cookie Policy</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── MODALS ── -->
+<div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Terms & Conditions</h3>
+      <button class="modal-close" onclick="closeModal('terms')">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
+      <h4>1. Acceptance</h4>
+      <p>By accessing erewhile.digital and submitting any inquiry form, you agree to these Terms & Conditions. If you do not agree, please do not use this website.</p>
+      <h4>2. Services described</h4>
+      <p>This website is a presentation of services offered by Erewhile Digital (sole trader / freelance agency, Riga, Latvia). Services include website design & development, content production, video, CRM automation and AI integrations. All descriptions are informational; final scope and pricing are confirmed in a separate written agreement.</p>
+      <h4>3. Inquiries & quotes</h4>
+      <p>Submitting an inquiry form does not constitute a binding contract. A project begins only after both parties have signed (or confirmed via email) an individual agreement or statement of work. Erewhile Digital reserves the right to decline any project without explanation.</p>
+      <h4>4. Intellectual property</h4>
+      <p>All content on this website — including text, design and code — is the property of Erewhile Digital unless stated otherwise. You may not reproduce or repurpose any materials without prior written consent.</p>
+      <h4>5. Limitation of liability</h4>
+      <p>This website is provided "as is". Erewhile Digital makes no warranties regarding uptime or uninterrupted access. We are not liable for any indirect or consequential damages arising from use of this website.</p>
+      <h4>6. Governing law</h4>
+      <p>These Terms are governed by the laws of the Republic of Latvia. Any disputes shall be resolved in the courts of Riga, Latvia.</p>
+      <h4>7. Contact</h4>
+      <p>Questions about these Terms: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Privacy Policy</h3>
+      <button class="modal-close" onclick="closeModal('privacy')">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
+      <h4>1. Who we are</h4>
+      <p>Erewhile Digital is a digital agency based in Riga, Latvia. This policy explains how we handle personal data collected through this website.</p>
+      <h4>2. What data we collect</h4>
+      <p>We collect only the information you voluntarily submit via the contact form: your name, your email address, and your message / project description. We do not collect payment data, sensitive personal data, or any information beyond what you actively provide.</p>
+      <h4>3. How we use your data</h4>
+      <p>Your data is used <b>exclusively</b> to respond to your inquiry. We do not use it for marketing without your explicit consent, and we do not share it with any third parties.</p>
+      <h4>4. Data storage</h4>
+      <p>Submissions are processed via <a href="https://formsubmit.co" target="_blank" rel="noopener">FormSubmit.co</a> and delivered to our email inbox. We retain your email correspondence for as long as is necessary for business purposes, and no longer than 3 years unless required by law.</p>
+      <h4>5. Your rights (GDPR)</h4>
+      <p>You have the right to: access your data, request correction or deletion, restrict processing, and lodge a complaint with the Latvian Data State Inspectorate (<a href="https://www.dvi.gov.lv" target="_blank" rel="noopener">dvi.gov.lv</a>).</p>
+      <p>To exercise any of these rights, email: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a>.</p>
+      <h4>6. Cookies</h4>
+      <p>We use only strictly necessary functional cookies. See our Cookie Policy for details.</p>
+      <h4>7. Changes to this policy</h4>
+      <p>We may update this policy from time to time. Material changes will be reflected by updating the effective date above.</p>
+      <h4>8. Contact</h4>
+      <p>Data controller: Erewhile Digital, Riga, Latvia · <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-cookies" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Cookie Policy</h3>
+      <button class="modal-close" onclick="closeModal('cookies')">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
+      <h4>What are cookies?</h4>
+      <p>Cookies are small text files stored on your device when you visit a website. They help the site remember certain information about your visit.</p>
+      <h4>What cookies do we use?</h4>
+      <p>Erewhile Digital uses <b>only strictly necessary functional cookies</b>. We do not use analytics or tracking cookies, advertising or remarketing cookies, social media tracking pixels, or any third-party cookies that profile your behaviour.</p>
+      <h4>Cookie we set</h4>
+      <p><b>ew_cookie_consent</b> — stores your accept/decline choice for this banner. Expires after 180 days. No personal data is stored inside this cookie.</p>
+      <h4>Third-party services</h4>
+      <p>The contact form uses <a href="https://formsubmit.co" target="_blank" rel="noopener">FormSubmit.co</a> to deliver your message to our inbox. FormSubmit may set a functional cookie solely to prevent spam (CSRF protection).</p>
+      <h4>Your choices</h4>
+      <p>Declining cookies will not affect your ability to use this website. You can also delete cookies at any time via your browser settings.</p>
+      <h4>Contact</h4>
+      <p>Questions: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Modals ── */
+function openModal(id) {
+  var el = document.getElementById('modal-' + id);
+  if (!el) return;
+  el.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  var el = document.getElementById('modal-' + id);
+  if (!el) return;
+  el.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+(function(){
+  /* Close modal on overlay click or Escape */
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', e => { if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; } });
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; });
+  });
+
+  /* Reveal on scroll */
+  const io = new IntersectionObserver(en => en.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* Pause auto-scroll rail when any card inside is hovered */
+  document.querySelectorAll('.rail-auto').forEach(rail => {
+    rail.addEventListener('mouseenter', () => {
+      const track = rail.querySelector('.rail-track');
+      if (track) track.style.animationPlayState = 'paused';
+    });
+    rail.addEventListener('mouseleave', () => {
+      const track = rail.querySelector('.rail-track');
+      if (track) track.style.animationPlayState = 'running';
+    });
+  });
+
+})();
+
+/* ── Fly-in + float + hover tilt ── */
+(function(){
+  const arena = document.getElementById('scatterArena');
+  if (!arena) return;
+
+  const isMobile = () => window.innerWidth <= 700;
+
+  // Connected cluster — every card overlaps ≥2 neighbours by 50-90px
+  // Layout map (W = container width, all widths: sc0=320, sc1=260, sc2=280, sc3=260, sc4=320):
+  //
+  //   [sc0 320px]──overlap──[sc2 280px]──overlap──[sc4 320px]
+  //         ╲overlap             ╲overlap             ╲overlap
+  //          [sc1 260px]────overlap──────[sc3 260px]
+  //
+  // Vertical: top row y≈0-20px, bottom row y≈220-260px
+  // Horizontal overlaps ~60-80px so no card floats alone
+
+  function getPositions() {
+    const W = arena.offsetWidth || 900;
+
+    // We work in a 920px design space and scale proportionally
+    // so the cluster stays tight on any screen width
+    const scale = Math.min(1, W / 920);
+    const ox = (W - 920 * scale) / 2; // center offset
+
+    function px(x) { return ox + x * scale; }
+    function py(y) { return y; } // vertical doesn't need scaling
+
+    return [
+      // sc0 (320px) — top-left, tilts -6°
+      { l: px(0),   t: py(12),  r: -6,  z: 3, dur: '6.4s', delay: '0s'    },
+      // sc1 (260px) — bottom-left, overlaps sc0 right+bottom, sc3 left
+      { l: px(200), t: py(250), r:  5,  z: 4, dur: '7.2s', delay: '-2.4s' },
+      // sc2 (280px) — top-center, overlaps sc0 right, sc4 left, sc1 top
+      { l: px(280), t: py(25),  r:  3,  z: 5, dur: '5.9s', delay: '-4.0s' },
+      // sc3 (260px) — bottom-right-center, overlaps sc1 right, sc2 bottom, sc4 bottom-left
+      { l: px(510), t: py(240), r: -5,  z: 4, dur: '8.0s', delay: '-1.6s' },
+      // sc4 (320px) — top-right, overlaps sc2 right, sc3 top
+      { l: px(600), t: py(10),  r:  8,  z: 2, dur: '6.8s', delay: '-3.7s' },
+    ];
+  }
+
+  const origins = [
+    { tx: '-160%', ty: '-140%' }, // sc0 top-left → from top-left
+    { tx: '-140%', ty:  '130%' }, // sc1 bottom → from left
+    { tx:    '0%', ty: '-160%' }, // sc2 center → from top
+    { tx:  '140%', ty:  '130%' }, // sc3 bottom → from right
+    { tx:  '160%', ty: '-140%' }, // sc4 top-right → from top-right
+  ];
+
+  const cards = [0,1,2,3,4].map(i => document.getElementById('sc'+i)).filter(Boolean);
+
+  function initDesktop() {
+    const positions = getPositions();
+    cards.forEach((card, i) => {
+      const p = positions[i];
+      const o = origins[i];
+      card.style.left      = p.l + 'px';
+      card.style.top       = p.t + 'px';
+      card.style.zIndex    = p.z;
+      card.style.setProperty('--float-dur', p.dur);
+      card.style.transform = `translate(${o.tx}, ${o.ty}) rotate(${p.r * 2}deg)`;
+      card.style.opacity   = '0';
+    });
+  }
+
+  if (!isMobile()) initDesktop();
+
+  let fired = false;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !fired) {
+        fired = true;
+        if (isMobile()) {
+          // Mobile: simple stagger fade-up
+          cards.forEach((card, i) => {
+            setTimeout(() => { card.classList.add('landed'); }, i * 120);
+          });
+        } else {
+          // Desktop: fly-in then float
+          const positions = getPositions();
+          cards.forEach((card, i) => {
+            const p = positions[i];
+            setTimeout(() => {
+              card.style.transform = `rotate(${p.r}deg)`;
+              card.style.opacity   = '1';
+              setTimeout(() => {
+                card.style.animationDelay = p.delay;
+                card.classList.add('landed');
+              }, 800);
+            }, i * 110);
+          });
+        }
+        io.disconnect();
+      }
+    });
+  }, { threshold: 0.15 });
+
+  io.observe(arena);
+
+  /* 3D tilt on hover — desktop only */
+  if (!isMobile()) {
+    cards.forEach(card => {
+      const baseR = parseFloat(card.dataset.rot || 0);
+      card.addEventListener('mousemove', e => {
+        const r  = card.getBoundingClientRect();
+        const dx = (e.clientX - r.left - r.width  / 2) / (r.width  / 2);
+        const dy = (e.clientY - r.top  - r.height / 2) / (r.height / 2);
+        card.style.transform = `rotate(${baseR}deg) perspective(600px) rotateX(${dy * -7}deg) rotateY(${dx * 7}deg) scale(1.04)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `rotate(${baseR}deg)`;
+      });
+    });
+  }
+})();
+
+/* ── Shared quiz engine ── */
+function buildQuiz(suffix) {
+  const S = suffix || '';
+  const steps = [
+    {
+      q: 'What type of website do you need?',
+      opts: [
+        { label: 'Landing page',       sub: 'One focused page',            val: 'landing'  },
+        { label: 'Business website',   sub: '3–8 pages, full structure',   val: 'business' },
+        { label: 'Online store',       sub: 'Products, cart, checkout',    val: 'store'    },
+        { label: 'Not sure yet',       sub: "I'll explain in the message", val: 'unsure'   },
+      ]
+    },
+    {
+      q: 'Do you need a contact form or booking system?',
+      opts: [
+        { label: 'Simple contact form',  sub: 'Name, email, message',   val: 'form'    },
+        { label: 'Booking / scheduling', sub: 'Calendar, appointments',  val: 'booking' },
+        { label: 'No form needed',       sub: 'Just info, no input',     val: 'none'    },
+      ]
+    },
+    {
+      q: 'Do you need CRM or third-party integrations?',
+      opts: [
+        { label: 'Yes — connect to CRM', sub: 'HubSpot, Pipedrive, etc.', val: 'crm'   },
+        { label: 'Basic (email alerts)', sub: 'Leads to inbox only',       val: 'basic' },
+        { label: 'No integrations',      sub: 'Keep it simple',            val: 'none'  },
+      ]
+    },
+    {
+      q: 'Do you have existing content (text & images)?',
+      opts: [
+        { label: 'Yes, all ready',     sub: 'I just need the site built', val: 'ready'   },
+        { label: 'Partially ready',    sub: 'Need some help writing',      val: 'partial' },
+        { label: 'Starting from zero', sub: 'Need full content support',   val: 'zero'    },
+      ]
+    },
+    {
+      q: "What's your timeline?",
+      opts: [
+        { label: 'ASAP (< 2 weeks)',     sub: 'Rush project',      val: 'rush'     },
+        { label: '2–4 weeks',            sub: 'Standard timeline', val: 'normal'   },
+        { label: 'No rush (1–2 months)', sub: 'Flexible',          val: 'flexible' },
+      ]
+    },
+  ];
+
+  const answers = [];
+  let current = 0;
+
+  const stepsEl    = document.getElementById('quizSteps' + S);
+  const resultEl   = document.getElementById('quizResult' + S);
+  const progressEl = document.getElementById('quizProgress' + S);
+  if (!stepsEl) return;
+
+  function renderProgress() {
+    progressEl.innerHTML = steps.map((_, i) =>
+      `<div class="quiz-dot ${i < current ? 'done' : i === current ? 'active' : ''}"></div>`
+    ).join('');
+  }
+
+  function renderStep(idx) {
+    const s = steps[idx];
+    stepsEl.innerHTML = `
+      <div class="quiz-step active">
+        <div class="quiz-q">${s.q}</div>
+        <div class="quiz-options">
+          ${s.opts.map((o, oi) => `
+            <button class="quiz-opt" onclick="quizSelect${S}(${oi})">
+              <div class="quiz-opt-label">${o.label}</div>
+              <div class="quiz-opt-sub">${o.sub}</div>
+            </button>`).join('')}
+        </div>
+        <div class="quiz-nav">
+          ${idx > 0 ? `<button class="quiz-back" onclick="quizBack${S}()">← Back</button>` : ''}
+        </div>
+      </div>`;
+    renderProgress();
+  }
+
+  function showResult() {
+    let base = 250, tl = '2–4 weeks', includes = [], desc = '';
+    const type = answers[0], form = answers[1], integr = answers[2],
+          content = answers[3], time = answers[4];
+
+    if (type === 'landing') {
+      base = 250; desc = 'A focused one-page site built for conversion — clear message, lead capture, fast launch.';
+      includes = ['1-page responsive design','Lead capture form','Analytics setup','2 revision rounds'];
+    } else if (type === 'business') {
+      base = 1200; desc = 'Multi-page business site with full structure, SEO foundations and conversion focus.';
+      includes = ['3–8 pages + navigation','UI/UX design','SEO foundations','Analytics setup','3 revision rounds'];
+    } else if (type === 'store') {
+      base = 2200; desc = 'E-commerce site with product catalogue, cart and checkout flow.';
+      includes = ['Product catalogue','Cart & checkout','Payment integration','Order notifications'];
+    } else {
+      base = 800; desc = "Let's talk — we'll figure out the best approach for your project together.";
+      includes = ['Discovery call included','Custom scope & timeline','No surprises'];
+    }
+
+    if (form === 'booking')    base += 400;
+    if (integr === 'crm')      base += 600;
+    if (integr === 'basic')    base += 150;
+    if (content === 'partial') base += 250;
+    if (content === 'zero')    base += 600;
+    if (time === 'rush')  { base = Math.round(base * 1.3 / 50) * 50; tl = '< 2 weeks (rush rate)'; }
+    else if (time === 'flexible') tl = '4–8 weeks';
+
+    const top = Math.round(base * 1.45 / 50) * 50;
+
+    document.getElementById('resultPrice' + S).innerHTML =
+      `€${base.toLocaleString()} <span style="font-size:0.45em;font-weight:500;color:var(--muted)">– €${top.toLocaleString()}</span>`;
+    document.getElementById('resultDesc' + S).textContent = desc;
+    document.getElementById('resultMeta' + S).innerHTML = `
+      <div class="result-meta-item"><div class="result-meta-icon">📅</div><span>${tl}</span></div>
+      <div class="result-meta-item"><div class="result-meta-icon">✅</div><span>Fixed-price agreement</span></div>`;
+    document.getElementById('resultIncludes' + S).innerHTML =
+      `<div style="font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">What's included</div>` +
+      includes.map(item => `<div class="result-item"><span class="result-check">✓</span>${item}</div>`).join('');
+
+    stepsEl.style.display = 'none';
+    progressEl.style.display = 'none';
+    resultEl.style.display = 'block';
+  }
+
+  window['quizSelect' + S] = function(oi) {
+    answers[current] = steps[current].opts[oi].val;
+    if (current < steps.length - 1) { current++; renderStep(current); }
+    else showResult();
+  };
+  window['quizBack' + S] = function() {
+    if (current > 0) { current--; renderStep(current); }
+  };
+  window['resetQuiz' + S] = function() {
+    answers.length = 0; current = 0;
+    resultEl.style.display = 'none';
+    stepsEl.style.display = '';
+    progressEl.style.display = '';
+    renderStep(0);
+  };
+
+  renderStep(0);
+}
+
+buildQuiz('');   // main page (#quizSteps, #quizProgress, #quizResult)
+buildQuiz('P');  // portfolio  (#quizStepsP, #quizProgressP, #quizResultP)
+
+
+/* ── Mobile nav ── */
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+document.getElementById('burgerBtn').addEventListener('click',function(){
+  var open=this.classList.toggle('open');
+  document.getElementById('mobileNav').classList.toggle('open',open);
+  this.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+
+</script>
+</body>
+</html>
