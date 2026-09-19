@@ -92,23 +92,6 @@
     .hero-stat-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);margin-top:2px}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
-    /* ── FILTER PILLS ── */
-    .filter-bar{
-      max-width:1200px;margin:0 auto;
-      padding:0 clamp(16px,4vw,48px) clamp(20px,3vw,32px);
-      display:flex;gap:8px;flex-wrap:wrap;
-      position:relative;z-index:1;
-    }
-    .filter-pill{
-      padding:8px 18px;border-radius:100px;
-      border:1px solid var(--line);
-      background:var(--glass-bg);backdrop-filter:blur(12px);
-      font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--muted);
-      cursor:pointer;transition:all .2s var(--ease);
-    }
-    .filter-pill:hover{border-color:var(--teal-line);color:var(--teal);background:var(--teal-dim)}
-    .filter-pill.active{background:var(--teal);color:#fff;border-color:var(--teal)}
-
     /* ── MASONRY GALLERY ── */
     .gallery-wrap{
       max-width:1200px;margin:0 auto;
@@ -367,16 +350,6 @@
   </div>
 </div>
 
-<!-- FILTER -->
-<div class="filter-bar">
-  <button class="filter-pill active" data-filter="all">All</button>
-  <button class="filter-pill" data-filter="landscape">Landscape 16:9</button>
-  <button class="filter-pill" data-filter="vertical">Vertical 9:16</button>
-  <button class="filter-pill" data-filter="event">Event</button>
-  <button class="filter-pill" data-filter="brand">Brand</button>
-  <button class="filter-pill" data-filter="social">Social / Reels</button>
-</div>
-
 <!-- MASONRY GALLERY -->
 <div class="gallery-wrap">
   <div class="masonry" id="gallery">
@@ -569,22 +542,6 @@ document.getElementById('burgerBtn').addEventListener('click',function(){
 });
 
 /* ── Cards always visible, no scroll reveal needed ── */
-
-/* ── Filter ── */
-document.querySelectorAll('.filter-pill').forEach(function(pill){
-  pill.addEventListener('click',function(){
-    document.querySelectorAll('.filter-pill').forEach(function(p){p.classList.remove('active')});
-    this.classList.add('active');
-    var filter=this.dataset.filter;
-    document.querySelectorAll('.gallery-card').forEach(function(card){
-      if(filter==='all'||card.dataset.cat.indexOf(filter)!==-1){
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-  });
-});
 
 /* ── Video modal ── */
 (function(){
