@@ -1,25 +1,657 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Erewhile</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Erewhile Digital — Website Design & Development, Riga</title>
+  <meta name="description" content="Erewhile Digital builds conversion-focused websites and landing pages. Based in Riga, Latvia."/>
+  <link rel="canonical" href="https://erewhile.digital/"/>
+  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/"/>
+  <meta property="og:title" content="Erewhile Digital — Website Design & Development"/>
+  <meta property="og:description" content="Conversion-focused websites and landing pages. Riga, Latvia."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://erewhile.digital/"/>
+  <meta property="og:image" content="https://ik.imagekit.io/erewhile/erewhile/og%20erewhile.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://ik.imagekit.io/erewhile/erewhile/og%20erewhile.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#0a0a0a; --ink2:#2a2a2a;
+      --muted:rgba(10,10,10,0.50); --muted2:rgba(10,10,10,0.30);
+      --teal:#076B58; --teal-light:#0cc9a4;
+      --teal-line:rgba(7,107,88,0.22); --teal-dim:rgba(7,107,88,0.07);
+      --bg:#f7f7f5; --bg2:#ffffff; --line:rgba(10,10,10,0.08); --line2:rgba(10,10,10,0.04);
+      --glass-bg:rgba(255,255,255,0.70); --glass-border:rgba(255,255,255,0.88);
+      --glass-shadow:0 4px 24px rgba(0,0,0,0.07),0 1px 4px rgba(0,0,0,0.04);
+      --glass-blur:blur(18px);
+      --ease:cubic-bezier(.16,1,.3,1); --font:'Montserrat',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font-family:var(--font);cursor:pointer}
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+      background-size:64px 64px}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.18;animation:blobDrift 22s ease-in-out infinite alternate}
+    .blob1{width:560px;height:560px;background:radial-gradient(circle,rgba(7,107,88,0.4),transparent 70%);top:-180px;right:-80px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle,rgba(7,107,88,0.25),transparent 70%);bottom:8%;left:-60px;animation-delay:-9s;animation-duration:28s}
+    @keyframes blobDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(28px,-36px) scale(1.07)}}
 
-<script>
-const lang = navigator.language.toLowerCase();
+    /* ── HEADER ── */
+    header{position:sticky;top:0;z-index:200;background:rgba(247,247,245,0.88);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid var(--line)}
+    .header-inner{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px);height:64px;display:flex;align-items:center;gap:14px}
+    .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:13.5px;letter-spacing:.01em;min-width:160px;transition:opacity .2s}
+    .brand:hover{opacity:.7}
+    .brand-logo{height:24px;width:auto}
+    nav{flex:1;display:flex;justify-content:center;gap:2px}
+    nav a{font-size:12.5px;font-weight:500;color:var(--muted);padding:7px 13px;border-radius:8px;transition:all .2s}
+    nav a:hover{color:var(--ink);background:var(--line2)}
+    nav a.active{color:var(--teal);font-weight:600}
+    .header-ctas{display:flex;align-items:center;gap:9px;margin-left:auto}
 
-if (lang.startsWith('lv')) {
-  window.location.replace('/lv/');
-} else {
-  window.location.replace('/en/');
-}
-</script>
+    /* Burger menu */
+    .burger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;border:none;background:transparent;border-radius:8px;transition:background .2s}
+    .burger:hover{background:var(--line2)}
+    .burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s var(--ease)}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-nav{display:none;position:fixed;inset:64px 0 0;background:rgba(247,247,245,0.97);backdrop-filter:blur(20px);z-index:190;padding:24px clamp(16px,4vw,48px);flex-direction:column;gap:4px}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
+    .mobile-nav a:hover{color:var(--teal)}
+    .mobile-nav .m-ctas{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 
-<noscript>
-<meta http-equiv="refresh" content="0; url=/en/">
-</noscript>
+    /* ── BUTTONS ── */
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:100px;font-family:var(--font);font-size:12.5px;font-weight:600;letter-spacing:.01em;transition:all .22s var(--ease);white-space:nowrap;cursor:pointer}
+    .btn-ghost{border:1px solid var(--line);background:var(--glass-bg);backdrop-filter:var(--glass-blur);color:var(--muted)}
+    .btn-ghost:hover{border-color:var(--teal-line);color:var(--teal);background:var(--teal-dim)}
+    .btn-ink{background:var(--ink);color:#fff;border:1px solid transparent}
+    .btn-ink:hover{background:var(--ink2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,0.14)}
+    .btn-teal{background:var(--teal);color:#fff;border:1px solid transparent}
+    .btn-teal:hover{background:#065a49;transform:translateY(-1px);box-shadow:0 8px 24px rgba(7,107,88,0.28)}
+    .btn-outline-teal{border:1px solid var(--teal-line);color:var(--teal);background:var(--teal-dim)}
+    .btn-outline-teal:hover{background:rgba(7,107,88,0.12);transform:translateY(-1px)}
+    .btn-sm{padding:7px 14px;font-size:12px}
+    .social-btn{width:36px;height:36px;border-radius:100px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;transition:all .2s}
+    .social-btn:hover{border-color:var(--teal-line);transform:translateY(-1px)}
+    .social-btn svg{width:15px;height:15px;fill:var(--muted);transition:fill .2s}
+    .social-btn:hover svg{fill:var(--teal)}
 
+    /* ── LAYOUT ── */
+    .section{max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(16px,4vw,48px);position:relative;z-index:1}
+    .divider{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px);position:relative;z-index:1}
+    .divider::after{content:'';display:block;border-bottom:1px solid var(--line)}
+
+    /* ── HERO ── */
+    .hero{padding-top:clamp(72px,9vw,120px);padding-bottom:clamp(48px,6vw,80px)}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:22px;opacity:0;animation:fadeUp .7s var(--ease) .05s forwards}
+    .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px rgba(7,107,88,0.5);animation:pulse 2.5s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+    h1{font-family:var(--font);font-size:clamp(38px,6.5vw,82px);font-weight:800;line-height:1.0;letter-spacing:-.04em;color:var(--ink);opacity:0;animation:fadeUp .85s var(--ease) .15s forwards}
+    h1 .thin{font-weight:300;color:var(--muted)}
+    h1 .italic{font-style:italic;font-weight:600}
+    h1 .accent{color:var(--teal)}
+    .hero-sub{max-width:520px;margin:22px 0 0;font-size:clamp(14px,1.3vw,16px);font-weight:400;color:var(--muted);line-height:1.78;opacity:0;animation:fadeUp .85s var(--ease) .28s forwards}
+    .hero-ctas{margin-top:36px;display:flex;gap:10px;flex-wrap:wrap;opacity:0;animation:fadeUp .85s var(--ease) .4s forwards}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+    /* ── MARQUEE ── */
+    .marquee-wrap{position:relative;z-index:1;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,0.6);backdrop-filter:blur(8px);padding:12px 0}
+    .marquee-track{display:flex;width:max-content;animation:marquee 26s linear infinite}
+    .marquee-track:hover{animation-play-state:paused}
+    .marquee-item{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);padding:0 30px;white-space:nowrap;display:flex;align-items:center;gap:16px}
+    .marquee-item::after{content:'◆';font-size:5px;color:var(--teal);opacity:.7}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ── SERVICES ── */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:760px){.services-grid{grid-template-columns:1fr}}
+    @media(min-width:761px) and (max-width:960px){.services-grid{grid-template-columns:1fr 1fr}}
+    .service-card{border-radius:18px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);padding:clamp(20px,2.5vw,32px);transition:all .28s var(--ease);position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.2),transparent 60%);pointer-events:none}
+    .service-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.09),0 2px 8px rgba(0,0,0,0.04);border-color:rgba(7,107,88,0.16)}
+    .service-card.featured{border-color:var(--teal-line);background:linear-gradient(135deg,rgba(7,107,88,0.06) 0%,rgba(255,255,255,0.75) 60%)}
+    .svc-icon{width:40px;height:40px;border-radius:12px;background:var(--teal-dim);border:1px solid var(--teal-line);display:grid;place-items:center;font-size:18px;margin-bottom:16px}
+    .svc-title{font-size:17px;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:8px;color:var(--ink)}
+    .svc-desc{font-size:13px;font-weight:400;color:var(--muted);line-height:1.7}
+    .svc-tag{display:inline-flex;margin-top:14px;padding:4px 11px;border-radius:100px;border:1px solid var(--teal-line);background:var(--teal-dim);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+
+    /* ── SECTION HEADS ── */
+    .section-label{font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+    .section-h2{font-size:clamp(24px,3.5vw,40px);font-weight:800;letter-spacing:-.04em;line-height:1.05;color:var(--ink)}
+    .section-h2 em{font-style:italic;font-weight:500;color:var(--muted)}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px}
+
+    /* ── PORTFOLIO CARDS ── */
+    .portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media(max-width:700px){.portfolio-grid{grid-template-columns:1fr}}
+    .bcard{border-radius:16px;overflow:hidden;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);transition:all .3s var(--ease)}
+    .bcard:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,0.10);border-color:rgba(7,107,88,0.18)}
+    .bcard-chrome{display:flex;align-items:center;gap:8px;padding:9px 12px 8px;background:rgba(245,245,243,0.9);border-bottom:1px solid var(--line)}
+    .chrome-dots{display:flex;gap:5px}
+    .chrome-dot{width:9px;height:9px;border-radius:50%}
+    .chrome-dot:nth-child(1){background:#ff5f57}
+    .chrome-dot:nth-child(2){background:#ffbd2e}
+    .chrome-dot:nth-child(3){background:#28c840}
+    .chrome-bar{flex:1;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.8);border:1px solid var(--line);border-radius:5px;padding:3px 9px;font-size:10.5px;font-weight:500;color:var(--muted2);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+    .chrome-favicon{width:11px;height:11px;border-radius:2px;flex-shrink:0}
+    .bcard-preview{width:100%;aspect-ratio:16/10;background:#e0e7e4;overflow:hidden;display:block;position:relative}
+    .bcard-preview img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+    .bcard:hover .bcard-preview img{transform:scale(1.04)}
+    .bcard-tag{position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:100px;background:var(--glass-bg);backdrop-filter:blur(8px);border:1px solid var(--glass-border);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    .bcard-body{padding:14px 16px 18px}
+    .bcard-kicker{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+    .bcard-title{font-size:16px;font-weight:700;letter-spacing:-.02em;line-height:1.25}
+    .bcard-link{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:12.5px;font-weight:600;color:var(--teal);transition:gap .2s}
+    .bcard:hover .bcard-link{gap:8px}
+
+    /* ── QUIZ ── */
+    .calc-card{border-radius:22px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);padding:clamp(24px,4vw,48px);position:relative;overflow:hidden}
+    .calc-card::before{content:'';position:absolute;inset:-40%;background:radial-gradient(400px circle at 10% 15%,rgba(7,107,88,0.05),transparent 55%);pointer-events:none}
+    .quiz-step{display:none}
+    .quiz-step.active{display:block;animation:fadeUp .4s var(--ease) forwards}
+    .quiz-q{font-size:clamp(16px,2vw,21px);font-weight:800;letter-spacing:-.03em;margin-bottom:20px;color:var(--ink)}
+    .quiz-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+    .quiz-opt{padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.75);cursor:pointer;text-align:left;transition:all .2s var(--ease);font-family:var(--font)}
+    .quiz-opt:hover{border-color:var(--teal-line);background:rgba(7,107,88,0.05);transform:translateY(-1px)}
+    .quiz-opt-label{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+    .quiz-opt-sub{font-size:12px;color:var(--muted);margin-top:3px}
+    .quiz-nav{display:flex;align-items:center;gap:10px;margin-top:22px}
+    .quiz-back{padding:9px 16px;border-radius:100px;border:1px solid var(--line);background:transparent;font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s}
+    .quiz-back:hover{color:var(--ink);border-color:rgba(10,10,10,0.2)}
+    .quiz-dot{height:4px;border-radius:2px;flex:1;background:var(--line);transition:background .3s}
+    .quiz-dot.done{background:var(--teal)}
+    .quiz-dot.active{background:rgba(7,107,88,0.35)}
+    .result-item{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:13px;color:var(--ink);border-bottom:1px solid var(--teal-line)}
+    .result-item:last-child{border-bottom:none}
+    .result-check{color:var(--teal);font-weight:800;font-size:14px;flex-shrink:0}
+    .result-meta-item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--muted)}
+    .result-meta-icon{width:28px;height:28px;border-radius:8px;background:var(--teal-dim);border:1px solid var(--teal-line);display:grid;place-items:center;font-size:13px}
+    @media(max-width:580px){#resultLayout{grid-template-columns:1fr !important}}
+
+    /* ── PROCESS ── */
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    @media(max-width:800px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.steps-grid{grid-template-columns:1fr}}
+    .step-card{border-radius:16px;padding:22px 20px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);transition:all .25s var(--ease)}
+    .step-card:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.08)}
+    .step-num{font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--teal);text-transform:uppercase;margin-bottom:10px}
+    .step-title{font-size:15px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px}
+    .step-desc{font-size:12.5px;color:var(--muted);line-height:1.65;font-weight:400}
+
+    /* ── FORM ── */
+    .form-card{border-radius:24px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);padding:clamp(24px,4vw,52px);position:relative;overflow:hidden}
+    .form-card::before{content:'';position:absolute;inset:-40%;background:radial-gradient(400px circle at 10% 15%,rgba(7,107,88,0.05),transparent 55%);pointer-events:none}
+    .form-card h3{font-size:clamp(20px,2.8vw,32px);font-weight:800;letter-spacing:-.04em;line-height:1.05;position:relative;color:var(--ink)}
+    .form-card h3 em{font-style:italic;font-weight:500;color:var(--teal)}
+    .form-desc{margin-top:9px;color:var(--muted);font-size:13.5px;line-height:1.75;max-width:56ch;position:relative;font-weight:400}
+    .form-grid{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative}
+    @media(max-width:580px){.form-grid{grid-template-columns:1fr}}
+    .full{grid-column:1/-1}
+    label{display:block;font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--muted2);margin-bottom:6px;text-transform:uppercase}
+    input,select,textarea{width:100%;background:rgba(255,255,255,0.75);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:13.5px;font-family:var(--font);font-weight:500;color:var(--ink);outline:none;transition:all .2s var(--ease)}
+    input::placeholder,textarea::placeholder{color:var(--muted2);font-weight:400}
+    textarea{min-height:120px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--teal-line);box-shadow:0 0 0 3px rgba(7,107,88,0.07);background:#fff}
+    select option{background:#fff}
+    .consent-row{display:flex;align-items:flex-start;gap:10px;margin-top:12px;position:relative}
+    .consent-check{width:17px;height:17px;border-radius:5px;flex:0 0 17px;margin-top:2px;background:rgba(255,255,255,0.8);border:1.5px solid var(--line);appearance:none;-webkit-appearance:none;cursor:pointer;transition:all .2s;position:relative}
+    .consent-check:checked{background:var(--teal);border-color:var(--teal)}
+    .consent-check:checked::after{content:'';position:absolute;left:4px;top:1px;width:6px;height:9px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg)}
+    .consent-label{font-size:11.5px;color:var(--muted);line-height:1.65;font-weight:400}
+    .consent-label a{color:var(--teal);border-bottom:1px solid var(--teal-line);cursor:pointer}
+    .form-actions{margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:relative}
+    .fine{font-size:11.5px;color:var(--muted2);line-height:1.5;font-weight:400}
+
+    /* ── FOOTER ── */
+    footer{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 40px;position:relative;z-index:1}
+    .footer-card{border-radius:16px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .footer-contacts{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .footer-link{font-size:13px;font-weight:600;color:var(--muted);border-bottom:1px solid rgba(10,10,10,0.12);padding-bottom:1px;transition:all .2s}
+    .footer-link:hover{color:var(--teal);border-bottom-color:var(--teal-line)}
+    .footer-sep{color:var(--muted2);opacity:.4}
+    .footer-legal{display:flex;gap:16px;flex-wrap:wrap}
+    .footer-legal-link{font-size:11px;font-weight:600;letter-spacing:.03em;color:var(--muted2);cursor:pointer;transition:color .2s;border-bottom:1px solid transparent}
+    .footer-legal-link:hover{color:var(--teal)}
+
+    /* ── MODALS ── */
+    .modal-overlay{position:fixed;inset:0;z-index:1100;background:rgba(10,10,10,0.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
+    .modal-overlay.open{opacity:1;pointer-events:all}
+    .modal-box{width:100%;max-width:680px;max-height:82vh;min-height:0;border-radius:20px;background:rgba(255,255,255,0.96);backdrop-filter:blur(24px);border:1px solid var(--line);box-shadow:0 32px 80px rgba(0,0,0,0.12);display:flex;flex-direction:column;transform:scale(.96) translateY(10px);transition:transform .3s var(--ease)}
+    .modal-overlay.open .modal-box{transform:scale(1) translateY(0)}
+    .modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px 16px;border-bottom:1px solid var(--line);flex-shrink:0}
+    .modal-header h3{font-size:17px;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+    .modal-close{width:32px;height:32px;border-radius:100px;background:rgba(10,10,10,0.05);border:1px solid var(--line);color:var(--muted);font-size:17px;display:grid;place-items:center;cursor:pointer;transition:all .2s;flex-shrink:0}
+    .modal-close:hover{background:rgba(10,10,10,0.09);color:var(--ink)}
+    .modal-body{padding:22px 24px 28px;overflow-y:auto;flex:1 1 auto;min-height:0;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+    .modal-body::-webkit-scrollbar{width:4px}
+    .modal-body::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+    .modal-body h4{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--ink);margin:20px 0 7px;text-transform:uppercase}
+    .modal-body h4:first-child{margin-top:0}
+    .modal-body p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:6px}
+    .modal-body a{color:var(--teal);border-bottom:1px solid var(--teal-line)}
+    .modal-body ul{margin:6px 0 8px 16px}
+    .modal-body li{font-size:13px;color:var(--muted);line-height:1.75}
+    .modal-body .effective{font-size:11px;color:var(--muted2);font-weight:600;letter-spacing:.05em;margin-bottom:16px}
+
+    /* ── REVEAL ── */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+    .reveal.on{opacity:1;transform:none}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:880px){nav{display:none}.burger{display:flex}}
+    @media(max-width:540px){.social-btn{display:none}.header-ctas .btn-ghost{display:none}.brand-logo{display:none}}
+  </style>
 </head>
 <body>
+<div class="ambient" aria-hidden="true"><div class="blob blob1"></div><div class="blob blob2"></div></div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital" loading="eager">
+      <span>erewhile.digital</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#ew-websites" class="active">Websites</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/video">Video</a>
+      <a href="#ew-contact">Contact</a>
+    </nav>
+    <div class="header-ctas">
+      <a class="social-btn" href="https://www.linkedin.com/company/erewhile-digital/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.82-2.05 3.74-2.05C19.4 8 22 10.42 22 15.17V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8Z"/></svg>
+      </a>
+      <a class="btn btn-ghost btn-sm" href="/fast-website">Landing page from €250</a>
+      <a class="btn btn-teal btn-sm" href="#ew-contact">Get a quote</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#ew-websites" onclick="closeMobileNav()">Websites</a>
+  <a href="/portfolio">Portfolio</a>
+  <a href="/video">Video</a>
+  <a href="#ew-contact" onclick="closeMobileNav()">Contact</a>
+  <div class="m-ctas">
+    <a class="btn btn-ghost btn-sm" href="/fast-website">Landing page from €250</a>
+    <a class="btn btn-teal btn-sm" href="#ew-contact" onclick="closeMobileNav()">Get a quote</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="section hero" id="top">
+  <div class="hero-eyebrow">Digital Agency · Riga</div>
+  <h1>Websites that<br><span class="italic">actually</span> <span class="accent">convert</span></h1>
+  <p class="hero-sub">We design and build websites for businesses, personal brands and NGOs — focused on structure, clarity and one goal: turning visitors into clients.</p>
+  <div class="hero-ctas">
+    <a class="btn btn-ink" href="#ew-contact">Discuss your project</a>
+    <a class="btn btn-outline-teal" href="/portfolio">See our work →</a>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" aria-hidden="true">
+    <span class="marquee-item">Website Design</span><span class="marquee-item">Web Development</span><span class="marquee-item">Landing Pages</span><span class="marquee-item">CRM Automation</span><span class="marquee-item">AI Integrations</span><span class="marquee-item">Analytics Setup</span><span class="marquee-item">Conversion Optimization</span><span class="marquee-item">SEO Foundations</span><span class="marquee-item">Website Design</span><span class="marquee-item">Web Development</span><span class="marquee-item">Landing Pages</span><span class="marquee-item">CRM Automation</span><span class="marquee-item">AI Integrations</span><span class="marquee-item">Analytics Setup</span><span class="marquee-item">Conversion Optimization</span><span class="marquee-item">SEO Foundations</span>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="section" id="ew-websites">
+  <div class="section-label reveal">What we build</div>
+  <div class="section-h2 reveal" style="margin-bottom:28px;transition-delay:.08s;">Three types of <em>web projects</em></div>
+  <div class="services-grid">
+    <div class="service-card featured reveal">
+      <div class="svc-icon">🌐</div>
+      <div class="svc-title">Full business website</div>
+      <div class="svc-desc">Multi-page site with strategy, information architecture, UI/UX design and SEO foundations. Built for long-term growth.</div>
+      <span class="svc-tag">From €1 200</span>
+    </div>
+    <div class="service-card reveal" style="transition-delay:.08s;">
+      <div class="svc-icon">⚡</div>
+      <div class="svc-title">Landing page</div>
+      <div class="svc-desc">One focused page that explains what you do and captures leads. Fast turnaround, clean design, tested CTA.</div>
+      <span class="svc-tag">From €250</span>
+    </div>
+    <div class="service-card reveal" style="transition-delay:.16s;">
+      <div class="svc-icon">🔧</div>
+      <div class="svc-title">Tools & integrations</div>
+      <div class="svc-desc">Forms connected to your CRM, booking flows, mini-dashboards and automations that make your site work for you.</div>
+      <span class="svc-tag">On request</span>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- PORTFOLIO PREVIEW -->
+<section class="section" id="ew-work">
+  <div class="section-head">
+    <div>
+      <div class="section-label reveal">Selected work</div>
+      <div class="section-h2 reveal" style="transition-delay:.08s;">Recent <em>projects</em></div>
+    </div>
+    <a class="btn btn-ghost reveal" href="/portfolio" style="transition-delay:.1s;">View all work →</a>
+  </div>
+  <div class="portfolio-grid">
+    <div class="bcard reveal">
+      <div class="bcard-chrome">
+        <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+        <div class="chrome-bar"><img class="chrome-favicon" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="">untu.ngo</div>
+      </div>
+      <a href="http://untu.ngo" target="_blank" rel="noopener" class="bcard-preview">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366" alt="UNTU NGO" loading="lazy">
+        <span class="bcard-tag">NGO website</span>
+      </a>
+      <div class="bcard-body">
+        <div class="bcard-kicker">Non-profit</div>
+        <div class="bcard-title">UNTU — structure, trust, and clear actions</div>
+        <a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Open site →</a>
+      </div>
+    </div>
+    <div class="bcard reveal" style="transition-delay:.1s;">
+      <div class="bcard-chrome">
+        <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+        <div class="chrome-bar"><span class="chrome-favicon" style="background:var(--teal-dim);border-radius:2px;"></span>jelgavacoworking.lv</div>
+      </div>
+      <a href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener" class="bcard-preview">
+        <img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="Jelgava Coworking" loading="lazy">
+        <span class="bcard-tag">Business site</span>
+      </a>
+      <div class="bcard-body">
+        <div class="bcard-kicker">Coworking space</div>
+        <div class="bcard-title">Jelgava Coworking — pricing, value props, lead capture</div>
+        <a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- PRICE QUIZ -->
+<section class="section" id="ew-pricing">
+  <div class="section-label reveal">Pricing</div>
+  <div class="section-h2 reveal" style="margin-bottom:28px;transition-delay:.08s;">What does your <em>project cost?</em></div>
+  <div class="calc-card reveal" style="transition-delay:.12s;">
+    <div style="position:relative;">
+      <div style="display:flex;gap:6px;margin-bottom:28px;" id="quizProgress"></div>
+      <div id="quizSteps"></div>
+      <div id="quizResult" style="display:none;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;" id="resultLayout">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:8px;">Based on your answers</div>
+            <div style="font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--ink);" id="resultPrice"></div>
+            <div style="margin-top:10px;font-size:13.5px;color:var(--muted);line-height:1.65;font-weight:400;" id="resultDesc"></div>
+            <div style="display:flex;gap:14px;margin-top:18px;flex-wrap:wrap;" id="resultMeta"></div>
+          </div>
+          <div id="resultIncludes" style="border-radius:14px;background:rgba(7,107,88,0.05);border:1px solid var(--teal-line);padding:20px;"></div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;">
+          <a class="btn btn-teal" href="#ew-contact">Get a precise quote →</a>
+          <button class="btn btn-ghost" onclick="buildQuiz('')" style="border:1px solid var(--line);">Start over</button>
+        </div>
+        <p style="margin-top:12px;font-size:11.5px;color:var(--muted2);font-weight:400;">Final price depends on content, integrations and scope. No surprises after we agree.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- PROCESS -->
+<section class="section" id="ew-process">
+  <div class="section-label reveal">How it works</div>
+  <div class="section-h2 reveal" style="margin-bottom:28px;transition-delay:.08s;">Simple, fast <em>process</em></div>
+  <div class="steps-grid">
+    <div class="step-card reveal"><div class="step-num">01</div><div class="step-title">Discovery call</div><div class="step-desc">We talk through your goal, audience and what success looks like. 30 minutes, no pressure.</div></div>
+    <div class="step-card reveal" style="transition-delay:.08s;"><div class="step-num">02</div><div class="step-title">Proposal & scope</div><div class="step-desc">You get a written plan: structure, timeline, price. We agree on scope before anything starts.</div></div>
+    <div class="step-card reveal" style="transition-delay:.16s;"><div class="step-num">03</div><div class="step-title">Design & build</div><div class="step-desc">We design, develop and test. You review and give feedback. Two rounds of revisions included.</div></div>
+    <div class="step-card reveal" style="transition-delay:.24s;"><div class="step-num">04</div><div class="step-title">Launch & handoff</div><div class="step-desc">We launch, connect analytics and hand over everything. You own the site completely.</div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="section" id="ew-contact">
+  <div class="form-card reveal">
+    <h3>Request a <em>quote</em></h3>
+    <div class="form-desc">Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours.</div>
+    <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
+      <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-grid">
+        <div><label>Name</label><input name="name" required placeholder="How should we address you?"></div>
+        <div><label>Email</label><input name="_replyto" type="email" required placeholder="you@company.com"></div>
+        <div class="full">
+          <label>What do you need?</label>
+          <select name="service" required>
+            <option value="Consultation">Consultation (project discovery)</option>
+            <option value="Website (custom)">Website (custom)</option>
+            <option value="Landing page">Landing page from €250</option>
+            <option value="Content">Content / video</option>
+            <option value="Integrations & analytics">Integrations / analytics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="full"><label>Message</label><textarea name="message" placeholder="Briefly: niche, goal, what you sell/offer, deadline, references (if any)"></textarea></div>
+      </div>
+      <div class="consent-row">
+        <input type="checkbox" class="consent-check" id="consent" required>
+        <label class="consent-label" for="consent" style="text-transform:none;letter-spacing:0;">
+          I agree to the <a tabindex="0" onclick="openModal('terms')">Terms & Conditions</a>,
+          <a tabindex="0" onclick="openModal('privacy')">Privacy Policy</a> and
+          <a tabindex="0" onclick="openModal('cookies')">Cookie Policy</a>.
+          My email will only be used to respond to this inquiry.
+        </label>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-teal" type="submit">Send request</button>
+        <div class="fine">We reply within 24 hours. Urgent? Add your deadline in the message.</div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-card reveal">
+    <div class="footer-contacts">
+      <a class="footer-link" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
+      <span class="footer-sep">·</span>
+      <a class="footer-link" href="tel:+37120579106">+371 20579106</a>
+    </div>
+    <div class="footer-legal">
+      <span class="footer-legal-link" onclick="openModal('terms')">Terms & Conditions</span>
+      <span class="footer-legal-link" onclick="openModal('privacy')">Privacy Policy</span>
+      <span class="footer-legal-link" onclick="openModal('cookies')">Cookie Policy</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-header"><h3>Terms & Conditions</h3><button class="modal-close" onclick="closeModal('terms')">×</button></div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital, Riga, Latvia</p>
+      <h4>1. Acceptance</h4><p>By accessing erewhile.digital and submitting any inquiry form, you agree to these Terms & Conditions. If you do not agree, please do not use this website.</p>
+      <h4>2. Services described</h4><p>This website presents services offered by Erewhile Digital (sole trader / freelance agency, Riga, Latvia). Services include website design & development, content production, video, CRM automation and AI integrations. All descriptions are informational; final scope and pricing are confirmed in a separate written agreement.</p>
+      <h4>3. Inquiries & quotes</h4><p>Submitting a form does not constitute a binding contract. A project begins only after both parties confirm an agreement in writing. Erewhile Digital reserves the right to decline any project without explanation.</p>
+      <h4>4. Intellectual property</h4><p>All content on this site — including text, design and code — is the property of Erewhile Digital unless stated otherwise. You may not reproduce or repurpose any materials without prior written consent.</p>
+      <h4>5. Limitation of liability</h4><p>This website is provided "as is". Erewhile Digital makes no warranties regarding uptime or uninterrupted access. We are not liable for any indirect or consequential damages arising from its use.</p>
+      <h4>6. Governing law</h4><p>These Terms are governed by the laws of the Republic of Latvia. Any disputes shall be resolved in the courts of Riga, Latvia.</p>
+      <h4>7. Contact</h4><p><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-header"><h3>Privacy Policy</h3><button class="modal-close" onclick="closeModal('privacy')">×</button></div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital, Riga, Latvia</p>
+      <h4>1. Who we are</h4><p>Erewhile Digital is a digital agency operating as a sole trader, based in Riga, Latvia. This policy explains how we collect and handle personal data through this website in compliance with the EU General Data Protection Regulation (GDPR) and Latvian data protection law.</p>
+      <h4>2. Data we collect</h4><p>We collect only the personal data you voluntarily provide through our contact form:</p>
+      <ul><li>Your name</li><li>Your email address</li><li>Your message or project description</li><li>Your selected service category</li></ul>
+      <p>We do not collect payment data, sensitive personal data, or any data beyond what you actively submit.</p>
+      <h4>3. Legal basis for processing</h4><p>We process your data on the basis of your consent (Article 6(1)(a) GDPR), given when you tick the consent checkbox and submit the form. You may withdraw consent at any time by contacting us at the address below.</p>
+      <h4>4. How we use your data</h4><p>Your data is used <b>exclusively</b> to respond to your inquiry and, if a project proceeds, to communicate during that project. We do not use your data for marketing, profiling or any automated decision-making. We do not sell or share your data with third parties, except as described in section 5.</p>
+      <h4>5. Data processors</h4><p>Form submissions are routed through <a href="https://formsubmit.co" target="_blank" rel="noopener">FormSubmit.co</a>, a third-party form delivery service, and delivered to our email inbox. FormSubmit processes your data solely to deliver the submission and does not retain or share it beyond that purpose. All email correspondence is stored within our standard email service.</p>
+      <h4>6. Data retention</h4><p>We retain your data only as long as necessary for business purposes — typically for the duration of a project and up to 3 years after the last contact, unless a longer period is required by law.</p>
+      <h4>7. Your rights under GDPR</h4><p>You have the right to: access the personal data we hold about you; request correction of inaccurate data; request deletion ("right to be forgotten"); restrict or object to processing; receive your data in a portable format; lodge a complaint with the Latvian Data State Inspectorate (Datu valsts inspekcija, <a href="https://www.dvi.gov.lv" target="_blank" rel="noopener">dvi.gov.lv</a>).</p>
+      <p>To exercise any of these rights, contact us at: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a>. We will respond within 30 days.</p>
+      <h4>8. Cookies</h4><p>We use only strictly necessary functional cookies. See our Cookie Policy for full details.</p>
+      <h4>9. Changes to this policy</h4><p>We may update this policy to reflect changes in law or our practices. Material changes will be indicated by an updated effective date. Continued use of this site after changes constitutes acceptance of the revised policy.</p>
+      <h4>10. Contact & data controller</h4><p>Data controller: Erewhile Digital (sole trader), Riga, Latvia<br>Email: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a><br>Phone: <a href="tel:+37120579106">+371 20579106</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-cookies" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-header"><h3>Cookie Policy</h3><button class="modal-close" onclick="closeModal('cookies')">×</button></div>
+    <div class="modal-body">
+      <p class="effective">Effective date: 1 May 2025 · Erewhile Digital, Riga, Latvia</p>
+      <h4>What are cookies?</h4><p>Cookies are small text files stored on your device when you visit a website. They help the site remember information about your session.</p>
+      <h4>What cookies do we use?</h4><p>Erewhile Digital uses <b>only strictly necessary functional cookies</b>. We do not use analytics, advertising, remarketing, or social tracking cookies of any kind.</p>
+      <h4>Cookie we set</h4><p><b>ew_cookie_consent</b> — stores your accept/decline choice for this banner. Expires after 180 days. Contains no personal data.</p>
+      <h4>Third-party services</h4><p>Our contact form is processed by <a href="https://formsubmit.co" target="_blank" rel="noopener">FormSubmit.co</a>, which may set a functional CSRF-protection cookie to prevent spam. No data from this cookie is shared with us beyond the form submission itself.</p>
+      <h4>Your choices</h4><p>Declining cookies will not affect your ability to use this website. You can delete cookies at any time via your browser settings.</p>
+      <h4>Contact</h4><p>Questions about cookies: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Modals ── */
+function openModal(id){var e=document.getElementById('modal-'+id);if(!e)return;e.classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(id){var e=document.getElementById('modal-'+id);if(!e)return;e.classList.remove('open');document.body.style.overflow=''}
+
+/* ── Mobile nav ── */
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+document.getElementById('burgerBtn').addEventListener('click',function(){
+  var open=this.classList.toggle('open');
+  document.getElementById('mobileNav').classList.toggle('open',open);
+  this.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+
+(function(){
+  /* smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      closeMobileNav();
+      t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+  /* reveal */
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  /* modal close */
+  document.querySelectorAll('.modal-overlay').forEach(function(o){
+    o.addEventListener('click',function(e){if(e.target===o){o.classList.remove('open');document.body.style.overflow=''}});
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(function(m){m.classList.remove('open');document.body.style.overflow=''});
+  });
+})();
+
+/* ── Price Quiz ── */
+function buildQuiz(suffix){
+  var S=suffix||'';
+  var steps=[
+    {q:'What type of website do you need?',opts:[
+      {label:'Landing page',sub:'One focused page',val:'landing'},
+      {label:'Business website',sub:'3–8 pages, full structure',val:'business'},
+      {label:'Online store',sub:'Products, cart, checkout',val:'store'},
+      {label:'Not sure yet',sub:"I'll explain in the message",val:'unsure'}]},
+    {q:'Do you need a contact form or booking system?',opts:[
+      {label:'Simple contact form',sub:'Name, email, message',val:'form'},
+      {label:'Booking / scheduling',sub:'Calendar, appointments',val:'booking'},
+      {label:'No form needed',sub:'Just info, no input',val:'none'}]},
+    {q:'Do you need CRM or third-party integrations?',opts:[
+      {label:'Yes — connect to CRM',sub:'HubSpot, Pipedrive, etc.',val:'crm'},
+      {label:'Basic (email alerts)',sub:'Leads to inbox only',val:'basic'},
+      {label:'No integrations',sub:'Keep it simple',val:'none'}]},
+    {q:'Do you have existing content (text & images)?',opts:[
+      {label:'Yes, all ready',sub:'I just need the site built',val:'ready'},
+      {label:'Partially ready',sub:'Need some help writing',val:'partial'},
+      {label:'Starting from zero',sub:'Need full content support',val:'zero'}]},
+    {q:"What's your timeline?",opts:[
+      {label:'ASAP (< 2 weeks)',sub:'Rush project',val:'rush'},
+      {label:'2–4 weeks',sub:'Standard timeline',val:'normal'},
+      {label:'No rush (1–2 months)',sub:'Flexible',val:'flexible'}]},
+  ];
+  var answers=[];var current=0;
+  var stepsEl=document.getElementById('quizSteps'+S);
+  var resultEl=document.getElementById('quizResult'+S);
+  var progressEl=document.getElementById('quizProgress'+S);
+  if(!stepsEl)return;
+  resultEl.style.display='none';
+  stepsEl.style.display='';
+  progressEl.style.display='';
+
+  function renderProgress(){
+    progressEl.innerHTML=steps.map(function(_,i){
+      return '<div class="quiz-dot '+(i<current?'done':i===current?'active':'')+'"></div>';
+    }).join('');
+  }
+  function renderStep(idx){
+    var s=steps[idx];
+    stepsEl.innerHTML='<div class="quiz-step active"><div class="quiz-q">'+s.q+'</div><div class="quiz-options">'+
+      s.opts.map(function(o,oi){return '<button class="quiz-opt" onclick="quizSel'+S+'('+oi+')"><div class="quiz-opt-label">'+o.label+'</div><div class="quiz-opt-sub">'+o.sub+'</div></button>';}).join('')+
+      '</div><div class="quiz-nav">'+(idx>0?'<button class="quiz-back" onclick="quizBk'+S+'()">← Back</button>':'')+
+      '</div></div>';
+    renderProgress();
+  }
+  function showResult(){
+    var base=250,tl='2–4 weeks',includes=[],desc='';
+    var type=answers[0],form=answers[1],integr=answers[2],content=answers[3],time=answers[4];
+    if(type==='landing'){base=250;desc='A focused one-page site built for conversion — clear message, lead capture, fast launch.';includes=['1-page responsive design','Lead capture form','Analytics setup','2 revision rounds'];}
+    else if(type==='business'){base=1200;desc='Multi-page business site with full structure, SEO foundations and conversion focus.';includes=['3–8 pages + navigation','UI/UX design','SEO foundations','Analytics setup','3 revision rounds'];}
+    else if(type==='store'){base=2200;desc='E-commerce site with product catalogue, cart and checkout flow.';includes=['Product catalogue','Cart & checkout','Payment integration','Order notifications'];}
+    else{base=800;desc="Let's talk — we'll figure out the best approach for your project together.";includes=['Discovery call included','Custom scope & timeline','No surprises'];}
+    if(form==='booking')base+=400;
+    if(integr==='crm')base+=600;if(integr==='basic')base+=150;
+    if(content==='partial')base+=250;if(content==='zero')base+=600;
+    if(time==='rush'){base=Math.round(base*1.3/50)*50;tl='< 2 weeks (rush rate)';}
+    else if(time==='flexible')tl='4–8 weeks';
+    var top=Math.round(base*1.45/50)*50;
+    document.getElementById('resultPrice'+S).innerHTML='€'+base.toLocaleString()+' <span style="font-size:.45em;font-weight:500;color:var(--muted)">– €'+top.toLocaleString()+'</span>';
+    document.getElementById('resultDesc'+S).textContent=desc;
+    document.getElementById('resultMeta'+S).innerHTML='<div class="result-meta-item"><div class="result-meta-icon">📅</div><span>'+tl+'</span></div><div class="result-meta-item"><div class="result-meta-icon">✅</div><span>Fixed-price agreement</span></div>';
+    document.getElementById('resultIncludes'+S).innerHTML='<div style="font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">What\'s included</div>'+includes.map(function(i){return '<div class="result-item"><span class="result-check">✓</span>'+i+'</div>';}).join('');
+    stepsEl.style.display='none';progressEl.style.display='none';resultEl.style.display='block';
+  }
+  window['quizSel'+S]=function(oi){answers[current]=steps[current].opts[oi].val;if(current<steps.length-1){current++;renderStep(current);}else showResult();};
+  window['quizBk'+S]=function(){if(current>0){current--;renderStep(current);}};
+  renderStep(0);
+}
+buildQuiz('');
+</script>
 </body>
 </html>
