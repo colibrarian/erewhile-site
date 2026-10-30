@@ -4,12 +4,21 @@
     <loc>https://erewhile.digital/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/"/>
     <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/"/>
   </url>
   <url>
     <loc>https://erewhile.digital/lv/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/"/>
     <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/"/>
   </url>
   <url><loc>https://erewhile.digital/en/fast-website.html</loc></url>

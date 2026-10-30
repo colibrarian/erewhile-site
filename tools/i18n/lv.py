@@ -1,18 +1,6 @@
-"""Build lv/index.html from index.html by translating its text.
-Run from the repo root after changing the English homepage: python3 tools/build_lv.py
-Each phrase must exist in index.html, otherwise the script stops and names it."""
-import re,sys
-src=open('index.html').read()
-i=src.index('<!-- MODALS -->'); j=src.index('<script>',i)
-A,M,B=src[:i],src[i:j],src[j:]
-
-def R(part,en,lv,min_count=1):
-    n=part.count(en)
-    if n<min_count: sys.exit('MISSING: '+en[:70])
-    return part.replace(en,lv)
-
-# ---------- head / body ----------
-pairs_A=[
+"""Latvian texts for the homepage. Each pair is (English as it appears in index.html, Latvian)."""
+LANG='lv'
+PAIRS_HTML=[
 ('<html lang="en">','<html lang="lv">'),
 ('<title>Web Design & Development in Riga, Latvia — Erewhile Digital</title>','<title>Mājaslapu izstrāde un dizains Rīgā — Erewhile Digital</title>'),
 ('content="Web design studio in Riga, Latvia. Business websites from €1 200 and landing pages from €250 for companies, NGOs and Erasmus+ projects across the Baltics and the EU."',
@@ -59,6 +47,7 @@ pairs_A=[
 ('Recent <span class="g">work</span>','Jaunākie <span class="g">darbi</span>'),
 ('>Clothing brand · Estonia<','>Apģērbu zīmols · Igaunija<'),
 ('Kondo — brand website with online ordering','Kondo — zīmola mājaslapa ar tiešsaistes pasūtījumiem'),
+('<span class="bcard-tag">E-commerce</span>','<span class="bcard-tag">E-komercija</span>'),
 ('>Digital infopack<','>Digitālā infopaka<'),
 ('>Digital tool<','>Digitāls rīks<'),
 ('>Restaurant<','>Restorāns<'),
@@ -116,7 +105,6 @@ pairs_A=[
 ('>Privacy Policy</a> and','>privātuma politikai</a> un'),
 ('>Cookie Policy</a>.','>sīkdatņu politikai</a>.'),
 ]
-for en,lv in pairs_A: A=R(A,en,lv)
 
 FAQ=[
 ("How much does a website cost?","Cik maksā mājaslapa?",
@@ -144,11 +132,8 @@ FAQ=[
  "You do. After launch we hand over the site, the accounts and access, and you own everything completely. Two rounds of revisions are included in every project.",
  "Jums. Pēc palaišanas nododam mājaslapu, kontus un piekļuves, un viss pilnībā pieder jums. Katrā projektā iekļautas divas labojumu kārtas."),
 ]
-for qe,ql,ae,al in FAQ:
-    A=R(A,qe,ql,2); A=R(A,ae,al,2)
 
-# ---------- scripts ----------
-pairs_B=[
+PAIRS_JS=[
 ("<button class=\"quiz-back\" onclick=\"quizBk'+S+'()\">← Back</button>","<button class=\"quiz-back\" onclick=\"quizBk'+S+'()\">← Atpakaļ</button>"),
 ("'< 2 weeks (rush rate)':time==='flexible'?'4–8 weeks':'2–4 weeks'","'< 2 nedēļas (steidzami)':time==='flexible'?'4–8 nedēļas':'2–4 nedēļas'"),
 ('>per day</span>','>dienā</span>'),
@@ -158,8 +143,8 @@ pairs_B=[
 ("' — estimate '","' — tāme '"),
 ("tl='Depends on scope'","tl='Atkarīgs no apjoma'"),
 ]
-for en,lv in pairs_B: B=R(B,en,lv)
-qs=[
+
+JS_STRINGS=[
 ('What do you need?','Kas jums nepieciešams?'),('Landing page','Vienas lapas mājaslapa'),('One focused page','Viena mērķtiecīga lapa'),
 ('Business website','Uzņēmuma mājaslapa'),('Several pages, full structure','Vairākas lapas, pilna struktūra'),('Online store','Interneta veikals'),
 ('Products, cart, checkout','Preces, grozs, apmaksa'),('Custom tool or web app','Individuāls rīks vai lietotne'),('Calculator, dashboard, CRM, API','Kalkulators, panelis, CRM, API'),
@@ -193,11 +178,3 @@ qs=[
 ('Soup of the day ........ €6\\nGrilled salmon ......... €16\\nOpens from a QR code, no app.','Dienas zupa ........... €6\\nGrilēts lasis ......... €16\\nAtveras ar QR kodu, bez lietotnes.'),
 ('Call a waiter','Izsaukt viesmīli'),('table request sent','galdiņa pieprasījums nosūtīts'),('Digital tool','Digitāls rīks'),
 ]
-for en,lv in qs:
-    q1="'"+en+"'"
-    if q1 not in B: sys.exit('JS MISSING: '+en)
-    B=B.replace(q1,"'"+lv+"'")
-out=A+M+B
-# keep EN demo label strings for the new-lead suffix "form.submit" (code, fine)
-open('lv/index.html','w').write(out)
-print('ok', len(out))
