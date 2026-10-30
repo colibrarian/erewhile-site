@@ -8,21 +8,25 @@
   <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--ink:#f4f4f2;--muted:rgba(244,244,242,0.62);--teal:#f4f4f2;--bg:#0b0c0c;--line:rgba(244,244,242,0.14)}
+    :root{color-scheme:light;--mint:#c3f5c7;--paper:#f4fff3;--ink:#151515;--ink2:#2b2b2b;--lime:#d9f35f;--sun:#ffd84a;--teal:#1e6b63}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;padding:24px}
-    main{max-width:520px;text-align:center}
-    h1{font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:-.035em;line-height:.95;text-transform:uppercase}
-    p{margin-top:14px;color:var(--muted);line-height:1.7;font-size:15px}
-    a.btn{display:inline-block;margin-top:28px;padding:11px 22px;border-radius:100px;background:var(--ink);color:var(--bg);font-weight:600;font-size:13px;text-decoration:none}
+    body{background:var(--mint);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;padding:24px}
+    main{max-width:540px;text-align:center;background:var(--paper);border:3px solid var(--ink);border-radius:24px;box-shadow:6px 6px 0 var(--ink);padding:40px 28px}
+    .ok{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;border:3px solid var(--ink);background:var(--lime);display:grid;place-items:center;font-size:30px;font-weight:900}
+    h1{font-size:clamp(28px,5vw,42px);font-weight:900;letter-spacing:-.035em;line-height:1.05;text-wrap:balance}
+    p{margin-top:14px;color:var(--ink2);line-height:1.7;font-size:15px}
+    p a{color:var(--ink);font-weight:700;border-bottom:2px solid var(--ink);text-decoration:none}
+    a.btn{display:inline-block;margin-top:26px;padding:12px 22px;border-radius:14px;border:3px solid var(--ink);background:var(--sun);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none;box-shadow:4px 4px 0 var(--ink)}
+    a.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
   </style>
 </head>
 <body>
   <main>
+    <div class="ok" aria-hidden="true">✓</div>
     <h1>Thank you, we got your request</h1>
-    <p>We'll reply within 24 hours with a plan, timeline and estimate. If it's urgent, call or message us at <a href="tel:+37120579106" style="color:var(--teal)">+371 20579106</a>.</p>
+    <p>We'll reply within 24 hours with a plan, timeline and estimate. If it's urgent, call or message us at <a href="tel:+37120579106">+371 20579106</a>.</p>
     <a class="btn" href="/">Back to the website</a>
   </main>
   <script>try{if(window.plausible)plausible('Lead');}catch(e){}</script>

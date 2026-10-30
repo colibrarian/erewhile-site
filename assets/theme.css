@@ -1,0 +1,78 @@
+/* Erewhile Digital — retro flat theme shared by inner pages (same look as the homepage).
+   Loaded after each page's own <style>; tokens first, then component overrides. */
+:root{
+  color-scheme:light;
+  --mint:#c3f5c7; --paper:#f4fff3; --rust:#d6532a; --rust-deep:#a3290f; --blue:#1f78a6;
+  --lime:#d9f35f; --olive:#79a814; --plum:#2e1c40; --sun:#ffd84a;
+  --bg:var(--mint); --bg2:var(--paper); --panel:var(--paper); --white:var(--paper);
+  --ink:#151515; --ink2:#2b2b2b;
+  --muted:rgba(21,21,21,0.70); --muted2:rgba(21,21,21,0.50);
+  --line:#151515; --line2:rgba(21,21,21,0.06);
+  --teal:#1e6b63; --teal2:#1e6b63; --teal-light:#1e6b63;
+  --teal-line:rgba(21,21,21,0.25); --teal-dim:rgba(30,107,99,0.08);
+  --glass-bg:var(--paper); --glass-border:var(--ink); --glass-shadow:none; --glass-blur:none;
+  --bw:3px;
+}
+html,body{background:var(--bg) !important;color:var(--ink)}
+body::before,.ambient,.blob,.orb,.marquee-wrap{display:none !important}
+*{backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
+
+header{background:var(--mint) !important;border-bottom:var(--bw) solid var(--ink) !important}
+.mobile-nav{background:var(--mint) !important}
+.burger span{background:var(--ink)}
+nav a{color:var(--ink) !important;font-weight:600}
+nav a.active{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* headings: Montserrat Black, sentence case; accent words on a lime sticker */
+h1,h2,.section-title,.section-h2{font-weight:900 !important;letter-spacing:-.035em !important;line-height:1.04 !important;text-wrap:balance;color:var(--ink)}
+h1 .thin,h1 .italic,h1 .muted,h1 .light{font-style:normal !important;font-weight:inherit !important;color:var(--ink) !important;-webkit-text-fill-color:currentColor;background:none !important}
+h1 em,h2 em,.section-title em,.section-h2 em,h1 .accent,h1 .teal{font-style:normal !important;font-weight:inherit !important;color:var(--ink) !important;-webkit-text-fill-color:currentColor;display:inline-block;background:var(--lime) !important;border:var(--bw) solid var(--ink);border-radius:12px;padding:0 .14em;box-shadow:4px 4px 0 var(--ink);transform:rotate(-1.2deg);margin:.06em 0}
+.pkg-name em{font-style:normal !important;color:inherit !important;background:none !important}
+.section-label,.hero-eyebrow,.hero-badge{color:var(--ink) !important;background:var(--paper) !important;border:2px solid var(--ink) !important;border-radius:100px !important;padding:4px 12px !important;display:inline-flex}
+.hero-eyebrow::before,.hero-badge::before{display:none !important}
+.trust-icon,.always-item-icon,.always-icon,.svc-icon,.result-meta-icon{display:none !important}
+
+/* buttons: thick outline, hard offset shadow */
+.btn-teal,.btn-ink,.btn-white,.btn-cta,.btn-outline-teal,.btn-ghost{border:var(--bw) solid var(--ink) !important;border-radius:14px !important;box-shadow:4px 4px 0 var(--ink) !important;color:var(--ink) !important;font-weight:700 !important}
+.btn-teal,.btn-ink,.btn-white,.btn-cta{background:var(--sun) !important}
+.btn-outline-teal,.btn-ghost{background:var(--paper) !important}
+.btn-teal:hover,.btn-ink:hover,.btn-white:hover,.btn-cta:hover,.btn-outline-teal:hover,.btn-ghost:hover{transform:translate(2px,2px) !important;box-shadow:2px 2px 0 var(--ink) !important}
+.social-btn{background:var(--paper) !important;border:2px solid var(--ink) !important}
+.social-btn svg{fill:var(--ink)}
+.lang-btn{background:var(--paper) !important;border:2px solid var(--ink) !important;color:var(--ink) !important}
+.lang-btn.active{background:var(--ink) !important;color:var(--paper) !important}
+
+/* cards: paper, thick outline, hard shadow */
+.bcard,.scard,.gallery-card,.cta-card,.form-card,.calc-card,.pkg-card,.always-card,.service-card,.modal-box{background:var(--paper) !important;border:var(--bw) solid var(--ink) !important;border-radius:22px !important;box-shadow:6px 6px 0 var(--ink) !important;overflow:hidden}
+.always-item,.faq-item{background:var(--paper) !important;border:2px solid var(--ink) !important;box-shadow:none !important}
+.footer-card{background:transparent !important;border:none !important;border-top:var(--bw) solid var(--ink) !important;border-radius:0 !important;box-shadow:none !important}
+.bcard:hover,.scard:hover,.gallery-card:hover,.pkg-card:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink) !important}
+.pkg-card.featured{background:var(--lime) !important}
+.bcard-chrome{display:none !important}
+.bcard-preview,.scard-img,.card-thumb{background:var(--plum) !important;border-bottom:var(--bw) solid var(--ink)}
+.bcard-tag,.scard-tag,.format-badge,.pkg-badge{background:var(--sun) !important;color:var(--ink) !important;border:2px solid var(--ink) !important;box-shadow:none !important}
+.bcard-kicker,.card-cat,.scard-sub{color:var(--teal) !important}
+.pkg-price{color:var(--ink) !important;-webkit-text-fill-color:currentColor;background:none !important}
+.dot{background:var(--teal) !important;box-shadow:none !important}
+.pkg-extra{background:var(--mint) !important;border:2px solid var(--ink) !important;color:var(--ink2) !important}
+.play-circle{background:var(--sun) !important;color:var(--ink) !important;border:var(--bw) solid var(--ink) !important}
+
+/* form controls */
+input,select,textarea{background:#fff !important;border:2px solid var(--ink) !important;border-radius:12px !important;color:var(--ink) !important}
+input:focus,select:focus,textarea:focus{box-shadow:3px 3px 0 var(--ink) !important}
+.consent-check{background:#fff !important;border:2px solid var(--ink) !important}
+.consent-check:checked{background:var(--teal) !important}
+.consent-check:checked::after{border-color:#fff !important}
+.consent-label{text-transform:none !important;letter-spacing:0 !important;font-weight:400 !important}
+.consent-label a,.modal-body a{color:var(--ink) !important;border-bottom:2px solid var(--ink) !important}
+.modal-close{background:var(--sun) !important;border:2px solid var(--ink) !important;color:var(--ink) !important}
+.card-body{background:var(--paper) !important}
+.card-title{color:var(--ink) !important}
+.card-sub{color:var(--muted) !important}
+
+/* layout guards */
+.rail-wrap{overflow:hidden;padding-bottom:10px}
+@media(max-width:420px){.header-ctas{gap:6px !important}.header-ctas .btn-sm{padding:7px 11px !important;font-size:12px !important}.lang-btn{padding:4px 7px !important}}
+.rail-fade-left,.rail-fade-right{display:none !important}
+.include-item b,.pkg-extra b,.faq-a b,.include-item strong{color:var(--ink) !important;-webkit-text-fill-color:currentColor;background:none !important}
