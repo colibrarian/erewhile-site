@@ -315,6 +315,17 @@
       .js .reveal{opacity:1;transform:none}
     }
 
+    /* ── Section bands: rhythm instead of decorative background ── */
+    .band{position:relative}
+    .band::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1}
+    .band-white::before{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .band-teal::before{background:linear-gradient(160deg,#076B58 0%,#054d40 100%)}
+    .band-white .calc-card{background:var(--bg)}
+    .hero::before{content:'';position:absolute;top:-64px;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;
+      background:radial-gradient(60% 70% at 85% 20%,rgba(7,107,88,0.10),transparent 70%)}
+    .section{isolation:isolate}
+    .divider{display:none}
+
   </style>
 </head>
 <body>
@@ -466,7 +477,7 @@
 <div class="divider"></div>
 
 <!-- PRICE QUIZ -->
-<section class="section" id="ew-pricing">
+<section class="section band band-white" id="ew-pricing">
   <h2 class="section-h2 reveal" style="margin-bottom:28px;">What will your project cost?</h2>
   <div class="calc-card reveal" style="transition-delay:.12s;">
     <div style="position:relative;">
@@ -506,7 +517,7 @@
 <div class="divider"></div>
 
 <!-- FAQ -->
-<section class="section" id="ew-faq">
+<section class="section band band-white" id="ew-faq">
   <h2 class="section-h2 reveal" style="margin-bottom:28px;">Frequently asked questions</h2>
   <div class="faq-list reveal">
     <details class="faq-item"><summary>How much does a website cost?</summary><p>A one-page landing page in one language costs €250, a business website with up to five pages starts at €1 200, and an online store at €2 200. Extra pages, language versions, copywriting and integrations are added as clear modules, and custom tools are estimated in working days. The calculator above gives a realistic range, and we confirm a fixed price in writing before work starts.</p></details>
@@ -522,7 +533,7 @@
 <div class="divider"></div>
 
 <!-- CONTACT -->
-<section class="section" id="ew-contact">
+<section class="section band band-teal" id="ew-contact">
   <div class="form-card reveal">
     <h2 class="section-h2" style="position:relative;">Request a quote</h2>
     <div class="form-desc">Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours.</div>
