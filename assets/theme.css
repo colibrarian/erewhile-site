@@ -1,0 +1,38 @@
+/* Erewhile Digital — minimal light theme shared by inner pages (same look as the homepage).
+   Loaded after each page's own <style>: keeps the original Montserrat + brand teal look,
+   removes decorative clutter and calms glass surfaces into solid cards. */
+:root{
+  --teal:#0D3E3E; --teal-light:#14BDB8;
+  --teal-line:rgba(13,62,62,0.22); --teal-dim:rgba(13,62,62,0.07);
+  --bg:#f7f7f5; --bg2:#ffffff; --line:rgba(10,10,10,0.08); --line2:rgba(10,10,10,0.04);
+  --ink:#0a0a0a; --white:#0a0a0a; --muted:rgba(10,10,10,0.55); --muted2:rgba(10,10,10,0.35);
+  --glass-bg:#fff; --glass-border:var(--line); --glass-shadow:0 1px 2px rgba(0,0,0,0.04); --glass-blur:none;
+}
+html,body{background:var(--bg) !important;color:var(--ink)}
+header{background:rgba(247,247,245,0.92) !important;border-bottom:1px solid var(--line) !important}
+.mobile-nav{background:#f7f7f5 !important}
+.burger span{background:var(--ink) !important}
+nav a:hover{color:var(--ink) !important;background:var(--line2) !important}
+input,select,textarea{background:#fff !important;border-color:var(--line) !important;color:var(--ink) !important}
+.lang-btn{color:var(--muted) !important;border-color:var(--line) !important;background:#fff !important}
+.lang-btn.active{background:var(--teal) !important;color:#fff !important;border-color:var(--teal) !important}
+.btn-ghost{background:#fff !important;border:1px solid var(--line) !important;color:var(--ink) !important}
+.modal-box{background:#fff !important}
+body::before,.ambient,.blob,.orb,.marquee-wrap,.bcard-chrome{display:none !important}
+.service-card,.bcard,.scard,.gallery-card,.cta-card,.form-card,.calc-card,.pkg-card,.always-card,.footer-card,.btn-ghost,.social-btn,input,select,textarea,.bcard-tag,header,.mobile-nav{backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
+.service-card::before,.calc-card::before,.form-card::before,.cta-card::before,.pkg-card::before{display:none !important}
+.trust-icon,.always-item-icon,.always-icon,.svc-icon{display:none !important}
+
+/* one heading treatment: bold Montserrat, accent words in brand teal instead of thin/italic mixes */
+h1 .thin,h1 .italic,h1 .light,h1 .muted{font-weight:inherit !important;font-style:normal !important;color:inherit !important}
+h1 em,h2 em,.section-title em,h1 .accent,h1 .teal{font-style:normal !important;font-weight:inherit !important;color:var(--teal) !important;-webkit-text-fill-color:currentColor;background:none !important}
+h1,h2,.section-title{text-wrap:balance}
+
+/* layout guards */
+.rail-wrap{overflow:hidden}
+@media(max-width:420px){.header-ctas{gap:6px !important}.header-ctas .btn-sm{padding:7px 11px !important;font-size:12px !important}.lang-btn{padding:4px 7px !important}}
+
+/* packages page was a dark design: bring its cards onto the light surface */
+.pkg-card{background:#fff !important;border:1px solid var(--line) !important;box-shadow:0 1px 2px rgba(0,0,0,0.04) !important}
+.pkg-card.featured{background:#fff !important;border:1.5px solid var(--teal) !important;box-shadow:0 16px 40px rgba(13,62,62,0.12) !important}
+.pkg-card.featured .btn-white,.pkg-card.featured .btn{background:var(--teal) !important;color:#fff !important;border-color:var(--teal) !important}
