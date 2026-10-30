@@ -379,7 +379,14 @@
     .statement{margin-block:clamp(24px,4vw,48px);padding:clamp(48px,6vw,88px) calc(clamp(16px,4vw,48px) + clamp(24px,5vw,64px))}
     .statement::before{left:clamp(16px,4vw,48px);right:clamp(16px,4vw,48px);width:auto;transform:none;border:none;border-radius:clamp(20px,2.4vw,32px);background:#0D3E3E;box-shadow:0 24px 60px rgba(13,62,62,0.18)}
     .statement .section-h2{color:#fff;font-size:clamp(30px,4.6vw,56px)}
-    .statement .section-h2 .g{color:#9FE6E4}
+    .statement .section-h2 .g{color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:.18em;padding:0 .16em;box-decoration-break:clone;-webkit-box-decoration-break:clone;transition:background .45s,border-color .45s,box-shadow .45s}
+    .statement .section-h2 .g.pre{background:transparent;border-color:transparent}
+    .statement .section-h2 .g.flash{box-shadow:0 0 0 6px rgba(159,230,228,.12)}
+    .statement .rest{color:transparent}
+    .statement .tcaret{display:inline-block;width:.07em;height:.85em;background:#9FE6E4;margin-left:.04em;vertical-align:-.06em}
+    .st-fx{position:absolute;top:0;bottom:0;left:clamp(16px,4vw,48px);right:clamp(16px,4vw,48px);border-radius:clamp(20px,2.4vw,32px);overflow:hidden;z-index:-1;pointer-events:none}
+    .st-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 75%)}
+    .st-spot{position:absolute;inset:0;background:radial-gradient(420px circle at var(--x,75%) var(--y,35%),rgba(159,230,228,.16),transparent 60%)}
     .statement p{margin-top:18px;color:rgba(255,255,255,.85);max-width:56ch}
     .statement .btn-ink{margin-top:26px;background:#fff;color:var(--teal)}
     .statement .btn-ink:hover{background:#F0FAFA}
@@ -552,7 +559,8 @@
 
 <!-- STATEMENT -->
 <section class="section light statement">
-  <h2 class="section-h2 reveal">Palīdzēsim jūsu biznesam <span class="g">sasniegt</span> nospraustos mērķus</h2>
+  <div class="st-fx" aria-hidden="true"><div class="st-grid"></div><div class="st-spot"></div></div>
+  <h2 class="section-h2 reveal" id="stH">Palīdzēsim jūsu biznesam <span class="g">sasniegt</span> nospraustos mērķus</h2>
   <p class="reveal">Mājaslapa, saturs un integrācijas kā vienota sistēma — no pirmās sarunas līdz palaišanai un pēc tās.</p>
   <a class="btn btn-ink reveal" href="#ew-contact">Pieteikt projektu</a>
 </section>
@@ -939,6 +947,28 @@ buildQuiz('');
   setTimeout(tick,900);
 })();
 
+</script>
+<script>
+/* statement: grid light follows the pointer (drifts on touch), heading types fast, then the accent words get their plate */
+(function(){
+  var sec=document.querySelector('.statement'),h=document.getElementById('stH');if(!sec||!h)return;
+  var fx=sec.querySelector('.st-fx'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,manual=false,t=0,vis=false;
+  sec.addEventListener('pointermove',function(e){manual=true;var r=fx.getBoundingClientRect();fx.style.setProperty('--x',(e.clientX-r.left)+'px');fx.style.setProperty('--y',(e.clientY-r.top)+'px')});
+  sec.addEventListener('pointerleave',function(){manual=false});
+  if(reduce)return;
+  (function loop(){if(vis&&!manual){t+=.006;fx.style.setProperty('--x',(60+25*Math.sin(t))+'%');fx.style.setProperty('--y',(40+25*Math.cos(t*1.3))+'%')}requestAnimationFrame(loop)})();
+  var segs=[];h.childNodes.forEach(function(n){if(n.nodeType===3){var s=document.createElement('span');s.textContent=n.textContent;segs.push(s)}else segs.push(n)});
+  h.textContent='';segs.forEach(function(s){h.appendChild(s)});
+  var texts=segs.map(function(s){return s.textContent}),plate=h.querySelector('.g'),total=texts.join('').length;
+  function esc(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function type(){var i=0;if(plate)plate.classList.add('pre');
+    (function step(){i++;var left=i;segs.forEach(function(s,k){var tx=texts[k],n=Math.max(0,Math.min(tx.length,left));left-=tx.length;
+        s.innerHTML=esc(tx.slice(0,n))+(n>0&&n<tx.length?'<span class="tcaret"></span>':'')+'<span class="rest">'+esc(tx.slice(n))+'</span>'});
+      if(i<total)setTimeout(step,24);
+      else{segs.forEach(function(s,k){s.textContent=texts[k]});if(plate)setTimeout(function(){plate.classList.remove('pre');plate.classList.add('flash');setTimeout(function(){plate.classList.remove('flash')},500)},180)}})();}
+  var done=false;
+  new IntersectionObserver(function(es){es.forEach(function(e){vis=e.isIntersecting;if(vis&&!done){done=true;type()}})},{threshold:.45}).observe(sec);
+})();
 </script>
 </body>
 </html>
