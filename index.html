@@ -321,8 +321,24 @@
     .band-white::before{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .band-teal::before{background:linear-gradient(160deg,#076B58 0%,#054d40 100%)}
     .band-white .calc-card{background:var(--bg)}
-    .hero::before{content:'';position:absolute;top:-64px;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;
-      background:radial-gradient(60% 70% at 85% 20%,rgba(7,107,88,0.10),transparent 70%)}
+    /* ── Deep teal concept: colours from the moodboard (#122834 → #0d4040 → #0f5444) + film grain ── */
+    :root{--deep1:#122834;--deep2:#0d4040;--deep3:#0f5444;--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .hero::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;
+      background:var(--grain),radial-gradient(120% 140% at 50% 50%,transparent 55%,rgba(0,0,0,.35) 100%),linear-gradient(100deg,var(--deep1) 0%,var(--deep1) 35%,var(--deep2) 100%);
+      background-blend-mode:soft-light,normal,normal}
+    .hero{padding-bottom:clamp(72px,9vw,128px)}
+    .hero h1{color:#fff}
+    .hero h1 .accent{color:var(--teal-light)}
+    .hero .hero-eyebrow{color:var(--teal-light)}
+    .hero .hero-sub{color:rgba(255,255,255,.68)}
+    .hero .btn-ink{background:#fff;color:var(--deep1)}
+    .hero .btn-ink:hover{background:#e9f3f0}
+    .hero .btn-outline-teal{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+    .hero .btn-outline-teal:hover{background:rgba(255,255,255,.08)}
+    .band-teal::before{background:var(--grain),radial-gradient(120% 140% at 50% 50%,transparent 55%,rgba(0,0,0,.3) 100%),linear-gradient(160deg,var(--deep2) 0%,var(--deep3) 100%) !important;background-blend-mode:soft-light,normal,normal}
+    /* light sections get a barely-visible paper grain so the page doesn't feel flat */
+    body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    footer{padding-top:24px}
     .section{isolation:isolate}
     .divider{display:none}
 
