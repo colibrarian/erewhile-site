@@ -687,6 +687,7 @@
     .social-btn:hover svg { fill:var(--teal); }
 
   </style>
+  <link rel="stylesheet" href="../assets/bw.css">
 </head>
 <body>
 
@@ -841,7 +842,7 @@
           </a>
           <div class="bcard-body">
             <div class="bcard-title">Jelgava Coworking</div>
-            <div class="bcard-desc">Pricing, value props and lead capture for a coworking space outside Riga.</div>
+            <div class="bcard-desc">Pricing, value props and lead capture for a coworking space in Latvia.</div>
             <a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site →</a>
           </div>
         </div>
@@ -891,7 +892,7 @@
         <div class="bcard" aria-hidden="true">
           <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🏢</span>jelgavacoworking.lv</div></div>
           <a href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="" loading="lazy"><span class="bcard-tag">Coworking</span></a>
-          <div class="bcard-body"><div class="bcard-title">Jelgava Coworking</div><div class="bcard-desc">Pricing, value props and lead capture for a coworking space outside Riga.</div><a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site →</a></div>
+          <div class="bcard-body"><div class="bcard-title">Jelgava Coworking</div><div class="bcard-desc">Pricing, value props and lead capture for a coworking space in Latvia.</div><a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site →</a></div>
         </div>
         <div class="bcard" aria-hidden="true">
           <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌍</span>untu.ngo</div></div>
@@ -986,41 +987,13 @@
 
 <div class="section-divider reveal"></div>
 
-<!-- ════════════════════════
-     SECTION 3 — PRICE QUIZ
-════════════════════════ -->
+<!-- PRICE: one calculator lives on the homepage -->
 <section class="portfolio-section reveal">
-  <div class="section-header">
-    <div>
-      <div class="section-label">Get an estimate</div>
-      <div class="section-title">How much does your project cost?</div>
-    </div>
-  </div>
-
-  <div style="padding:0 clamp(16px,4vw,48px);">
-    <div class="cta-card" id="priceQuizP">
-      <div style="position:relative;">
-        <div style="display:flex;gap:6px;margin-bottom:28px;" id="quizProgressP"></div>
-        <div id="quizStepsP"></div>
-        <div id="quizResultP" style="display:none;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;" id="resultLayoutP">
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:8px;">Based on your answers</div>
-              <div style="font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-0.04em;line-height:1;color:var(--ink);" id="resultPriceP"></div>
-              <div style="margin-top:10px;font-size:13.5px;color:var(--muted);line-height:1.65;font-weight:400;" id="resultDescP"></div>
-              <div style="display:flex;gap:14px;margin-top:18px;flex-wrap:wrap;" id="resultMetaP"></div>
-            </div>
-            <div id="resultIncludesP" style="border-radius:14px;background:rgba(7,107,88,0.05);border:1px solid var(--teal-line);padding:20px;"></div>
-          </div>
-          <div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;">
-            <a class="btn-cta" href="#contact">Get a precise quote →</a>
-            <button style="padding:9px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;" onclick="resetQuizP()">Start over</button>
-          </div>
-          <p style="margin-top:12px;font-size:11.5px;color:var(--muted2);font-weight:400;">Final price depends on content, integrations and scope. No surprises after we agree.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="section-header"><div>
+    <h2 class="section-title">What will your <em>project cost?</em></h2>
+    <p style="color:var(--muted);max-width:56ch;margin:14px 0 20px">Answer six short questions in our calculator and get a realistic price range for your website.</p>
+    <a class="btn btn-teal" href="/#ew-pricing">Open the price calculator →</a>
+  </div></div>
 </section>
 
 <div class="section-divider reveal"></div>
@@ -1072,7 +1045,7 @@
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-row">
-    <span class="footer-brand">© 2025 Erewhile Digital, Riga, Latvia</span>
+    <span class="footer-brand">© 2025 Erewhile Digital, Latvia</span>
     <div class="footer-links">
       <span class="footer-link" onclick="openModal('terms')">Terms & Conditions</span>
       <span class="footer-link" onclick="openModal('privacy')">Privacy Policy</span>
@@ -1093,7 +1066,7 @@
       <h4>1. Acceptance</h4>
       <p>By accessing erewhile.digital and submitting any inquiry form, you agree to these Terms & Conditions. If you do not agree, please do not use this website.</p>
       <h4>2. Services described</h4>
-      <p>This website is a presentation of services offered by Erewhile Digital (sole trader / freelance agency, Riga, Latvia). Services include website design & development, content production, video, CRM automation and AI integrations. All descriptions are informational; final scope and pricing are confirmed in a separate written agreement.</p>
+      <p>This website is a presentation of services offered by Erewhile Digital (sole trader / freelance agency, Latvia). Services include website design & development, content production, video, CRM automation and AI integrations. All descriptions are informational; final scope and pricing are confirmed in a separate written agreement.</p>
       <h4>3. Inquiries & quotes</h4>
       <p>Submitting an inquiry form does not constitute a binding contract. A project begins only after both parties have signed (or confirmed via email) an individual agreement or statement of work. Erewhile Digital reserves the right to decline any project without explanation.</p>
       <h4>4. Intellectual property</h4>
@@ -1101,7 +1074,7 @@
       <h4>5. Limitation of liability</h4>
       <p>This website is provided "as is". Erewhile Digital makes no warranties regarding uptime or uninterrupted access. We are not liable for any indirect or consequential damages arising from use of this website.</p>
       <h4>6. Governing law</h4>
-      <p>These Terms are governed by the laws of the Republic of Latvia. Any disputes shall be resolved in the courts of Riga, Latvia.</p>
+      <p>These Terms are governed by the laws of the Republic of Latvia. Any disputes shall be resolved in the courts of the Republic of Latvia.</p>
       <h4>7. Contact</h4>
       <p>Questions about these Terms: <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
     </div>
@@ -1117,7 +1090,7 @@
     <div class="modal-body">
       <p class="effective">Effective date: 1 May 2025 · Erewhile Digital</p>
       <h4>1. Who we are</h4>
-      <p>Erewhile Digital is a digital agency based in Riga, Latvia. This policy explains how we handle personal data collected through this website.</p>
+      <p>Erewhile Digital is a digital agency based in Latvia. This policy explains how we handle personal data collected through this website.</p>
       <h4>2. What data we collect</h4>
       <p>We collect only the information you voluntarily submit via the contact form: your name, your email address, and your message / project description. We do not collect payment data, sensitive personal data, or any information beyond what you actively provide.</p>
       <h4>3. How we use your data</h4>
@@ -1132,7 +1105,7 @@
       <h4>7. Changes to this policy</h4>
       <p>We may update this policy from time to time. Material changes will be reflected by updating the effective date above.</p>
       <h4>8. Contact</h4>
-      <p>Data controller: Erewhile Digital, Riga, Latvia · <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
+      <p>Data controller: Erewhile Digital, Latvia · <a href="mailto:web@erewhile.digital">web@erewhile.digital</a></p>
     </div>
   </div>
 </div>
