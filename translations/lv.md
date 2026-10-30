@@ -1,6 +1,6 @@
 # Erewhile Digital — Latvian website texts for review
 
-Website of a web design studio in Riga (websites, landing pages, video, integrations).
+Website of a web design studio in Latvia (websites, landing pages, video, integrations).
 Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 
 ## Instructions for the reviewer
@@ -13,16 +13,16 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 
 | ID | English source | Latvian (current) | Latvian (corrected) |
 |---|---|---|---|
-| LV-001 | Web Design & Development in Riga, Latvia — Erewhile Digital | Mājaslapu izstrāde un dizains Rīgā — Erewhile Digital | |
-| LV-002 | Web design studio in Riga, Latvia. Business websites from €1 200 and landing pages from €250 for companies, NGOs and Erasmus+ projects across the Baltics and the EU. | Mājaslapu dizaina studija Rīgā. Uzņēmumu mājaslapas no €1 200 un vienas lapas mājaslapas no €250 uzņēmumiem, NVO un Erasmus+ projektiem Baltijā un ES. | |
-| LV-003 | Erewhile Digital — Web Design & Development in Riga | Erewhile Digital — mājaslapu izstrāde Rīgā | |
+| LV-001 | Web Design & Development in Latvia — Erewhile Digital | Mājaslapu izstrāde un dizains Latvijā — Erewhile Digital | |
+| LV-002 | Web design studio in Latvia. Business websites from €1 200 and landing pages from €250 for companies, NGOs and Erasmus+ projects across the Baltics and the EU. | Mājaslapu dizaina studija Latvijā. Uzņēmumu mājaslapas no €1 200 un vienas lapas mājaslapas no €250 uzņēmumiem, NVO un Erasmus+ projektiem Baltijā un ES. | |
+| LV-003 | Erewhile Digital — Web Design & Development in Latvia | Erewhile Digital — mājaslapu izstrāde Latvijā | |
 | LV-004 | Business websites and landing pages for companies, NGOs and Erasmus+ projects across the Baltics and the EU. | Mājaslapas uzņēmumiem, NVO un Erasmus+ projektiem Baltijā un ES. | |
 | LV-005 | Websites | Mājaslapas | |
 | LV-006 | FAQ | BUJ | |
 | LV-007 | Contact | Kontakti | |
 | LV-008 | Get a quote | Piedāvājums | |
 | LV-009 | Open menu | Atvērt izvēlni | |
-| LV-010 | Web design studio · Riga, Latvia | Mājaslapu dizaina studija · Rīga | |
+| LV-010 | Web design studio · Latvia | Mājaslapu dizaina studija · Latvija | |
 | LV-011 | Websites that bring you new clients | Mājaslapas, kas atved jums jaunus klientus | |
 | LV-012 | We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200. | Izstrādājam mājaslapas uzņēmumiem, personīgajiem zīmoliem, NVO un Erasmus+ projektiem Baltijā un visā ES. Vienas lapas mājaslapa no €250, uzņēmuma mājaslapa no €1 200. | |
 | LV-013 | Discuss your project | Apspriest projektu | |
@@ -182,7 +182,7 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | LV-167 | Erasmus+ infopack | Erasmus+ infopaka | |
 | LV-168 | Catalogue · Delivery | Katalogs · Piegāde | |
 | LV-169 | Fresh flowers | Svaigi ziedi | |
-| LV-170 | from Riga | no Rīgas | |
+| LV-170 | for any occasion | jebkuram gadījumam | |
 | LV-171 | The flower shop catalogue with online ordering. | Ziedu veikala katalogs ar tiešsaistes pasūtījumiem. | |
 | LV-172 | Order a bouquet | Pasūtīt pušķi | |
 | LV-173 | bouquet ordered | pušķis pasūtīts | |
@@ -199,7 +199,7 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | LV-184 | How long does it take to build a website? | Cik ilgi tiek izstrādāta mājaslapa? | |
 | LV-185 | A landing page typically takes 1–2 weeks and a business website 2–4 weeks. Rush delivery in under two weeks is possible at a higher rate. Most of the timeline depends on how quickly content and feedback come in. | Vienas lapas mājaslapa parasti aizņem 1–2 nedēļas, uzņēmuma mājaslapa 2–4 nedēļas. Steidzama izstrāde ātrāk par divām nedēļām ir iespējama par augstāku cenu. Termiņš lielā mērā atkarīgs no tā, cik ātri saņemam saturu un atsauksmes. | |
 | LV-186 | Do you work with clients outside Latvia? | Vai strādājat ar klientiem ārpus Latvijas? | |
-| LV-187 | Yes. We are based in Riga and work with clients across the Baltics and the EU, for example Kondo in Estonia. Everything can be done remotely, and we communicate in English, Latvian or Russian. | Jā. Atrodamies Rīgā un strādājam ar klientiem visā Baltijā un ES, piemēram, ar Kondo Igaunijā. Visu var izdarīt attālināti, un sazināmies latviešu, angļu vai krievu valodā. | |
+| LV-187 | Yes. We are based in Latvia and work with clients across the Baltics and the EU, for example Kondo in Estonia. Everything can be done remotely, and we communicate in English, Latvian or Russian. | Jā. Atrodamies Latvijā un strādājam ar klientiem visā Baltijā un ES, piemēram, ar Kondo Igaunijā. Visu var izdarīt attālināti, un sazināmies latviešu, angļu vai krievu valodā. | |
 | LV-188 | Do you build websites for NGOs and Erasmus+ projects? | Vai izstrādājat mājaslapas NVO un Erasmus+ projektiem? | |
 | LV-189 | Yes. We have built websites and digital infopacks for NGOs and Erasmus+ projects, such as From Thinking to Speaking for UNTU. We know what these projects need: clear structure, partner and result pages, and materials that stay online after the project ends. | Jā. Esam izstrādājuši mājaslapas un digitālās infopakas NVO un Erasmus+ projektiem, piemēram, From Thinking to Speaking organizācijai UNTU. Zinām, kas šādiem projektiem vajadzīgs: skaidra struktūra, partneru un rezultātu lapas un materiāli, kas paliek tiešsaistē arī pēc projekta beigām. | |
 | LV-190 | Will my website be optimised for Google? | Vai mājaslapa būs optimizēta Google? | |

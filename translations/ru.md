@@ -1,6 +1,6 @@
 # Erewhile Digital — Russian website texts for review
 
-Website of a web design studio in Riga (websites, landing pages, video, integrations).
+Website of a web design studio in Latvia (websites, landing pages, video, integrations).
 Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 
 ## Instructions for the reviewer
@@ -13,9 +13,9 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 
 | ID | English source | Russian (current) | Russian (corrected) |
 |---|---|---|---|
-| RU-001 | Web Design & Development in Riga, Latvia — Erewhile Digital | Разработка и дизайн сайтов в Риге — Erewhile Digital | |
-| RU-002 | Web design studio in Riga, Latvia. Business websites from €1 200 and landing pages from €250 for companies, NGOs and Erasmus+ projects across the Baltics and the EU. | Студия веб-дизайна в Риге. Сайты для бизнеса от €1 200 и лендинги от €250 для компаний, НКО и проектов Erasmus+ в Балтии и ЕС. | |
-| RU-003 | Erewhile Digital — Web Design & Development in Riga | Erewhile Digital — разработка сайтов в Риге | |
+| RU-001 | Web Design & Development in Latvia — Erewhile Digital | Разработка и дизайн сайтов в Латвии — Erewhile Digital | |
+| RU-002 | Web design studio in Latvia. Business websites from €1 200 and landing pages from €250 for companies, NGOs and Erasmus+ projects across the Baltics and the EU. | Студия веб-дизайна в Латвии. Сайты для бизнеса от €1 200 и лендинги от €250 для компаний, НКО и проектов Erasmus+ в Балтии и ЕС. | |
+| RU-003 | Erewhile Digital — Web Design & Development in Latvia | Erewhile Digital — разработка сайтов в Латвии | |
 | RU-004 | Business websites and landing pages for companies, NGOs and Erasmus+ projects across the Baltics and the EU. | Сайты и лендинги для компаний, НКО и проектов Erasmus+ в Балтии и ЕС. | |
 | RU-005 | Websites | Сайты | |
 | RU-006 | Portfolio | Портфолио | |
@@ -24,7 +24,7 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | RU-009 | Contact | Контакты | |
 | RU-010 | Get a quote | Расчёт | |
 | RU-011 | Open menu | Открыть меню | |
-| RU-012 | Web design studio · Riga, Latvia | Студия веб-дизайна · Рига, Латвия | |
+| RU-012 | Web design studio · Latvia | Студия веб-дизайна · Латвия | |
 | RU-013 | Websites that bring you new clients | Сайты, которые приводят новых клиентов | |
 | RU-014 | We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200. | Проектируем и разрабатываем сайты и лендинги для бизнеса, личных брендов, НКО и проектов Erasmus+ в Балтии и по всему ЕС. Лендинг от €250, сайт для бизнеса от €1 200. | |
 | RU-015 | Discuss your project | Обсудить проект | |
@@ -184,7 +184,7 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | RU-169 | Erasmus+ infopack | Инфопак Erasmus+ | |
 | RU-170 | Catalogue · Delivery | Каталог · Доставка | |
 | RU-171 | Fresh flowers | Свежие цветы | |
-| RU-172 | from Riga | из Риги | |
+| RU-172 | for any occasion | на любой случай | |
 | RU-173 | The flower shop catalogue with online ordering. | Каталог цветочного магазина с онлайн-заказом. | |
 | RU-174 | Order a bouquet | Заказать букет | |
 | RU-175 | bouquet ordered | букет заказан | |
@@ -201,7 +201,7 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | RU-186 | How long does it take to build a website? | Сколько времени занимает разработка сайта? | |
 | RU-187 | A landing page typically takes 1–2 weeks and a business website 2–4 weeks. Rush delivery in under two weeks is possible at a higher rate. Most of the timeline depends on how quickly content and feedback come in. | Лендинг обычно занимает 1–2 недели, сайт для бизнеса 2–4 недели. Срочная разработка быстрее двух недель возможна по повышенному тарифу. Сроки во многом зависят от того, как быстро приходят материалы и обратная связь. | |
 | RU-188 | Do you work with clients outside Latvia? | Работаете ли вы с клиентами за пределами Латвии? | |
-| RU-189 | Yes. We are based in Riga and work with clients across the Baltics and the EU, for example Kondo in Estonia. Everything can be done remotely, and we communicate in English, Latvian or Russian. | Да. Мы находимся в Риге и работаем с клиентами по всей Балтии и ЕС, например с Kondo в Эстонии. Всё можно сделать удалённо, общаемся на русском, латышском или английском. | |
+| RU-189 | Yes. We are based in Latvia and work with clients across the Baltics and the EU, for example Kondo in Estonia. Everything can be done remotely, and we communicate in English, Latvian or Russian. | Да. Мы находимся в Латвии и работаем с клиентами по всей Балтии и ЕС, например с Kondo в Эстонии. Всё можно сделать удалённо, общаемся на русском, латышском или английском. | |
 | RU-190 | Do you build websites for NGOs and Erasmus+ projects? | Делаете ли вы сайты для НКО и проектов Erasmus+? | |
 | RU-191 | Yes. We have built websites and digital infopacks for NGOs and Erasmus+ projects, such as From Thinking to Speaking for UNTU. We know what these projects need: clear structure, partner and result pages, and materials that stay online after the project ends. | Да. Мы делали сайты и цифровые инфопаки для НКО и проектов Erasmus+, например From Thinking to Speaking для UNTU. Мы знаем, что нужно таким проектам: понятная структура, страницы партнёров и результатов и материалы, которые остаются онлайн после завершения проекта. | |
 | RU-192 | Will my website be optimised for Google? | Будет ли сайт оптимизирован под Google? | |

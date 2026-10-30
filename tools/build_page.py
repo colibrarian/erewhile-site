@@ -60,7 +60,7 @@ def export_md(t):
     name = {'lv': 'Latvian', 'ru': 'Russian'}.get(t.LANG, t.LANG)
     lines = [
         f'# Erewhile Digital — {name} website texts for review', '',
-        f'Website of a web design studio in Riga (websites, landing pages, video, integrations).',
+        f'Website of a web design studio in Latvia (websites, landing pages, video, integrations).',
         f'Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.', '',
         '## Instructions for the reviewer', '',
         f'1. Check every {name} text in the table for grammar, spelling, natural phrasing and consistent terminology.',
