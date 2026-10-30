@@ -27,7 +27,7 @@
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink:#0a0a0a; --ink2:#2a2a2a;
@@ -370,12 +370,39 @@
     .d-p{font-size:11.5px;color:#4b4f4e;max-width:40ch}
     .d-btn{display:inline-block;margin-top:10px;background:#0b0c0c;color:#f4f4f2;font-size:11px;font-weight:600;padding:7px 14px;border-radius:100px;transition:background .3s}
     .d-btn.lead{background:var(--green)}
+
+    /* each mini site gets its own look, palette limited to black / white / green */
+    .demo-site{transition:background .4s,color .4s}
+    .th-kondo{background:#0b0c0c;color:#f4f4f2;border-color:rgba(244,244,242,.6)}
+    .th-kondo .d-nav span:first-child{letter-spacing:.42em;font-weight:500}
+    .th-kondo .d-h{font-weight:300;letter-spacing:.06em;font-size:clamp(17px,2vw,24px)}
+    .th-kondo .d-h span{color:#8a8d8c}
+    .th-kondo .d-p{color:rgba(244,244,242,.6)}
+    .th-kondo .d-btn{background:transparent;border:1px solid #f4f4f2;border-radius:0;letter-spacing:.2em;text-transform:uppercase;font-size:10px}
+    .th-fts{background:#f4f4f2;padding-top:0}
+    .th-fts .d-nav{margin:0 -18px;padding:10px 18px;background:var(--green);color:#f4f4f2}
+    .th-fts .d-h{text-transform:none;letter-spacing:-.02em;font-weight:800}
+    .th-fts .d-h span{color:var(--green)}
+    .th-fts .d-btn{background:var(--green);border-radius:8px}
+    .th-raz{background:#fbfaf7;text-align:center}
+    .th-raz .d-nav{justify-content:center;gap:18px}
+    .th-raz .d-nav span:first-child{font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;letter-spacing:.3em;color:var(--green)}
+    .th-raz .d-nav span:last-child{display:none}
+    .th-raz .d-h{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;text-transform:none;letter-spacing:0;font-size:clamp(24px,2.8vw,32px);font-style:italic}
+    .th-raz .d-h span{color:var(--green)}
+    .th-raz .d-p{margin:0 auto}
+    .th-raz .d-btn{background:transparent;color:var(--green);border:1px solid var(--green)}
+    .th-menu{background:#f4f4f2;font-family:var(--mono)}
+    .th-menu .d-nav{font-family:var(--mono);border-bottom:1px dashed rgba(11,12,12,.3);padding-bottom:8px}
+    .th-menu .d-h{font-family:var(--mono);font-weight:500;letter-spacing:0;font-size:clamp(15px,1.7vw,19px)}
+    .th-menu .d-h span{color:#0b0c0c;font-weight:400}
+    .th-menu .d-p{font-family:var(--mono);font-size:11px;white-space:pre;color:#0b0c0c}
+    .th-menu .d-btn{border-radius:4px;font-family:var(--mono)}
+    .d-btn.lead{background:var(--green) !important;color:#f4f4f2 !important;border-color:var(--green) !important}
     .demo-meta{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;color:var(--grey)}
     .demo-meta a{color:var(--ink);border-bottom:1px solid var(--line)}
     .demo-meta a:hover{border-bottom-color:var(--ink)}
-    .demo-site{--brand:#0b0c0c;transition:background .4s}
-    .d-nav span:first-child{color:var(--brand)}
-    .d-btn{background:var(--brand)}
+
 
     /* cards: dark panels with light outline, rounded like the reference photo cards */
     .service-card,.bcard,.calc-card,.form-card{background:var(--panel);border:1.5px solid var(--line);box-shadow:none;border-radius:16px}
@@ -952,10 +979,10 @@ buildQuiz('');
   var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
   /* real projects from the portfolio */
   var projects=[
-    {brand:'KONDO',menu:'Shop · About · Contact',h:'New collection',hg:'is live',p:'Clothing brand from Estonia. Browse the collection and order online.',btn:'Order now',href:'#order',lead:'new order received',color:'#1a1a2e',url:'https://kondo.ee',domain:'kondo.ee'},
-    {brand:'FROM THINKING TO SPEAKING',menu:'Modules · Partners',h:'Erasmus+',hg:'digital infopack',p:'A digital infopack that gives Erasmus+ participants everything in one place.',btn:'Open infopack',href:'#infopack',lead:'participant registered',color:'#e84b1e',url:'https://untu.ngo/projects/fts',domain:'untu.ngo'},
-    {brand:'RAZALIJA',menu:'Catalogue · Delivery',h:'Fresh flowers',hg:'from Riga',p:'The flower shop catalogue with online ordering.',btn:'Order a bouquet',href:'#catalogue',lead:'bouquet ordered',color:'#b0607a',url:'https://razalija.lv',domain:'razalija.lv'},
-    {brand:'DIGITAL MENU',menu:'Mains · Drinks · Desserts',h:'Scan the QR,',hg:'see the menu',p:'A restaurant menu that opens from a QR code, with no app to install.',btn:'Call a waiter',href:'#menu',lead:'table request sent',color:'#c0392b',url:'/portfolio',domain:'see portfolio'}
+    {brand:'KONDO',menu:'Shop · About · Contact',h:'New collection',hg:'is live',p:'Clothing brand from Estonia. Browse the collection and order online.',btn:'Order now',href:'#order',lead:'new order received',theme:'th-kondo',url:'https://kondo.ee',domain:'kondo.ee'},
+    {brand:'FROM THINKING TO SPEAKING',menu:'Modules · Partners',h:'Erasmus+',hg:'digital infopack',p:'A digital infopack that gives Erasmus+ participants everything in one place.',btn:'Open infopack',href:'#infopack',lead:'participant registered',theme:'th-fts',url:'https://untu.ngo/projects/fts',domain:'untu.ngo'},
+    {brand:'Razalija',menu:'Catalogue · Delivery',h:'Fresh flowers',hg:'from Riga',p:'The flower shop catalogue with online ordering.',btn:'Order a bouquet',href:'#catalogue',lead:'bouquet ordered',theme:'th-raz',url:'https://razalija.lv',domain:'razalija.lv'},
+    {brand:'DIGITAL MENU',menu:'Mains · Drinks · Desserts',h:'Scan the QR,',hg:'see the menu',p:'Soup of the day ........ €6\nGrilled salmon ......... €16\nOpens from a QR code, no app.',btn:'Call a waiter',href:'#menu',lead:'table request sent',theme:'th-menu',url:'/portfolio',domain:'see portfolio'}
   ];
   var linesFor=function(pr){return [
     ['<span class="t">&lt;</span><span class="k">nav</span><span class="t">&gt;</span>'+esc(pr.brand)+'<span class="t">&lt;/nav&gt;</span>',0],
@@ -967,7 +994,7 @@ buildQuiz('');
   var fill=function(i){var pr=projects[i];
     $('dBrand').textContent=pr.brand;$('dMenu').textContent=pr.menu;
     $('dH').innerHTML=esc(pr.h)+' <span>'+esc(pr.hg)+'</span>';$('dP').textContent=pr.p;btn.textContent=pr.btn;
-    siteEl.style.setProperty('--brand',pr.color);
+    siteEl.className='demo-site '+pr.theme;
     $('dCount').textContent='0'+(i+1)+' / 0'+projects.length;
     var l=$('dLink');l.textContent=pr.domain+' ↗';l.href=pr.url;if(pr.url.charAt(0)==='/')l.removeAttribute('target');else l.target='_blank';
   };
