@@ -2,8 +2,8 @@
    Loaded after each page's own <style>: keeps the original Montserrat + brand teal look,
    removes decorative clutter and calms glass surfaces into solid cards. */
 :root{
-  --teal:#0E5454; --teal-light:#14BDB8;
-  --teal-line:rgba(14,84,84,0.22); --teal-dim:rgba(14,84,84,0.07);
+  --teal:#0D3E3E; --teal-light:#14BDB8;
+  --teal-line:rgba(13,62,62,0.22); --teal-dim:rgba(13,62,62,0.07);
   --bg:#f7f7f5; --bg2:#ffffff; --line:rgba(10,10,10,0.08); --line2:rgba(10,10,10,0.04);
   --ink:#0a0a0a; --white:#0a0a0a; --muted:rgba(10,10,10,0.55); --muted2:rgba(10,10,10,0.35);
   --glass-bg:#fff; --glass-border:var(--line); --glass-shadow:0 1px 2px rgba(0,0,0,0.04); --glass-blur:none;
@@ -34,5 +34,5 @@ h1,h2,.section-title{text-wrap:balance}
 
 /* packages page was a dark design: bring its cards onto the light surface */
 .pkg-card{background:#fff !important;border:1px solid var(--line) !important;box-shadow:0 1px 2px rgba(0,0,0,0.04) !important}
-.pkg-card.featured{background:#fff !important;border:1.5px solid var(--teal) !important;box-shadow:0 16px 40px rgba(14,84,84,0.12) !important}
+.pkg-card.featured{background:#fff !important;border:1.5px solid var(--teal) !important;box-shadow:0 16px 40px rgba(13,62,62,0.12) !important}
 .pkg-card.featured .btn-white,.pkg-card.featured .btn{background:var(--teal) !important;color:#fff !important;border-color:var(--teal) !important}
