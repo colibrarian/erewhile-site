@@ -514,7 +514,7 @@
       <div class="d-p" id="dP"></div>
       <div><span class="d-btn" id="demoBtn"></span></div>
     </div>
-    <div class="demo-meta"><span id="dCount">01 / 04</span><a id="dLink" href="/portfolio" target="_blank" rel="noopener"></a></div>
+    <div class="demo-meta"><span id="dCount">01 / 04</span><a href="/portfolio">View portfolio →</a></div>
   </div>
 </section>
 
@@ -979,10 +979,10 @@ buildQuiz('');
   var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
   /* real projects from the portfolio */
   var projects=[
-    {brand:'KONDO',menu:'Shop · About · Contact',h:'New collection',hg:'is live',p:'Clothing brand from Estonia. Browse the collection and order online.',btn:'Order now',href:'#order',lead:'new order received',theme:'th-kondo',url:'https://kondo.ee',domain:'kondo.ee'},
-    {brand:'FROM THINKING TO SPEAKING',menu:'Modules · Partners',h:'Erasmus+',hg:'digital infopack',p:'A digital infopack that gives Erasmus+ participants everything in one place.',btn:'Open infopack',href:'#infopack',lead:'participant registered',theme:'th-fts',url:'https://untu.ngo/projects/fts',domain:'untu.ngo'},
-    {brand:'Razalija',menu:'Catalogue · Delivery',h:'Fresh flowers',hg:'from Riga',p:'The flower shop catalogue with online ordering.',btn:'Order a bouquet',href:'#catalogue',lead:'bouquet ordered',theme:'th-raz',url:'https://razalija.lv',domain:'razalija.lv'},
-    {brand:'DIGITAL MENU',menu:'Mains · Drinks · Desserts',h:'Scan the QR,',hg:'see the menu',p:'Soup of the day ........ €6\nGrilled salmon ......... €16\nOpens from a QR code, no app.',btn:'Call a waiter',href:'#menu',lead:'table request sent',theme:'th-menu',url:'/portfolio',domain:'see portfolio'}
+    {brand:'FASHION BRAND',menu:'Shop · About · Contact',h:'New collection',hg:'is live',p:'Clothing brand from Estonia. Browse the collection and order online.',btn:'Order now',href:'#order',lead:'new order received',theme:'th-kondo',url:'/portfolio',domain:'E-commerce'},
+    {brand:'NGO PROJECT',menu:'Modules · Partners',h:'Erasmus+',hg:'digital infopack',p:'A digital infopack that gives Erasmus+ participants everything in one place.',btn:'Open infopack',href:'#infopack',lead:'participant registered',theme:'th-fts',url:'/portfolio',domain:'Erasmus+ infopack'},
+    {brand:'Flower shop',menu:'Catalogue · Delivery',h:'Fresh flowers',hg:'from Riga',p:'The flower shop catalogue with online ordering.',btn:'Order a bouquet',href:'#catalogue',lead:'bouquet ordered',theme:'th-raz',url:'/portfolio',domain:'Catalogue & orders'},
+    {brand:'DIGITAL MENU',menu:'Mains · Drinks · Desserts',h:'Scan the QR,',hg:'see the menu',p:'Soup of the day ........ €6\nGrilled salmon ......... €16\nOpens from a QR code, no app.',btn:'Call a waiter',href:'#menu',lead:'table request sent',theme:'th-menu',url:'/portfolio',domain:'Digital tool'}
   ];
   var linesFor=function(pr){return [
     ['<span class="t">&lt;</span><span class="k">nav</span><span class="t">&gt;</span>'+esc(pr.brand)+'<span class="t">&lt;/nav&gt;</span>',0],
@@ -995,8 +995,7 @@ buildQuiz('');
     $('dBrand').textContent=pr.brand;$('dMenu').textContent=pr.menu;
     $('dH').innerHTML=esc(pr.h)+' <span>'+esc(pr.hg)+'</span>';$('dP').textContent=pr.p;btn.textContent=pr.btn;
     siteEl.className='demo-site '+pr.theme;
-    $('dCount').textContent='0'+(i+1)+' / 0'+projects.length;
-    var l=$('dLink');l.textContent=pr.domain+' ↗';l.href=pr.url;if(pr.url.charAt(0)==='/')l.removeAttribute('target');else l.target='_blank';
+    $('dCount').textContent='0'+(i+1)+' / 0'+projects.length+' · '+pr.domain;
   };
   var plainLen=function(html){var d=document.createElement('div');d.innerHTML=html;return d.textContent.length;};
   var slice=function(html,n){var out='',c=0,i=0;while(i<html.length&&c<n){if(html[i]==='<'){var j=html.indexOf('>',i);out+=html.slice(i,j+1);i=j+1;}else if(html[i]==='&'){var k=html.indexOf(';',i);out+=html.slice(i,k+1);i=k+1;c++;}else{out+=html[i];i++;c++;}}
