@@ -27,7 +27,7 @@
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink:#0a0a0a; --ink2:#2a2a2a;
@@ -315,89 +315,111 @@
       .js .reveal{opacity:1;transform:none}
     }
 
-    /* ── Section bands: rhythm instead of decorative background ── */
-    .band{position:relative}
-    .band::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1}
-    .band-white::before{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .band-teal::before{background:linear-gradient(160deg,#076B58 0%,#054d40 100%)}
-    .band-white .calc-card{background:var(--bg)}
-    /* ── Deep teal concept: colours from the moodboard (#122834 → #0d4040 → #0f5444) + film grain ── */
-    :root{--deep1:#122834;--deep2:#0d4040;--deep3:#0f5444;--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    .hero::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;
-      background:var(--grain),radial-gradient(120% 140% at 50% 50%,transparent 55%,rgba(0,0,0,.35) 100%),linear-gradient(100deg,var(--deep1) 0%,var(--deep1) 35%,var(--deep2) 100%);
-      background-blend-mode:soft-light,normal,normal}
-    .hero{padding-bottom:clamp(72px,9vw,128px)}
-    .hero h1{color:#fff}
-    .hero h1 .accent{color:var(--teal-light)}
-    .hero .hero-eyebrow{color:var(--teal-light)}
-    .hero .hero-sub{color:rgba(255,255,255,.68)}
-    .hero .btn-ink{background:#fff;color:var(--deep1)}
-    .hero .btn-ink:hover{background:#e9f3f0}
-    .hero .btn-outline-teal{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
-    .hero .btn-outline-teal:hover{background:rgba(255,255,255,.08)}
-    .band-teal::before{background:var(--grain),radial-gradient(120% 140% at 50% 50%,transparent 55%,rgba(0,0,0,.3) 100%),linear-gradient(160deg,var(--deep2) 0%,var(--deep3) 100%) !important;background-blend-mode:soft-light,normal,normal}
-    /* light sections get a barely-visible paper grain so the page doesn't feel flat */
-    body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    footer{padding-top:24px}
+    /* ══ Black & white direction (moodboard: dark studio site, white statement band, warped grid).
+       Montserrat Black for headings; dark green appears once — when the demo "receives a lead". ══ */
+    :root{
+      color-scheme:dark;
+      --bg:#0b0c0c; --bg2:#141616; --panel:#141616;
+      --ink:#f4f4f2; --ink2:#d9dbda;
+      --muted:rgba(244,244,242,0.62); --muted2:rgba(244,244,242,0.40);
+      --line:rgba(244,244,242,0.14); --line2:rgba(244,244,242,0.06);
+      --teal:#f4f4f2; --teal-light:#f4f4f2; --teal-line:rgba(244,244,242,0.28); --teal-dim:rgba(244,244,242,0.06);
+      --glass-bg:var(--panel); --glass-border:var(--line);
+      --grey:#8a8d8c; --green:#0f5444; --green-hi:#2f8a69;
+      --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+    }
+    body{background:var(--bg);color:var(--ink)}
+    header{background:rgba(11,12,12,0.88);border-bottom-color:var(--line)}
+    .brand-logo{filter:brightness(0) invert(1)}
+    .mobile-nav{background:rgba(11,12,12,0.98)}
+    .burger span{background:var(--ink)}
+    nav a.active{color:var(--ink)}
+
+    /* headings */
+    h1,.section-h2{font-weight:900;text-transform:uppercase;letter-spacing:-.035em;line-height:.95;text-wrap:balance}
+    h1{font-size:clamp(38px,5.6vw,76px)}
+    h1 .g,.section-h2 .g{color:var(--grey)}
+    .section-h2{font-size:clamp(28px,4vw,52px)}
+    .hero-eyebrow{color:var(--grey)}
+
+    /* buttons: white on black, outline secondary */
+    .btn-ink,.btn-teal{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+    .btn-ink:hover,.btn-teal:hover{background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+    .btn-outline-teal,.btn-ghost{background:transparent;border:1px solid rgba(244,244,242,.35);color:var(--ink)}
+    .btn-outline-teal:hover,.btn-ghost:hover{background:rgba(244,244,242,.08);color:var(--ink);border-color:var(--ink)}
+    .social-btn{background:transparent;border-color:var(--line)}
+    .social-btn svg{fill:var(--muted)}
+
+    /* hero: text + code→site demo on a warped grid */
+    .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .hero-text{min-width:0}
+    .hero-grid{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none}
+    .hero-grid canvas{width:100%;height:100%;display:block}
+    .demo{display:grid;gap:12px;min-width:0;opacity:0;animation:fadeUp .9s var(--ease) .5s forwards}
+    .demo-code{border:1.5px solid rgba(244,244,242,.6);border-radius:16px;background:var(--panel);padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.7;color:#cfd2d0;white-space:pre;overflow:hidden;min-height:170px}
+    .demo-code .t{color:var(--grey)}.demo-code .k{color:var(--ink);font-weight:500}.demo-code .s{color:var(--green-hi)}
+    .caret{display:inline-block;width:7px;height:14px;background:var(--ink);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .demo-site{border:1.5px solid rgba(244,244,242,.6);border-radius:16px;background:#f4f4f2;color:#0b0c0c;padding:16px 18px;min-height:190px}
+    .demo-site > *{opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+    .demo-site > .on{opacity:1;transform:none}
+    .d-nav{display:flex;justify-content:space-between;font-size:11px;font-weight:700}
+    .d-h{font-weight:900;letter-spacing:-.03em;text-transform:uppercase;font-size:clamp(18px,2.2vw,26px);line-height:.95;margin:12px 0 6px}
+    .d-h span{color:var(--grey)}
+    .d-p{font-size:11.5px;color:#4b4f4e;max-width:40ch}
+    .d-btn{display:inline-block;margin-top:10px;background:#0b0c0c;color:#f4f4f2;font-size:11px;font-weight:600;padding:7px 14px;border-radius:100px;transition:background .3s}
+    .d-btn.lead{background:var(--green)}
+    .d-toast{position:absolute;opacity:0}
+    .demo-meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--grey)}
+
+    /* cards: dark panels with light outline, rounded like the reference photo cards */
+    .service-card,.bcard,.calc-card,.form-card{background:var(--panel);border:1.5px solid var(--line);box-shadow:none;border-radius:16px}
+    .service-card:hover,.bcard:hover{border-color:rgba(244,244,242,.6);box-shadow:none;transform:translateY(-4px)}
+    .service-card{display:flex;flex-direction:column;min-height:230px}
+    .service-card.featured{background:var(--panel);border-color:rgba(244,244,242,.6)}
+    .svc-title{font-size:20px;text-transform:uppercase;font-weight:900;letter-spacing:-.02em}
+    .svc-price{margin-top:auto;padding-top:22px;color:var(--ink);font-size:22px;font-weight:900;letter-spacing:-.02em}
+    .bcard-preview{background:#1d2020}
+    .bcard-preview img{filter:grayscale(1) contrast(1.05);transition:filter .4s var(--ease),transform .5s var(--ease)}
+    .bcard:hover .bcard-preview img{filter:none}
+    .bcard-tag{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+    .bcard-kicker{color:var(--grey)}
+    .bcard-link{color:var(--ink)}
+    .bcard-viewall{background:var(--ink);border:none;color:var(--bg)}
+    .bcard-viewall:hover{background:#fff;border:none;box-shadow:none}
+    .bcard-viewall-label{color:var(--bg)}.bcard-viewall-sub{color:rgba(11,12,12,.6)}
+    .bcard-viewall-icon{background:transparent;border-color:rgba(11,12,12,.3);color:var(--bg)}
+
+    /* calculator + form controls on dark */
+    .quiz-opt{background:transparent;border-color:var(--line)}
+    .quiz-opt:hover{background:rgba(244,244,242,.06);border-color:var(--ink)}
+    .quiz-dot.done{background:var(--ink)}.quiz-dot.active{background:rgba(244,244,242,.4)}
+    #resultIncludes{background:rgba(244,244,242,.04) !important;border-color:var(--line) !important}
+    input,select,textarea{background:rgba(244,244,242,.04);border-color:var(--line);color:var(--ink)}
+    input:focus,select:focus,textarea:focus{background:rgba(244,244,242,.07);border-color:rgba(244,244,242,.5);box-shadow:none}
+    select option{background:var(--panel)}
+    .consent-check{background:transparent;border-color:rgba(244,244,242,.35)}
+    .consent-check:checked{background:var(--ink);border-color:var(--ink)}
+    .consent-check:checked::after{border-color:var(--bg)}
+    .consent-label a,.modal-body a{color:var(--ink);border-bottom-color:rgba(244,244,242,.35)}
+    .modal-box{background:var(--panel);border-color:var(--line)}
+    .modal-close{background:transparent;border-color:var(--line);color:var(--muted)}
+    .step-card{border-top-color:var(--line)}
+    .step-card:hover{border-top-color:var(--ink)}
+    .step-num{color:var(--grey)}
+    .footer-card{background:transparent;border:none;border-top:1px solid var(--line);border-radius:0;padding:22px 0;box-shadow:none}
+
+    /* white bands: statement + FAQ (tokens flip locally) */
+    .light{--ink:#0b0c0c;--muted:rgba(11,12,12,.64);--muted2:rgba(11,12,12,.4);--line:rgba(11,12,12,.14);color:var(--ink);position:relative}
+    .light::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;background:#f4f4f2}
     .section{isolation:isolate}
     .divider{display:none}
-
-    /* ══ Studio palette: warm paper + deep teal blocks (replaces the clean white/teal "clinic" look) ══ */
-    :root{
-      --ink:#122834; --ink2:#0d4040;
-      --muted:rgba(18,40,52,0.62); --muted2:rgba(18,40,52,0.38);
-      --teal:#0f5444; --teal-light:#7ad9b4;
-      --teal-line:rgba(15,84,68,0.25); --teal-dim:rgba(15,84,68,0.08);
-      --bg:#ece7dd; --bg2:#f5f1e9; --line:rgba(18,40,52,0.12); --line2:rgba(18,40,52,0.05);
-      --glass-bg:var(--bg2); --cream:#f2ede3; --mint:#7ad9b4;
-    }
-    header{background:rgba(236,231,221,0.9)}
-    .mobile-nav{background:rgba(236,231,221,0.98)}
-    nav a.active{color:var(--ink)}
-    /* buttons */
-    .btn-teal,.btn-ink{background:var(--ink);color:var(--cream)}
-    .btn-teal:hover,.btn-ink:hover{background:var(--ink2);box-shadow:0 8px 24px rgba(18,40,52,0.22)}
-    .btn-outline-teal{background:transparent;border-color:rgba(18,40,52,0.25);color:var(--ink)}
-    .btn-outline-teal:hover{background:rgba(18,40,52,0.06)}
-    .hero .btn-ink{background:var(--mint);color:var(--ink)}
-    .hero .btn-ink:hover{background:#9be5c8}
-    .band-teal .btn-teal{background:var(--teal);color:var(--cream)}
-    .band-teal .btn-teal:hover{background:#126b4a}
-    /* dark grained bands */
-    .band-dark{color:var(--cream)}
-    .band-dark::before{background:var(--grain),linear-gradient(180deg,#0f2330 0%,var(--deep1) 100%);background-blend-mode:soft-light,normal}
-    .band-dark .section-h2{color:var(--cream)}
-    /* services as colour blocks from the moodboard */
-    .service-card{border:none;box-shadow:none;border-radius:4px;color:var(--cream);min-height:240px;display:flex;flex-direction:column;
-      background:var(--grain),var(--c,#0d4040);background-blend-mode:soft-light,normal}
-    .service-card:nth-child(1){--c:#0d4040}.service-card:nth-child(2){--c:#0f5444}.service-card:nth-child(3){--c:#126b4a}
-    .service-card.featured{background:var(--grain),var(--c);border:none}
-    .service-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,0.25)}
-    .svc-title{color:var(--cream);font-size:22px}
-    .svc-desc{color:rgba(242,237,227,0.72)}
-    .svc-price{margin-top:auto;padding-top:24px;color:var(--mint);font-size:20px;font-weight:800;letter-spacing:-.02em}
-    /* process on dark */
-    .band-dark .step-card{border-top-color:rgba(122,217,180,0.35)}
-    .band-dark .step-card:hover{border-top-color:var(--mint)}
-    .band-dark .step-num{color:var(--mint)}
-    .band-dark .step-title{color:var(--cream)}
-    .band-dark .step-desc{color:rgba(242,237,227,0.66)}
-    /* sharper, less "app-like" corners */
-    .bcard,.calc-card,.form-card,.footer-card,.quiz-opt,input,select,textarea{border-radius:4px}
-    .bcard{background:var(--bg2);box-shadow:none;border:1px solid var(--line)}
-    .bcard-tag{background:var(--ink);color:var(--cream);border:none;border-radius:2px}
-    .bcard-kicker,.bcard-link{color:var(--teal)}
-    .bcard-viewall{background:var(--ink);border:none;color:var(--cream)}
-    .bcard-viewall:hover{background:var(--ink2);border:none}
-    .bcard-viewall-label{color:var(--cream)}.bcard-viewall-sub{color:rgba(242,237,227,.6)}
-    .bcard-viewall-icon{background:transparent;border-color:rgba(122,217,180,.4);color:var(--mint)}
-    .band-white::before{background:var(--bg2);border-color:var(--line)}
-    .band-white .calc-card{background:var(--bg);border-color:var(--line)}
-    .quiz-opt{background:var(--bg2)}
-    .quiz-opt:hover{background:#fff;border-color:var(--ink)}
-    .consent-check:checked{background:var(--ink);border-color:var(--ink)}
-    .form-card{background:var(--bg2);border:none}
-    .footer-card{background:transparent;border:none;border-top:1px solid var(--line);box-shadow:none;border-radius:0;padding:22px 0}
+    .statement .section-h2{font-size:clamp(34px,6.6vw,96px)}
+    .statement p{margin-top:18px;color:var(--muted);max-width:56ch}
+    .statement .btn-ink{margin-top:26px;background:#0b0c0c;color:#f4f4f2;border-color:#0b0c0c}
+    .faq-item summary::after{color:var(--ink)}
+    @media (prefers-reduced-motion: reduce){.demo,.demo-site > *{opacity:1;transform:none}}
 
   </style>
 </head>
@@ -443,20 +465,32 @@
 
 <!-- HERO -->
 <section class="section hero" id="top">
-  <div class="hero-eyebrow">Web design studio · Riga, Latvia</div>
-  <h1>Websites that bring<br>you <span class="accent">new clients</span></h1>
-  <p class="hero-sub">We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200.</p>
-  <div class="hero-ctas">
-    <a class="btn btn-ink" href="#ew-contact">Discuss your project</a>
-    <a class="btn btn-outline-teal" href="/portfolio">See our work →</a>
+  <div class="hero-grid" aria-hidden="true"><canvas id="heroGrid"></canvas></div>
+  <div class="hero-text">
+    <div class="hero-eyebrow">Web design studio · Riga, Latvia</div>
+    <h1>Websites that <span class="g">bring you</span> new clients</h1>
+    <p class="hero-sub">We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-ink" href="#ew-contact">Discuss your project</a>
+      <a class="btn btn-outline-teal" href="/portfolio">See our work →</a>
+    </div>
+  </div>
+  <div class="demo" aria-hidden="true">
+    <div class="demo-code" id="demoCode"></div>
+    <div class="demo-site" id="demoSite">
+      <div class="d-nav"><span>KONDO</span><span>Shop · About · Contact</span></div>
+      <div class="d-h">New collection <span>is live</span></div>
+      <div class="d-p">Handmade clothing from Tallinn. Order online, delivery across the Baltics.</div>
+      <div><span class="d-btn" id="demoBtn">Order now</span></div>
+    </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
 <!-- SERVICES -->
-<section class="section band band-dark" id="ew-websites">
-  <h2 class="section-h2 reveal" style="margin-bottom:28px;">Services and prices</h2>
+<section class="section" id="ew-websites">
+  <h2 class="section-h2 reveal" style="margin-bottom:28px;">Services <span class="g">and prices</span></h2>
   <div class="services-grid">
     <div class="service-card featured reveal">
       <div class="svc-title">Full business website</div>
@@ -481,7 +515,7 @@
 <section class="section" id="ew-work">
   <div class="section-head">
     <div>
-      <h2 class="section-h2 reveal">Recent work</h2>
+      <h2 class="section-h2 reveal">Recent <span class="g">work</span></h2>
     </div>
   </div>
 
@@ -549,9 +583,16 @@
 </section>
 <div class="divider"></div>
 
+<!-- STATEMENT -->
+<section class="section light statement">
+  <h2 class="section-h2 reveal">Let's get your business <span class="g">where you</span> want it to be</h2>
+  <p class="reveal">Website, content and integrations built to work as one system, from the first call to launch and beyond.</p>
+  <a class="btn btn-ink reveal" href="#ew-contact">Start a project</a>
+</section>
+
 <!-- PRICE QUIZ -->
-<section class="section band band-white" id="ew-pricing">
-  <h2 class="section-h2 reveal" style="margin-bottom:28px;">What will your project cost?</h2>
+<section class="section" id="ew-pricing">
+  <h2 class="section-h2 reveal" style="margin-bottom:28px;">What will your <span class="g">project cost?</span></h2>
   <div class="calc-card reveal" style="transition-delay:.12s;">
     <div style="position:relative;">
       <div id="quizProgress" class="quiz-progress"></div>
@@ -578,8 +619,8 @@
 <div class="divider"></div>
 
 <!-- PROCESS -->
-<section class="section band band-dark" id="ew-process">
-  <h2 class="section-h2 reveal" style="margin-bottom:28px;">How a project runs</h2>
+<section class="section" id="ew-process">
+  <h2 class="section-h2 reveal" style="margin-bottom:28px;">How a project <span class="g">runs</span></h2>
   <div class="steps-grid">
     <div class="step-card reveal"><div class="step-num">01</div><div class="step-title">Discovery call</div><div class="step-desc">We talk through your goal, audience and what success looks like. 30 minutes, no pressure.</div></div>
     <div class="step-card reveal" style="transition-delay:.08s;"><div class="step-num">02</div><div class="step-title">Proposal & scope</div><div class="step-desc">You get a written plan: structure, timeline, price. We agree on scope before anything starts.</div></div>
@@ -590,8 +631,8 @@
 <div class="divider"></div>
 
 <!-- FAQ -->
-<section class="section band band-white" id="ew-faq">
-  <h2 class="section-h2 reveal" style="margin-bottom:28px;">Frequently asked questions</h2>
+<section class="section light" id="ew-faq">
+  <h2 class="section-h2 reveal" style="margin-bottom:28px;">Questions <span class="g">clients ask</span></h2>
   <div class="faq-list reveal">
     <details class="faq-item"><summary>How much does a website cost?</summary><p>A one-page landing page in one language costs €250, a business website with up to five pages starts at €1 200, and an online store at €2 200. Extra pages, language versions, copywriting and integrations are added as clear modules, and custom tools are estimated in working days. The calculator above gives a realistic range, and we confirm a fixed price in writing before work starts.</p></details>
     <details class="faq-item"><summary>How long does it take to build a website?</summary><p>A landing page typically takes 1–2 weeks and a business website 2–4 weeks. Rush delivery in under two weeks is possible at a higher rate. Most of the timeline depends on how quickly content and feedback come in.</p></details>
@@ -606,9 +647,9 @@
 <div class="divider"></div>
 
 <!-- CONTACT -->
-<section class="section band band-teal" id="ew-contact">
+<section class="section" id="ew-contact">
   <div class="form-card reveal">
-    <h2 class="section-h2" style="position:relative;">Request a quote</h2>
+    <h2 class="section-h2" style="position:relative;">Request <span class="g">a quote</span></h2>
     <div class="form-desc">Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours.</div>
     <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
       <input type="hidden" name="_subject" value="New request — erewhile.digital (EN)">
@@ -882,6 +923,48 @@ function buildQuiz(suffix){
   renderStep(0);
 }
 buildQuiz('');
+
+/* ── Hero: warped grid + code→site demo ── */
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cv=document.getElementById('heroGrid');
+  if(cv){
+    var ctx=cv.getContext('2d'),w,h,dpr=Math.min(2,window.devicePixelRatio||1),t=0;
+    var size=function(){w=cv.offsetWidth;h=cv.offsetHeight;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);};
+    var warp=function(x,y){return [x+Math.sin(y/140+t)*14,y+Math.sin(x/170+t*.8)*16];};
+    var draw=function(){
+      ctx.clearRect(0,0,w,h);ctx.strokeStyle='rgba(244,244,242,0.08)';ctx.lineWidth=1;var st=72,x,y,p;
+      for(x=-st;x<=w+st;x+=st){ctx.beginPath();for(y=-20;y<=h+20;y+=12){p=warp(x,y);y<=-20?ctx.moveTo(p[0],p[1]):ctx.lineTo(p[0],p[1]);}ctx.stroke();}
+      for(y=-st;y<=h+st;y+=st){ctx.beginPath();for(x=-20;x<=w+20;x+=12){p=warp(x,y);x<=-20?ctx.moveTo(p[0],p[1]):ctx.lineTo(p[0],p[1]);}ctx.stroke();}
+    };
+    size();draw();window.addEventListener('resize',function(){size();draw();});
+    if(!reduce)(function loop(){t+=0.004;draw();requestAnimationFrame(loop);})();
+  }
+  var code=document.getElementById('demoCode'),siteEl=document.getElementById('demoSite'),btn=document.getElementById('demoBtn');
+  if(!code||!siteEl)return;
+  var site=siteEl.children;
+  var lines=[
+    ['<span class="t">&lt;</span><span class="k">nav</span><span class="t">&gt;</span>KONDO · Shop · About<span class="t">&lt;/nav&gt;</span>',0],
+    ['<span class="t">&lt;</span><span class="k">h1</span><span class="t">&gt;</span>New collection is live<span class="t">&lt;/h1&gt;</span>',1],
+    ['<span class="t">&lt;</span><span class="k">p</span><span class="t">&gt;</span>Handmade clothing…<span class="t">&lt;/p&gt;</span>',2],
+    ['<span class="t">&lt;</span><span class="k">a</span> <span class="t">href=</span><span class="s">"#order"</span><span class="t">&gt;</span>Order now<span class="t">&lt;/a&gt;</span>',3],
+    ['<span class="t">// form.submit → </span><span class="s">new lead in your inbox</span>',4]
+  ];
+  var plainLen=function(html){var d=document.createElement('div');d.innerHTML=html;return d.textContent.length;};
+  var slice=function(html,n){var out='',c=0,i=0;while(i<html.length&&c<n){if(html[i]==='<'){var j=html.indexOf('>',i);out+=html.slice(i,j+1);i=j+1;}else if(html[i]==='&'){var k=html.indexOf(';',i);out+=html.slice(i,k+1);i=k+1;c++;}else{out+=html[i];i++;c++;}}
+    var o=(out.match(/<span[^>]*>/g)||[]).length,cl=(out.match(/<\/span>/g)||[]).length;for(var q=0;q<o-cl;q++)out+='</span>';return out;};
+  if(reduce){code.innerHTML=lines.map(function(l){return l[0]}).join('\n');for(var s=0;s<site.length;s++)site[s].classList.add('on');btn.classList.add('lead');return;}
+  var li=0,ch=0;
+  var tick=function(){
+    if(li>=lines.length){setTimeout(function(){li=0;ch=0;for(var s=0;s<site.length;s++)site[s].classList.remove('on');btn.classList.remove('lead');tick();},2800);return;}
+    var done=lines.slice(0,li).map(function(l){return l[0]}).join('\n'),cur=lines[li][0],len=plainLen(cur);
+    code.innerHTML=(done?done+'\n':'')+slice(cur,ch)+'<span class="caret"></span>';
+    if(ch<len){ch++;setTimeout(tick,28);}
+    else{var tg=lines[li][1];if(tg<4)site[tg].classList.add('on');else btn.classList.add('lead');li++;ch=0;setTimeout(tick,380);}
+  };
+  setTimeout(tick,900);
+})();
+
 </script>
 </body>
 </html>
