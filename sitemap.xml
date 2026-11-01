@@ -24,4 +24,5 @@
   <url><loc>https://erewhile.digital/en/fast-website.html</loc></url>
   <url><loc>https://erewhile.digital/portfolio</loc></url>
   <url><loc>https://erewhile.digital/video</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/kondo/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

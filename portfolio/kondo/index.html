@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kondo case study: website for a made-to-order clothing label — Erewhile Digital</title>
+  <meta name="description" content="How we built a one-page brand site with a pre-order bag for Kondo, an Estonian label making linen and ramie clothing to order."/>
+  <link rel="canonical" href="https://erewhile.digital/portfolio/kondo/"/>
+  <meta property="og:title" content="Kondo case study — Erewhile Digital"/>
+  <meta property="og:description" content="One-page brand site with a pre-order bag for an Estonian made-to-order clothing label."/>
+  <meta property="og:image" content="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Kondo — brand website with pre-order","url":"https://erewhile.digital/portfolio/kondo/","about":"Website for a made-to-order clothing label in Estonia","creator":{"@id":"https://erewhile.digital/#org"},"image":"https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg","isBasedOn":"https://kondo.ee"}</script>
+  <style>
+    :root{--ink:#0a0a0a;--muted:#6b6f6e;--line:rgba(10,10,10,.08);--bg:#f7f7f5;--teal:#0D3E3E;--teal-line:rgba(13,62,62,.22);--teal-dim:rgba(13,62,62,.07);--soft:#9FE6E4;--font:'Montserrat',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(247,247,245,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+    .hdr{height:64px;display:flex;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
+    .brand img{height:24px;width:auto}
+    nav{display:flex;gap:22px;margin-left:auto;font-size:13px;color:var(--muted)}
+    nav a:hover,nav a.active{color:var(--teal)}
+    nav a.active{font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:100px;font-weight:600;font-size:13.5px;padding:12px 22px;transition:transform .2s var(--ease),background .2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-teal{background:var(--teal);color:#fff}
+    .btn-teal:hover{background:#072828}
+    .btn-ghost{border:1px solid var(--teal-line);color:var(--teal);background:var(--teal-dim)}
+    .btn-sm{padding:9px 16px;font-size:12.5px}
+    @media(max-width:640px){nav{display:none}.hdr .btn-sm{margin-left:auto}}
+
+    .crumbs{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:clamp(28px,4vw,48px)}
+    .crumbs a:hover{color:var(--teal)}
+    .intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:end;padding-block:18px clamp(28px,4vw,44px)}
+    @media(max-width:860px){.intro{grid-template-columns:1fr}}
+    h1{font-size:clamp(34px,5.4vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:800;text-wrap:balance}
+    h1 span{color:var(--teal)}
+    .lede{color:var(--muted);font-size:clamp(15px,1.4vw,17px);max-width:52ch}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid var(--teal-line);background:var(--teal-dim);border-radius:100px;padding:5px 12px}
+
+    .shot{position:relative;border-radius:clamp(18px,2.2vw,28px);overflow:hidden;border:1px solid var(--line);background:#e9ebe9;box-shadow:0 30px 70px rgba(13,62,62,.12)}
+    .shot img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top}
+
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:clamp(28px,4vw,44px)}
+    .fact{background:#fff;padding:18px 20px}
+    .fact dt{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:4px}
+    .fact dd{font-weight:700;font-size:14px;line-height:1.4}
+    @media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+
+    .block{display:grid;grid-template-columns:260px 1fr;gap:clamp(20px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--line)}
+    @media(max-width:760px){.block{grid-template-columns:1fr}}
+    .label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+    .block h2{font-size:clamp(22px,2.6vw,32px);line-height:1.15;letter-spacing:-.03em;font-weight:800;margin-top:8px;text-wrap:balance}
+    .body{max-width:68ch;display:grid;gap:14px;color:#2a2a2a}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:600px){.list{grid-template-columns:1fr}}
+    .item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px}
+    .item b{display:block;font-size:14.5px;margin-bottom:4px}
+    .item span{font-size:13.5px;color:var(--muted);line-height:1.55;display:block}
+
+    .handover{display:flex;flex-wrap:wrap;gap:8px}
+    .handover li{list-style:none;font-size:13.5px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:100px;padding:8px 14px}
+    .handover li::before{content:'✓';color:var(--teal);margin-right:8px;font-weight:800}
+
+    .next{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:28px;font-size:14px}
+    .next a{font-weight:700;color:var(--teal)}
+
+    .cta{position:relative;isolation:isolate;overflow:hidden;border-radius:clamp(20px,2.4vw,32px);background:var(--teal);color:#fff;padding:clamp(40px,6vw,80px) clamp(24px,5vw,64px);margin-block:clamp(20px,4vw,40px) clamp(48px,6vw,80px);box-shadow:0 24px 60px rgba(13,62,62,.18)}
+    .cta::before{content:'';position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(ellipse at 75% 40%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 75% 40%,#000,transparent 75%)}
+    .cta h2{font-size:clamp(26px,3.8vw,46px);line-height:1.05;letter-spacing:-.035em;font-weight:800;max-width:20ch;text-wrap:balance}
+    .cta h2 span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:.18em;padding:0 .14em}
+    .cta p{margin-top:14px;color:rgba(255,255,255,.82);max-width:52ch}
+    .cta .btn{margin-top:24px;background:#fff;color:var(--teal)}
+
+    footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+    footer a:hover{color:var(--teal)}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.on{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
+    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
+    <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="crumbs"><a href="/portfolio">Portfolio</a> / Kondo</div>
+
+  <section class="intro">
+    <div>
+      <h1>A brand site that takes <span>pre&#8209;orders</span> for a clothing label</h1>
+      <div class="tags"><span class="tag">Fashion</span><span class="tag">Estonia</span><span class="tag">One-page site</span><span class="tag">Pre-order bag</span></div>
+    </div>
+    <div>
+      <p class="lede">Kondo makes linen and ramie clothing for yoga and everyday wear, sewn to order. They needed a site that tells the story of the fabrics and lets people put together an order without a full online store.</p>
+      <div class="actions"><a class="btn btn-teal" href="https://kondo.ee" target="_blank" rel="noopener">Open kondo.ee ↗</a><a class="btn btn-ghost" href="/#ew-contact">Discuss a similar site</a></div>
+    </div>
+  </section>
+
+  <figure class="shot reveal"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg" alt="Kondo website, first screen" loading="eager"></figure>
+
+  <dl class="facts reveal">
+    <div class="fact"><dt>Client</dt><dd>Kondo, clothing label</dd></div>
+    <div class="fact"><dt>Market</dt><dd>Estonia</dd></div>
+    <div class="fact"><dt>Format</dt><dd>One-page site with sections</dd></div>
+    <div class="fact"><dt>Ordering</dt><dd>Pre-order bag + enquiry form</dd></div>
+  </dl>
+
+  <section class="block reveal">
+    <div><div class="label">The task</div><h2>Sell made-to-order clothes without a heavy shop</h2></div>
+    <div class="body">
+      <p>Every Kondo piece is made after the order, with a 50% deposit and 1–2 weeks of production. A standard e-commerce platform with stock, shipping rules and instant payment did not fit that model.</p>
+      <p>The brand also needed space to explain why ramie and linen are worth it, and how to care for them, so buyers understand the price before they order.</p>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">What we built</div><h2>One page that leads from story to order</h2></div>
+    <div class="body">
+      <div class="list">
+        <div class="item"><b>Brand story and fabrics</b><span>About, Fabrics and Care sections explain the materials and how to look after them.</span></div>
+        <div class="item"><b>Two collections</b><span>Yoga Drop and City Drop, each with prices, so buyers see the range at a glance.</span></div>
+        <div class="item"><b>Pre-order bag</b><span>Visitors add pieces to a bag and see an estimated total. Items priced on request are confirmed separately.</span></div>
+        <div class="item"><b>Enquiry form</b><span>Name, phone, email and a comment. Works with or without selected pieces, so custom requests come in too.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">Handed over</div><h2>What the client got at launch</h2></div>
+    <div class="body">
+      <ul class="handover"><li>Live website</li><li>Pre-order flow</li><li>Mobile layout</li><li>Privacy policy</li><li>Instagram link</li><li>Full access and ownership</li></ul>
+    </div>
+  </section>
+
+  <div class="next"><a href="/portfolio">← All projects</a><span>Next case: <a href="/portfolio">coming soon</a></span></div>
+
+  <section class="cta reveal">
+    <h2>Need a site that <span>sells</span> your way?</h2>
+    <p>Tell us how you take orders today. We will suggest the simplest site that fits, with a fixed price before work starts.</p>
+    <a class="btn" href="/#ew-contact">Start a project</a>
+  </section>
+
+  <footer><span>© Erewhile Digital · Latvia</span><span><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></span></footer>
+</main>
+
+<script>
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
