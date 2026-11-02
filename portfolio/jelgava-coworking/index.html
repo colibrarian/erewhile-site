@@ -71,24 +71,37 @@
     .item span{font-size:13.5px;color:var(--muted);line-height:1.55;display:block}
 
 
-    /* brand panel: the client's own identity, shown on its own white surface */
-    .brand-panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
-    @media(max-width:860px){.brand-panel{grid-template-columns:1fr}}
-    .bp{background:#fff;padding:clamp(22px,3vw,36px)}
-    .bp-logo{background:var(--c-logo-bg,#fff);display:grid;place-items:center;position:relative;min-height:280px;overflow:hidden}
-    .bp-logo img{width:min(220px,60%);height:auto;position:relative}
-    .bp-logo .kanji{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--c-display);font-size:clamp(110px,13vw,190px);white-space:nowrap;color:var(--c-ink,#111);opacity:.045;line-height:1;user-select:none}
-    .bp-cap{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:10px}
-    .spec{display:grid;gap:18px}
-    .spec-row{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px}
-    @media(max-width:520px){.spec-row{grid-template-columns:1fr;gap:4px}}
-    .spec-row:last-child{border-bottom:none;padding-bottom:0}
-    .f-display{font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(30px,3.6vw,44px);letter-spacing:var(--c-display-ls,.01em);line-height:1.05;color:var(--c-ink,#111)}
-    .f-body{font-family:var(--c-body);font-size:clamp(19px,2vw,23px);color:var(--c-ink,#111)}
-    .f-ui{font-family:var(--c-ui);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--c-ui-color,#8a8a8a)}
-    .swatches{display:flex;gap:10px;flex-wrap:wrap}
-    .sw{display:grid;gap:6px;font-family:var(--mono);font-size:11px;color:var(--muted)}
-    .sw i{display:block;width:56px;height:40px;border-radius:10px;border:1px solid var(--line)}
+    /* brand sheet: the client's identity on its own background, one card per font, palette strip with roles */
+    .sheet{--sl:rgba(0,0,0,.08);--sm:rgba(0,0,0,.45);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);grid-template-rows:repeat(var(--n),auto) auto;background:var(--c-logo-bg,#fff);color:var(--c-ink,#111);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:6px}
+    .sheet.dark{--sl:rgba(255,255,255,.1);--sm:rgba(255,255,255,.5);border-color:transparent}
+    .sh-cell{position:relative;padding:clamp(18px,2.4vw,28px)}
+    .sh-cap{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--sm);position:relative;z-index:1}
+    .sh-logo{grid-row:1 / span var(--n);border-right:1px solid var(--sl);display:flex;flex-direction:column;min-height:280px;overflow:hidden}
+    .sh-logo img,.sh-logo .bp-mark{margin:auto;position:relative}
+    .sh-logo img{width:min(200px,64%);height:auto;padding-block:24px}
+    .sh-logo .kanji{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--c-display);font-size:clamp(110px,12vw,180px);white-space:nowrap;color:var(--c-ink,#111);opacity:.045;line-height:1;user-select:none}
+    .bp-mark{font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(40px,5vw,64px);letter-spacing:var(--c-display-ls,.01em);color:var(--c-mark,#111);text-align:center;line-height:1;padding-block:24px}
+    .sh-font{display:flex;flex-direction:column;justify-content:center;gap:14px}
+    .sh-font+.sh-font{border-top:1px solid var(--sl)}
+    .sh-row{display:flex;align-items:baseline;gap:clamp(14px,2vw,24px);min-width:0}
+    .sh-aa{flex:0 0 auto;font-size:clamp(40px,4.6vw,58px)!important;line-height:1!important;letter-spacing:0!important;text-transform:none!important;color:var(--c-ink,#111)!important;opacity:.9}
+    .sh-smp{min-width:0;overflow-wrap:anywhere}
+    .f-display{font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(24px,2.6vw,34px);letter-spacing:var(--c-display-ls,.01em);line-height:1.08;color:var(--c-ink,#111)}
+    .f-body{font-family:var(--c-body);font-size:clamp(17px,1.7vw,20px);line-height:1.35;color:var(--c-ink,#111)}
+    .f-ui{font-family:var(--c-ui);font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--c-ui-color,#8a8a8a)}
+    .sh-aa.f-ui{font-weight:500}
+    .sh-palette{grid-column:1 / -1;display:flex;border-top:1px solid var(--sl)}
+    .sw{flex:1 1 0;min-width:0;min-height:112px;padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px}
+    .sw b{font-size:12.5px;font-weight:700;line-height:1.25}
+    .sw span{font-family:var(--mono);font-size:11px;opacity:.7}
+    .sw+.sw{box-shadow:inset 1px 0 0 rgba(0,0,0,.06)}
+    @media(max-width:760px){
+      .sheet{grid-template-columns:1fr;grid-template-rows:none}
+      .sh-logo{grid-row:auto;border-right:none;border-bottom:1px solid var(--sl);min-height:200px}
+      .sh-palette{flex-direction:column}
+      .sw{min-height:0;flex-direction:row;justify-content:space-between;align-items:center;padding:16px 18px}
+      .sw+.sw{box-shadow:inset 0 1px 0 rgba(0,0,0,.06)}
+    }
     .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
     @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}}
     .gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:#eceeed}
@@ -111,7 +124,6 @@
     .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
     .reveal.on{opacity:1;transform:none}
     @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-    .bp-mark{position:relative;font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(44px,6vw,72px);letter-spacing:var(--c-display-ls,.01em);color:var(--c-mark,#111);text-align:center;line-height:1}
     .new{background:var(--teal);color:#fff;border-color:var(--teal)}
 
     /* Stage: the client's first screen rebuilt in HTML (tools/case_stages.py) */
@@ -178,14 +190,10 @@
     <div><div class="label">Visual language</div><h2>Calm white with one strong red</h2></div>
     <div class="body wide">
       <p>White space and black text keep the site as quiet as the space itself. One deep red from the logo marks actions and prices. A single modern grotesque runs through everything.</p>
-      <div class="brand-panel">
-        <div class="bp bp-logo"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Jelgava_Coworking_Space_Red.png?tr=f-auto,w-440" alt="Jelgava Coworking logo" loading="lazy"></div>
-        <div class="bp spec">
-          <div class="spec-row"><span class="bp-cap">Display · Space Grotesk</span><span class="f-display">Jelgava Coworking</span></div>
-          <div class="spec-row"><span class="bp-cap">Text · Space Grotesk</span><span class="f-body">A calm place to focus</span></div>
-          <div class="spec-row"><span class="bp-cap">Interface · Space Grotesk</span><span class="f-ui">Apskatīt paketes</span></div>
-          <div class="spec-row"><span class="bp-cap">Palette</span><span class="swatches"><span class="sw"><i style="background:#880002"></i>#880002</span><span class="sw"><i style="background:#111111"></i>#111111</span><span class="sw"><i style="background:#666666"></i>#666666</span><span class="sw"><i style="background:#E9E9E9"></i>#E9E9E9</span><span class="sw"><i style="background:#FFFFFF"></i>#FFFFFF</span></span></div>
-        </div>
+      <div class="sheet" style="--n:1">
+        <div class="sh-cell sh-logo"><div class="sh-cap"><span>Logo</span></div><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Jelgava_Coworking_Space_Red.png?tr=f-auto,w-440" alt="Jelgava Coworking logo" loading="lazy"></div>
+        <div class="sh-cell sh-font"><div class="sh-cap"><span>Headings · body text · buttons and labels</span><span>Space Grotesk</span></div><div class="sh-row"><span class="sh-aa f-display">Aa</span><span class="f-display sh-smp">Jelgava Coworking</span></div></div>
+        <div class="sh-palette"><div class="sw" style="background:#880002;color:#fff"><b>Logo red</b><span>#880002</span></div><div class="sw" style="background:#111111;color:#fff"><b>Text</b><span>#111111</span></div><div class="sw" style="background:#666666;color:#fff"><b>Muted text</b><span>#666666</span></div><div class="sw" style="background:#E9E9E9;color:#111"><b>Lines</b><span>#E9E9E9</span></div><div class="sw" style="background:#FFFFFF;color:#111"><b>Background</b><span>#FFFFFF</span></div></div>
       </div>
       <div class="gallery"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/cowork%201.png?tr=f-auto,w-600" alt="Jelgava Coworking Space interior" loading="lazy" style="aspect-ratio:4/3"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%202.png?tr=f-auto,w-600" alt="Jelgava Coworking Space interior" loading="lazy" style="aspect-ratio:4/3"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%203.png?tr=f-auto,w-600" alt="Jelgava Coworking Space interior" loading="lazy" style="aspect-ratio:4/3"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/conference%20room.png?tr=f-auto,w-600" alt="Jelgava Coworking Space interior" loading="lazy" style="aspect-ratio:4/3"></div>
     </div>

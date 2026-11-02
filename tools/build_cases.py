@@ -38,8 +38,8 @@ CASES = [
     fonts=('Playfair Display', 'Outfit', 'Outfit'), gf='family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600',
     display_w='500', display_ls='0',
     sample=('Visible results.', 'Advanced aesthetic cosmetology equipment', 'Zemits Skin Expert'),
-    palette=['#1A4A8A', '#2D6BBF', '#4DA6FF', '#1A2340', '#F7F8FA'],
-    ink='#1A2340', logo_bg='#1A4A8A', logo='/assets/cases/zemits/logo-white.png', logo_wh=(None, None), mark_color='#fff',
+    palette=[('#1A4A8A','Brand blue'), ('#2D6BBF','Links, hovers'), ('#4DA6FF','Light accent'), ('#1A2340','Text'), ('#F7F8FA','Background')],
+    ink='#ffffff', logo_bg='#1A4A8A', logo='/assets/cases/zemits/logo-white.png', logo_wh=(None, None), mark_color='#fff', dark_panel=True,
     gallery=['https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/1.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/2.png?tr=w-500',
              'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/3.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/4.png?tr=w-500'],
     gallery_alt='Zemits before and after treatment', gallery_ratio='1/1',
@@ -70,7 +70,7 @@ CASES = [
     fonts=('Cinzel Decorative', 'EB Garamond', 'Inter'), gf='family=Cinzel+Decorative:wght@900&family=EB+Garamond:ital@0;1&family=Inter:wght@400;600',
     display_w='900', display_ls='.03em', kanji='金堂',
     sample=('KONDŌ', 'Where the Dragon Dwells', 'Golden Hall'),
-    palette=['#FFFFFF', '#111111', '#5C5C5C', '#E2E2E2'],
+    palette=[('#FFFFFF','Background'), ('#111111','Ink'), ('#5C5C5C','Body text'), ('#E2E2E2','Lines')],
     ink='#111111', logo_bg='#ffffff', logo='/assets/cases/kondo/dragon.png', logo_wh=(480, 441),
     gallery=['https://ik.imagekit.io/colibrarian/Kondo/products/kimono/1.jpg?tr=w-500,q-75,f-auto', 'https://ik.imagekit.io/colibrarian/Kondo/products/skirt/1.jpg?tr=w-500,q-75,f-auto',
              'https://ik.imagekit.io/colibrarian/Kondo/products/top/1.jpg?tr=w-500,q-75,f-auto', 'https://ik.imagekit.io/colibrarian/Kondo/products/aladdin/1.jpg?tr=w-500,q-75,f-auto'],
@@ -101,7 +101,7 @@ CASES = [
     fonts=('Cormorant Garamond', 'Cormorant Garamond', 'Jost'), gf='family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500',
     display_w='500', display_ls='0',
     sample=('Solvata Beauty', 'Dabiskais skaistums un jaunība', 'Pierakstīties'),
-    palette=['#410022', '#6B0038', '#FAF8F7', '#1A1015', '#7A6670'],
+    palette=[('#410022','Deep plum'), ('#6B0038','Accent'), ('#FAF8F7','Background'), ('#1A1015','Text'), ('#7A6670','Muted text')],
     ink='#1A1015', logo_bg='#FAF8F7', logo='https://ik.imagekit.io/erewhile/Solvata/logo%20solvata%20beauty.png?tr=w-480', logo_wh=(None, None),
     gallery=['https://ik.imagekit.io/erewhile/Solvata/main%20photo.png?tr=w-500', 'https://ik.imagekit.io/erewhile/Solvata/Endymed%20Intensive%20Microneedling.png?tr=w-500',
              'https://ik.imagekit.io/erewhile/Solvata/endospheres.png?tr=w-500', 'https://ik.imagekit.io/erewhile/Solvata/pollogen%20geneo.JPG?tr=w-500'],
@@ -132,7 +132,7 @@ CASES = [
     fonts=('Fraunces', 'Inter', 'Inter'), gf='family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@400;600;700;800',
     display_w='600', display_ls='-.01em',
     sample=('Razalija', 'Ziedi, kas izskatās kā svētki', 'Pasūtīt pušķi'),
-    palette=['#7C3AED', '#EC4899', '#38BDF8', '#FFFFFF', '#FBFBFE'],
+    palette=[('#7C3AED','Violet'), ('#EC4899','Pink'), ('#38BDF8','Sky'), ('#FFFFFF','Cards'), ('#FBFBFE','Background')],
     ink='#1b1530', logo_bg='#FBFBFE', logo=None, mark_color='#7C3AED',
     gallery=['https://ik.imagekit.io/coworker/Razalija/raz%202.png?tr=w-500', 'https://ik.imagekit.io/coworker/Razalija/raz%203.png?tr=w-500',
              'https://ik.imagekit.io/coworker/Razalija/raz%204.png?tr=w-500', 'https://ik.imagekit.io/coworker/Razalija/raz%205.png?tr=w-500'],
@@ -163,7 +163,7 @@ CASES = [
     fonts=('Space Grotesk', 'Space Grotesk', 'Space Grotesk'), gf='family=Space+Grotesk:wght@400;700',
     display_w='700', display_ls='-.02em',
     sample=('Jelgava Coworking', 'A calm place to focus', 'Apskatīt paketes'),
-    palette=['#880002', '#111111', '#666666', '#E9E9E9', '#FFFFFF'],
+    palette=[('#880002','Logo red'), ('#111111','Text'), ('#666666','Muted text'), ('#E9E9E9','Lines'), ('#FFFFFF','Background')],
     ink='#111111', logo_bg='#ffffff', logo='https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Jelgava_Coworking_Space_Red.png?tr=f-auto,w-440', logo_wh=(None, None),
     gallery=['https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/cowork%201.png?tr=f-auto,w-600', 'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%202.png?tr=f-auto,w-600',
              'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%203.png?tr=f-auto,w-600', 'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/conference%20room.png?tr=f-auto,w-600'],
@@ -192,9 +192,9 @@ CASES = [
     vis_h='Night blue with a bright yellow spark',
     vis='A dark background with a bright yellow accent gives the NGO energy without looking corporate. Bold Montserrat headings and a dragon character make it recognisable.',
     fonts=('Montserrat', 'Montserrat', 'Montserrat'), gf='',
-    display_w='800', display_ls='-.03em',
+    display_w='900', display_ls='-.03em',
     sample=('Grow, connect, create.', 'A non-profit youth organization for real-world growth.', 'Get involved'),
-    palette=['#0B0D12', '#FFD233', '#FFFFFF'],
+    palette=[('#0B0D12','Night background'), ('#FFD233','Yellow accent'), ('#FFFFFF','Text')],
     ink='#ffffff', logo_bg='#0B0D12', logo='https://ik.imagekit.io/xshkpkf2i/Untu/untu%20dragon.png?tr=w-480', logo_wh=(None, None), dark_panel=True,
     gallery=['https://ik.imagekit.io/xshkpkf2i/Untu/DSC_6724.jpg?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/IMG_7184.JPG?tr=w-500',
              'https://ik.imagekit.io/xshkpkf2i/Untu/asset%20photo%20session.png?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/ctml.png?tr=w-500'],
@@ -225,7 +225,7 @@ CASES = [
     fonts=('Unbounded', 'Noto Sans', 'Noto Sans'), gf='family=Unbounded:wght@700&family=Noto+Sans:wght@400;600',
     display_w='700', display_ls='-.01em',
     sample=('ID CHEF', 'From chaos to a profitable kitchen', 'Contact'),
-    palette=['#08080A', '#1C1C20', '#E8E4DC', '#C8A96E', '#B8341A'],
+    palette=[('#08080A','Background'), ('#1C1C20','Surfaces'), ('#E8E4DC','Text'), ('#C8A96E','Gold accent'), ('#B8341A','Ember red')],
     ink='#E8E4DC', logo_bg='#08080A', logo=None, mark_color='#C8A96E', dark_panel=True,
     gallery=['https://ik.imagekit.io/xwsgpirygo/id%20chef/IMG_1156.JPG?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/id%20chef/klubs%201.jpeg?tr=w-500',
              'https://ik.imagekit.io/xwsgpirygo/id%20chef/IMG_1163.JPG?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/id%20chef/IMG_1160.JPG?tr=w-500'],
@@ -256,7 +256,7 @@ CASES = [
     fonts=('Bebas Neue', 'DM Sans', 'DM Sans'), gf='family=Bebas+Neue&family=DM+Sans:wght@400;600',
     display_w='400', display_ls='.04em',
     sample=('GRILL IN', 'Grill bar by the lake', 'Take away'),
-    palette=['#0E0D0B', '#2A2720', '#C8410A', '#F5A623', '#F5F4F0'],
+    palette=[('#0E0D0B','Coal background'), ('#2A2720','Surfaces'), ('#C8410A','Ember orange'), ('#F5A623','Gold'), ('#F5F4F0','Light text')],
     ink='#F0EEE8', logo_bg='#0E0D0B', logo=None, mark_color='#F5A623', dark_panel=True,
     gallery=[], gallery_alt='', gallery_ratio='4/3',
     handover=['Live website', 'Menu section', 'Takeaway flow', 'Water park booking', 'Map and directions', 'Full access and ownership'],
@@ -279,6 +279,11 @@ els.forEach(function(e){io.observe(e)})})();
 (function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('[data-slides]').forEach(function(box){var s=box.children,i=0;if(s.length<2)return;
 setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},4200)})})();
 </script>'''
+
+
+def luminance(hexc):
+  r, g, b = (int(hexc.lstrip('#')[i:i + 2], 16) / 255 for i in (0, 2, 4))
+  return .2126 * r + .7152 * g + .0722 * b
 
 
 def font_stack(name):
@@ -313,8 +318,19 @@ def page(c, nxt):
   else:
     logo = '<span class="bp-mark">%s</span>' % e(c['sample'][0])
   kanji = '<span class="kanji" aria-hidden="true">%s</span>' % c['kanji'] if c.get('kanji') else ''
-  sw = ''.join('<span class="sw"><i style="background:%s"></i>%s</span>' % (x, x) for x in c['palette'])
-  spec_style = ' style="background:%s"' % panel_bg if dark else ''
+  sw = ''.join('<div class="sw" style="background:%s;color:%s"><b>%s</b><span>%s</span></div>' % (x, '#fff' if luminance(x) < .45 else '#111', e(r), x)
+               for x, r in c['palette'])
+  fonts = []  # one card per font family, with every role it plays
+  for role, fam, cls, smp in (('Headings', d, 'f-display', c['sample'][0]), ('Body text', b, 'f-body', c['sample'][1]), ('Buttons and labels', u, 'f-ui', c['sample'][2])):
+    for f in fonts:
+      if f[1] == fam:
+        f[0].append(role.lower()); break
+    else:
+      fonts.append(([role], fam, cls, smp))
+  type_cards = ''.join(
+    '<div class="sh-cell sh-font"><div class="sh-cap"><span>%s</span><span>%s</span></div>'
+    '<div class="sh-row"><span class="sh-aa %s">Aa</span><span class="%s sh-smp">%s</span></div></div>'
+    % (e(' · '.join(r)), e(fam), cls, cls, e(smp)) for r, fam, cls, smp in fonts)
   gallery = ''
   if c['gallery']:
     gallery = '<div class="gallery">%s</div>' % ''.join(
@@ -386,14 +402,10 @@ def page(c, nxt):
     <div><div class="label">Visual language</div><h2>{c['vis_h']}</h2></div>
     <div class="body wide">
       <p>{c['vis']}</p>
-      <div class="brand-panel">
-        <div class="bp bp-logo">{kanji}{logo}</div>
-        <div class="bp spec"{spec_style}>
-          <div class="spec-row"><span class="bp-cap">Display · {e(d)}</span><span class="f-display">{e(c['sample'][0])}</span></div>
-          <div class="spec-row"><span class="bp-cap">Text · {e(b)}</span><span class="f-body">{e(c['sample'][1])}</span></div>
-          <div class="spec-row"><span class="bp-cap">Interface · {e(u)}</span><span class="f-ui">{e(c['sample'][2])}</span></div>
-          <div class="spec-row"><span class="bp-cap">Palette</span><span class="swatches">{sw}</span></div>
-        </div>
+      <div class="sheet{' dark' if dark else ''}" style="--n:{len(fonts)}">
+        <div class="sh-cell sh-logo"><div class="sh-cap"><span>Logo</span></div>{kanji}{logo}</div>
+        {type_cards}
+        <div class="sh-palette">{sw}</div>
       </div>
       {gallery}
     </div>
