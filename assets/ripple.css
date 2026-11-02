@@ -1,0 +1,12 @@
+/* Hover ripple: when the pointer enters a card, a thin wave spreads from that point;
+   buttons send rings outward like a sound wave. Desktop only. */
+.rp-host{overflow:hidden}
+.rp{position:absolute;border-radius:50%;pointer-events:none;z-index:3;
+  border:1.5px solid rgba(13,62,62,.4);background:radial-gradient(circle,rgba(13,62,62,0) 55%,rgba(13,62,62,.06) 70%,rgba(13,62,62,0) 72%);
+  transform:translate(-50%,-50%) scale(0);animation:rp-wave 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.rp.rp2{border-color:rgba(13,62,62,.22);animation-delay:.14s;animation-duration:1.25s}
+@keyframes rp-wave{0%{transform:translate(-50%,-50%) scale(0);opacity:1}70%{opacity:.7}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+.rb{position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;border:1px solid var(--teal,#0D3E3E);opacity:.45;animation:rb-ring .9s cubic-bezier(.2,.7,.2,1) forwards}
+.rb.rb2{animation-delay:.18s}
+@keyframes rb-ring{to{inset:-12px;opacity:0}}
+@media (prefers-reduced-motion:reduce){.rp,.rb{display:none}}
