@@ -1,5 +1,5 @@
 /* Erewhile Digital — minimal light theme shared by inner pages (same look as the homepage).
-   Loaded after each page's own <style>: keeps the original Montserrat + brand teal look,
+   Loaded after each page's own <style>: keeps the original Manrope + brand teal look,
    removes decorative clutter and calms glass surfaces into solid cards. */
 :root{
   --teal:#0D3E3E; --teal-light:#14BDB8;
@@ -23,7 +23,7 @@ body::before,.ambient,.blob,.orb,.marquee-wrap,.bcard-chrome{display:none !impor
 .service-card::before,.calc-card::before,.form-card::before,.cta-card::before,.pkg-card::before{display:none !important}
 .trust-icon,.always-item-icon,.always-icon,.svc-icon{display:none !important}
 
-/* one heading treatment: bold Montserrat, accent words in brand teal instead of thin/italic mixes */
+/* one heading treatment: bold Manrope, accent words in brand teal instead of thin/italic mixes */
 h1 .thin,h1 .italic,h1 .light,h1 .muted{font-weight:inherit !important;font-style:normal !important;color:inherit !important}
 h1 em,h2 em,.section-title em,h1 .accent,h1 .teal{font-style:normal !important;font-weight:inherit !important;color:var(--teal) !important;-webkit-text-fill-color:currentColor;background:none !important}
 h1,h2,.section-title{text-wrap:balance}
