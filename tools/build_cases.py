@@ -5,7 +5,10 @@ Writes portfolio/<slug>/index.html for every case in CASES, in this order
 tools/case_style.css. Texts are English; client visuals are hot-linked
 from the clients' own ImageKit folders or copied into assets/cases/<slug>/.
 """
-import html, json, os
+import html, json, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from case_stages import STAGES, stage_css
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://erewhile.digital'
@@ -32,7 +35,7 @@ CASES = [
            ('Search-ready in three languages', 'Language versions with hreflang, structured data for every device with its price, a sitemap and link previews for each page.')],
     vis_h='Clinical blue with an editorial touch',
     vis='A deep blue palette signals medical precision, and an elegant serif for headlines keeps it from feeling like a hospital. A clean sans handles prices, specs and buttons.',
-    fonts=('Playfair Display', 'Outfit', 'Outfit'), gf='family=Playfair+Display:ital,wght@0,500;1,500&family=Outfit:wght@400;600',
+    fonts=('Playfair Display', 'Outfit', 'Outfit'), gf='family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600',
     display_w='500', display_ls='0',
     sample=('Visible results.', 'Advanced aesthetic cosmetology equipment', 'Zemits Skin Expert'),
     palette=['#1A4A8A', '#2D6BBF', '#4DA6FF', '#1A2340', '#F7F8FA'],
@@ -126,7 +129,7 @@ CASES = [
            ('Local search basics', 'FAQ, map, opening hours, structured data and Latvian and Russian versions for local search.')],
     vis_h='Bright, fresh and a little playful',
     vis='Soft violet and pink accents on white match the mood of the bouquets. A characterful serif for headings and a neutral sans for prices and practical details.',
-    fonts=('Fraunces', 'Inter', 'Inter'), gf='family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@400;600',
+    fonts=('Fraunces', 'Inter', 'Inter'), gf='family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@400;600;700;800',
     display_w='600', display_ls='-.01em',
     sample=('Razalija', 'Ziedi, kas izskatās kā svētki', 'Pasūtīt pušķi'),
     palette=['#7C3AED', '#EC4899', '#38BDF8', '#FFFFFF', '#FBFBFE'],
@@ -273,6 +276,8 @@ SCRIPT = '''<script>
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 els.forEach(function(e){io.observe(e)})})();
+(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('[data-slides]').forEach(function(box){var s=box.children,i=0;if(s.length<2)return;
+setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},4200)})})();
 </script>'''
 
 
@@ -288,7 +293,7 @@ def abs_url(u):
 def page(c, nxt):
   e = html.escape
   d, b, u = c['fonts']
-  gf = 'family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500' + ('&' + c['gf'] if c['gf'] else '')
+  gf = 'family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500' + ('&' + c['gf'] if c['gf'] else '')
   dark = c.get('dark_panel')
   vars_ = ('--c-display:%s;--c-body:%s;--c-ui:%s;--c-display-w:%s;--c-display-ls:%s;--c-ink:%s;--c-logo-bg:%s;--c-mark:%s;--c-ui-color:%s'
            % (font_stack(d), font_stack(b), font_stack(u), c['display_w'], c['display_ls'], c['ink'], c['logo_bg'], c.get('mark_color', c['ink']),
@@ -316,6 +321,16 @@ def page(c, nxt):
       '<img src="%s" alt="%s" loading="lazy" style="aspect-ratio:%s">' % (g, e(c['gallery_alt']), c['gallery_ratio']) for g in c['gallery'])
   handover = ''.join('<li>%s</li>' % h for h in c['handover'])
   cw, ch = c['cover_wh']
+  st = STAGES.get(c['slug'])
+  if st:
+    hero = (f'''<a class="stage st-{c['slug']} reveal" href="{c['url']}" target="_blank" rel="noopener" style="--ratio:{st['ratio']};--mratio:{st['mratio']}" aria-label="First screen of {c['host']}, rebuilt from the site code. Opens the live site">
+    <div class="st-in" aria-hidden="true">{st['html']}
+    </div>
+    <span class="st-open">{c['host']} ↗</span>
+  </a>
+  <p class="stage-cap reveal"><span>The first screen of {c['host']}, rebuilt from the site's own code: fonts, colours and layout.</span></p>''')
+  else:
+    hero = '<figure class="shot reveal"><img src="%s" alt="%s website preview" loading="eager" width="%d" height="%d"></figure>' % (c['cover'], e(c['name']), cw, ch)
   return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -332,7 +347,8 @@ def page(c, nxt):
   <link href="https://fonts.googleapis.com/css2?{gf}&display=swap" rel="stylesheet">
   <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
   <style>
-{STYLE}    .case{{{vars_}}}
+{STYLE}{stage_css(c['slug'])}
+    .case{{{vars_}}}
   </style>
 </head>
 <body>
@@ -352,7 +368,7 @@ def page(c, nxt):
     </div>
   </section>
 
-  <figure class="shot reveal"><img src="{c['cover']}" alt="{e(c['name'])} website preview" loading="eager" width="{cw}" height="{ch}"></figure>
+  {hero}
 
   <dl class="facts reveal">{facts}</dl>
 

@@ -11,7 +11,7 @@
   <meta property="og:image" content="https://erewhile.digital/assets/cases/zemits/cover.jpg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;1,500&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Zemits — case study", "url": "https://erewhile.digital/portfolio/zemits/", "about": "How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics.", "creator": {"@id": "https://erewhile.digital/#org"}, "image": "https://erewhile.digital/assets/cases/zemits/cover.jpg", "isBasedOn": "https://zemits-latvija.lv"}</script>
   <style>
     :root{--ink:#0a0a0a;--muted:#6b6f6e;--line:rgba(10,10,10,.08);--bg:#f7f7f5;--teal:#0D3E3E;--teal-line:rgba(13,62,62,.22);--teal-dim:rgba(13,62,62,.07);--soft:#9FE6E4;--font:'Montserrat',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
@@ -113,6 +113,62 @@
     @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
     .bp-mark{position:relative;font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(44px,6vw,72px);letter-spacing:var(--c-display-ls,.01em);color:var(--c-mark,#111);text-align:center;line-height:1}
     .new{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+    /* Stage: the client's first screen rebuilt in HTML (tools/case_stages.py) */
+    .stage{position:relative;display:block;aspect-ratio:var(--ratio,16/9);border-radius:clamp(18px,2.2vw,28px);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(13,62,62,.12);container-type:inline-size;isolation:isolate;-webkit-font-smoothing:antialiased;line-height:1.4;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+    .stage:hover{transform:translateY(-3px);box-shadow:0 38px 80px rgba(13,62,62,.16)}
+    .stage:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
+    @media(max-width:640px){.stage{aspect-ratio:var(--mratio,4/5)}}
+    .st-in{position:absolute;inset:0;overflow:hidden}
+    .st-in *{box-sizing:border-box}
+    .st-in img{max-width:none}
+    .st-burger{display:none;position:relative}
+    .st-burger b{position:absolute;left:0;right:0;height:1.5px;background:currentColor}
+    .st-burger b:nth-child(1){top:0}.st-burger b:nth-child(2){top:calc(50% - .75px)}.st-burger b:nth-child(3){bottom:0}
+    .st-open{position:absolute;right:14px;bottom:14px;z-index:20;font:600 12.5px/1 var(--font);background:rgba(255,255,255,.94);color:var(--teal);border-radius:100px;padding:10px 15px;box-shadow:0 8px 24px rgba(0,0,0,.14);opacity:0;transform:translateY(6px);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+    .stage:hover .st-open,.stage:focus-visible .st-open{opacity:1;transform:none}
+    @media(hover:none){.st-open{opacity:1;transform:none}}
+    .st-a{opacity:0;transform:translateY(14px)}
+    .stage.on .st-a{animation:st-up .9s var(--ease) var(--d,0s) both}
+    @keyframes st-up{to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.st-a{opacity:1;transform:none}.stage.on .st-a{animation:none}}
+    .stage-cap{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:12px}
+
+.st-zemits{color:#fff;font-family:'Outfit',sans-serif;font-weight:300}
+.z-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d2040 0%,#1a4a8a 45%,#0a3060 100%)}
+.z-dots{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.8) 1px,transparent 0);background-size:2.67cqw 2.67cqw}
+.z-nav{position:absolute;inset:0 0 auto;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:1.33cqw 5cqw}
+.z-logo{height:2.5cqw;width:auto}
+.z-right{display:flex;align-items:center;gap:2cqw}
+.z-links{display:flex;align-items:center;gap:1.08cqw;font-size:1.12cqw;letter-spacing:.04em;color:rgba(255,255,255,.85)}
+.z-links i{width:1px;height:1.08cqw;background:rgba(255,255,255,.28)}
+.z-links .z-cta{margin-left:0.333cqw}
+.z-cta{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.4);color:#fff;padding:0.667cqw 1.67cqw;border-radius:100px;font-weight:500}
+.z-lang{display:flex;gap:0.333cqw;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:0.25cqw}
+.z-lang span{padding:0.417cqw 0.917cqw;border-radius:100px;font-size:0.917cqw;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.7)}
+.z-lang .on{background:#fff;color:#1a4a8a}
+.z-hero{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:5cqw 5cqw 0;z-index:2}
+.z-title{font:400 4.17cqw/1.12 'Playfair Display',serif;margin-bottom:1.33cqw}
+.z-title span{display:block;font-style:italic;font-size:5.33cqw;line-height:1.05;margin-top:0.5cqw;color:#7ecbff}
+.z-sub{font-size:1.25cqw;line-height:1.8;color:rgba(255,255,255,.72);max-width:38.3cqw;margin-bottom:2.83cqw}
+.z-actions{display:flex;gap:1.17cqw}
+.z-btn{background:#fff;color:#1a4a8a;padding:1.08cqw 2.5cqw;border-radius:100px;font-weight:600;font-size:1.17cqw}
+.z-out{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.35);font-weight:400}
+.z-side{display:flex;justify-content:center}
+.z-side img{width:72%;height:auto;filter:drop-shadow(0 0 3.33cqw rgba(77,166,255,.28))}
+@container (max-width:620px){
+  .z-nav{padding:3.59cqw 5.13cqw}
+  .z-logo{height:6.67cqw}
+  .z-links,.z-lang{display:none}
+  .st-zemits .st-burger{display:block;width:6.15cqw;height:4.62cqw}
+  .z-hero{grid-template-columns:1fr;align-content:center;padding:17.9cqw 5.13cqw 5.13cqw}
+  .z-title{font-size:8.21cqw}
+  .z-title span{font-size:10.8cqw}
+  .z-sub{font-size:3.59cqw;max-width:none;margin-bottom:6.15cqw}
+  .z-actions{gap:2.56cqw;flex-wrap:wrap}
+  .z-btn{padding:3.08cqw 5.64cqw;font-size:3.46cqw}
+  .z-side{display:none}
+}
     .case{--c-display:'Playfair Display',Georgia,serif;--c-body:'Outfit',system-ui,sans-serif;--c-ui:'Outfit',system-ui,sans-serif;--c-display-w:500;--c-display-ls:0;--c-ink:#1A2340;--c-logo-bg:#1A4A8A;--c-mark:#fff;--c-ui-color:#8a8a8a}
   </style>
 </head>
@@ -139,7 +195,29 @@
     </div>
   </section>
 
-  <figure class="shot reveal"><img src="/assets/cases/zemits/cover.jpg" alt="Zemits website preview" loading="eager" width="1200" height="630"></figure>
+  <a class="stage st-zemits reveal" href="https://zemits-latvija.lv" target="_blank" rel="noopener" style="--ratio:16/10;--mratio:9/13" aria-label="First screen of zemits-latvija.lv, rebuilt from the site code. Opens the live site">
+    <div class="st-in" aria-hidden="true">
+<div class="z-bg"></div><div class="z-dots"></div>
+<div class="z-nav st-a">
+  <img class="z-logo" src="/assets/cases/zemits/logo-white.png" alt="" width="480" height="122">
+  <div class="z-right">
+    <div class="z-links"><span>Iekārtas</span><i></i><span>Par mums</span><i></i><span>Apmācības</span><i></i><span>Atsauksmes</span><i></i><span>Jautājumi</span><span class="z-cta">Sazināties</span></div>
+    <div class="z-lang"><span class="on">LV</span><span>RU</span><span>EN</span></div>
+    <i class="st-burger"><b></b><b></b><b></b></i>
+  </div>
+</div>
+<div class="z-hero">
+  <div class="z-content">
+    <div class="z-title st-a" style="--d:.1s">Mūsdienīgas estētiskās kosmetoloģijas iekārtas<span>Redzami rezultāti.</span></div>
+    <div class="z-sub st-a" style="--d:.2s">Zemits ir starptautiski atzīts estētiskās kosmetoloģijas un skaistumkopšanas iekārtu zīmols, kas piedāvā mūsdienīgus risinājumus sejas un ķermeņa procedūrām.</div>
+    <div class="z-actions st-a" style="--d:.3s"><span class="z-btn">Visas iekārtas →</span><span class="z-btn z-out">Semināri</span></div>
+  </div>
+  <div class="z-side st-a" style="--d:.4s"><img src="/assets/cases/zemits/logo-white.png" alt="" width="480" height="122"></div>
+</div>
+    </div>
+    <span class="st-open">zemits-latvija.lv ↗</span>
+  </a>
+  <p class="stage-cap reveal"><span>The first screen of zemits-latvija.lv, rebuilt from the site's own code: fonts, colours and layout.</span></p>
 
   <dl class="facts reveal"><div class="fact"><dt>Client</dt><dd>Zemits Skin Expert</dd></div><div class="fact"><dt>Market</dt><dd>Latvia and the Baltics</dd></div><div class="fact"><dt>Languages</dt><dd>Latvian, Russian, English</dd></div><div class="fact"><dt>Catalogue</dt><dd>Devices with prices and details</dd></div></dl>
 
@@ -190,6 +268,8 @@
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 els.forEach(function(e){io.observe(e)})})();
+(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('[data-slides]').forEach(function(box){var s=box.children,i=0;if(s.length<2)return;
+setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},4200)})})();
 </script>
 </body>
 </html>

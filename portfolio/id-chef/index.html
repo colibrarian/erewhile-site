@@ -11,7 +11,7 @@
   <meta property="og:image" content="https://ik.imagekit.io/xwsgpirygo/id%20chef/logos/OG.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "ID Chef — case study", "url": "https://erewhile.digital/portfolio/id-chef/", "about": "How we built a personal brand site in English, Latvian and Russian for Denis Ivankov, an executive chef and restaurant consultant with 30+ years of experience.", "creator": {"@id": "https://erewhile.digital/#org"}, "image": "https://ik.imagekit.io/xwsgpirygo/id%20chef/logos/OG.png", "isBasedOn": "https://idchef13.com"}</script>
   <style>
     :root{--ink:#0a0a0a;--muted:#6b6f6e;--line:rgba(10,10,10,.08);--bg:#f7f7f5;--teal:#0D3E3E;--teal-line:rgba(13,62,62,.22);--teal-dim:rgba(13,62,62,.07);--soft:#9FE6E4;--font:'Montserrat',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
@@ -113,6 +113,27 @@
     @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
     .bp-mark{position:relative;font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(44px,6vw,72px);letter-spacing:var(--c-display-ls,.01em);color:var(--c-mark,#111);text-align:center;line-height:1}
     .new{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+    /* Stage: the client's first screen rebuilt in HTML (tools/case_stages.py) */
+    .stage{position:relative;display:block;aspect-ratio:var(--ratio,16/9);border-radius:clamp(18px,2.2vw,28px);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(13,62,62,.12);container-type:inline-size;isolation:isolate;-webkit-font-smoothing:antialiased;line-height:1.4;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+    .stage:hover{transform:translateY(-3px);box-shadow:0 38px 80px rgba(13,62,62,.16)}
+    .stage:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
+    @media(max-width:640px){.stage{aspect-ratio:var(--mratio,4/5)}}
+    .st-in{position:absolute;inset:0;overflow:hidden}
+    .st-in *{box-sizing:border-box}
+    .st-in img{max-width:none}
+    .st-burger{display:none;position:relative}
+    .st-burger b{position:absolute;left:0;right:0;height:1.5px;background:currentColor}
+    .st-burger b:nth-child(1){top:0}.st-burger b:nth-child(2){top:calc(50% - .75px)}.st-burger b:nth-child(3){bottom:0}
+    .st-open{position:absolute;right:14px;bottom:14px;z-index:20;font:600 12.5px/1 var(--font);background:rgba(255,255,255,.94);color:var(--teal);border-radius:100px;padding:10px 15px;box-shadow:0 8px 24px rgba(0,0,0,.14);opacity:0;transform:translateY(6px);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+    .stage:hover .st-open,.stage:focus-visible .st-open{opacity:1;transform:none}
+    @media(hover:none){.st-open{opacity:1;transform:none}}
+    .st-a{opacity:0;transform:translateY(14px)}
+    .stage.on .st-a{animation:st-up .9s var(--ease) var(--d,0s) both}
+    @keyframes st-up{to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.st-a{opacity:1;transform:none}.stage.on .st-a{animation:none}}
+    .stage-cap{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:12px}
+
     .case{--c-display:'Unbounded',system-ui,sans-serif;--c-body:'Noto Sans',system-ui,sans-serif;--c-ui:'Noto Sans',system-ui,sans-serif;--c-display-w:700;--c-display-ls:-.01em;--c-ink:#E8E4DC;--c-logo-bg:#08080A;--c-mark:#C8A96E;--c-ui-color:rgba(255,255,255,.6)}
   </style>
 </head>
@@ -190,6 +211,8 @@
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 els.forEach(function(e){io.observe(e)})})();
+(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('[data-slides]').forEach(function(box){var s=box.children,i=0;if(s.length<2)return;
+setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},4200)})})();
 </script>
 </body>
 </html>
