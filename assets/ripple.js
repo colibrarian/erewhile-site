@@ -6,7 +6,7 @@
     if(css)for(var k in css)s.style[k]=css[k];
     host.appendChild(s);s.addEventListener('animationend',function(){s.remove()});
   }
-  document.querySelectorAll('.service-card,.bcard,.scard,.calc-card,.form-card').forEach(function(c){
+  document.querySelectorAll('.service-card,.bcard,.scard,.calc-card').forEach(function(c){
     c.classList.add('rp-host');if(getComputedStyle(c).position==='static')c.style.position='relative';
     var last=0;
     c.addEventListener('pointerenter',function(e){
@@ -18,6 +18,7 @@
     });
   });
   document.querySelectorAll('.btn').forEach(function(btn){
+    if(btn.closest('.form-card,form'))return;
     btn.classList.add('rb-host');if(getComputedStyle(btn).position==='static')btn.style.position='relative';
     var last=0;
     btn.addEventListener('pointerenter',function(){
