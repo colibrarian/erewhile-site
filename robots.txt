@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /thanks/
+Disallow: /lv/thanks/
+Disallow: /ru/thanks/
 
 Sitemap: https://erewhile.digital/sitemap.xml
