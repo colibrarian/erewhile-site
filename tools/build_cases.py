@@ -40,10 +40,10 @@ CASES = [
     sample=('Visible results.', 'Advanced aesthetic cosmetology equipment', 'Zemits Skin Expert'),
     palette=[('#1A4A8A','Brand blue'), ('#2D6BBF','Links, hovers'), ('#4DA6FF','Light accent'), ('#1A2340','Text'), ('#F7F8FA','Background')],
     ink='#ffffff', logo_bg='#1A4A8A', logo='/assets/cases/zemits/logo-white.png', logo_wh=(None, None), mark_color='#fff', dark_panel=True,
-    gallery=['https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/1.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/2.png?tr=w-500',
-             'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/3.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/4.png?tr=w-500'],
-    gallery_alt='Zemits before and after treatment', gallery_ratio='1/1',
-    handover=['Live site in 3 languages', 'Device catalogue', 'Build script for easy edits', 'Link previews for every page', 'Sitemap, schema and llms.txt', 'Full access and ownership'],
+    gallery=['https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/1.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/2.png?tr=w-500',
+             'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/3.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/4.png?tr=w-500'],
+    gallery_alt='Zemits device from the catalogue', gallery_ratio='1/1',
+    handover=['Live site in 3 languages', 'Device catalogue', 'Build script for easy edits', 'Link previews for every page', 'Sitemap, schema and llms.txt'],
     cta=('Selling something that needs <span>explaining</span>?', 'Tell us what you sell and who buys it. We will plan the pages that answer their questions before they call.'),
   ),
   dict(
@@ -75,7 +75,7 @@ CASES = [
     gallery=['https://ik.imagekit.io/colibrarian/Kondo/products/kimono/1.jpg?tr=w-500,q-75,f-auto', 'https://ik.imagekit.io/colibrarian/Kondo/products/skirt/1.jpg?tr=w-500,q-75,f-auto',
              'https://ik.imagekit.io/colibrarian/Kondo/products/top/1.jpg?tr=w-500,q-75,f-auto', 'https://ik.imagekit.io/colibrarian/Kondo/products/aladdin/1.jpg?tr=w-500,q-75,f-auto'],
     gallery_alt='Kondo garment', gallery_ratio='3/4',
-    handover=['Live website', 'Pre-order flow', 'Mobile layout', 'Privacy policy', 'Instagram link', 'Full access and ownership'],
+    handover=['Live website', 'Pre-order flow', 'Mobile layout', 'Privacy policy', 'Instagram link'],
     cta=('Need a site that <span>sells</span> your way?', 'Tell us how you take orders today. We will suggest the simplest site that fits, with a fixed price before work starts.'),
   ),
   dict(
@@ -106,7 +106,7 @@ CASES = [
     gallery=['https://ik.imagekit.io/erewhile/Solvata/main%20photo.png?tr=w-500', 'https://ik.imagekit.io/erewhile/Solvata/Endymed%20Intensive%20Microneedling.png?tr=w-500',
              'https://ik.imagekit.io/erewhile/Solvata/endospheres.png?tr=w-500', 'https://ik.imagekit.io/erewhile/Solvata/pollogen%20geneo.JPG?tr=w-500'],
     gallery_alt='Solvata Beauty studio and devices', gallery_ratio='3/4',
-    handover=['Live website', 'Treatment pages', 'Booking flow', 'Map and contacts', 'Privacy policy', 'Full access and ownership'],
+    handover=['Live website', 'Treatment pages', 'Booking flow', 'Map and contacts', 'Privacy policy'],
     cta=('Want clients to <span>trust</span> you before the first visit?', 'Tell us about your studio and treatments. We will plan a site that explains them clearly and leads to booking.'),
   ),
   dict(
@@ -137,7 +137,7 @@ CASES = [
     gallery=['https://ik.imagekit.io/coworker/Razalija/raz%202.png?tr=w-500', 'https://ik.imagekit.io/coworker/Razalija/raz%203.png?tr=w-500',
              'https://ik.imagekit.io/coworker/Razalija/raz%204.png?tr=w-500', 'https://ik.imagekit.io/coworker/Razalija/raz%205.png?tr=w-500'],
     gallery_alt='Razalija bouquet', gallery_ratio='3/4',
-    handover=['Live site in 2 languages', 'Bouquet gallery', 'WhatsApp ordering', 'Delivery info', 'Sitemap, schema and llms.txt', 'Full access and ownership'],
+    handover=['Live site in 2 languages', 'Bouquet gallery', 'WhatsApp ordering', 'Delivery info', 'Sitemap, schema and llms.txt'],
     cta=('Want orders to come in <span>faster</span>?', 'Tell us how customers order from you today. We will make that path shorter.'),
   ),
   dict(
@@ -160,7 +160,7 @@ CASES = [
            ('Application form and FAQ', 'Every package leads to one form, and common questions are answered on the page.')],
     vis_h='Calm white with one strong red',
     vis='White space and black text keep the site as quiet as the space itself. One deep red from the logo marks actions and prices. A single modern grotesque runs through everything.',
-    fonts=('Space Grotesk', 'Space Grotesk', 'Space Grotesk'), gf='family=Space+Grotesk:wght@400;700',
+    fonts=('Space Grotesk', 'Space Grotesk', 'Space Grotesk'), gf='family=Space+Grotesk:wght@400;500;600;700',
     display_w='700', display_ls='-.02em',
     sample=('Jelgava Coworking', 'A calm place to focus', 'Apskatīt paketes'),
     palette=[('#880002','Logo red'), ('#111111','Text'), ('#666666','Muted text'), ('#E9E9E9','Lines'), ('#FFFFFF','Background')],
@@ -168,7 +168,7 @@ CASES = [
     gallery=['https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/cowork%201.png?tr=f-auto,w-600', 'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%202.png?tr=f-auto,w-600',
              'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%203.png?tr=f-auto,w-600', 'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/conference%20room.png?tr=f-auto,w-600'],
     gallery_alt='Jelgava Coworking Space interior', gallery_ratio='4/3',
-    handover=['Live site in 3 languages', 'Packages and prices', 'Application form', 'Privacy policy in 3 languages', 'Sitemap, schema and llms.txt', 'Full access and ownership'],
+    handover=['Live site in 3 languages', 'Packages and prices', 'Application form', 'Privacy policy in 3 languages', 'Sitemap, schema and llms.txt'],
     cta=('Need your prices to <span>sell</span>, not scare?', 'Tell us about your offer. We will lay it out so people pick a plan instead of leaving.'),
   ),
   dict(
@@ -195,11 +195,11 @@ CASES = [
     display_w='900', display_ls='-.03em',
     sample=('Grow, connect, create.', 'A non-profit youth organization for real-world growth.', 'Get involved'),
     palette=[('#0B0D12','Night background'), ('#FFD233','Yellow accent'), ('#FFFFFF','Text')],
-    ink='#ffffff', logo_bg='#0B0D12', logo='https://ik.imagekit.io/xshkpkf2i/Untu/untu%20dragon.png?tr=w-480', logo_wh=(None, None), dark_panel=True,
+    ink='#ffffff', logo_bg='#0B0D12', logo='https://ik.imagekit.io/xshkpkf2i/Untu/logo%20untu.png?tr=w-480', logo_wh=(None, None), dark_panel=True,
     gallery=['https://ik.imagekit.io/xshkpkf2i/Untu/DSC_6724.jpg?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/IMG_7184.JPG?tr=w-500',
              'https://ik.imagekit.io/xshkpkf2i/Untu/asset%20photo%20session.png?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/ctml.png?tr=w-500'],
     gallery_alt='UNTU project moment', gallery_ratio='4/3',
-    handover=['Live website', 'Project sections', 'Apply and partner forms', 'Privacy and terms', 'Sitemap', 'Full access and ownership'],
+    handover=['Live website', 'Project sections', 'Apply and partner forms', 'Privacy and terms', 'Sitemap'],
     cta=('Running an NGO or <span>Erasmus+</span> project?', 'Tell us about your project. We will plan pages for participants, partners and results that stay online after it ends.'),
   ),
   dict(
@@ -230,7 +230,7 @@ CASES = [
     gallery=['https://ik.imagekit.io/xwsgpirygo/id%20chef/IMG_1156.JPG?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/id%20chef/klubs%201.jpeg?tr=w-500',
              'https://ik.imagekit.io/xwsgpirygo/id%20chef/IMG_1163.JPG?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/id%20chef/IMG_1160.JPG?tr=w-500'],
     gallery_alt='Chef Denis Ivankov at work', gallery_ratio='3/4',
-    handover=['Live site in 3 languages', 'Contact form', 'WhatsApp link', 'Privacy and cookie notes', 'Link preview image', 'Full access and ownership'],
+    handover=['Live site in 3 languages', 'Contact form', 'WhatsApp link', 'Privacy and cookie notes', 'Link preview image'],
     cta=('Building a <span>personal</span> brand?', 'Tell us what you do and who hires you. We will turn your experience into a site that brings the right requests.'),
   ),
   dict(
@@ -259,7 +259,7 @@ CASES = [
     palette=[('#0E0D0B','Coal background'), ('#2A2720','Surfaces'), ('#C8410A','Ember orange'), ('#F5A623','Gold'), ('#F5F4F0','Light text')],
     ink='#F0EEE8', logo_bg='#0E0D0B', logo=None, mark_color='#F5A623', dark_panel=True,
     gallery=[], gallery_alt='', gallery_ratio='4/3',
-    handover=['Live website', 'Menu section', 'Takeaway flow', 'Water park booking', 'Map and directions', 'Full access and ownership'],
+    handover=['Live website', 'Menu section', 'Takeaway flow', 'Water park booking', 'Map and directions'],
     cta=('Running a <span>venue</span> with more than one offer?', 'Tell us what people come for. We will give each reason a clear path on one site.'),
   ),
 ]
@@ -269,13 +269,21 @@ HEADER = '''<header>
     <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
     <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
     <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
-</header>'''
+</header>
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Websites</a>
+  <a href="/portfolio" class="active">Portfolio</a>
+  <a href="/video">Video</a>
+  <a href="/#ew-contact">Contact</a>
+</div>'''
 
 SCRIPT = '''<script>
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 els.forEach(function(e){io.observe(e)})})();
+(function(){var b=document.getElementById('burgerBtn'),n=document.getElementById('mobileNav');b.addEventListener('click',function(){var o=b.classList.toggle('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''})})();
 (function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('[data-slides]').forEach(function(box){var s=box.children,i=0;if(s.length<2)return;
 setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},4200)})})();
 </script>'''
@@ -352,6 +360,9 @@ def page(c, nxt):
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
   <title>{e(c['title'])} — Erewhile Digital</title>
   <meta name="description" content="{e(c['desc'])}"/>
   <link rel="canonical" href="{SITE}/portfolio/{c['slug']}/"/>

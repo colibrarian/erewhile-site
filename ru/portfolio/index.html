@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
   <title>Портфолио — Erewhile Digital</title>
   <meta name="description" content="Портфолио сайтов — Erewhile Digital. Веб-дизайн, лендинги, сайты НКО, CRM-панели и онлайн-запись." />
   <link rel="canonical" href="https://erewhile.digital/ru/portfolio/" />
@@ -222,6 +225,14 @@
       display: flex; gap: 16px;
       width: max-content;
     }
+
+    /* ── Websites: static grid instead of the auto-scrolling rail ── */
+    .rail-grid .rail-fade-left,.rail-grid .rail-fade-right{display:none}
+    .rail-grid .rail-viewport{overflow:visible}
+    .rail-grid .rail-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;width:auto;max-width:1400px;margin:0 auto}
+    .rail-grid .bcard,.rail-grid .bcard-wide,.rail-grid .bcard-sm{width:auto}
+    @media(max-width:1100px){.rail-grid .rail-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.rail-grid .rail-track{grid-template-columns:1fr}}
 
     /* ── Animation B: Fly-in scatter ── */
     .scatter-section {
@@ -754,7 +765,7 @@
     </div>
   </div>
 
-  <div class="rail-wrap rail-auto">
+  <div class="rail-wrap rail-grid">
     <div class="rail-fade-left" aria-hidden="true"></div>
     <div class="rail-fade-right" aria-hidden="true"></div>
     <div class="rail-viewport">
@@ -763,16 +774,32 @@
         <div class="bcard">
           <div class="bcard-chrome">
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
+            <div class="chrome-bar"><span class="chrome-favicon">✨</span>zemits-latvija.lv</div>
+          </div>
+          <a href="/portfolio/zemits/" class="bcard-preview">
+            <img src="/assets/cases/zemits/cover.jpg" alt="Zemits Skin Expert" loading="eager">
+            <span class="bcard-tag">Новое · B2B-каталог</span>
+          </a>
+          <div class="bcard-body">
+            <div class="bcard-title">Zemits — косметологическое оборудование</div>
+            <div class="bcard-desc">Сайт-каталог на трёх языках для официального представителя Zemits в Балтии.</div>
+            <a class="bcard-link" href="/portfolio/zemits/">Подробнее о проекте →</a> <a class="bcard-link" href="https://zemits-latvija.lv" target="_blank" rel="noopener">Открыть сайт ↗</a>
+          </div>
+        </div>
+
+        <div class="bcard">
+          <div class="bcard-chrome">
+            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">💄</span>solvatabeauty.lv</div>
           </div>
-          <a href="https://solvatabeauty.lv" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/solvata-beauty/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/6.jpg" alt="Solvata Beauty" loading="eager">
             <span class="bcard-tag">Бьюти</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">Solvata Beauty</div>
             <div class="bcard-desc">Сайт для салона красоты — услуги, доверие и онлайн-запись.</div>
-            <a class="bcard-link" href="https://solvatabeauty.lv" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/solvata-beauty/">Подробнее о проекте →</a> <a class="bcard-link" href="https://solvatabeauty.lv" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
         </div>
 
@@ -781,14 +808,14 @@
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">👨‍🍳</span>idchef13.com</div>
           </div>
-          <a href="http://idchef13.com" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/id-chef/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/5.jpg" alt="ID Chef personal brand" loading="eager">
             <span class="bcard-tag">Личный бренд</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">ID Chef — сайт личного бренда</div>
             <div class="bcard-desc">Сайт шеф-повара и ресторанного консультанта — позиционирование, история и удобная связь.</div>
-            <a class="bcard-link" href="http://idchef13.com" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/id-chef/">Подробнее о проекте →</a> <a class="bcard-link" href="http://idchef13.com" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
         </div>
 
@@ -797,14 +824,14 @@
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">🍖</span>grill-in.lv</div>
           </div>
-          <a href="http://grill-in.lv" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/grill-in/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/4.jpg" alt="Grill In restaurant" loading="lazy">
             <span class="bcard-tag">Ресторан</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">Grill In — лендинг ресторана</div>
             <div class="bcard-desc">Одностраничный сайт гриль-ресторана: главное из меню, атмосфера и бронирование столиков.</div>
-            <a class="bcard-link" href="http://grill-in.lv" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/grill-in/">Подробнее о проекте →</a> <a class="bcard-link" href="http://grill-in.lv" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
         </div>
 
@@ -813,14 +840,14 @@
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">👗</span>kondo.ee</div>
           </div>
-          <a href="https://kondo.ee" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/kondo/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg" alt="Kondo clothing brand" loading="lazy">
             <span class="bcard-tag">Интернет-магазин</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">Kondo — бренд одежды</div>
             <div class="bcard-desc">Сайт эстонского бренда одежды с онлайн-заказом.</div>
-            <a class="bcard-link" href="https://kondo.ee" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/kondo/">Подробнее о проекте →</a> <a class="bcard-link" href="https://kondo.ee" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
         </div>
 
@@ -829,14 +856,14 @@
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">🌸</span>razalija.lv</div>
           </div>
-          <a href="https://razalija.lv" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/razalija/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/1.jpg" alt="Razalija flower shop" loading="lazy">
             <span class="bcard-tag">Местный магазин</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">Razalija — цветочный магазин</div>
             <div class="bcard-desc">Цветочный магазин с онлайн-заказом — галерея, каталог и простое оформление.</div>
-            <a class="bcard-link" href="https://razalija.lv" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/razalija/">Подробнее о проекте →</a> <a class="bcard-link" href="https://razalija.lv" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
         </div>
 
@@ -845,14 +872,14 @@
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">🏢</span>jelgavacoworking.lv</div>
           </div>
-          <a href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/jelgava-coworking/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="Jelgava Coworking" loading="lazy">
             <span class="bcard-tag">Коворкинг</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">Jelgava Coworking</div>
             <div class="bcard-desc">Цены, преимущества и форма заявки для коворкинга в Латвии.</div>
-            <a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/jelgava-coworking/">Подробнее о проекте →</a> <a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
         </div>
 
@@ -861,52 +888,15 @@
             <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
             <div class="chrome-bar"><span class="chrome-favicon">🌍</span>untu.ngo</div>
           </div>
-          <a href="http://untu.ngo" target="_blank" rel="noopener" class="bcard-preview">
+          <a href="/portfolio/untu/" class="bcard-preview">
             <img src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366" alt="UNTU NGO" loading="lazy">
             <span class="bcard-tag">НКО</span>
           </a>
           <div class="bcard-body">
             <div class="bcard-title">UNTU — молодёжная НКО</div>
             <div class="bcard-desc">Сайт некоммерческой организации, построенный на доверии и понятных призывах: пожертвовать, стать волонтёром, присоединиться.</div>
-            <a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Открыть сайт →</a>
+            <a class="bcard-link" href="/portfolio/untu/">Подробнее о проекте →</a> <a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Открыть сайт ↗</a>
           </div>
-        </div>
-
-        <!-- Duplicate set for seamless infinite loop -->
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">💄</span>solvatabeauty.lv</div></div>
-          <a href="https://solvatabeauty.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/6.jpg" alt="" loading="lazy"><span class="bcard-tag">Бьюти</span></a>
-          <div class="bcard-body"><div class="bcard-title">Solvata Beauty</div><div class="bcard-desc">Сайт для салона красоты — услуги, доверие и онлайн-запись.</div><a class="bcard-link" href="https://solvatabeauty.lv" target="_blank" rel="noopener">Открыть сайт →</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">👨‍🍳</span>idchef13.com</div></div>
-          <a href="http://idchef13.com" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/5.jpg" alt="" loading="lazy"><span class="bcard-tag">Личный бренд</span></a>
-          <div class="bcard-body"><div class="bcard-title">ID Chef — сайт личного бренда</div><div class="bcard-desc">Сайт шеф-повара и ресторанного консультанта — позиционирование, история и удобная связь.</div><a class="bcard-link" href="http://idchef13.com" target="_blank" rel="noopener">Открыть сайт →</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🍖</span>grill-in.lv</div></div>
-          <a href="http://grill-in.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/4.jpg" alt="" loading="lazy"><span class="bcard-tag">Ресторан</span></a>
-          <div class="bcard-body"><div class="bcard-title">Grill In — лендинг ресторана</div><div class="bcard-desc">Одностраничный сайт гриль-ресторана: главное из меню, атмосфера и бронирование столиков.</div><a class="bcard-link" href="http://grill-in.lv" target="_blank" rel="noopener">Открыть сайт →</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">👗</span>kondo.ee</div></div>
-          <a href="https://kondo.ee" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg" alt="" loading="lazy"><span class="bcard-tag">Интернет-магазин</span></a>
-          <div class="bcard-body"><div class="bcard-title">Kondo — бренд одежды</div><div class="bcard-desc">Сайт эстонского бренда одежды с онлайн-заказом.</div><a class="bcard-link" href="https://kondo.ee" target="_blank" rel="noopener">Открыть сайт →</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌸</span>razalija.lv</div></div>
-          <a href="https://razalija.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/1.jpg" alt="" loading="lazy"><span class="bcard-tag">Местный магазин</span></a>
-          <div class="bcard-body"><div class="bcard-title">Razalija — цветочный магазин</div><div class="bcard-desc">Цветочный магазин с онлайн-заказом — галерея, каталог и простое оформление.</div><a class="bcard-link" href="https://razalija.lv" target="_blank" rel="noopener">Открыть сайт →</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🏢</span>jelgavacoworking.lv</div></div>
-          <a href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="" loading="lazy"><span class="bcard-tag">Коворкинг</span></a>
-          <div class="bcard-body"><div class="bcard-title">Jelgava Coworking</div><div class="bcard-desc">Цены, преимущества и форма заявки для коворкинга в Латвии.</div><a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Открыть сайт →</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌍</span>untu.ngo</div></div>
-          <a href="http://untu.ngo" target="_blank" rel="noopener" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366" alt="" loading="lazy"><span class="bcard-tag">НКО</span></a>
-          <div class="bcard-body"><div class="bcard-title">UNTU — молодёжная НКО</div><div class="bcard-desc">Сайт некоммерческой организации, построенный на доверии и понятных призывах: пожертвовать, стать волонтёром, присоединиться.</div><a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Открыть сайт →</a></div>
         </div>
 
       </div>
@@ -1011,7 +1001,7 @@
 <div class="cta-section" id="contact">
   <div class="cta-card reveal">
     <h2>Готовы сделать то, <em>что работает</em>?</h2>
-    <p class="cta-desc">Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. В течение 24 часов пришлём план и смету.</p>
+    <p class="cta-desc">Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. Мы свяжемся с вами и обсудим детали.</p>
 
     <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
       <input type="hidden" name="_subject" value="Заявка со страницы портфолио — erewhile.digital (RU)">
@@ -1045,7 +1035,7 @@
       </div>
       <div class="form-actions">
         <button class="btn-cta" type="submit">Отправить запрос</button>
-        <div class="fine">Отвечаем в течение 24 часов. Срочно? Укажите дедлайн в сообщении.</div>
+        <div class="fine">Срочно? Укажите дедлайн в сообщении.</div>
       </div>
     </form>
   </div>
