@@ -21,15 +21,55 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/"/>
   </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/video/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/video/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/video/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/video/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/video/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/video/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/video/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/video/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/video/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/video/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/video/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/video/"/>
+  </url>
   <url><loc>https://erewhile.digital/en/fast-website.html</loc></url>
-  <url><loc>https://erewhile.digital/portfolio</loc></url>
-  <url><loc>https://erewhile.digital/video</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/kondo/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/zemits/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/solvata-beauty/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/razalija/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/jelgava-coworking/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/untu/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/id-chef/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://erewhile.digital/portfolio/grill-in/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://erewhile.digital/portfolio/zemits/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/kondo/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/solvata-beauty/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/razalija/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/jelgava-coworking/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/untu/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/id-chef/</loc></url>
+  <url><loc>https://erewhile.digital/portfolio/grill-in/</loc></url>
 </urlset>

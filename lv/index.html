@@ -401,14 +401,14 @@
 <!-- HEADER -->
 <header>
   <div class="header-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="/lv/">
       <img class="brand-logo" src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital" loading="eager">
       <span>erewhile.digital</span>
     </a>
     <nav aria-label="Primary">
       <a href="#ew-websites" class="active">Mājaslapas</a>
-      <a href="/portfolio">Portfolio</a>
-      <a href="/video">Video</a>
+      <a href="/lv/portfolio/">Portfolio</a>
+      <a href="/lv/video/">Video</a>
       <a href="#ew-faq">BUJ</a>
       <a href="#ew-contact">Kontakti</a>
       <a href="/" hreflang="en" lang="en">EN</a>
@@ -429,8 +429,8 @@
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="#ew-websites" onclick="closeMobileNav()">Mājaslapas</a>
-  <a href="/portfolio">Portfolio</a>
-  <a href="/video">Video</a>
+  <a href="/lv/portfolio/">Portfolio</a>
+  <a href="/lv/video/">Video</a>
   <a href="#ew-faq" onclick="closeMobileNav()">BUJ</a>
   <a href="#ew-contact" onclick="closeMobileNav()">Kontakti</a>
   <a href="/" hreflang="en" lang="en">English</a>
@@ -446,7 +446,7 @@
     <p class="hero-sub">Izstrādājam mājaslapas un mērķlapas uzņēmumiem, personīgajiem zīmoliem, NVO un Erasmus+ projektiem Baltijā un visā ES. Mērķlapas no €250, biznesa mājaslapas no €1 200.</p>
     <div class="hero-ctas">
       <a class="btn btn-ink" href="#ew-contact">Pieteikt projektu</a>
-      <a class="btn btn-outline-teal" href="/portfolio">Mūsu darbi →</a>
+      <a class="btn btn-outline-teal" href="/lv/portfolio/">Mūsu darbi →</a>
     </div>
   </div>
   <div class="demo" aria-label="Animēti mūsu izstrādāto mājaslapu piemēri">
@@ -457,7 +457,7 @@
       <div class="d-p" id="dP"></div>
       <div><span class="d-btn" id="demoBtn"></span></div>
     </div>
-    <div class="demo-meta"><span id="dCount">01 / 04</span><a href="/portfolio">Portfolio →</a></div>
+    <div class="demo-meta"><span id="dCount">01 / 04</span><a href="/lv/portfolio/">Portfolio →</a></div>
   </div>
 </section>
 
@@ -547,7 +547,7 @@
       </div>
     </div>
 
-    <a href="/portfolio" class="bcard bcard-viewall reveal" style="transition-delay:.24s;">
+    <a href="/lv/portfolio/" class="bcard bcard-viewall reveal" style="transition-delay:.24s;">
       <div class="bcard-viewall-inner">
         <div class="bcard-viewall-icon">→</div>
         <div class="bcard-viewall-label">Skatīt visus projektus</div>
@@ -631,12 +631,12 @@
       <input type="hidden" name="_subject" value="Jauns pieteikums — erewhile.digital (LV)">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://erewhile.digital/thanks/">
+      <input type="hidden" name="_next" value="https://erewhile.digital/lv/thanks/">
       <input type="hidden" name="quiz" id="quizSummary" value="">
       <input type="text" name="_honey" style="display:none">
       <div class="form-grid">
-        <div><label>Vārds, Uzvārds</label><input name="name" required placeholder="Kā pie jums vērsties?"></div>
-        <div><label>E-pasts</label><input name="_replyto" type="email" required placeholder="jus@uznemums.lv"></div>
+        <div><label>Vārds, uzvārds</label><input name="name" required placeholder="Kā pie jums vērsties?"></div>
+        <div><label>E-pasts</label><input name="_replyto" type="email" required placeholder="vards@uznemums.lv"></div>
         <div class="full">
           <label>Kāds pakalpojums jums ir nepieciešams?</label>
           <select name="service" required>
@@ -656,7 +656,7 @@
           Piekrītu <a tabindex="0" onclick="openModal('terms')">lietošanas noteikumiem</a>,
           <a tabindex="0" onclick="openModal('privacy')">privātuma politikai</a> un
           <a tabindex="0" onclick="openModal('cookies')">sīkdatņu politikai</a>.
-          E-pasts tiks izmantots tikai atbildei uz šo pieprasījumu. Noteikumi pieejami angļu valodā.
+          Mans e-pasts tiks izmantots tikai atbildei uz šo pieteikumu.
         </label>
       </div>
       <div class="form-actions">
@@ -910,10 +910,10 @@ buildQuiz('');
   var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
   /* real projects from the portfolio */
   var projects=[
-    {brand:'MODES ZĪMOLS',menu:'Veikals · Par mums · Kontakti',h:'Jaunā kolekcija',hg:'jau pieejama',p:'Apģērbu zīmols no Igaunijas. Apskatiet kolekciju un pasūtiet tiešsaistē.',btn:'Pasūtīt tūlīt',href:'#order',lead:'saņemts jauns pasūtījums',theme:'th-kondo',url:'/portfolio',domain:'E-komercija'},
-    {brand:'NVO PROJEKTS',menu:'Moduļi · Partneri',h:'Erasmus+',hg:'digitālā informatīvā paka',p:'Digitālā informatīvā paka, kas nodrošina Erasmus+ dalībniekiem visu nepieciešamo vienuviet.',btn:'Atvērt infopaku',href:'#infopack',lead:'dalībnieks reģistrēts',theme:'th-fts',url:'/portfolio',domain:'Erasmus+ informatīvā paka'},
-    {brand:'Ziedu veikals',menu:'Katalogs · Piegāde',h:'Svaigi ziedi',hg:'jebkuram dzīves gadījumam',p:'Ziedu veikala katalogs ar tiešsaistes pasūtījumiem.',btn:'Pasūtīt pušķi',href:'#catalogue',lead:'pušķis pasūtīts',theme:'th-raz',url:'/portfolio',domain:'Katalogs un pasūtījumi'},
-    {brand:'DIGITĀLĀ ĒDIENKARTE',menu:'Pamatēdieni · Dzērieni · Deserti',h:'Noskenējiet QR kodu,',hg:'atveriet ēdienkarti',p:'Dienas zupa ........... €6\nGrilēts lasis ......... €16\nAtveras ar QR kodu, bez lietotnes.',btn:'Izsaukt viesmīli',href:'#menu',lead:'galdiņa pieprasījums nosūtīts',theme:'th-menu',url:'/portfolio',domain:'Digitāls rīks'}
+    {brand:'MODES ZĪMOLS',menu:'Veikals · Par mums · Kontakti',h:'Jaunā kolekcija',hg:'jau pieejama',p:'Apģērbu zīmols no Igaunijas. Apskatiet kolekciju un pasūtiet tiešsaistē.',btn:'Pasūtīt tūlīt',href:'#order',lead:'saņemts jauns pasūtījums',theme:'th-kondo',url:'/lv/portfolio/',domain:'E-komercija'},
+    {brand:'NVO PROJEKTS',menu:'Moduļi · Partneri',h:'Erasmus+',hg:'digitālā informatīvā paka',p:'Digitālā informatīvā paka, kas nodrošina Erasmus+ dalībniekiem visu nepieciešamo vienuviet.',btn:'Atvērt infopaku',href:'#infopack',lead:'dalībnieks reģistrēts',theme:'th-fts',url:'/lv/portfolio/',domain:'Erasmus+ informatīvā paka'},
+    {brand:'Ziedu veikals',menu:'Katalogs · Piegāde',h:'Svaigi ziedi',hg:'jebkuram dzīves gadījumam',p:'Ziedu veikala katalogs ar tiešsaistes pasūtījumiem.',btn:'Pasūtīt pušķi',href:'#catalogue',lead:'pušķis pasūtīts',theme:'th-raz',url:'/lv/portfolio/',domain:'Katalogs un pasūtījumi'},
+    {brand:'DIGITĀLĀ ĒDIENKARTE',menu:'Pamatēdieni · Dzērieni · Deserti',h:'Noskenējiet QR kodu,',hg:'atveriet ēdienkarti',p:'Dienas zupa ........... €6\nGrilēts lasis ......... €16\nAtveras ar QR kodu, bez lietotnes.',btn:'Izsaukt viesmīli',href:'#menu',lead:'galdiņa pieprasījums nosūtīts',theme:'th-menu',url:'/lv/portfolio/',domain:'Digitāls rīks'}
   ];
   var linesFor=function(pr){return [
     ['<span class="t">&lt;</span><span class="k">nav</span><span class="t">&gt;</span>'+esc(pr.brand)+'<span class="t">&lt;/nav&gt;</span>',0],

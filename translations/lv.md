@@ -74,7 +74,7 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | LV-059 | Request a quote | Pieteikt projektu | |
 | LV-060 | Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours. | Īsi pastāstiet par savu nozari un mērķi — 24 stundu laikā nosūtīsim plānu, termiņus un tāmi. | |
 | LV-061 | New request — erewhile.digital (EN) | Jauns pieteikums — erewhile.digital (LV) | |
-| LV-062 | Name | Vārds, Uzvārds | |
+| LV-062 | Name | Vārds, uzvārds | |
 | LV-063 | Email | E-pasts | |
 | LV-064 | What do you need? | Kāds pakalpojums jums ir nepieciešams? | |
 | LV-065 | Consultation (project discovery) | Konsultācija (projekta izpēte) | |
@@ -85,10 +85,10 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | LV-070 | Other | Cits | |
 | LV-071 | Message | Ziņojums | |
 | LV-072 | How should we address you? | Kā pie jums vērsties? | |
-| LV-073 | you@company.com | jus@uznemums.lv | |
+| LV-073 | you@company.com | vards@uznemums.lv | |
 | LV-074 | Briefly: niche, goal, what you sell/offer, deadline, references (if any) | Īsi: nozare, mērķis, piedāvājums, vēlamais termiņš un atsauces/piemēri (ja ir) | |
 | LV-075 | I agree to the <a | Piekrītu <a | |
-| LV-076 | My email will only be used to respond to this inquiry. | E-pasts tiks izmantots tikai atbildei uz šo pieprasījumu. Noteikumi pieejami angļu valodā. | |
+| LV-076 | My email will only be used to respond to this inquiry. | Mans e-pasts tiks izmantots tikai atbildei uz šo pieteikumu. | |
 | LV-077 | Send request | Nosūtīt pieteikumu | |
 | LV-078 | We reply within 24 hours. Urgent? Add your deadline in the message. | Atbildēsim 24 stundu laikā. Steidzami? Norādiet termiņu ziņojumā. | |
 | LV-079 | Terms & Conditions | lietošanas noteikumiem | |
