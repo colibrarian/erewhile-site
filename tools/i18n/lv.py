@@ -82,7 +82,7 @@ PAIRS_HTML=[
 ('Questions <span class="g">clients ask</span>','Biežāk uzdotie <span class="g">jautājumi</span>'),
 # form
 ('Request <span class="g">a quote</span>','Pieteikt <span class="g">projektu</span>'),
-("Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours.",'Īsi pastāstiet par savu nozari un mērķi — 24 stundu laikā nosūtīsim plānu, termiņus un tāmi.'),
+("Tell us your niche and goal, and we'll get back to you to talk through the details.",'Īsi pastāstiet par savu nozari un mērķi, un mēs sazināsimies ar jums, lai pārrunātu detaļas.'),
 ('New request — erewhile.digital (EN)','Jauns pieteikums — erewhile.digital (LV)'),
 ('<label>Name</label>','<label>Vārds, uzvārds</label>'),
 ('<label>Email</label>','<label>E-pasts</label>'),
@@ -100,7 +100,7 @@ PAIRS_HTML=[
 ('I agree to the <a','Piekrītu <a'),
 ('My email will only be used to respond to this inquiry.','Mans e-pasts tiks izmantots tikai atbildei uz šo pieteikumu.'),
 ('>Send request<','>Nosūtīt pieteikumu<'),
-('We reply within 24 hours. Urgent? Add your deadline in the message.','Atbildēsim 24 stundu laikā. Steidzami? Norādiet termiņu ziņojumā.'),
+('Urgent? Add your deadline in the message.','Steidzami? Norādiet termiņu ziņojumā.'),
 ('>Terms & Conditions</a>,','>lietošanas noteikumiem</a>,'),
 ('>Privacy Policy</a> and','>privātuma politikai</a> un'),
 ('>Cookie Policy</a>.','>sīkdatņu politikai</a>.'),

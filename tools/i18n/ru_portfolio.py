@@ -60,8 +60,8 @@ PAIRS=[
 ('Open the price calculator →','Открыть калькулятор →'),
 # form
 ('Ready to build something <em>that works</em>?','Готовы сделать то, <em>что работает</em>?'),
-("Tell us what you need — website, landing page, tool or something else. We'll reply with a plan and estimate within 24 hours.",
- 'Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. В течение 24 часов пришлём план и смету.'),
+("Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details.",
+ 'Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. Мы свяжемся с вами и обсудим детали.'),
 ('Portfolio page inquiry — erewhile.digital','Заявка со страницы портфолио — erewhile.digital (RU)'),
 ('<label>Name</label>','<label>Имя</label>'),
 ('<label>Email</label>','<label>Email</label>'),
@@ -82,7 +82,7 @@ PAIRS=[
 ('>Cookie Policy</a>.','>политикой cookie</a>.'),
 ('My email will only be used to respond to this inquiry.','Email будет использован только для ответа на эту заявку. Документы доступны на английском.'),
 ('>Send request<','>Отправить запрос<'),
-('We reply within 24 h. Urgent? Add your deadline in the message.','Отвечаем в течение 24 часов. Срочно? Укажите дедлайн в сообщении.'),
+('Urgent? Add your deadline in the message.','Срочно? Укажите дедлайн в сообщении.'),
 # footer
 ('© 2025 Erewhile Digital, Latvia','© 2025 Erewhile Digital, Латвия'),
 (">Terms & Conditions</span>",">Условия использования</span>"),

@@ -2,7 +2,7 @@
 PAIRS=[
 ('<title>Thank you — Erewhile Digital</title>','<title>Спасибо — Erewhile Digital</title>'),
 ('Thank you, we got your request','Спасибо, мы получили вашу заявку'),
-("We'll reply within 24 hours with a plan, timeline and estimate. If it's urgent, call or message us at",
- 'В течение 24 часов пришлём план, сроки и смету. Если срочно, звоните или пишите на'),
+("We'll get back to you soon to talk through the details. If it's urgent, call or message us at",
+ 'Скоро свяжемся с вами и обсудим детали. Если срочно, звоните или пишите на'),
 ('Back to the website','Вернуться на сайт'),
 ]

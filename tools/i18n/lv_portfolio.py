@@ -57,8 +57,8 @@ PAIRS=[
 ('Open the price calculator →','Atvērt cenu kalkulatoru →'),
 # form
 ('Ready to build something <em>that works</em>?','Gatavi izveidot kaut ko, <em>kas strādā</em>?'),
-("Tell us what you need — website, landing page, tool or something else. We'll reply with a plan and estimate within 24 hours.",
- 'Pastāstiet, kas jums nepieciešams — mājaslapa, mērķlapa, rīks vai kas cits. 24 stundu laikā atsūtīsim plānu un tāmi.'),
+("Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details.",
+ 'Pastāstiet, kas jums nepieciešams — mājaslapa, mērķlapa, rīks vai kas cits. Mēs sazināsimies ar jums, lai pārrunātu detaļas.'),
 ('Portfolio page inquiry — erewhile.digital','Pieteikums no portfolio lapas — erewhile.digital (LV)'),
 ('<label>Name</label>','<label>Vārds, uzvārds</label>'),
 ('<label>Email</label>','<label>E-pasts</label>'),
@@ -79,7 +79,7 @@ PAIRS=[
 ('>Cookie Policy</a>.','>sīkdatņu politikai</a>.'),
 ('My email will only be used to respond to this inquiry.','Mans e-pasts tiks izmantots tikai atbildei uz šo pieteikumu.'),
 ('>Send request<','>Nosūtīt pieteikumu<'),
-('We reply within 24 h. Urgent? Add your deadline in the message.','Atbildēsim 24 stundu laikā. Steidzami? Norādiet termiņu ziņojumā.'),
+('Urgent? Add your deadline in the message.','Steidzami? Norādiet termiņu ziņojumā.'),
 # footer
 ('© 2025 Erewhile Digital, Latvia','© 2025 Erewhile Digital, Latvija'),
 (">Terms & Conditions</span>",">Lietošanas noteikumi</span>"),

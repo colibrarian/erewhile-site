@@ -83,7 +83,7 @@ PAIRS_HTML=[
 ('Questions <span class="g">clients ask</span>','Частые <span class="g">вопросы</span>'),
 # form
 ('Request <span class="g">a quote</span>','Запросить <span class="g">расчёт</span>'),
-("Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours.",'Расскажите о своей нише и цели, и в течение 24 часов мы пришлём план, сроки и оценку стоимости.'),
+("Tell us your niche and goal, and we'll get back to you to talk through the details.",'Расскажите о своей нише и цели, и мы свяжемся с вами, чтобы обсудить детали.'),
 ('New request — erewhile.digital (EN)','New request — erewhile.digital (RU)'),
 ('<label>Name</label>','<label>Имя</label>'),
 ('<label>Email</label>','<label>E-mail</label>'),
@@ -101,7 +101,7 @@ PAIRS_HTML=[
 ('I agree to the <a','Я согласен(-на) с <a'),
 ('My email will only be used to respond to this inquiry.','Мой e-mail будет использован только для ответа на этот запрос. Документы доступны на английском.'),
 ('>Send request<','>Отправить запрос<'),
-('We reply within 24 hours. Urgent? Add your deadline in the message.','Отвечаем в течение 24 часов. Срочно? Укажите дедлайн в сообщении.'),
+('Urgent? Add your deadline in the message.','Срочно? Укажите дедлайн в сообщении.'),
 ('>Terms & Conditions</a>,','>условиями</a>,'),
 ('>Privacy Policy</a> and','>политикой конфиденциальности</a> и'),
 ('>Cookie Policy</a>.','>политикой cookie</a>.'),
