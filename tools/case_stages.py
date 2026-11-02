@@ -264,7 +264,58 @@ RAZALIJA = dict(
   .r-btn{font-size:M(14.5);padding:M(11) M(13);border-radius:M(13)}
 }''')
 
-STAGES = {'kondo': KONDO, 'zemits': ZEMITS, 'untu': UNTU, 'razalija': RAZALIJA}
+JELGAVA = dict(
+  ratio='16/9', mratio='9/14',
+  html='''
+<div class="j-hdr st-a">
+  <div class="j-brand"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Jelgava_Coworking_Space_Red.png?tr=f-auto,w-440" alt="" width="220" height="40"><span>Kazarmes iela 16B, Jelgava</span></div>
+  <div class="j-nav"><span>Atmosfēra</span><span>Kam paredzēts</span><span>Paketes</span><span>BUJ</span><span>Kontakti</span></div>
+  <div class="j-act"><span class="j-lang"><i class="on">LV</i><i>RU</i><i>EN</i></span><span class="j-btn j-pri">Sazinies ar mums</span><i class="st-burger"><b></b><b></b><b></b></i></div>
+</div>
+<div class="j-hero">
+  <div class="j-left">
+    <div class="j-kick st-a" style="--d:.1s">Coworking Jelgavā</div>
+    <div class="j-h1 st-a" style="--d:.2s">Coworking jeb kopstrādes telpa Jelgavā mierīgam un produktīvam darbam</div>
+    <div class="j-lead st-a" style="--d:.3s">Jelgava Coworking Space — klusa coworking telpa Jelgavā freelanceriem, studentiem un uzņēmējiem. Ērta darba vide, stabils internets, kafija un vieta fokusam.</div>
+    <div class="j-cta st-a" style="--d:.4s"><span class="j-btn j-pri">Atstāt pieteikumu</span><span class="j-btn">Apskatīt paketes</span></div>
+  </div>
+  <div class="j-photo st-a" style="--d:.3s"><img src="https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/cowork%201.png?tr=f-auto,w-1000" alt="" loading="lazy"></div>
+</div>''',
+  css='''
+.st-jelgava-coworking{background:#fff;color:#111;font-family:'Space Grotesk',sans-serif;letter-spacing:.1px}
+.j-hdr{position:absolute;inset:0 0 auto;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:U(16);padding:U(14) U(40);background:rgba(255,255,255,.72);border-bottom:1px solid rgba(0,0,0,.05)}
+.j-brand{display:flex;flex-direction:column;gap:U(6)}
+.j-brand img{height:U(40);width:auto}
+.j-brand span{font-size:U(12);color:#666;line-height:1.25}
+.j-nav{display:flex;gap:U(18);font-size:U(14);color:#666;white-space:nowrap}
+.j-act{display:flex;align-items:center;gap:U(10)}
+.j-lang{display:flex;gap:U(6);padding:U(4);border:1px solid #e9e9e9;border-radius:999px}
+.j-lang i{font-style:normal;font-size:U(12);padding:U(7) U(10);border-radius:999px;color:#666}
+.j-lang .on{background:#f4f4f4;color:#111;font-weight:500}
+.j-btn{display:inline-flex;align-items:center;padding:U(10) U(14);border-radius:999px;border:1px solid #e9e9e9;background:#fff;font-size:U(14);white-space:nowrap}
+.j-pri{background:#880002;color:#fff;border-color:transparent}
+.j-hero{position:absolute;inset:U(85) U(40) 0;display:grid;grid-template-columns:1.1fr .9fr;gap:U(26);align-items:center;padding-bottom:U(30);z-index:2}
+.j-kick{font-size:U(12);color:#666;text-transform:uppercase;letter-spacing:1.8px;margin-bottom:U(10)}
+.j-h1{font-size:U(46);line-height:1.08;font-weight:600;letter-spacing:-.5px;margin-bottom:U(14)}
+.j-lead{font-size:U(18);line-height:1.55;color:#666;margin-bottom:U(22)}
+.j-cta{display:flex;gap:U(10)}
+.j-photo{aspect-ratio:4/3;border-radius:U(18);background:#f6f6f6;border:1px solid #e9e9e9;overflow:hidden;box-shadow:0 U(10) U(30) rgba(0,0,0,.06)}
+.j-photo img{width:100%;height:100%;object-fit:cover}
+@container (max-width:620px){
+  .j-hdr{padding:M(12) M(18)}
+  .j-brand img{height:M(30)}.j-brand span{font-size:M(11)}
+  .j-nav,.j-lang,.j-act .j-btn{display:none}
+  .st-jelgava-coworking .st-burger{display:block;width:M(24);height:M(18)}
+  .j-hero{inset:M(78) M(18) M(18);grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:M(18);align-items:start;padding:M(12) 0 0}
+  .j-kick{font-size:M(11);margin-bottom:M(8)}
+  .j-h1{font-size:M(30)}
+  .j-lead{font-size:M(15);margin-bottom:M(16)}
+  .j-cta{gap:M(8);flex-wrap:wrap}
+  .j-btn{font-size:M(14);padding:M(10) M(14)}
+  .j-photo{aspect-ratio:auto;height:100%;border-radius:M(16)}
+}''')
+
+STAGES = {'kondo': KONDO, 'zemits': ZEMITS, 'untu': UNTU, 'razalija': RAZALIJA, 'jelgava-coworking': JELGAVA}
 
 
 def _units(css):

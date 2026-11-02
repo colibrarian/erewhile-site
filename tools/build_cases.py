@@ -40,9 +40,9 @@ CASES = [
     sample=('Visible results.', 'Advanced aesthetic cosmetology equipment', 'Zemits Skin Expert'),
     palette=[('#1A4A8A','Brand blue'), ('#2D6BBF','Links, hovers'), ('#4DA6FF','Light accent'), ('#1A2340','Text'), ('#F7F8FA','Background')],
     ink='#ffffff', logo_bg='#1A4A8A', logo='/assets/cases/zemits/logo-white.png', logo_wh=(None, None), mark_color='#fff', dark_panel=True,
-    gallery=['https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/1.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/2.png?tr=w-500',
-             'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/3.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/4.png?tr=w-500'],
-    gallery_alt='Zemits before and after treatment', gallery_ratio='1/1',
+    gallery=['https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/1.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/2.png?tr=w-500',
+             'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/3.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/4.png?tr=w-500'],
+    gallery_alt='Zemits device from the catalogue', gallery_ratio='1/1',
     handover=['Live site in 3 languages', 'Device catalogue', 'Build script for easy edits', 'Link previews for every page', 'Sitemap, schema and llms.txt'],
     cta=('Selling something that needs <span>explaining</span>?', 'Tell us what you sell and who buys it. We will plan the pages that answer their questions before they call.'),
   ),
@@ -160,7 +160,7 @@ CASES = [
            ('Application form and FAQ', 'Every package leads to one form, and common questions are answered on the page.')],
     vis_h='Calm white with one strong red',
     vis='White space and black text keep the site as quiet as the space itself. One deep red from the logo marks actions and prices. A single modern grotesque runs through everything.',
-    fonts=('Space Grotesk', 'Space Grotesk', 'Space Grotesk'), gf='family=Space+Grotesk:wght@400;700',
+    fonts=('Space Grotesk', 'Space Grotesk', 'Space Grotesk'), gf='family=Space+Grotesk:wght@400;500;600;700',
     display_w='700', display_ls='-.02em',
     sample=('Jelgava Coworking', 'A calm place to focus', 'Apskatīt paketes'),
     palette=[('#880002','Logo red'), ('#111111','Text'), ('#666666','Muted text'), ('#E9E9E9','Lines'), ('#FFFFFF','Background')],
@@ -195,7 +195,7 @@ CASES = [
     display_w='900', display_ls='-.03em',
     sample=('Grow, connect, create.', 'A non-profit youth organization for real-world growth.', 'Get involved'),
     palette=[('#0B0D12','Night background'), ('#FFD233','Yellow accent'), ('#FFFFFF','Text')],
-    ink='#ffffff', logo_bg='#0B0D12', logo='https://ik.imagekit.io/xshkpkf2i/Untu/untu%20dragon.png?tr=w-480', logo_wh=(None, None), dark_panel=True,
+    ink='#ffffff', logo_bg='#0B0D12', logo='https://ik.imagekit.io/xshkpkf2i/Untu/logo%20untu.png?tr=w-480', logo_wh=(None, None), dark_panel=True,
     gallery=['https://ik.imagekit.io/xshkpkf2i/Untu/DSC_6724.jpg?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/IMG_7184.JPG?tr=w-500',
              'https://ik.imagekit.io/xshkpkf2i/Untu/asset%20photo%20session.png?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/ctml.png?tr=w-500'],
     gallery_alt='UNTU project moment', gallery_ratio='4/3',
@@ -269,13 +269,21 @@ HEADER = '''<header>
     <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
     <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
     <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
-</header>'''
+</header>
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Websites</a>
+  <a href="/portfolio" class="active">Portfolio</a>
+  <a href="/video">Video</a>
+  <a href="/#ew-contact">Contact</a>
+</div>'''
 
 SCRIPT = '''<script>
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 els.forEach(function(e){io.observe(e)})})();
+(function(){var b=document.getElementById('burgerBtn'),n=document.getElementById('mobileNav');b.addEventListener('click',function(){var o=b.classList.toggle('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''})})();
 (function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('[data-slides]').forEach(function(box){var s=box.children,i=0;if(s.length<2)return;
 setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},4200)})})();
 </script>'''

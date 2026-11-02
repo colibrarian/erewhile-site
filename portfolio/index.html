@@ -226,6 +226,14 @@
       width: max-content;
     }
 
+    /* ── Websites: static grid instead of the auto-scrolling rail ── */
+    .rail-grid .rail-fade-left,.rail-grid .rail-fade-right{display:none}
+    .rail-grid .rail-viewport{overflow:visible}
+    .rail-grid .rail-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;width:auto;max-width:1400px;margin:0 auto}
+    .rail-grid .bcard,.rail-grid .bcard-wide,.rail-grid .bcard-sm{width:auto}
+    @media(max-width:1100px){.rail-grid .rail-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.rail-grid .rail-track{grid-template-columns:1fr}}
+
     /* ── Animation B: Fly-in scatter ── */
     .scatter-section {
       padding: 0 clamp(16px,4vw,48px);
@@ -757,7 +765,7 @@
     </div>
   </div>
 
-  <div class="rail-wrap rail-auto">
+  <div class="rail-wrap rail-grid">
     <div class="rail-fade-left" aria-hidden="true"></div>
     <div class="rail-fade-right" aria-hidden="true"></div>
     <div class="rail-viewport">
@@ -889,59 +897,6 @@
             <div class="bcard-desc">Non-profit website built around trust and clear calls to action: donate, volunteer, get involved.</div>
             <a class="bcard-link" href="/portfolio/untu/">Case study →</a> <a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Open site ↗</a>
           </div>
-        </div>
-
-        <!-- Duplicate set for seamless infinite loop -->
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome">
-            <div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div>
-            <div class="chrome-bar"><span class="chrome-favicon">✨</span>zemits-latvija.lv</div>
-          </div>
-          <a href="/portfolio/zemits/" class="bcard-preview">
-            <img src="/assets/cases/zemits/cover.jpg" alt="" loading="eager">
-            <span class="bcard-tag">New · B2B catalogue</span>
-          </a>
-          <div class="bcard-body">
-            <div class="bcard-title">Zemits — Cosmetology Equipment</div>
-            <div class="bcard-desc">Three-language catalogue site for the official Zemits representative in the Baltics.</div>
-            <a class="bcard-link" href="/portfolio/zemits/">Case study →</a> <a class="bcard-link" href="https://zemits-latvija.lv" target="_blank" rel="noopener">Open site ↗</a>
-          </div>
-        </div>
-
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">💄</span>solvatabeauty.lv</div></div>
-          <a href="/portfolio/solvata-beauty/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/6.jpg" alt="" loading="lazy"><span class="bcard-tag">Beauty</span></a>
-          <div class="bcard-body"><div class="bcard-title">Solvata Beauty</div><div class="bcard-desc">Website for a beauty studio — services, trust signals and online booking.</div><a class="bcard-link" href="/portfolio/solvata-beauty/">Case study →</a> <a class="bcard-link" href="https://solvatabeauty.lv" target="_blank" rel="noopener">Open site ↗</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">👨‍🍳</span>idchef13.com</div></div>
-          <a href="/portfolio/id-chef/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/5.jpg" alt="" loading="lazy"><span class="bcard-tag">Personal brand</span></a>
-          <div class="bcard-body"><div class="bcard-title">ID Chef — Personal Brand Site</div><div class="bcard-desc">Website for a chef and restaurant consultant — positioning, story, and contact flow.</div><a class="bcard-link" href="/portfolio/id-chef/">Case study →</a> <a class="bcard-link" href="http://idchef13.com" target="_blank" rel="noopener">Open site ↗</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🍖</span>grill-in.lv</div></div>
-          <a href="/portfolio/grill-in/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/4.jpg" alt="" loading="lazy"><span class="bcard-tag">Restaurant</span></a>
-          <div class="bcard-body"><div class="bcard-title">Grill In — Restaurant Landing</div><div class="bcard-desc">One-page site for a grill restaurant: menu highlights, atmosphere and table reservations.</div><a class="bcard-link" href="/portfolio/grill-in/">Case study →</a> <a class="bcard-link" href="http://grill-in.lv" target="_blank" rel="noopener">Open site ↗</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">👗</span>kondo.ee</div></div>
-          <a href="/portfolio/kondo/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg" alt="" loading="lazy"><span class="bcard-tag">E-commerce</span></a>
-          <div class="bcard-body"><div class="bcard-title">Kondo — Clothing Brand</div><div class="bcard-desc">Brand website with online ordering capability for an Estonian clothing label.</div><a class="bcard-link" href="/portfolio/kondo/">Case study →</a> <a class="bcard-link" href="https://kondo.ee" target="_blank" rel="noopener">Open site ↗</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌸</span>razalija.lv</div></div>
-          <a href="/portfolio/razalija/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/1.jpg" alt="" loading="lazy"><span class="bcard-tag">Local shop</span></a>
-          <div class="bcard-body"><div class="bcard-title">Razalija — Flower Shop</div><div class="bcard-desc">Local flower shop with online order option — gallery, catalogue and easy checkout flow.</div><a class="bcard-link" href="/portfolio/razalija/">Case study →</a> <a class="bcard-link" href="https://razalija.lv" target="_blank" rel="noopener">Open site ↗</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🏢</span>jelgavacoworking.lv</div></div>
-          <a href="/portfolio/jelgava-coworking/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/cowork.png?updatedAt=1777368269266" alt="" loading="lazy"><span class="bcard-tag">Coworking</span></a>
-          <div class="bcard-body"><div class="bcard-title">Jelgava Coworking</div><div class="bcard-desc">Pricing, value props and lead capture for a coworking space in Latvia.</div><a class="bcard-link" href="/portfolio/jelgava-coworking/">Case study →</a> <a class="bcard-link" href="https://www.jelgavacoworking.lv" target="_blank" rel="noopener">Open site ↗</a></div>
-        </div>
-        <div class="bcard" aria-hidden="true">
-          <div class="bcard-chrome"><div class="chrome-dots"><span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span></div><div class="chrome-bar"><span class="chrome-favicon">🌍</span>untu.ngo</div></div>
-          <a href="/portfolio/untu/" class="bcard-preview"><img src="https://ik.imagekit.io/erewhile/erewhile/untu%20erewhile.png?updatedAt=1777368269366" alt="" loading="lazy"><span class="bcard-tag">NGO</span></a>
-          <div class="bcard-body"><div class="bcard-title">UNTU — Youth NGO</div><div class="bcard-desc">Non-profit website built around trust and clear calls to action: donate, volunteer, get involved.</div><a class="bcard-link" href="/portfolio/untu/">Case study →</a> <a class="bcard-link" href="http://untu.ngo" target="_blank" rel="noopener">Open site ↗</a></div>
         </div>
 
       </div>
