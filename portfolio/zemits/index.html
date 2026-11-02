@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Zemits case study: three-language catalogue for a cosmetology equipment distributor — Erewhile Digital</title>
+  <meta name="description" content="How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics."/>
+  <link rel="canonical" href="https://erewhile.digital/portfolio/zemits/"/>
+  <meta property="og:title" content="Zemits case study — Erewhile Digital"/>
+  <meta property="og:description" content="How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics."/>
+  <meta property="og:image" content="https://erewhile.digital/assets/cases/zemits/cover.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;1,500&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Zemits — case study", "url": "https://erewhile.digital/portfolio/zemits/", "about": "How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics.", "creator": {"@id": "https://erewhile.digital/#org"}, "image": "https://erewhile.digital/assets/cases/zemits/cover.jpg", "isBasedOn": "https://zemits-latvija.lv"}</script>
+  <style>
+    :root{--ink:#0a0a0a;--muted:#6b6f6e;--line:rgba(10,10,10,.08);--bg:#f7f7f5;--teal:#0D3E3E;--teal-line:rgba(13,62,62,.22);--teal-dim:rgba(13,62,62,.07);--soft:#9FE6E4;--font:'Montserrat',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(247,247,245,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+    .hdr{height:64px;display:flex;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
+    .brand img{height:24px;width:auto}
+    nav{display:flex;gap:22px;margin-left:auto;font-size:13px;color:var(--muted)}
+    nav a:hover,nav a.active{color:var(--teal)}
+    nav a.active{font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:100px;font-weight:600;font-size:13.5px;padding:12px 22px;transition:transform .2s var(--ease),background .2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-teal{background:var(--teal);color:#fff}
+    .btn-teal:hover{background:#072828}
+    .btn-ghost{border:1px solid var(--teal-line);color:var(--teal);background:var(--teal-dim)}
+    .btn-sm{padding:9px 16px;font-size:12.5px}
+    @media(max-width:640px){nav{display:none}.hdr .btn-sm{margin-left:auto}.brand img{display:none}}
+    .btn{white-space:nowrap}
+
+    .crumbs{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:clamp(28px,4vw,48px)}
+    .crumbs a:hover{color:var(--teal)}
+    .intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:end;padding-block:18px clamp(28px,4vw,44px)}
+    @media(max-width:860px){.intro{grid-template-columns:1fr}}
+    h1{font-size:clamp(34px,5.4vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:800;text-wrap:balance}
+    h1 span{color:var(--teal)}
+    .lede{color:var(--muted);font-size:clamp(15px,1.4vw,17px);max-width:52ch}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid var(--teal-line);background:var(--teal-dim);border-radius:100px;padding:5px 12px}
+
+    .shot{position:relative;border-radius:clamp(18px,2.2vw,28px);overflow:hidden;border:1px solid var(--line);background:#e9ebe9;box-shadow:0 30px 70px rgba(13,62,62,.12)}
+    .shot{background:var(--c-logo-bg,#fff)}
+    .shot img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover}
+
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:clamp(28px,4vw,44px)}
+    .fact{background:#fff;padding:18px 20px}
+    .fact dt{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:4px}
+    .fact dd{font-weight:700;font-size:14px;line-height:1.4}
+    @media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+
+    .block{display:grid;grid-template-columns:260px 1fr;gap:clamp(20px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--line)}
+    @media(max-width:760px){.block{grid-template-columns:1fr}}
+    .label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+    .block h2{font-size:clamp(22px,2.6vw,32px);line-height:1.15;letter-spacing:-.03em;font-weight:800;margin-top:8px;text-wrap:balance}
+    .body{max-width:68ch;display:grid;gap:14px;color:#2a2a2a}
+    .body.wide{max-width:none}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:600px){.list{grid-template-columns:1fr}}
+    .item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px}
+    .item b{display:block;font-size:14.5px;margin-bottom:4px}
+    .item span{font-size:13.5px;color:var(--muted);line-height:1.55;display:block}
+
+
+    /* brand panel: the client's own identity, shown on its own white surface */
+    .brand-panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+    @media(max-width:860px){.brand-panel{grid-template-columns:1fr}}
+    .bp{background:#fff;padding:clamp(22px,3vw,36px)}
+    .bp-logo{background:var(--c-logo-bg,#fff);display:grid;place-items:center;position:relative;min-height:280px;overflow:hidden}
+    .bp-logo img{width:min(220px,60%);height:auto;position:relative}
+    .bp-logo .kanji{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--c-display);font-size:clamp(110px,13vw,190px);white-space:nowrap;color:var(--c-ink,#111);opacity:.045;line-height:1;user-select:none}
+    .bp-cap{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:10px}
+    .spec{display:grid;gap:18px}
+    .spec-row{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px}
+    @media(max-width:520px){.spec-row{grid-template-columns:1fr;gap:4px}}
+    .spec-row:last-child{border-bottom:none;padding-bottom:0}
+    .f-display{font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(30px,3.6vw,44px);letter-spacing:var(--c-display-ls,.01em);line-height:1.05;color:var(--c-ink,#111)}
+    .f-body{font-family:var(--c-body);font-size:clamp(19px,2vw,23px);color:var(--c-ink,#111)}
+    .f-ui{font-family:var(--c-ui);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--c-ui-color,#8a8a8a)}
+    .swatches{display:flex;gap:10px;flex-wrap:wrap}
+    .sw{display:grid;gap:6px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+    .sw i{display:block;width:56px;height:40px;border-radius:10px;border:1px solid var(--line)}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+    @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:#eceeed}
+    .handover{display:flex;flex-wrap:wrap;gap:8px}
+    .handover li{list-style:none;font-size:13.5px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:100px;padding:8px 14px}
+    .handover li::before{content:'✓';color:var(--teal);margin-right:8px;font-weight:800}
+
+    .next{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:28px;font-size:14px}
+    .next a{font-weight:700;color:var(--teal)}
+
+    .cta{position:relative;isolation:isolate;overflow:hidden;border-radius:clamp(20px,2.4vw,32px);background:var(--teal);color:#fff;padding:clamp(40px,6vw,80px) clamp(24px,5vw,64px);margin-block:clamp(20px,4vw,40px) clamp(48px,6vw,80px);box-shadow:0 24px 60px rgba(13,62,62,.18)}
+    .cta::before{content:'';position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(ellipse at 75% 40%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 75% 40%,#000,transparent 75%)}
+    .cta h2{font-size:clamp(26px,3.8vw,46px);line-height:1.05;letter-spacing:-.035em;font-weight:800;max-width:20ch;text-wrap:balance}
+    .cta h2 span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:.18em;padding:0 .14em}
+    .cta p{margin-top:14px;color:rgba(255,255,255,.82);max-width:52ch}
+    .cta .btn{margin-top:24px;background:#fff;color:var(--teal)}
+
+    footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+    footer a:hover{color:var(--teal)}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.on{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+    .bp-mark{position:relative;font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(44px,6vw,72px);letter-spacing:var(--c-display-ls,.01em);color:var(--c-mark,#111);text-align:center;line-height:1}
+    .new{background:var(--teal);color:#fff;border-color:var(--teal)}
+    .case{--c-display:'Playfair Display',Georgia,serif;--c-body:'Outfit',system-ui,sans-serif;--c-ui:'Outfit',system-ui,sans-serif;--c-display-w:500;--c-display-ls:0;--c-ink:#1A2340;--c-logo-bg:#1A4A8A;--c-mark:#fff;--c-ui-color:#8a8a8a}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
+    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
+    <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
+  </div>
+</header>
+
+<main class="wrap case">
+  <div class="crumbs"><a href="/portfolio">Portfolio</a> / Zemits</div>
+
+  <section class="intro">
+    <div>
+      <h1>A three-language catalogue that sells <span>professional</span> beauty equipment</h1>
+      <div class="tags"><span class="tag new">New</span><span class="tag">Beauty equipment</span><span class="tag">Latvia &amp; Baltics</span><span class="tag">LV · RU · EN</span><span class="tag">Device catalogue</span></div>
+    </div>
+    <div>
+      <p class="lede">Zemits Skin Expert is the official Zemits representative in the Baltic states. They sell professional face and body devices to salons, clinics and specialists, and back them with training, a 24-month warranty and local service.</p>
+      <div class="actions"><a class="btn btn-teal" href="https://zemits-latvija.lv" target="_blank" rel="noopener">Open zemits-latvija.lv ↗</a><a class="btn btn-ghost" href="/#ew-contact">Discuss a similar site</a></div>
+    </div>
+  </section>
+
+  <figure class="shot reveal"><img src="/assets/cases/zemits/cover.jpg" alt="Zemits website preview" loading="eager" width="1200" height="630"></figure>
+
+  <dl class="facts reveal"><div class="fact"><dt>Client</dt><dd>Zemits Skin Expert</dd></div><div class="fact"><dt>Market</dt><dd>Latvia and the Baltics</dd></div><div class="fact"><dt>Languages</dt><dd>Latvian, Russian, English</dd></div><div class="fact"><dt>Catalogue</dt><dd>Devices with prices and details</dd></div></dl>
+
+  <section class="block reveal">
+    <div><div class="label">The task</div><h2>Help salons compare devices worth thousands of euros</h2></div>
+    <div class="body"><p>Salon owners and cosmetologists do not buy a laser or an RF platform on impulse. They compare technologies, prices and what support they get after the purchase.</p><p>The site had to present the whole device range in three languages, show real treatment results and make it easy to ask a question or book training.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">What we built</div><h2>From first look to a request in one flow</h2></div>
+    <div class="body"><div class="list"><div class="item"><b>Device catalogue</b><span>Each device has a card and a detail popup with price, features and photos, on the home page and a full catalogue page.</span></div><div class="item"><b>Training and seminars</b><span>Masterclasses and seminars are part of the offer, so buyers see they will not be left alone with the device.</span></div><div class="item"><b>Results and reviews</b><span>Before-and-after photos and client reviews build trust for a technical, high-ticket product.</span></div><div class="item"><b>Search-ready in three languages</b><span>Language versions with hreflang, structured data for every device with its price, a sitemap and link previews for each page.</span></div></div></div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">Visual language</div><h2>Clinical blue with an editorial touch</h2></div>
+    <div class="body wide">
+      <p>A deep blue palette signals medical precision, and an elegant serif for headlines keeps it from feeling like a hospital. A clean sans handles prices, specs and buttons.</p>
+      <div class="brand-panel">
+        <div class="bp bp-logo"><img src="/assets/cases/zemits/logo-white.png" alt="Zemits logo" loading="lazy"></div>
+        <div class="bp spec">
+          <div class="spec-row"><span class="bp-cap">Display · Playfair Display</span><span class="f-display">Visible results.</span></div>
+          <div class="spec-row"><span class="bp-cap">Text · Outfit</span><span class="f-body">Advanced aesthetic cosmetology equipment</span></div>
+          <div class="spec-row"><span class="bp-cap">Interface · Outfit</span><span class="f-ui">Zemits Skin Expert</span></div>
+          <div class="spec-row"><span class="bp-cap">Palette</span><span class="swatches"><span class="sw"><i style="background:#1A4A8A"></i>#1A4A8A</span><span class="sw"><i style="background:#2D6BBF"></i>#2D6BBF</span><span class="sw"><i style="background:#4DA6FF"></i>#4DA6FF</span><span class="sw"><i style="background:#1A2340"></i>#1A2340</span><span class="sw"><i style="background:#F7F8FA"></i>#F7F8FA</span></span></div>
+        </div>
+      </div>
+      <div class="gallery"><img src="https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/1.png?tr=w-500" alt="Zemits before and after treatment" loading="lazy" style="aspect-ratio:1/1"><img src="https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/2.png?tr=w-500" alt="Zemits before and after treatment" loading="lazy" style="aspect-ratio:1/1"><img src="https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/3.png?tr=w-500" alt="Zemits before and after treatment" loading="lazy" style="aspect-ratio:1/1"><img src="https://ik.imagekit.io/xwsgpirygo/Zemits/before%20after/4.png?tr=w-500" alt="Zemits before and after treatment" loading="lazy" style="aspect-ratio:1/1"></div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">Handed over</div><h2>What the client got at launch</h2></div>
+    <div class="body"><ul class="handover"><li>Live site in 3 languages</li><li>Device catalogue</li><li>Build script for easy edits</li><li>Link previews for every page</li><li>Sitemap, schema and llms.txt</li><li>Full access and ownership</li></ul></div>
+  </section>
+
+  <div class="next"><a href="/portfolio">← All projects</a><span>Next case: <a href="/portfolio/kondo/">Kondo →</a></span></div>
+
+  <section class="cta reveal">
+    <h2>Selling something that needs <span>explaining</span>?</h2>
+    <p>Tell us what you sell and who buys it. We will plan the pages that answer their questions before they call.</p>
+    <a class="btn" href="/#ew-contact">Start a project</a>
+  </section>
+
+  <footer><span>© Erewhile Digital · Latvia</span><span><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></span></footer>
+</main>
+
+<script>
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>

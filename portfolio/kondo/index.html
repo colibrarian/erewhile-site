@@ -7,12 +7,12 @@
   <meta name="description" content="How we built a one-page brand site with a pre-order bag for Kondo, an Estonian label making linen and ramie clothing to order."/>
   <link rel="canonical" href="https://erewhile.digital/portfolio/kondo/"/>
   <meta property="og:title" content="Kondo case study — Erewhile Digital"/>
-  <meta property="og:description" content="One-page brand site with a pre-order bag for an Estonian made-to-order clothing label."/>
+  <meta property="og:description" content="How we built a one-page brand site with a pre-order bag for Kondo, an Estonian label making linen and ramie clothing to order."/>
   <meta property="og:image" content="https://erewhile.digital/assets/cases/kondo/cover.jpg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Cinzel+Decorative:wght@900&family=EB+Garamond:ital@0;1&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Kondo — brand website with pre-order","url":"https://erewhile.digital/portfolio/kondo/","about":"Website for a made-to-order clothing label in Estonia","creator":{"@id":"https://erewhile.digital/#org"},"image":"https://erewhile.digital/assets/cases/kondo/cover.jpg","isBasedOn":"https://kondo.ee"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kondo — case study", "url": "https://erewhile.digital/portfolio/kondo/", "about": "How we built a one-page brand site with a pre-order bag for Kondo, an Estonian label making linen and ramie clothing to order.", "creator": {"@id": "https://erewhile.digital/#org"}, "image": "https://erewhile.digital/assets/cases/kondo/cover.jpg", "isBasedOn": "https://kondo.ee"}</script>
   <style>
     :root{--ink:#0a0a0a;--muted:#6b6f6e;--line:rgba(10,10,10,.08);--bg:#f7f7f5;--teal:#0D3E3E;--teal-line:rgba(13,62,62,.22);--teal-dim:rgba(13,62,62,.07);--soft:#9FE6E4;--font:'Montserrat',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -34,7 +34,8 @@
     .btn-teal:hover{background:#072828}
     .btn-ghost{border:1px solid var(--teal-line);color:var(--teal);background:var(--teal-dim)}
     .btn-sm{padding:9px 16px;font-size:12.5px}
-    @media(max-width:640px){nav{display:none}.hdr .btn-sm{margin-left:auto}}
+    @media(max-width:640px){nav{display:none}.hdr .btn-sm{margin-left:auto}.brand img{display:none}}
+    .btn{white-space:nowrap}
 
     .crumbs{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:clamp(28px,4vw,48px)}
     .crumbs a:hover{color:var(--teal)}
@@ -48,8 +49,8 @@
     .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid var(--teal-line);background:var(--teal-dim);border-radius:100px;padding:5px 12px}
 
     .shot{position:relative;border-radius:clamp(18px,2.2vw,28px);overflow:hidden;border:1px solid var(--line);background:#e9ebe9;box-shadow:0 30px 70px rgba(13,62,62,.12)}
-    .shot{background:#fff}
-    .shot img{width:100%;aspect-ratio:1200/630;object-fit:cover}
+    .shot{background:var(--c-logo-bg,#fff)}
+    .shot img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover}
 
     .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:clamp(28px,4vw,44px)}
     .fact{background:#fff;padding:18px 20px}
@@ -74,23 +75,23 @@
     .brand-panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
     @media(max-width:860px){.brand-panel{grid-template-columns:1fr}}
     .bp{background:#fff;padding:clamp(22px,3vw,36px)}
-    .bp-logo{display:grid;place-items:center;position:relative;min-height:280px;overflow:hidden}
+    .bp-logo{background:var(--c-logo-bg,#fff);display:grid;place-items:center;position:relative;min-height:280px;overflow:hidden}
     .bp-logo img{width:min(220px,60%);height:auto;position:relative}
-    .bp-logo .kanji{position:absolute;inset:0;display:grid;place-items:center;font-family:'Cinzel Decorative',serif;font-size:clamp(110px,13vw,190px);white-space:nowrap;color:#111;opacity:.045;line-height:1;user-select:none}
+    .bp-logo .kanji{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--c-display);font-size:clamp(110px,13vw,190px);white-space:nowrap;color:var(--c-ink,#111);opacity:.045;line-height:1;user-select:none}
     .bp-cap{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:10px}
     .spec{display:grid;gap:18px}
     .spec-row{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px}
     @media(max-width:520px){.spec-row{grid-template-columns:1fr;gap:4px}}
     .spec-row:last-child{border-bottom:none;padding-bottom:0}
-    .f-display{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(30px,3.6vw,44px);letter-spacing:.03em;line-height:1;color:#111}
-    .f-body{font-family:'EB Garamond',Georgia,serif;font-size:clamp(20px,2vw,24px);color:#111}
-    .f-ui{font-family:'Inter',system-ui,sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:#8a8a8a}
+    .f-display{font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(30px,3.6vw,44px);letter-spacing:var(--c-display-ls,.01em);line-height:1.05;color:var(--c-ink,#111)}
+    .f-body{font-family:var(--c-body);font-size:clamp(19px,2vw,23px);color:var(--c-ink,#111)}
+    .f-ui{font-family:var(--c-ui);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--c-ui-color,#8a8a8a)}
     .swatches{display:flex;gap:10px;flex-wrap:wrap}
     .sw{display:grid;gap:6px;font-family:var(--mono);font-size:11px;color:var(--muted)}
     .sw i{display:block;width:56px;height:40px;border-radius:10px;border:1px solid var(--line)}
     .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
     @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:#eceeed}
+    .gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:#eceeed}
     .handover{display:flex;flex-wrap:wrap;gap:8px}
     .handover li{list-style:none;font-size:13.5px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:100px;padding:8px 14px}
     .handover li::before{content:'✓';color:var(--teal);margin-right:8px;font-weight:800}
@@ -110,6 +111,9 @@
     .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
     .reveal.on{opacity:1;transform:none}
     @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+    .bp-mark{position:relative;font-family:var(--c-display);font-weight:var(--c-display-w,800);font-size:clamp(44px,6vw,72px);letter-spacing:var(--c-display-ls,.01em);color:var(--c-mark,#111);text-align:center;line-height:1}
+    .new{background:var(--teal);color:#fff;border-color:var(--teal)}
+    .case{--c-display:'Cinzel Decorative',Georgia,serif;--c-body:'EB Garamond',Georgia,serif;--c-ui:'Inter',system-ui,sans-serif;--c-display-w:900;--c-display-ls:.03em;--c-ink:#111111;--c-logo-bg:#ffffff;--c-mark:#111111;--c-ui-color:#8a8a8a}
   </style>
 </head>
 <body>
@@ -121,7 +125,7 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap case">
   <div class="crumbs"><a href="/portfolio">Portfolio</a> / Kondo</div>
 
   <section class="intro">
@@ -135,34 +139,18 @@
     </div>
   </section>
 
-  <figure class="shot reveal"><img src="/assets/cases/kondo/cover.jpg" alt="Kondo brand: Golden Hall, Where the Dragon Dwells" loading="eager" width="1200" height="630"></figure>
+  <figure class="shot reveal"><img src="/assets/cases/kondo/cover.jpg" alt="Kondo website preview" loading="eager" width="1200" height="630"></figure>
 
-  <dl class="facts reveal">
-    <div class="fact"><dt>Client</dt><dd>Kondo, clothing label</dd></div>
-    <div class="fact"><dt>Deadline</dt><dd>Live before the launch event</dd></div>
-    <div class="fact"><dt>Format</dt><dd>One-page site with sections</dd></div>
-    <div class="fact"><dt>Ordering</dt><dd>Pre-order bag + enquiry form</dd></div>
-  </dl>
+  <dl class="facts reveal"><div class="fact"><dt>Client</dt><dd>Kondo, clothing label</dd></div><div class="fact"><dt>Deadline</dt><dd>Live before the launch event</dd></div><div class="fact"><dt>Format</dt><dd>One-page site with sections</dd></div><div class="fact"><dt>Ordering</dt><dd>Pre-order bag + enquiry form</dd></div></dl>
 
   <section class="block reveal">
     <div><div class="label">The task</div><h2>Launch before the collection presentation</h2></div>
-    <div class="body">
-      <p>Kondo had a presentation event for its new clothing line already scheduled, and the site had to be live by then. The deadline was fixed, so the scope had to be tight and the launch reliable.</p>
-      <p>Every Kondo piece is made after the order, with a 50% deposit and 1–2 weeks of production. A standard e-commerce platform with stock, shipping rules and instant payment did not fit that model.</p>
-      <p>The brand also needed space to explain why ramie and linen are worth it, and how to care for them, so buyers understand the price before they order.</p>
-    </div>
+    <div class="body"><p>Kondo had a presentation event for its new clothing line already scheduled, and the site had to be live by then. The deadline was fixed, so the scope had to be tight and the launch reliable.</p><p>Every Kondo piece is made after the order, with a 50% deposit and 1–2 weeks of production. A standard e-commerce platform with stock, shipping rules and instant payment did not fit that model.</p><p>The brand also needed space to explain why ramie and linen are worth it, and how to care for them, so buyers understand the price before they order.</p></div>
   </section>
 
   <section class="block reveal">
     <div><div class="label">What we built</div><h2>One page that leads from story to order</h2></div>
-    <div class="body">
-      <div class="list">
-        <div class="item"><b>Brand story and fabrics</b><span>About, Fabrics and Care sections explain the materials and how to look after them.</span></div>
-        <div class="item"><b>Two collections</b><span>Yoga Drop and City Drop, each with prices, so buyers see the range at a glance.</span></div>
-        <div class="item"><b>Pre-order bag</b><span>Visitors add pieces to a bag and see an estimated total. Items priced on request are confirmed separately.</span></div>
-        <div class="item"><b>Enquiry form</b><span>Name, phone, email and a comment. Works with or without selected pieces, so custom requests come in too.</span></div>
-      </div>
-    </div>
+    <div class="body"><div class="list"><div class="item"><b>Brand story and fabrics</b><span>About, Fabrics and Care sections explain the materials and how to look after them.</span></div><div class="item"><b>Two collections</b><span>Yoga Drop and City Drop, each with prices, so buyers see the range at a glance.</span></div><div class="item"><b>Pre-order bag</b><span>Visitors add pieces to a bag and see an estimated total. Items priced on request are confirmed separately.</span></div><div class="item"><b>Enquiry form</b><span>Name, phone, email and a comment. Works with or without selected pieces, so custom requests come in too.</span></div></div></div>
   </section>
 
   <section class="block reveal">
@@ -170,31 +158,24 @@
     <div class="body wide">
       <p>The name means "Golden Hall", so the site follows a temple-like calm: white space, black ink, a faint 金堂 watermark and a dragon mark. A decorative display face for the name, a classic serif for the story, and a clean sans for prices and buttons.</p>
       <div class="brand-panel">
-        <div class="bp bp-logo"><span class="kanji" aria-hidden="true">金堂</span><img src="/assets/cases/kondo/dragon.png" alt="Kondo dragon logo" loading="lazy" width="480" height="441"></div>
+        <div class="bp bp-logo"><span class="kanji" aria-hidden="true">金堂</span><img src="/assets/cases/kondo/dragon.png" alt="Kondo logo" loading="lazy" width="480" height="441"></div>
         <div class="bp spec">
           <div class="spec-row"><span class="bp-cap">Display · Cinzel Decorative</span><span class="f-display">KONDŌ</span></div>
           <div class="spec-row"><span class="bp-cap">Text · EB Garamond</span><span class="f-body">Where the Dragon Dwells</span></div>
           <div class="spec-row"><span class="bp-cap">Interface · Inter</span><span class="f-ui">Golden Hall</span></div>
-          <div class="spec-row"><span class="bp-cap">Palette</span><span class="swatches"><span class="sw"><i style="background:#ffffff"></i>#FFFFFF</span><span class="sw"><i style="background:#111111"></i>#111111</span><span class="sw"><i style="background:#5c5c5c"></i>#5C5C5C</span><span class="sw"><i style="background:#e2e2e2"></i>#E2E2E2</span></span></div>
+          <div class="spec-row"><span class="bp-cap">Palette</span><span class="swatches"><span class="sw"><i style="background:#FFFFFF"></i>#FFFFFF</span><span class="sw"><i style="background:#111111"></i>#111111</span><span class="sw"><i style="background:#5C5C5C"></i>#5C5C5C</span><span class="sw"><i style="background:#E2E2E2"></i>#E2E2E2</span></span></div>
         </div>
       </div>
-      <div class="gallery">
-        <img src="https://ik.imagekit.io/colibrarian/Kondo/products/kimono/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo kimono" loading="lazy">
-        <img src="https://ik.imagekit.io/colibrarian/Kondo/products/skirt/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo skirt" loading="lazy">
-        <img src="https://ik.imagekit.io/colibrarian/Kondo/products/top/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo top" loading="lazy">
-        <img src="https://ik.imagekit.io/colibrarian/Kondo/products/aladdin/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo Aladdin piece" loading="lazy">
-      </div>
+      <div class="gallery"><img src="https://ik.imagekit.io/colibrarian/Kondo/products/kimono/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo garment" loading="lazy" style="aspect-ratio:3/4"><img src="https://ik.imagekit.io/colibrarian/Kondo/products/skirt/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo garment" loading="lazy" style="aspect-ratio:3/4"><img src="https://ik.imagekit.io/colibrarian/Kondo/products/top/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo garment" loading="lazy" style="aspect-ratio:3/4"><img src="https://ik.imagekit.io/colibrarian/Kondo/products/aladdin/1.jpg?tr=w-500,q-75,f-auto" alt="Kondo garment" loading="lazy" style="aspect-ratio:3/4"></div>
     </div>
   </section>
 
   <section class="block reveal">
     <div><div class="label">Handed over</div><h2>What the client got at launch</h2></div>
-    <div class="body">
-      <ul class="handover"><li>Live website</li><li>Pre-order flow</li><li>Mobile layout</li><li>Privacy policy</li><li>Instagram link</li><li>Full access and ownership</li></ul>
-    </div>
+    <div class="body"><ul class="handover"><li>Live website</li><li>Pre-order flow</li><li>Mobile layout</li><li>Privacy policy</li><li>Instagram link</li><li>Full access and ownership</li></ul></div>
   </section>
 
-  <div class="next"><a href="/portfolio">← All projects</a><span>Next case: <a href="/portfolio">coming soon</a></span></div>
+  <div class="next"><a href="/portfolio">← All projects</a><span>Next case: <a href="/portfolio/solvata-beauty/">Solvata Beauty →</a></span></div>
 
   <section class="cta reveal">
     <h2>Need a site that <span>sells</span> your way?</h2>
