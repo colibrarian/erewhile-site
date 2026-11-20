@@ -92,6 +92,10 @@ PAIRS=[
 ]
 # Texts that only the case-pages version of the portfolio has (Zemits card, case links).
 OPTIONAL=[
+('<span class="bcard-tag">B2B catalogue</span>','<span class="bcard-tag">B2B katalogs</span>'),
+('<span class="bcard-tag">New · Event studio</span>','<span class="bcard-tag">Jaunums · Pasākumu studija</span>'),
+('ORO Studio — Event Space in Tallinn','ORO Studio — pasākumu telpa Tallinā'),
+('Estonian and Russian site with hourly rental, turnkey parties and a booking calendar.','Vietne igauņu un krievu valodā ar stundu nomu, pasākumiem "pēc atslēgas" un rezervāciju kalendāru.'),
 ('<span class="bcard-tag">New · B2B catalogue</span>','<span class="bcard-tag">Jaunums · B2B katalogs</span>'),
 ('Zemits — Cosmetology Equipment','Zemits — kosmetoloģijas iekārtas'),
 ('Three-language catalogue site for the official Zemits representative in the Baltics.','Katalogs trīs valodās oficiālajam Zemits pārstāvim Baltijā.'),

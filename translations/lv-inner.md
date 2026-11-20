@@ -92,42 +92,46 @@ These are the inner pages: Portfolio, Video and the "thank you" page after the c
 | LV-IN-073 | © 2025 Erewhile Digital, Latvia | © 2025 Erewhile Digital, Latvija | |
 | LV-IN-074 | Privacy Policy | Privātuma politika | |
 | LV-IN-075 | Cookie Policy | Sīkdatņu politika | |
-| LV-IN-076 | New · B2B catalogue | Jaunums · B2B katalogs | |
-| LV-IN-077 | Zemits — Cosmetology Equipment | Zemits — kosmetoloģijas iekārtas | |
-| LV-IN-078 | Three-language catalogue site for the official Zemits representative in the Baltics. | Katalogs trīs valodās oficiālajam Zemits pārstāvim Baltijā. | |
-| LV-IN-079 | Case study → | Projekta apraksts → | |
-| LV-IN-080 | Open site ↗ | Atvērt vietni ↗ | |
+| LV-IN-076 | B2B catalogue | B2B katalogs | |
+| LV-IN-077 | New · Event studio | Jaunums · Pasākumu studija | |
+| LV-IN-078 | ORO Studio — Event Space in Tallinn | ORO Studio — pasākumu telpa Tallinā | |
+| LV-IN-079 | Estonian and Russian site with hourly rental, turnkey parties and a booking calendar. | Vietne igauņu un krievu valodā ar stundu nomu, pasākumiem "pēc atslēgas" un rezervāciju kalendāru. | |
+| LV-IN-080 | New · B2B catalogue | Jaunums · B2B katalogs | |
+| LV-IN-081 | Zemits — Cosmetology Equipment | Zemits — kosmetoloģijas iekārtas | |
+| LV-IN-082 | Three-language catalogue site for the official Zemits representative in the Baltics. | Katalogs trīs valodās oficiālajam Zemits pārstāvim Baltijā. | |
+| LV-IN-083 | Case study → | Projekta apraksts → | |
+| LV-IN-084 | Open site ↗ | Atvērt vietni ↗ | |
 
 ## Video page
 
 | ID | English source | Latvian (current) | Latvian (corrected) |
 |---|---|---|---|
-| LV-IN-081 | Video Production — Erewhile Digital | Video veidošana — Erewhile Digital | |
-| LV-IN-082 | Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Latvia. | Video saturs mājaslapām — zīmolu prezentācijas, skaidrojošie video, Reels un YouTube Shorts. Erewhile Digital, Latvija. | |
-| LV-IN-083 | Video production · Latvia | Video veidošana · Latvija | |
-| LV-IN-084 | Content that sells your website | Saturs, kas palīdz jūsu mājaslapai pārdot | |
-| LV-IN-085 | Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms. | Zīmolu prezentācijas, skaidrojošie video, Reels un Shorts — katrs formāts konkrētam mērķim: uzticībai jūsu mājaslapā un sasniedzamībai mobilajās platformās. | |
-| LV-IN-086 | Landscape | Horizontāli | |
-| LV-IN-087 | Vertical | Vertikāli | |
-| LV-IN-088 | Projects | Projekti | |
-| LV-IN-089 | Brand | Zīmols | |
-| LV-IN-090 | Social | Sociālie tīkli | |
-| LV-IN-091 | Event | Pasākums | |
-| LV-IN-092 | · Landscape | · horizontāls | |
-| LV-IN-093 | · Vertical | · vertikāls | |
-| LV-IN-094 | Need video for your site? | Nepieciešams video jūsu mājaslapai? | |
-| LV-IN-095 | Tell us what you're building — we'll suggest the right format, budget and timeline. | Pastāstiet par savu projektu — ieteiksim piemērotāko formātu, budžetu un termiņus. | |
-| LV-IN-096 | Request a format → | Pieteikt formātu → | |
-| LV-IN-097 | Video player | Video atskaņotājs | |
-| LV-IN-098 | Close | Aizvērt | |
-| LV-IN-099 | Previous | Iepriekšējais | |
-| LV-IN-100 | Next | Nākamais | |
+| LV-IN-085 | Video Production — Erewhile Digital | Video veidošana — Erewhile Digital | |
+| LV-IN-086 | Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Latvia. | Video saturs mājaslapām — zīmolu prezentācijas, skaidrojošie video, Reels un YouTube Shorts. Erewhile Digital, Latvija. | |
+| LV-IN-087 | Video production · Latvia | Video veidošana · Latvija | |
+| LV-IN-088 | Content that sells your website | Saturs, kas palīdz jūsu mājaslapai pārdot | |
+| LV-IN-089 | Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms. | Zīmolu prezentācijas, skaidrojošie video, Reels un Shorts — katrs formāts konkrētam mērķim: uzticībai jūsu mājaslapā un sasniedzamībai mobilajās platformās. | |
+| LV-IN-090 | Landscape | Horizontāli | |
+| LV-IN-091 | Vertical | Vertikāli | |
+| LV-IN-092 | Projects | Projekti | |
+| LV-IN-093 | Brand | Zīmols | |
+| LV-IN-094 | Social | Sociālie tīkli | |
+| LV-IN-095 | Event | Pasākums | |
+| LV-IN-096 | · Landscape | · horizontāls | |
+| LV-IN-097 | · Vertical | · vertikāls | |
+| LV-IN-098 | Need video for your site? | Nepieciešams video jūsu mājaslapai? | |
+| LV-IN-099 | Tell us what you're building — we'll suggest the right format, budget and timeline. | Pastāstiet par savu projektu — ieteiksim piemērotāko formātu, budžetu un termiņus. | |
+| LV-IN-100 | Request a format → | Pieteikt formātu → | |
+| LV-IN-101 | Video player | Video atskaņotājs | |
+| LV-IN-102 | Close | Aizvērt | |
+| LV-IN-103 | Previous | Iepriekšējais | |
+| LV-IN-104 | Next | Nākamais | |
 
 ## Thanks page
 
 | ID | English source | Latvian (current) | Latvian (corrected) |
 |---|---|---|---|
-| LV-IN-101 | Thank you — Erewhile Digital | Paldies — Erewhile Digital | |
-| LV-IN-102 | Thank you, we got your request | Paldies, jūsu pieteikums ir saņemts | |
-| LV-IN-103 | We'll get back to you soon to talk through the details. If it's urgent, call or message us at | Drīzumā sazināsimies ar jums, lai pārrunātu detaļas. Ja jautājums ir steidzams, zvaniet vai rakstiet mums uz | |
-| LV-IN-104 | Back to the website | Atpakaļ uz mājaslapu | |
+| LV-IN-105 | Thank you — Erewhile Digital | Paldies — Erewhile Digital | |
+| LV-IN-106 | Thank you, we got your request | Paldies, jūsu pieteikums ir saņemts | |
+| LV-IN-107 | We'll get back to you soon to talk through the details. If it's urgent, call or message us at | Drīzumā sazināsimies ar jums, lai pārrunātu detaļas. Ja jautājums ir steidzams, zvaniet vai rakstiet mums uz | |
+| LV-IN-108 | Back to the website | Atpakaļ uz mājaslapu | |

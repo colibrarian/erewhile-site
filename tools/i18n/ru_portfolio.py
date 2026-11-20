@@ -94,6 +94,10 @@ PAIRS=[
 (">Cookie Policy</span>",">Политика cookie</span>"),
 ]
 OPTIONAL=[
+('<span class="bcard-tag">B2B catalogue</span>','<span class="bcard-tag">B2B-каталог</span>'),
+('<span class="bcard-tag">New · Event studio</span>','<span class="bcard-tag">Новое · Студия для мероприятий</span>'),
+('ORO Studio — Event Space in Tallinn','ORO Studio — пространство для мероприятий в Таллине'),
+('Estonian and Russian site with hourly rental, turnkey parties and a booking calendar.','Сайт на эстонском и русском: почасовая аренда, праздники под ключ и календарь бронирования.'),
 ('<span class="bcard-tag">New · B2B catalogue</span>','<span class="bcard-tag">Новое · B2B-каталог</span>'),
 ('Zemits — Cosmetology Equipment','Zemits — косметологическое оборудование'),
 ('Three-language catalogue site for the official Zemits representative in the Baltics.','Сайт-каталог на трёх языках для официального представителя Zemits в Балтии.'),
