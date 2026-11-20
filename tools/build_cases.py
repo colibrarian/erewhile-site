@@ -407,6 +407,7 @@ def page(c, nxt):
 {STYLE}{stage_css(c['slug'])}
     .case{{{vars_}}}
   </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
 </head>
 <body>
 {HEADER}
@@ -554,6 +555,7 @@ def kb_page(c, nxt):
 {STYLE}{KB_STYLE}
     .case{{{vars_}}}
   </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
 </head>
 <body>
 {HEADER}
