@@ -64,15 +64,195 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/video/"/>
   </url>
   <url><loc>https://erewhile.digital/en/fast-website.html</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/oro/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/zemits/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/kondo/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/solvata-beauty/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/razalija/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/jelgava-coworking/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/untu/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/id-chef/</loc></url>
-  <url><loc>https://erewhile.digital/portfolio/grill-in/</loc></url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/oro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/oro/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/oro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/oro/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/oro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/oro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/oro/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/zemits/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/zemits/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/zemits/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/zemits/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/zemits/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/zemits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/zemits/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/kondo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/kondo/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/kondo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/kondo/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/kondo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/kondo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/kondo/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/solvata-beauty/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/solvata-beauty/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/solvata-beauty/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/solvata-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/razalija/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/razalija/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/razalija/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/razalija/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/razalija/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/razalija/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/razalija/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/jelgava-coworking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/jelgava-coworking/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/jelgava-coworking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/jelgava-coworking/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/jelgava-coworking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/jelgava-coworking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/jelgava-coworking/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/untu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/untu/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/untu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/untu/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/untu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/untu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/untu/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/id-chef/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/id-chef/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/id-chef/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/id-chef/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/id-chef/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/id-chef/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/id-chef/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/portfolio/grill-in/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/grill-in/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/grill-in/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/grill-in/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/grill-in/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/grill-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/grill-in/"/>
+  </url>
   <url>
     <loc>https://erewhile.digital/store-migration/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/store-migration/"/>

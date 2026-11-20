@@ -692,7 +692,8 @@
     .mobile-nav a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
     .mobile-nav a:hover{color:var(--teal)}
     .mobile-nav .m-ctas{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-    @media(max-width:880px){nav{display:none}.burger{display:flex}}
+    nav a{white-space:nowrap}
+    @media(max-width:1080px){nav{display:none}.burger{display:flex}}
     @media(max-width:540px){.social-btn{display:none}.header-ctas .btn-ghost{display:none}.brand-logo{display:none}}
   
     /* ── Header CTA alignment fix ── */
@@ -725,6 +726,7 @@
       <a href="/">Websites</a>
       <a href="/portfolio" class="active">Portfolio</a>
       <a href="/video">Video</a>
+      <a href="/store-migration/">Online stores</a>
       <a href="#contact">Contact</a>
       <a href="/lv/portfolio/" hreflang="lv" lang="lv">LV</a>
       <a href="/ru/portfolio/" hreflang="ru" lang="ru">RU</a>
@@ -744,6 +746,7 @@
   <a href="/">Websites</a>
   <a href="/portfolio" class="active">Portfolio</a>
   <a href="/video">Video</a>
+  <a href="/store-migration/">Online stores</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
   <a href="/lv/portfolio/" hreflang="lv" lang="lv">Latviski</a>
   <a href="/ru/portfolio/" hreflang="ru" lang="ru">Русский</a>
@@ -1018,7 +1021,7 @@
 <!-- ── CTA / FORM ── -->
 <div class="cta-section" id="contact">
   <div class="cta-card reveal">
-    <h2>Ready to build something <em>that works</em>?</h2>
+    <h2>Ready to start <em>your project</em>?</h2>
     <p class="cta-desc">Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details.</p>
 
     <form action="https://formsubmit.co/web@erewhile.digital" method="POST">
@@ -1064,6 +1067,7 @@
   <div class="footer-row">
     <span class="footer-brand">© 2025 Erewhile Digital, Latvia</span>
     <div class="footer-links">
+      <a class="footer-link" href="/store-migration/">Online stores &amp; Etsy migration</a>
       <span class="footer-link" onclick="openModal('terms')">Terms & Conditions</span>
       <span class="footer-link" onclick="openModal('privacy')">Privacy Policy</span>
       <span class="footer-link" onclick="openModal('cookies')">Cookie Policy</span>

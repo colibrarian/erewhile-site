@@ -9,13 +9,17 @@
   <title>Solvata Beauty case study: website for a hardware cosmetology studio — Erewhile Digital</title>
   <meta name="description" content="How we built a premium website for Solvata Beauty, a hardware cosmetology studio in Latvia: technologies, results, team and booking."/>
   <link rel="canonical" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+  <link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
+  <link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/solvata-beauty/"/>
+  <link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/solvata-beauty/"/>
+  <link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/solvata-beauty/"/>
   <meta property="og:title" content="Solvata Beauty case study — Erewhile Digital"/>
   <meta property="og:description" content="How we built a premium website for Solvata Beauty, a hardware cosmetology studio in Latvia: technologies, results, team and booking."/>
   <meta property="og:image" content="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/OG%20image%20solvata.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Solvata Beauty — case study", "url": "https://erewhile.digital/portfolio/solvata-beauty/", "about": "How we built a premium website for Solvata Beauty, a hardware cosmetology studio in Latvia: technologies, results, team and booking.", "creator": {"@id": "https://erewhile.digital/#org"}, "image": "https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/OG%20image%20solvata.png", "isBasedOn": "https://solvatabeauty.lv"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Solvata Beauty — case study", "url": "https://erewhile.digital/portfolio/solvata-beauty/", "about": "How we built a premium website for Solvata Beauty, a hardware cosmetology studio in Latvia: technologies, results, team and booking.", "creator": {"@id": "https://erewhile.digital/#org"}, "image": "https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/OG%20image%20solvata.png", "isBasedOn": "https://solvatabeauty.lv", "inLanguage": "en"}</script>
   <style>
     :root{--ink:#0a0a0a;--muted:#6b6f6e;--line:rgba(10,10,10,.08);--bg:#f7f7f5;--teal:#0D3E3E;--teal-line:rgba(13,62,62,.22);--teal-dim:rgba(13,62,62,.07);--soft:#9FE6E4;--font:'Montserrat',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -46,7 +50,9 @@
     .mobile-nav.open{display:flex}
     .mobile-nav a{font-size:18px;font-weight:700;padding:14px 0;border-bottom:1px solid var(--line)}
     .mobile-nav a.active{color:var(--teal)}
-    @media(max-width:640px){nav{display:none}.hdr .btn-sm{margin-left:auto}.brand img{display:none}.burger{display:flex}}
+    nav a{white-space:nowrap}
+    @media(max-width:920px){nav{display:none}.hdr .btn-sm{margin-left:auto}.burger{display:flex}}
+    @media(max-width:640px){.brand img{display:none}}
     .btn{white-space:nowrap}
 
     .crumbs{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:clamp(28px,4vw,48px)}
@@ -70,11 +76,11 @@
     .fact dd{font-weight:700;font-size:14px;line-height:1.4}
     @media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
 
-    .block{display:grid;grid-template-columns:260px 1fr;gap:clamp(20px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--line)}
-    @media(max-width:760px){.block{grid-template-columns:1fr}}
+    .block{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(20px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--line)}
+    @media(max-width:760px){.block{grid-template-columns:minmax(0,1fr)}}
     .label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
     .block h2{font-size:clamp(22px,2.6vw,32px);line-height:1.15;letter-spacing:-.03em;font-weight:800;margin-top:8px;text-wrap:balance}
-    .body{max-width:68ch;display:grid;gap:14px;color:#2a2a2a}
+    .body{max-width:68ch;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;color:#2a2a2a}
     .body.wide{max-width:none}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media(max-width:600px){.list{grid-template-columns:1fr}}
@@ -87,7 +93,7 @@
     .sheet{--sl:rgba(0,0,0,.08);--sm:rgba(0,0,0,.45);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);grid-template-rows:repeat(var(--n),auto) auto;background:var(--c-logo-bg,#fff);color:var(--c-ink,#111);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:6px}
     .sheet.dark{--sl:rgba(255,255,255,.1);--sm:rgba(255,255,255,.5);border-color:transparent}
     .sh-cell{position:relative;padding:clamp(18px,2.4vw,28px)}
-    .sh-cap{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--sm);position:relative;z-index:1}
+    .sh-cap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--sm);position:relative;z-index:1}
     .sh-logo{grid-row:1 / span var(--n);border-right:1px solid var(--sl);display:flex;flex-direction:column;min-height:280px;overflow:hidden}
     .sh-logo img,.sh-logo .bp-mark{margin:auto;position:relative}
     .sh-logo img{width:min(200px,64%);height:auto;padding-block:24px}
@@ -108,7 +114,7 @@
     .sw span{font-family:var(--mono);font-size:11px;opacity:.7}
     .sw+.sw{box-shadow:inset 1px 0 0 rgba(0,0,0,.06)}
     @media(max-width:760px){
-      .sheet{grid-template-columns:1fr;grid-template-rows:none}
+      .sheet{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
       .sh-logo{grid-row:auto;border-right:none;border-bottom:1px solid var(--sl);min-height:200px}
       .sh-palette{flex-direction:column}
       .sw{min-height:0;flex-direction:row;justify-content:space-between;align-items:center;padding:16px 18px}
@@ -130,6 +136,8 @@
     .cta h2 span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:.18em;padding:0 .14em}
     .cta p{margin-top:14px;color:rgba(255,255,255,.82);max-width:52ch}
     .cta .btn{margin-top:24px;background:#fff;color:var(--teal)}
+    .cta .btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);margin-left:8px}
+    @media(max-width:560px){.cta .btn.alt{margin-left:0;white-space:normal}}
 
     footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
     footer a:hover{color:var(--teal)}
@@ -166,20 +174,22 @@
 <header>
   <div class="wrap hdr">
     <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
-    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
+    <nav><a href="/">Websites</a><a href="/portfolio/" class="active">Portfolio</a><a href="/video/">Video</a><a href="/store-migration/">Online stores</a><a href="/#ew-contact">Contact</a><a href="/lv/portfolio/solvata-beauty/" hreflang="lv" lang="lv">LV</a><a href="/ru/portfolio/solvata-beauty/" hreflang="ru" lang="ru">RU</a></nav>
     <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
     <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="/">Websites</a>
-  <a href="/portfolio" class="active">Portfolio</a>
-  <a href="/video">Video</a>
+  <a href="/portfolio/" class="active">Portfolio</a>
+  <a href="/video/">Video</a>
+  <a href="/store-migration/">Online stores</a>
   <a href="/#ew-contact">Contact</a>
+  <a href="/lv/portfolio/solvata-beauty/" hreflang="lv" lang="lv">Latviski</a><a href="/ru/portfolio/solvata-beauty/" hreflang="ru" lang="ru">Русский</a>
 </div>
 
 <main class="wrap case">
-  <div class="crumbs"><a href="/portfolio">Portfolio</a> / Solvata Beauty</div>
+  <div class="crumbs"><a href="/portfolio/">Portfolio</a> / Solvata Beauty</div>
 
   <section class="intro">
     <div>
@@ -197,12 +207,12 @@
   <dl class="facts reveal"><div class="fact"><dt>Client</dt><dd>Solvata Beauty studio</dd></div><div class="fact"><dt>Market</dt><dd>Latvia</dd></div><div class="fact"><dt>Format</dt><dd>Home page + treatment pages</dd></div><div class="fact"><dt>Booking</dt><dd>Online booking + WhatsApp</dd></div></dl>
 
   <section class="block reveal">
-    <div><div class="label">The task</div><h2>Turn complex treatments into a confident booking</h2></div>
+    <div><div class="label">The task</div><h2>Explain complex treatments clearly enough to book with confidence</h2></div>
     <div class="body"><p>Treatments like RF microneedling or endospheres are hard to judge from a price list. Clients want to understand what the device does, whether it is safe, and who will do the procedure.</p><p>The studio needed a site that feels as premium as the service and leads naturally to a booking.</p></div>
   </section>
 
   <section class="block reveal">
-    <div><div class="label">What we built</div><h2>Technology, proof and people on one path</h2></div>
+    <div><div class="label">What we built</div><h2>Technology, results and the team</h2></div>
     <div class="body"><div class="list"><div class="item"><b>Technology section</b><span>Every device gets a photo and a plain explanation of what it does and how it feels.</span></div><div class="item"><b>Dedicated treatment pages</b><span>Separate pages for services and RF microneedling give room for detail and search.</span></div><div class="item"><b>Before and after, reviews</b><span>Real results and client words answer the "does it work" question.</span></div><div class="item"><b>Team and booking</b><span>The people behind the studio, a map and a booking call to action in every section.</span></div></div></div>
   </section>
 
@@ -224,7 +234,7 @@
     <div class="body"><ul class="handover"><li>Live website</li><li>Treatment pages</li><li>Booking flow</li><li>Map and contacts</li><li>Privacy policy</li></ul></div>
   </section>
 
-  <div class="next"><a href="/portfolio">← All projects</a><span>Next case: <a href="/portfolio/razalija/">Razalija →</a></span></div>
+  <div class="next"><a href="/portfolio/">← All projects</a><span>Next case: <a href="/portfolio/razalija/">Razalija →</a></span></div>
 
   <section class="cta reveal">
     <h2>Want clients to <span>trust</span> you before the first visit?</h2>

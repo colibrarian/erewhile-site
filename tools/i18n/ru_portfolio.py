@@ -63,7 +63,7 @@ PAIRS=[
 ('Answer six short questions in our calculator and get a realistic price range for your website.','Ответьте на шесть коротких вопросов в калькуляторе и получите реальный диапазон цены для вашего сайта.'),
 ('Open the price calculator →','Открыть калькулятор →'),
 # form
-('Ready to build something <em>that works</em>?','Готовы сделать то, <em>что работает</em>?'),
+('Ready to start <em>your project</em>?','Готовы начать <em>свой проект</em>?'),
 ("Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details.",
  'Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. Мы свяжемся с вами и обсудим детали.'),
 ('Portfolio page inquiry — erewhile.digital','Заявка со страницы портфолио — erewhile.digital (RU)'),
@@ -92,6 +92,8 @@ PAIRS=[
 (">Terms & Conditions</span>",">Условия использования</span>"),
 (">Privacy Policy</span>",">Политика конфиденциальности</span>"),
 (">Cookie Policy</span>",">Политика cookie</span>"),
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Интернет-магазины</a>'),
+('>Online stores &amp; Etsy migration<','>Интернет-магазины и перенос с Etsy<'),
 ]
 OPTIONAL=[
 ('<span class="bcard-tag">B2B catalogue</span>','<span class="bcard-tag">B2B-каталог</span>'),

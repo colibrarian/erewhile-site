@@ -87,6 +87,8 @@ PAIRS_HTML=[
 # faq heading
 ('Questions <span class="g">clients ask</span>','Biežāk uzdotie <span class="g">jautājumi</span>'),
 # form
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Interneta veikali</a>'),
+('>Online stores &amp; Etsy migration<','>Interneta veikali un pārnešana no Etsy<'),
 ('Request <span class="g">a quote</span>','Pieteikt <span class="g">projektu</span>'),
 ("Tell us your niche and goal, and we'll get back to you to talk through the details.",'Īsi pastāstiet par savu nozari un mērķi, un mēs sazināsimies ar jums, lai pārrunātu detaļas.'),
 ('New request — erewhile.digital (EN)','Jauns pieteikums — erewhile.digital (LV)'),

@@ -9,6 +9,7 @@ import html, json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from case_stages import STAGES, stage_css
+import importlib
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://erewhile.digital'
@@ -25,7 +26,7 @@ CASES = [
     lede='ORO Studio is a small event space in the heart of Tallinn for up to 15 people. Experts rent it for workshops, consultations and women’s circles, and friends book it for birthdays and bachelorette parties, with or without a ready programme.',
     cover='/assets/cases/oro/cover.jpg', cover_wh=(1200, 630),
     facts=[('Client', 'ORO Studio, Tallinn'), ('Market', 'Tallinn, Estonia'), ('Languages', 'Estonian, Russian'), ('Booking', 'Calendar + email + invoice')],
-    task_h='Turn messages about free dates into bookings',
+    task_h='Fewer messages, more bookings',
     task=['Every rental started with the same chat: is the studio free that evening, how much is it for ten people, what is included. Answering it by hand took time and dates were easy to mix up.',
           'The site had to show the atmosphere, explain two very different offers (renting the space and a turnkey party) and let people pick a free time on their own.'],
     built_h='From first look to a booked evening',
@@ -46,11 +47,11 @@ CASES = [
     cta=('Renting out a <span>space</span>?', 'Tell us how people book you today. We will build a calendar that fills the free hours without the back-and-forth.'),
   ),
   dict(
-    slug='zemits', name='Zemits',
+    slug='zemits', store=True, name='Zemits',
     url='https://zemits-latvija.lv', host='zemits-latvija.lv',
     title='Zemits case study: three-language catalogue for a cosmetology equipment distributor',
     desc='How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics.',
-    h1='A three-language catalogue that sells <span>professional</span> beauty equipment',
+    h1='A three-language catalogue of <span>professional</span> beauty equipment',
     tags=['Beauty equipment', 'Latvia &amp; Baltics', 'LV · RU · EN', 'Device catalogue'],
     lede='Zemits Skin Expert is the official Zemits representative in the Baltic states. They sell professional face and body devices to salons, clinics and specialists, and back them with training, a 24-month warranty and local service.',
     cover='/assets/cases/zemits/cover.jpg', cover_wh=(1200, 630),
@@ -58,7 +59,7 @@ CASES = [
     task_h='Help salons compare devices worth thousands of euros',
     task=['Salon owners and cosmetologists do not buy a laser or an RF platform on impulse. They compare technologies, prices and what support they get after the purchase.',
           'The site had to present the whole device range in three languages, show real treatment results and make it easy to ask a question or book training.'],
-    built_h='From first look to a request in one flow',
+    built_h='From first look to a request',
     built=[('Device catalogue', 'Each device has a card and a detail popup with price, features and photos, on the home page and a full catalogue page.'),
            ('Training and seminars', 'Masterclasses and seminars are part of the offer, so buyers see they will not be left alone with the device.'),
            ('Results and reviews', 'Before-and-after photos and client reviews build trust for a technical, high-ticket product.'),
@@ -74,14 +75,14 @@ CASES = [
              'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/3.png?tr=w-500', 'https://ik.imagekit.io/xwsgpirygo/Zemits/aparati/4.png?tr=w-500'],
     gallery_alt='Zemits device from the catalogue', gallery_ratio='1/1',
     handover=['Live site in 3 languages', 'Device catalogue', 'Build script for easy edits', 'Link previews for every page', 'Sitemap, schema and llms.txt'],
-    cta=('Selling something that needs <span>explaining</span>?', 'Tell us what you sell and who buys it. We will plan the pages that answer their questions before they call.'),
+    cta=('Is your product hard to <span>explain</span> in one sentence?', 'Tell us what you sell and who buys it. We will plan the pages that answer their questions before they call.'),
   ),
   dict(
-    slug='kondo', name='Kondo',
+    slug='kondo', store=True, name='Kondo',
     url='https://kondo.ee', host='kondo.ee',
     title='Kondo case study: website for a made-to-order clothing label',
     desc='How we built a one-page brand site with a pre-order bag for Kondo, an Estonian label making linen and ramie clothing to order.',
-    h1='A brand site that takes <span>pre&#8209;orders</span> for a clothing label',
+    h1='A brand site with <span>pre&#8209;orders</span> for linen outfits',
     tags=['Fashion', 'Estonia', 'Fixed deadline', 'One-page site', 'Pre-order bag'],
     lede='Kondo makes linen and ramie clothing for yoga and everyday wear, sewn to order. They needed a site that tells the story of the fabrics and lets people put together an order without a full online store.',
     cover='/assets/cases/kondo/cover.jpg', cover_wh=(1200, 630),
@@ -106,7 +107,7 @@ CASES = [
              'https://ik.imagekit.io/colibrarian/Kondo/products/top/1.jpg?tr=w-500,q-75,f-auto', 'https://ik.imagekit.io/colibrarian/Kondo/products/aladdin/1.jpg?tr=w-500,q-75,f-auto'],
     gallery_alt='Kondo garment', gallery_ratio='3/4',
     handover=['Live website', 'Pre-order flow', 'Mobile layout', 'Privacy policy', 'Instagram link'],
-    cta=('Need a site that <span>sells</span> your way?', 'Tell us how you take orders today. We will suggest the simplest site that fits, with a fixed price before work starts.'),
+    cta=('Want to take orders <span>right on</span> your site?', 'Tell us how you take orders today. We will suggest the simplest site that fits, with a fixed price before work starts.'),
   ),
   dict(
     slug='solvata-beauty', name='Solvata Beauty',
@@ -118,10 +119,10 @@ CASES = [
     lede='Solvata Beauty is a hardware cosmetology studio that works only with original, clinically tested premium devices. The site had to show that care and expertise before a client books.',
     cover='https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/OG%20image%20solvata.png', cover_wh=(1200, 630),
     facts=[('Client', 'Solvata Beauty studio'), ('Market', 'Latvia'), ('Format', 'Home page + treatment pages'), ('Booking', 'Online booking + WhatsApp')],
-    task_h='Turn complex treatments into a confident booking',
+    task_h='Explain complex treatments clearly enough to book with confidence',
     task=['Treatments like RF microneedling or endospheres are hard to judge from a price list. Clients want to understand what the device does, whether it is safe, and who will do the procedure.',
           'The studio needed a site that feels as premium as the service and leads naturally to a booking.'],
-    built_h='Technology, proof and people on one path',
+    built_h='Technology, results and the team',
     built=[('Technology section', 'Every device gets a photo and a plain explanation of what it does and how it feels.'),
            ('Dedicated treatment pages', 'Separate pages for services and RF microneedling give room for detail and search.'),
            ('Before and after, reviews', 'Real results and client words answer the "does it work" question.'),
@@ -140,7 +141,7 @@ CASES = [
     cta=('Want clients to <span>trust</span> you before the first visit?', 'Tell us about your studio and treatments. We will plan a site that explains them clearly and leads to booking.'),
   ),
   dict(
-    slug='razalija', name='Razalija',
+    slug='razalija', store=True, name='Razalija',
     url='https://razalija.lv', host='razalija.lv',
     title='Razalija case study: website for a flower shop in Riga',
     desc='How we built a Latvian and Russian site for Razalija, a florist in Mežaparks, Riga: bouquet gallery, delivery zones and ordering through WhatsApp.',
@@ -149,7 +150,7 @@ CASES = [
     lede='Razalija is a florist in Mežaparks, Riga, with fresh bouquets, compositions for special occasions, custom orders and delivery across the city. Most customers order from a phone, often at the last minute.',
     cover='https://ik.imagekit.io/coworker/Razalija/raz%201.png?tr=w-1200,h-630,c-maintain_ratio', cover_wh=(1200, 630),
     facts=[('Client', 'Razalija flower shop'), ('Market', 'Riga, Latvia'), ('Languages', 'Latvian, Russian'), ('Ordering', 'Gallery + WhatsApp')],
-    task_h='Make a last-minute bouquet order easy from a phone',
+    task_h='Make a last-minute bouquet easy to order from a phone',
     task=['Flowers are often bought in a hurry: for a birthday tonight or a meeting tomorrow. A long checkout loses those customers.',
           'The shop needed a site where people see ready bouquets, understand delivery, and send an order in a few taps, in Latvian or Russian.'],
     built_h='See it, pick it, send it',
@@ -199,7 +200,7 @@ CASES = [
              'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/Cowork%203.png?tr=f-auto,w-600', 'https://ik.imagekit.io/coworker/Jelgava%20Coworking%20Space/conference%20room.png?tr=f-auto,w-600'],
     gallery_alt='Jelgava Coworking Space interior', gallery_ratio='4/3',
     handover=['Live site in 3 languages', 'Packages and prices', 'Application form', 'Privacy policy in 3 languages', 'Sitemap, schema and llms.txt'],
-    cta=('Need your prices to <span>sell</span>, not scare?', 'Tell us about your offer. We will lay it out so people pick a plan instead of leaving.'),
+    cta=('Want your prices to be <span>clear</span> at a glance?', 'Tell us about your offer. We will lay it out so people pick a plan instead of leaving.'),
   ),
   dict(
     slug='untu', name='UNTU',
@@ -210,11 +211,11 @@ CASES = [
     tags=['NGO', 'Erasmus+', 'Project pages', 'Applications'],
     lede='UNTU is a non-profit youth organisation for people aged 18–35, running international projects, trainings, volunteering and cultural exchange.',
     cover='https://ik.imagekit.io/xshkpkf2i/Untu/Logo%20and%20Og/UNTU%20OG%20image.png', cover_wh=(1200, 630),
-    facts=[('Client', 'UNTU, youth NGO'), ('Audience', 'Young people 18–35, partners'), ('Format', 'Main site + project sections'), ('Leads', 'Apply and partner forms')],
+    facts=[('Organisation', 'UNTU, youth NGO'), ('Audience', 'Young people 18–35, partners'), ('Format', 'Main site + project sections'), ('Sign-ups', 'Apply and partner forms')],
     task_h='One site for the organisation and all its projects',
     task=['An NGO speaks to several audiences at once: young people who want to join, partner organisations, and funders who need to see results.',
           'Each Erasmus+ project also needs its own space for programme, travel, participants and outputs that stays online after the project ends.'],
-    built_h='Organisation on top, projects underneath',
+    built_h='The organisation first, then its projects',
     built=[('Events and calls', 'Upcoming programmes and an "apply" path right from the first screen.'),
            ('Vision and about', 'What UNTU stands for, in clear language for young people and partners.'),
            ('Project sections', 'FTS and DWCM have their own pages: programme, travel info, participants, library, media and learning modules.'),
@@ -228,6 +229,7 @@ CASES = [
     ink='#ffffff', logo_bg='#0B0D12', logo='https://ik.imagekit.io/xshkpkf2i/Untu/logo%20untu.png?tr=w-480', logo_wh=(None, None), dark_panel=True,
     gallery=['https://ik.imagekit.io/xshkpkf2i/Untu/DSC_6724.jpg?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/IMG_7184.JPG?tr=w-500',
              'https://ik.imagekit.io/xshkpkf2i/Untu/asset%20photo%20session.png?tr=w-500', 'https://ik.imagekit.io/xshkpkf2i/Untu/ctml.png?tr=w-500'],
+    handed_h='What the organisation got at launch',
     gallery_alt='UNTU project moment', gallery_ratio='4/3',
     handover=['Live website', 'Project sections', 'Apply and partner forms', 'Privacy and terms', 'Sitemap'],
     cta=('Running an NGO or <span>Erasmus+</span> project?', 'Tell us about your project. We will plan pages for participants, partners and results that stay online after it ends.'),
@@ -237,12 +239,12 @@ CASES = [
     url='https://idchef13.com', host='idchef13.com',
     title='ID Chef case study: personal brand website for a chef and restaurant consultant',
     desc='How we built a personal brand site in English, Latvian and Russian for Denis Ivankov, an executive chef and restaurant consultant with 30+ years of experience.',
-    h1='A personal brand site for a chef who <span>fixes</span> kitchens',
+    h1='A personal brand site for a chef who makes kitchens <span>profitable</span>',
     tags=['Personal brand', 'Riga', 'EN · LV · RU', 'Consulting'],
     lede='Denis Ivankov is an executive chef and restaurant consultant with more than 30 years in the industry. He launches restaurants from scratch and turns kitchen chaos into profitable systems.',
     cover='https://ik.imagekit.io/xwsgpirygo/id%20chef/logos/OG.png', cover_wh=(1200, 630),
     facts=[('Client', 'Denis Ivankov, ID Chef'), ('Market', 'Latvia and abroad'), ('Languages', 'English, Latvian, Russian'), ('Leads', 'Contact form + WhatsApp')],
-    task_h='Sell experience, not just a CV',
+    task_h='Show experience, not just a CV',
     task=['Restaurant owners hire a consultant when something is going wrong. They need to trust the person quickly and understand what he will actually do.',
           'The site had to tell a 30-year career story in a few screens and turn it into clear services and a way to get in touch.'],
     built_h='Story, services, approach, contact',
@@ -273,10 +275,10 @@ CASES = [
     lede='Grill In is a grill bar by the lake in Mežaparks, Jēkabpils, with a wide menu, takeaway and an inflatable water park on the lake.',
     cover='https://ik.imagekit.io/erewhile/erewhile/portfolio/4.jpg', cover_wh=(1600, 900),
     facts=[('Client', 'Grill In'), ('Market', 'Jēkabpils, Latvia'), ('Format', 'One-page site'), ('Actions', 'Takeaway, booking, directions')],
-    task_h='Three businesses, one simple page',
+    task_h='Three offers, one simple page',
     task=['A restaurant, a takeaway and a water park attract different visitors with different questions: what is on the menu, when can I pick up, how do I book.',
           'The site had to answer all three without becoming confusing on a phone.'],
-    built_h='Clear sections for each reason to visit',
+    built_h='A clear section for every reason to visit',
     built=[('Grill bar', 'Menu highlights and the lakeside atmosphere.'),
            ('Takeaway', 'Open the menu, choose dishes and set a pickup time.'),
            ('Water park', 'What the park offers and a booking call to action.'),
@@ -294,20 +296,55 @@ CASES = [
   ),
 ]
 
-HEADER = '''<header>
+LANGS = ('en', 'lv', 'ru')
+
+
+def pre(lang):
+  return '' if lang == 'en' else '/' + lang
+
+
+def header(lang='en', slug=None):
+  """Site header for a case page. Language links point to the same case in the other languages."""
+  t, p = UI[lang], pre(lang)
+  alt = ''.join('<a href="%s/portfolio/%s/" hreflang="%s" lang="%s">%s</a>' % (pre(l), slug, l, l, l.upper())
+                for l in LANGS if l != lang) if slug else ''
+  malt = ''.join('<a href="%s/portfolio/%s/" hreflang="%s" lang="%s">%s</a>' % (pre(l), slug, l, l, UI[l]['lang_name'])
+                 for l in LANGS if l != lang) if slug else ''
+  return f'''<header>
   <div class="wrap hdr">
-    <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
-    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
-    <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+    <a class="brand" href="{p}/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
+    <nav><a href="{p}/">{t['nav_web']}</a><a href="{p}/portfolio/" class="active">{t['nav_port']}</a><a href="{p}/video/">{t['nav_video']}</a><a href="{p}/store-migration/">{t['nav_store']}</a><a href="{p}/#ew-contact">{t['nav_contact']}</a>{alt}</nav>
+    <a class="btn btn-teal btn-sm" href="{p}/#ew-contact">{t['quote']}</a>
+    <button class="burger" id="burgerBtn" aria-label="{t['menu']}" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-  <a href="/">Websites</a>
-  <a href="/portfolio" class="active">Portfolio</a>
-  <a href="/video">Video</a>
-  <a href="/#ew-contact">Contact</a>
+  <a href="{p}/">{t['nav_web']}</a>
+  <a href="{p}/portfolio/" class="active">{t['nav_port']}</a>
+  <a href="{p}/video/">{t['nav_video']}</a>
+  <a href="{p}/store-migration/">{t['nav_store']}</a>
+  <a href="{p}/#ew-contact">{t['nav_contact']}</a>
+  {malt}
 </div>'''
+
+
+def alternates(slug):
+  """hreflang links for a case that exists in all three languages."""
+  return ''.join('  <link rel="alternate" hreflang="%s" href="%s%s/portfolio/%s/"/>\n' % (l, SITE, pre(l), slug) for l in LANGS) + \
+         '  <link rel="alternate" hreflang="x-default" href="%s/portfolio/%s/"/>\n' % (SITE, slug)
+
+
+UI = {
+  'en': dict(lang_name='English', nav_web='Websites', nav_port='Portfolio', nav_video='Video', nav_store='Online stores', nav_contact='Contact',
+             quote='Get a quote', menu='Open menu', new='New', open='Open', discuss='Discuss a similar site', task='The task', built='What we built',
+             visual='Visual language', logo='Logo', roles=('Headings', 'Body text', 'Buttons and labels'), handed='Handed over',
+             handed_h='What the client got at launch', all='← All projects', next='Next case:', start='Start a project',
+             store='Online stores &amp; Etsy migration →', footer='© Erewhile Digital · Latvia', case_study='case study',
+             stage_cap="The first screen of {host}, rebuilt from the site's own code: fonts, colours and layout.",
+             stage_aria='First screen of {host}, rebuilt from the site code. Opens the live site', preview='website preview', logo_alt='logo'),
+}
+for _l in LANGS[1:]:
+  UI[_l] = importlib.import_module('i18n.cases_' + _l).UI
 
 SCRIPT = '''<script>
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
@@ -333,8 +370,28 @@ def abs_url(u):
   return u if u.startswith('http') else SITE + u
 
 
-def page(c, nxt):
+def service_btn(c, lang='en'):
+  """E-commerce cases link to the online store service page."""
+  return '<a class="btn alt" href="%s/store-migration/">%s</a>' % (pre(lang), UI[lang]['store']) if c.get('store') else ''
+
+
+def localize(c, lang):
+  """The case with its texts in another language (tools/i18n/cases_<lang>.py); palette roles are given as a list."""
+  if lang == 'en':
+    return c
+  tr = dict(importlib.import_module('i18n.cases_' + lang).CASES[c['slug']])
+  roles = tr.pop('palette', None)
+  out = dict(c, **tr)
+  if roles:
+    assert len(roles) == len(c['palette']), c['slug']
+    out['palette'] = [(x, r) for (x, _), r in zip(c['palette'], roles)]
+  return out
+
+
+def page(c, nxt, lang='en'):
   e = html.escape
+  t, p = UI[lang], pre(lang)
+  c = localize(c, lang)
   d, b, u = c['fonts']
   gf = 'family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500' + ('&' + c['gf'] if c['gf'] else '')
   dark = c.get('dark_panel')
@@ -342,24 +399,25 @@ def page(c, nxt):
            % (font_stack(d), font_stack(b), font_stack(u), c['display_w'], c['display_ls'], c['ink'], c['logo_bg'], c.get('mark_color', c['ink']),
               'rgba(255,255,255,.6)' if dark else '#8a8a8a'))
   panel_bg = c['logo_bg'] if dark else '#fff'
-  ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": c['name'] + ' — case study', "url": SITE + '/portfolio/%s/' % c['slug'],
-        "about": c['desc'], "creator": {"@id": SITE + "/#org"}, "image": abs_url(c['cover']), "isBasedOn": c['url']}
-  tags = ''.join('<span class="tag%s">%s</span>' % (' new' if i == 0 and c.get('new') else '', t)
-                 for i, t in enumerate((['New'] if c.get('new') else []) + c['tags']))
+  ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": c['name'] + ' — ' + t['case_study'], "url": SITE + p + '/portfolio/%s/' % c['slug'],
+        "about": c['desc'], "creator": {"@id": SITE + "/#org"}, "image": abs_url(c['cover']), "isBasedOn": c['url'], "inLanguage": lang}
+  tags = ''.join('<span class="tag%s">%s</span>' % (' new' if i == 0 and c.get('new') else '', x)
+                 for i, x in enumerate(([t['new']] if c.get('new') else []) + c['tags']))
   facts = ''.join('<div class="fact"><dt>%s</dt><dd>%s</dd></div>' % (k, v) for k, v in c['facts'])
   task = ''.join('<p>%s</p>' % p for p in c['task'])
   built = ''.join('<div class="item"><b>%s</b><span>%s</span></div>' % x for x in c['built'])
   if c.get('logo'):
     w, h = c.get('logo_wh', (None, None))
     wh = ' width="%d" height="%d"' % (w, h) if w else ''
-    logo = '<img src="%s" alt="%s logo" loading="lazy"%s>' % (c['logo'], e(c['name']), wh)
+    logo = '<img src="%s" alt="%s %s" loading="lazy"%s>' % (c['logo'], e(c['name']), t['logo_alt'], wh)
   else:
     logo = '<span class="bp-mark">%s</span>' % e(c['sample'][0])
   kanji = '<span class="kanji" aria-hidden="true">%s</span>' % c['kanji'] if c.get('kanji') else ''
   sw = ''.join('<div class="sw" style="background:%s;color:%s"><b>%s</b><span>%s</span></div>' % (x, '#fff' if luminance(x) < .45 else '#111', e(r), x)
                for x, r in c['palette'])
   fonts = []  # one card per font family, with every role it plays
-  for role, fam, cls, smp in (('Headings', d, 'f-display', c['sample'][0]), ('Body text', b, 'f-body', c['sample'][1]), ('Buttons and labels', u, 'f-ui', c['sample'][2])):
+  r1, r2, r3 = t['roles']
+  for role, fam, cls, smp in ((r1, d, 'f-display', c['sample'][0]), (r2, b, 'f-body', c['sample'][1]), (r3, u, 'f-ui', c['sample'][2])):
     for f in fonts:
       if f[1] == fam:
         f[0].append(role.lower()); break
@@ -377,16 +435,16 @@ def page(c, nxt):
   cw, ch = c['cover_wh']
   st = STAGES.get(c['slug'])
   if st:
-    hero = (f'''<a class="stage st-{c['slug']} reveal" href="{c['url']}" target="_blank" rel="noopener" style="--ratio:{st['ratio']};--mratio:{st['mratio']}" aria-label="First screen of {c['host']}, rebuilt from the site code. Opens the live site">
+    hero = (f'''<a class="stage st-{c['slug']} reveal" href="{c['url']}" target="_blank" rel="noopener" style="--ratio:{st['ratio']};--mratio:{st['mratio']}" aria-label="{t['stage_aria'].format(host=c['host'])}">
     <div class="st-in" aria-hidden="true">{st['html']}
     </div>
     <span class="st-open">{c['host']} ↗</span>
   </a>
-  <p class="stage-cap reveal"><span>The first screen of {c['host']}, rebuilt from the site's own code: fonts, colours and layout.</span></p>''')
+  <p class="stage-cap reveal"><span>{t['stage_cap'].format(host=c['host'])}</span></p>''')
   else:
-    hero = '<figure class="shot reveal"><img src="%s" alt="%s website preview" loading="eager" width="%d" height="%d"></figure>' % (c['cover'], e(c['name']), cw, ch)
+    hero = '<figure class="shot reveal"><img src="%s" alt="%s %s" loading="eager" width="%d" height="%d"></figure>' % (c['cover'], e(c['name']), t['preview'], cw, ch)
   return f'''<!doctype html>
-<html lang="en">
+<html lang="{lang}">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -395,8 +453,8 @@ def page(c, nxt):
   <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
   <title>{e(c['title'])} — Erewhile Digital</title>
   <meta name="description" content="{e(c['desc'])}"/>
-  <link rel="canonical" href="{SITE}/portfolio/{c['slug']}/"/>
-  <meta property="og:title" content="{e(c['name'])} case study — Erewhile Digital"/>
+  <link rel="canonical" href="{SITE}{p}/portfolio/{c['slug']}/"/>
+{alternates(c['slug'])}  <meta property="og:title" content="{e(c['name'])} {t['case_study']} — Erewhile Digital"/>
   <meta property="og:description" content="{e(c['desc'])}"/>
   <meta property="og:image" content="{abs_url(c['cover'])}"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -410,10 +468,10 @@ def page(c, nxt):
   <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
 </head>
 <body>
-{HEADER}
+{header(lang, c['slug'])}
 
 <main class="wrap case">
-  <div class="crumbs"><a href="/portfolio">Portfolio</a> / {e(c['name'])}</div>
+  <div class="crumbs"><a href="{p}/portfolio/">{t['nav_port']}</a> / {e(c['name'])}</div>
 
   <section class="intro">
     <div>
@@ -422,7 +480,7 @@ def page(c, nxt):
     </div>
     <div>
       <p class="lede">{c['lede']}</p>
-      <div class="actions"><a class="btn btn-teal" href="{c['url']}" target="_blank" rel="noopener">Open {c['host']} ↗</a><a class="btn btn-ghost" href="/#ew-contact">Discuss a similar site</a></div>
+      <div class="actions"><a class="btn btn-teal" href="{c['url']}" target="_blank" rel="noopener">{t['open']} {c['host']} ↗</a><a class="btn btn-ghost" href="{p}/#ew-contact">{t['discuss']}</a></div>
     </div>
   </section>
 
@@ -431,21 +489,21 @@ def page(c, nxt):
   <dl class="facts reveal">{facts}</dl>
 
   <section class="block reveal">
-    <div><div class="label">The task</div><h2>{c['task_h']}</h2></div>
+    <div><div class="label">{t['task']}</div><h2>{c['task_h']}</h2></div>
     <div class="body">{task}</div>
   </section>
 
   <section class="block reveal">
-    <div><div class="label">What we built</div><h2>{c['built_h']}</h2></div>
+    <div><div class="label">{t['built']}</div><h2>{c['built_h']}</h2></div>
     <div class="body"><div class="list">{built}</div></div>
   </section>
 
   <section class="block reveal">
-    <div><div class="label">Visual language</div><h2>{c['vis_h']}</h2></div>
+    <div><div class="label">{t['visual']}</div><h2>{c['vis_h']}</h2></div>
     <div class="body wide">
       <p>{c['vis']}</p>
       <div class="sheet{' dark' if dark else ''}" style="--n:{len(fonts)}">
-        <div class="sh-cell sh-logo"><div class="sh-cap"><span>Logo</span></div>{kanji}{logo}</div>
+        <div class="sh-cell sh-logo"><div class="sh-cap"><span>{t['logo']}</span></div>{kanji}{logo}</div>
         {type_cards}
         <div class="sh-palette">{sw}</div>
       </div>
@@ -454,19 +512,19 @@ def page(c, nxt):
   </section>
 
   <section class="block reveal">
-    <div><div class="label">Handed over</div><h2>What the client got at launch</h2></div>
+    <div><div class="label">{t['handed']}</div><h2>{c.get('handed_h', t['handed_h'])}</h2></div>
     <div class="body"><ul class="handover">{handover}</ul></div>
   </section>
 
-  <div class="next"><a href="/portfolio">← All projects</a><span>Next case: <a href="/portfolio/{nxt['slug']}/">{e(nxt['name'])} →</a></span></div>
+  <div class="next"><a href="{p}/portfolio/">{t['all']}</a><span>{t['next']} <a href="{p}/portfolio/{nxt['slug']}/">{e(nxt['name'])} →</a></span></div>
 
   <section class="cta reveal">
     <h2>{c['cta'][0]}</h2>
     <p>{c['cta'][1]}</p>
-    <a class="btn" href="/#ew-contact">Start a project</a>
+    <a class="btn" href="{p}/#ew-contact">{t['start']}</a>{service_btn(c, lang)}
   </section>
 
-  <footer><span>© Erewhile Digital · Latvia</span><span><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></span></footer>
+  <footer><span>{t['footer']}</span><span><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></span></footer>
 </main>
 
 {SCRIPT}
@@ -558,7 +616,7 @@ def kb_page(c, nxt):
   <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
 </head>
 <body>
-{HEADER}
+{header('en')}
 
 <main class="wrap case kb">
   <div class="crumbs"><a href="/portfolio">Portfolio</a> / {e(c['name'])}</div>
@@ -671,11 +729,13 @@ bs.forEach(function(x){{x.setAttribute('aria-pressed',x===b)}});var t=b.dataset.
 
 
 if __name__ == '__main__':
-  for i, c in enumerate(CASES):
-    out = os.path.join(ROOT, 'portfolio', c['slug'], 'index.html')
-    os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf-8').write(page(c, CASES[(i + 1) % len(CASES)]))
-    print('built', os.path.relpath(out, ROOT))
+  for lang in LANGS:
+    for i, c in enumerate(CASES):
+      out = os.path.join(ROOT, pre(lang).strip('/'), 'portfolio', c['slug'], 'index.html')
+      os.makedirs(os.path.dirname(out), exist_ok=True)
+      open(out, 'w', encoding='utf-8').write(page(c, CASES[(i + 1) % len(CASES)], lang))
+      print('built', os.path.relpath(out, ROOT))
+  # the FTS library is an English-language resource for international youth workers: English only
   out = os.path.join(ROOT, 'portfolio', KB['slug'], 'index.html')
   os.makedirs(os.path.dirname(out), exist_ok=True)
   open(out, 'w', encoding='utf-8').write(kb_page(KB, CASES[0]))

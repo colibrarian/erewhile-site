@@ -46,7 +46,9 @@
     .mobile-nav.open{display:flex}
     .mobile-nav a{font-size:18px;font-weight:700;padding:14px 0;border-bottom:1px solid var(--line)}
     .mobile-nav a.active{color:var(--teal)}
-    @media(max-width:640px){nav{display:none}.hdr .btn-sm{margin-left:auto}.brand img{display:none}.burger{display:flex}}
+    nav a{white-space:nowrap}
+    @media(max-width:920px){nav{display:none}.hdr .btn-sm{margin-left:auto}.burger{display:flex}}
+    @media(max-width:640px){.brand img{display:none}}
     .btn{white-space:nowrap}
 
     .crumbs{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:clamp(28px,4vw,48px)}
@@ -70,11 +72,11 @@
     .fact dd{font-weight:700;font-size:14px;line-height:1.4}
     @media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
 
-    .block{display:grid;grid-template-columns:260px 1fr;gap:clamp(20px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--line)}
-    @media(max-width:760px){.block{grid-template-columns:1fr}}
+    .block{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(20px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--line)}
+    @media(max-width:760px){.block{grid-template-columns:minmax(0,1fr)}}
     .label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
     .block h2{font-size:clamp(22px,2.6vw,32px);line-height:1.15;letter-spacing:-.03em;font-weight:800;margin-top:8px;text-wrap:balance}
-    .body{max-width:68ch;display:grid;gap:14px;color:#2a2a2a}
+    .body{max-width:68ch;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;color:#2a2a2a}
     .body.wide{max-width:none}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media(max-width:600px){.list{grid-template-columns:1fr}}
@@ -87,7 +89,7 @@
     .sheet{--sl:rgba(0,0,0,.08);--sm:rgba(0,0,0,.45);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);grid-template-rows:repeat(var(--n),auto) auto;background:var(--c-logo-bg,#fff);color:var(--c-ink,#111);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:6px}
     .sheet.dark{--sl:rgba(255,255,255,.1);--sm:rgba(255,255,255,.5);border-color:transparent}
     .sh-cell{position:relative;padding:clamp(18px,2.4vw,28px)}
-    .sh-cap{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--sm);position:relative;z-index:1}
+    .sh-cap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--sm);position:relative;z-index:1}
     .sh-logo{grid-row:1 / span var(--n);border-right:1px solid var(--sl);display:flex;flex-direction:column;min-height:280px;overflow:hidden}
     .sh-logo img,.sh-logo .bp-mark{margin:auto;position:relative}
     .sh-logo img{width:min(200px,64%);height:auto;padding-block:24px}
@@ -108,7 +110,7 @@
     .sw span{font-family:var(--mono);font-size:11px;opacity:.7}
     .sw+.sw{box-shadow:inset 1px 0 0 rgba(0,0,0,.06)}
     @media(max-width:760px){
-      .sheet{grid-template-columns:1fr;grid-template-rows:none}
+      .sheet{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
       .sh-logo{grid-row:auto;border-right:none;border-bottom:1px solid var(--sl);min-height:200px}
       .sh-palette{flex-direction:column}
       .sw{min-height:0;flex-direction:row;justify-content:space-between;align-items:center;padding:16px 18px}
@@ -130,6 +132,8 @@
     .cta h2 span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:.18em;padding:0 .14em}
     .cta p{margin-top:14px;color:rgba(255,255,255,.82);max-width:52ch}
     .cta .btn{margin-top:24px;background:#fff;color:var(--teal)}
+    .cta .btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);margin-left:8px}
+    @media(max-width:560px){.cta .btn.alt{margin-left:0;white-space:normal}}
 
     footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
     footer a:hover{color:var(--teal)}
@@ -219,16 +223,18 @@
 <header>
   <div class="wrap hdr">
     <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
-    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
+    <nav><a href="/">Websites</a><a href="/portfolio/" class="active">Portfolio</a><a href="/video/">Video</a><a href="/store-migration/">Online stores</a><a href="/#ew-contact">Contact</a></nav>
     <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
     <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="/">Websites</a>
-  <a href="/portfolio" class="active">Portfolio</a>
-  <a href="/video">Video</a>
+  <a href="/portfolio/" class="active">Portfolio</a>
+  <a href="/video/">Video</a>
+  <a href="/store-migration/">Online stores</a>
   <a href="/#ew-contact">Contact</a>
+  
 </div>
 
 <main class="wrap case kb">
