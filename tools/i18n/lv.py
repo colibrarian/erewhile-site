@@ -24,7 +24,7 @@ PAIRS_HTML=[
 ('<a class="btn btn-teal btn-sm" href="#ew-contact">Get a quote</a>','<a class="btn btn-teal btn-sm" href="#ew-contact">Piedāvājums</a>'),
 ('aria-label="Open menu"','aria-label="Atvērt izvēlni"'),
 # hero
-('Web design studio · Latvia','Mājaslapu dizaina studija · Latvija'),
+('Web design studio','Mājaslapu dizaina studija'),
 ('<h1>Websites that <span class="g">bring you</span> new clients</h1>','<h1>Mājaslapas, kas <span class="g">piesaista</span> jaunus klientus</h1>'),
 ('We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200.',
  'Izstrādājam mājaslapas un mērķlapas uzņēmumiem, personīgajiem zīmoliem, NVO un Erasmus+ projektiem Baltijā un visā ES. Mērķlapas no €250, biznesa mājaslapas no €1 200.'),
@@ -34,6 +34,7 @@ PAIRS_HTML=[
 ('>View portfolio →<','>Portfolio →<'),
 # services
 ('Services <span class="g">and prices</span>','Pakalpojumi <span class="g">un cenas</span>'),
+('Selling on Etsy or another marketplace? <span>We move your products to your own online store →</span>','Pārdodat Etsy vai citā tirdzniecības platformā? <span>Pārnesīsim jūsu preces uz jūsu interneta veikalu →</span>'),
 ('>Full business website<','>Pilna biznesa mājaslapa<'),
 ('Multi-page site with strategy, information architecture, UI/UX design and SEO foundations. Built for long-term growth.','Vairāku lapu mājaslapa ar stratēģiju, informācijas arhitektūru, UI/UX dizainu un SEO pamatiem. Veidota ilgtermiņa izaugsmei.'),
 ('>From €1 200<','>No €1 200<'),

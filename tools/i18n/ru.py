@@ -25,7 +25,7 @@ PAIRS_HTML=[
 ('<a class="btn btn-teal btn-sm" href="#ew-contact">Get a quote</a>','<a class="btn btn-teal btn-sm" href="#ew-contact">Расчёт</a>'),
 ('aria-label="Open menu"','aria-label="Открыть меню"'),
 # hero
-('Web design studio · Latvia','Студия веб-дизайна · Латвия'),
+('Web design studio','Студия веб-дизайна'),
 ('<h1>Websites that <span class="g">bring you</span> new clients</h1>','<h1>Сайты, которые <span class="g">приводят</span> новых клиентов</h1>'),
 ('We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200.',
  'Проектируем и разрабатываем сайты и лендинги для бизнеса, личных брендов, НКО и проектов Erasmus+ в Балтии и по всему ЕС. Лендинг от €250, сайт для бизнеса от €1 200.'),
@@ -35,6 +35,7 @@ PAIRS_HTML=[
 ('>View portfolio →<','>Смотреть портфолио →<'),
 # services
 ('Services <span class="g">and prices</span>','Услуги <span class="g">и цены</span>'),
+('Selling on Etsy or another marketplace? <span>We move your products to your own online store →</span>','Продаёте на Etsy или другом маркетплейсе? <span>Перенесём товары в ваш собственный интернет-магазин →</span>'),
 ('>Full business website<','>Сайт для бизнеса<'),
 ('Multi-page site with strategy, information architecture, UI/UX design and SEO foundations. Built for long-term growth.','Многостраничный сайт со стратегией, структурой, UI/UX-дизайном и базовым SEO. Рассчитан на долгосрочный рост.'),
 ('>From €1 200<','>От €1 200<'),
