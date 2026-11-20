@@ -30,6 +30,9 @@ PAGES = {
 LOCAL_PATHS = {'/': '/', '/portfolio': '/portfolio/', '/portfolio/': '/portfolio/',
                '/video': '/video/', '/video/': '/video/',
                '/store-migration': '/store-migration/', '/store-migration/': '/store-migration/'}
+# Case pages exist in all three languages (tools/build_cases.py); the FTS library is English only.
+CASE_SLUGS = ('oro', 'zemits', 'kondo', 'solvata-beauty', 'razalija', 'jelgava-coworking', 'untu', 'id-chef', 'grill-in')
+LOCAL_PATHS.update({'/portfolio/%s/' % s: '/portfolio/%s/' % s for s in CASE_SLUGS})
 SWITCH = {'en': ('EN', 'English'), 'lv': ('LV', 'Latviski'), 'ru': ('RU', 'Русский')}
 MODAL_MARKERS = ('<!-- MODALS -->', '<!-- ── MODALS ── -->')
 
@@ -58,7 +61,7 @@ def localize_links(html, lang):
         if path not in LOCAL_PATHS:
             return m.group(0)
         return f'href="/{lang}{LOCAL_PATHS[path]}{frag}"'
-    html = re.sub(r'href="(/[a-z-]*/?)(#[^"]*)?"(?!\s+hreflang)', fix, html)
+    html = re.sub(r'href="(/[a-z-]*/?(?:[a-z-]+/)?)(#[^"]*)?"(?!\s+hreflang)', fix, html)
     html = re.sub(r"url:'(/portfolio|/video)'", lambda m: f"url:'/{lang}{LOCAL_PATHS[m.group(1)]}'", html)
     html = html.replace(f'value="{SITE}/thanks/"', f'value="{SITE}/{lang}/thanks/"')
     return html
