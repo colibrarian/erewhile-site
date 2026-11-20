@@ -395,6 +395,11 @@
     .sm-hero{padding-top:clamp(64px,8vw,104px);padding-bottom:clamp(40px,5vw,64px)}
     .sm-hero-text{max-width:820px}
     .sm-hero h1{font-size:clamp(36px,5.6vw,72px)}
+    .sm-swap{display:inline-block;text-align:left;white-space:nowrap;transition:width .35s var(--ease)}
+    .sm-swap.out{animation:swOut .26s cubic-bezier(.5,0,.75,0) forwards}
+    .sm-swap.in{animation:swIn .5s cubic-bezier(.34,1.56,.64,1) forwards}
+    @keyframes swOut{0%{transform:none}35%{transform:translateY(.06em)}100%{transform:translateY(-.45em);opacity:0}}
+    @keyframes swIn{0%{transform:translateY(.35em);opacity:0}100%{transform:none;opacity:1}}
     .sm-offer{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px;max-width:680px;opacity:0;animation:fadeUp .85s var(--ease) .34s forwards}
     .sm-offer a{display:block;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:border-color .2s}
     .sm-offer a:hover{border-color:var(--teal-line)}
@@ -499,7 +504,7 @@
 <section class="section sm-hero" id="top">
   <div class="sm-hero-text">
     <div class="hero-eyebrow">Интернет-магазины · Перенос товаров</div>
-    <h1>С Etsy в <span class="g">собственный</span> интернет-магазин</h1>
+    <h1>С <span class="sm-swap" id="smSwap">Etsy</span> в <span class="g">собственный</span> интернет-магазин</h1>
     <p class="hero-sub">Создаём независимые интернет-магазины и переносим в них товары с Etsy и других маркетплейсов: названия, описания, фото, варианты и цены. От нескольких десятков позиций до каталогов в тысячи товаров.</p>
     <div class="sm-offer">
       <a href="#sm-store"><b>Создание интернет-магазина</b><span>Дизайн, каталог, оплата, доставка</span></a>
@@ -789,6 +794,17 @@ document.getElementById('burgerBtn').addEventListener('click',function(){
   });
 })();
 
+/* hero: the platform name jumps and changes, to show we work with any of them */
+(function(){
+  var el=document.getElementById('smSwap');if(!el||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var names=['Etsy','Shopify','Wix','eBay','Tilda'],i=0;
+  var W={};function fit(){el.style.width='';var t=el.textContent;names.forEach(function(n){el.textContent=n;W[n]=Math.ceil(el.getBoundingClientRect().width)});el.textContent=t;el.style.width=W[t]+'px'}
+  fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+  setInterval(function(){
+    el.classList.remove('in');el.classList.add('out');
+    setTimeout(function(){i=(i+1)%names.length;el.textContent=names[i];el.style.width=W[names[i]]+'px';el.classList.remove('out');el.classList.add('in')},260);
+  },2400);
+})();
 /* transfer diagram: lines from every marketplace field into the pipeline and out to the store field;
    one field at a time lights up, travels through the three steps and gets its check mark */
 (function(){
