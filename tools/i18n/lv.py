@@ -24,7 +24,7 @@ PAIRS_HTML=[
 ('<a class="btn btn-teal btn-sm" href="#ew-contact">Get a quote</a>','<a class="btn btn-teal btn-sm" href="#ew-contact">Piedāvājums</a>'),
 ('aria-label="Open menu"','aria-label="Atvērt izvēlni"'),
 # hero
-('Web design studio · Latvia','Mājaslapu dizaina studija · Latvija'),
+('Web design studio','Mājaslapu dizaina studija'),
 ('<h1>Websites that <span class="g">bring you</span> new clients</h1>','<h1>Mājaslapas, kas <span class="g">piesaista</span> jaunus klientus</h1>'),
 ('We design and build websites and landing pages for businesses, personal brands, NGOs and Erasmus+ projects in the Baltics and across the EU. Landing pages from €250, business websites from €1 200.',
  'Izstrādājam mājaslapas un mērķlapas uzņēmumiem, personīgajiem zīmoliem, NVO un Erasmus+ projektiem Baltijā un visā ES. Mērķlapas no €250, biznesa mājaslapas no €1 200.'),

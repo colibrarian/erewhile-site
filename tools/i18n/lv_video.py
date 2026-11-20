@@ -11,7 +11,7 @@ PAIRS=[
 ('>Get a quote<','>Piedāvājums<'),
 ('aria-label="Open menu"','aria-label="Atvērt izvēlni"'),
 # hero
-('Video production · Latvia','Video veidošana · Latvija'),
+('Video production','Video veidošana'),
 ('<h1>Content that <em>sells</em><br><span class="thin">your website</span></h1>','<h1>Saturs, kas <em>palīdz</em><br><span class="thin">jūsu mājaslapai pārdot</span></h1>'),
 ('Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms.',
  'Zīmolu prezentācijas, skaidrojošie video, Reels un Shorts — katrs formāts konkrētam mērķim: uzticībai jūsu mājaslapā un sasniedzamībai mobilajās platformās.'),
