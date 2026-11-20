@@ -35,6 +35,7 @@ PAIRS_HTML=[
 ('>View portfolio →<','>Смотреть портфолио →<'),
 # services
 ('Services <span class="g">and prices</span>','Услуги <span class="g">и цены</span>'),
+('Selling on Etsy or another marketplace? <span>We move your products to your own online store →</span>','Продаёте на Etsy или другом маркетплейсе? <span>Перенесём товары в ваш собственный интернет-магазин →</span>'),
 ('>Full business website<','>Сайт для бизнеса<'),
 ('Multi-page site with strategy, information architecture, UI/UX design and SEO foundations. Built for long-term growth.','Многостраничный сайт со стратегией, структурой, UI/UX-дизайном и базовым SEO. Рассчитан на долгосрочный рост.'),
 ('>From €1 200<','>От €1 200<'),

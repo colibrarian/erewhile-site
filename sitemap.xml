@@ -72,4 +72,25 @@
   <url><loc>https://erewhile.digital/portfolio/untu/</loc></url>
   <url><loc>https://erewhile.digital/portfolio/id-chef/</loc></url>
   <url><loc>https://erewhile.digital/portfolio/grill-in/</loc></url>
+  <url>
+    <loc>https://erewhile.digital/store-migration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/store-migration/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/store-migration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/store-migration/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/store-migration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/store-migration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/store-migration/"/>
+  </url>
 </urlset>

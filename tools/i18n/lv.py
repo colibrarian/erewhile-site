@@ -34,6 +34,7 @@ PAIRS_HTML=[
 ('>View portfolio →<','>Portfolio →<'),
 # services
 ('Services <span class="g">and prices</span>','Pakalpojumi <span class="g">un cenas</span>'),
+('Selling on Etsy or another marketplace? <span>We move your products to your own online store →</span>','Pārdodat Etsy vai citā tirdzniecības platformā? <span>Pārnesīsim jūsu preces uz jūsu interneta veikalu →</span>'),
 ('>Full business website<','>Pilna biznesa mājaslapa<'),
 ('Multi-page site with strategy, information architecture, UI/UX design and SEO foundations. Built for long-term growth.','Vairāku lapu mājaslapa ar stratēģiju, informācijas arhitektūru, UI/UX dizainu un SEO pamatiem. Veidota ilgtermiņa izaugsmei.'),
 ('>From €1 200<','>No €1 200<'),
