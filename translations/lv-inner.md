@@ -45,90 +45,89 @@ These are the inner pages: Portfolio, Video and the "thank you" page after the c
 | LV-IN-026 | UNTU — Youth NGO | UNTU — jauniešu NVO | |
 | LV-IN-027 | Non-profit website built around trust and clear calls to action: donate, volunteer, get involved. | Bezpeļņas organizācijas mājaslapa, kas balstīta uzticībā un skaidros aicinājumos: ziedot, brīvprātīgi palīdzēt, iesaistīties. | |
 | LV-IN-028 | Open site → | Atvērt vietni → | |
-| LV-IN-029 | Knowledge base | Zināšanu bāze | |
-| LV-IN-030 | Libraries of learning materials | Mācību materiālu bibliotēkas | |
-| LV-IN-031 | A knowledge base for youth work from the From Thinking to Speaking training: presentations, guides and an interactive bias map, sorted into one library. | Zināšanu bāze darbam ar jaunatni no apmācību kursa From Thinking to Speaking: prezentācijas, ceļveži un interaktīva kognitīvo kļūdu karte, sakārtoti vienā bibliotēkā. | |
-| LV-IN-032 | 6 topics13 materials156 slides40 biases on one map | 6 tēmas13 materiāli156 slaidi40 kognitīvās kļūdas vienā kartē | |
-| LV-IN-033 | See the library → | Skatīt bibliotēku → | |
-| LV-IN-034 | Tools & Apps | Rīki un lietotnes | |
-| LV-IN-035 | Booking flows, dashboards & digital tools | Rezervāciju plūsmas, vadības paneļi un digitālie rīki | |
-| LV-IN-036 | Booking flow | Rezervāciju plūsma | |
-| LV-IN-037 | Expert Booking Flow | Pieraksts pie speciālista | |
-| LV-IN-038 | Short path from landing to booked appointment | Īss ceļš no mērķlapas līdz rezervētai vizītei | |
-| LV-IN-039 | Knowledge base · library of materials · UNTU | Zināšanu bāze · materiālu bibliotēka · UNTU | |
-| LV-IN-040 | Digital menu | Digitālā ēdienkarte | |
-| LV-IN-041 | Digital Menu — Grill Bar | Digitālā ēdienkarte — grila bārs | |
-| LV-IN-042 | QR-accessible · no app needed | Atveras ar QR kodu · bez lietotnes | |
-| LV-IN-043 | DWCM — Project Report Site | DWCM — projekta atskaišu vietne | |
-| LV-IN-044 | Multi-page microsite · structured docs | Vairāku lapu mikrovietne · strukturēti dokumenti | |
-| LV-IN-045 | Internal CRM — Leads & Workflow | Iekšējais CRM — pieteikumi un darba plūsma | |
-| LV-IN-046 | Pipeline · status tracking · no fees | Pieteikumu plūsma · statusu izsekošana · bez abonēšanas maksas | |
-| LV-IN-047 | Request details → | Uzzināt vairāk → | |
-| LV-IN-048 | What will your project cost? | Cik maksās jūsu projekts? | |
-| LV-IN-049 | Answer six short questions in our calculator and get a realistic price range for your website. | Atbildiet uz sešiem īsiem jautājumiem mūsu kalkulatorā un uzziniet reālu cenu diapazonu savai mājaslapai. | |
-| LV-IN-050 | Open the price calculator → | Atvērt cenu kalkulatoru → | |
-| LV-IN-051 | Ready to build something that works? | Gatavi izveidot kaut ko, kas strādā? | |
-| LV-IN-052 | Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details. | Pastāstiet, kas jums nepieciešams — mājaslapa, mērķlapa, rīks vai kas cits. Mēs sazināsimies ar jums, lai pārrunātu detaļas. | |
-| LV-IN-053 | Portfolio page inquiry — erewhile.digital | Pieteikums no portfolio lapas — erewhile.digital (LV) | |
-| LV-IN-054 | Name | Vārds, uzvārds | |
-| LV-IN-055 | Email | E-pasts | |
-| LV-IN-056 | What do you need? | Kāds pakalpojums jums ir nepieciešams? | |
-| LV-IN-057 | Consultation (project discovery) | Konsultācija (projekta izpēte) | |
-| LV-IN-058 | Website (custom) | Individuāla mājaslapa | |
-| LV-IN-059 | Landing page from €250 | Mērķlapa no €250 | |
-| LV-IN-060 | Content / video | Saturs / video | |
-| LV-IN-061 | Integrations / analytics | Integrācijas / analītika | |
-| LV-IN-062 | Other | Cits | |
-| LV-IN-063 | Message | Ziņojums | |
-| LV-IN-064 | How should we address you? | Kā pie jums vērsties? | |
-| LV-IN-065 | you@company.com | vards@uznemums.lv | |
-| LV-IN-066 | Niche, goal, deadline — anything that helps us understand the project | Nozare, mērķis, termiņš — viss, kas palīdz izprast projektu | |
-| LV-IN-067 | I agree to the <a | Piekrītu <a | |
-| LV-IN-068 | Terms & Conditions | lietošanas noteikumiem | |
-| LV-IN-069 | Privacy Policy and | privātuma politikai un | |
-| LV-IN-070 | Cookie Policy. | sīkdatņu politikai. | |
-| LV-IN-071 | My email will only be used to respond to this inquiry. | Mans e-pasts tiks izmantots tikai atbildei uz šo pieteikumu. | |
-| LV-IN-072 | Send request | Nosūtīt pieteikumu | |
-| LV-IN-073 | Urgent? Add your deadline in the message. | Steidzami? Norādiet termiņu ziņojumā. | |
-| LV-IN-074 | © 2025 Erewhile Digital, Latvia | © 2025 Erewhile Digital, Latvija | |
-| LV-IN-075 | Privacy Policy | Privātuma politika | |
-| LV-IN-076 | Cookie Policy | Sīkdatņu politika | |
-| LV-IN-077 | New · B2B catalogue | Jaunums · B2B katalogs | |
-| LV-IN-078 | Zemits — Cosmetology Equipment | Zemits — kosmetoloģijas iekārtas | |
-| LV-IN-079 | Three-language catalogue site for the official Zemits representative in the Baltics. | Katalogs trīs valodās oficiālajam Zemits pārstāvim Baltijā. | |
-| LV-IN-080 | Case study → | Projekta apraksts → | |
-| LV-IN-081 | Open site ↗ | Atvērt vietni ↗ | |
+| LV-IN-029 | See the library → | Skatīt bibliotēku → | |
+| LV-IN-030 | Digital products | Digitālie produkti | |
+| LV-IN-031 | Knowledge bases, reports & working tools | Zināšanu bāzes, atskaites un darba rīki | |
+| LV-IN-032 | Booking flow | Rezervāciju plūsma | |
+| LV-IN-033 | Expert Booking Flow | Pieraksts pie speciālista | |
+| LV-IN-034 | Short path from landing to booked appointment | Īss ceļš no mērķlapas līdz rezervētai vizītei | |
+| LV-IN-035 | Knowledge base | Zināšanu bāze | |
+| LV-IN-036 | 13 materials · bias map · 156 slides | 13 materiāli · kognitīvo kļūdu karte · 156 slaidi | |
+| LV-IN-037 | alt="FTS Library: interactive cognitive bias map | alt="FTS bibliotēka: interaktīva kognitīvo kļūdu karte | |
+| LV-IN-038 | Project report | Projekta atskaite | |
+| LV-IN-039 | Digital menu | Digitālā ēdienkarte | |
+| LV-IN-040 | Digital Menu — Grill Bar | Digitālā ēdienkarte — grila bārs | |
+| LV-IN-041 | QR-accessible · no app needed | Atveras ar QR kodu · bez lietotnes | |
+| LV-IN-042 | DWCM — Erasmus+ Project Report | DWCM — Erasmus+ projekta atskaite | |
+| LV-IN-043 | Research, toolkits and outputs on one site | Pētījums, rīkkopas un rezultāti vienā vietnē | |
+| LV-IN-044 | Internal CRM — Leads & Workflow | Iekšējais CRM — pieteikumi un darba plūsma | |
+| LV-IN-045 | Pipeline · status tracking · no fees | Pieteikumu plūsma · statusu izsekošana · bez abonēšanas maksas | |
+| LV-IN-046 | Request details → | Uzzināt vairāk → | |
+| LV-IN-047 | What will your project cost? | Cik maksās jūsu projekts? | |
+| LV-IN-048 | Answer six short questions in our calculator and get a realistic price range for your website. | Atbildiet uz sešiem īsiem jautājumiem mūsu kalkulatorā un uzziniet reālu cenu diapazonu savai mājaslapai. | |
+| LV-IN-049 | Open the price calculator → | Atvērt cenu kalkulatoru → | |
+| LV-IN-050 | Ready to build something that works? | Gatavi izveidot kaut ko, kas strādā? | |
+| LV-IN-051 | Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details. | Pastāstiet, kas jums nepieciešams — mājaslapa, mērķlapa, rīks vai kas cits. Mēs sazināsimies ar jums, lai pārrunātu detaļas. | |
+| LV-IN-052 | Portfolio page inquiry — erewhile.digital | Pieteikums no portfolio lapas — erewhile.digital (LV) | |
+| LV-IN-053 | Name | Vārds, uzvārds | |
+| LV-IN-054 | Email | E-pasts | |
+| LV-IN-055 | What do you need? | Kāds pakalpojums jums ir nepieciešams? | |
+| LV-IN-056 | Consultation (project discovery) | Konsultācija (projekta izpēte) | |
+| LV-IN-057 | Website (custom) | Individuāla mājaslapa | |
+| LV-IN-058 | Landing page from €250 | Mērķlapa no €250 | |
+| LV-IN-059 | Content / video | Saturs / video | |
+| LV-IN-060 | Integrations / analytics | Integrācijas / analītika | |
+| LV-IN-061 | Other | Cits | |
+| LV-IN-062 | Message | Ziņojums | |
+| LV-IN-063 | How should we address you? | Kā pie jums vērsties? | |
+| LV-IN-064 | you@company.com | vards@uznemums.lv | |
+| LV-IN-065 | Niche, goal, deadline — anything that helps us understand the project | Nozare, mērķis, termiņš — viss, kas palīdz izprast projektu | |
+| LV-IN-066 | I agree to the <a | Piekrītu <a | |
+| LV-IN-067 | Terms & Conditions | lietošanas noteikumiem | |
+| LV-IN-068 | Privacy Policy and | privātuma politikai un | |
+| LV-IN-069 | Cookie Policy. | sīkdatņu politikai. | |
+| LV-IN-070 | My email will only be used to respond to this inquiry. | Mans e-pasts tiks izmantots tikai atbildei uz šo pieteikumu. | |
+| LV-IN-071 | Send request | Nosūtīt pieteikumu | |
+| LV-IN-072 | Urgent? Add your deadline in the message. | Steidzami? Norādiet termiņu ziņojumā. | |
+| LV-IN-073 | © 2025 Erewhile Digital, Latvia | © 2025 Erewhile Digital, Latvija | |
+| LV-IN-074 | Privacy Policy | Privātuma politika | |
+| LV-IN-075 | Cookie Policy | Sīkdatņu politika | |
+| LV-IN-076 | New · B2B catalogue | Jaunums · B2B katalogs | |
+| LV-IN-077 | Zemits — Cosmetology Equipment | Zemits — kosmetoloģijas iekārtas | |
+| LV-IN-078 | Three-language catalogue site for the official Zemits representative in the Baltics. | Katalogs trīs valodās oficiālajam Zemits pārstāvim Baltijā. | |
+| LV-IN-079 | Case study → | Projekta apraksts → | |
+| LV-IN-080 | Open site ↗ | Atvērt vietni ↗ | |
 
 ## Video page
 
 | ID | English source | Latvian (current) | Latvian (corrected) |
 |---|---|---|---|
-| LV-IN-082 | Video Production — Erewhile Digital | Video veidošana — Erewhile Digital | |
-| LV-IN-083 | Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Latvia. | Video saturs mājaslapām — zīmolu prezentācijas, skaidrojošie video, Reels un YouTube Shorts. Erewhile Digital, Latvija. | |
-| LV-IN-084 | Video production · Latvia | Video veidošana · Latvija | |
-| LV-IN-085 | Content that sells your website | Saturs, kas palīdz jūsu mājaslapai pārdot | |
-| LV-IN-086 | Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms. | Zīmolu prezentācijas, skaidrojošie video, Reels un Shorts — katrs formāts konkrētam mērķim: uzticībai jūsu mājaslapā un sasniedzamībai mobilajās platformās. | |
-| LV-IN-087 | Landscape | Horizontāli | |
-| LV-IN-088 | Vertical | Vertikāli | |
-| LV-IN-089 | Projects | Projekti | |
-| LV-IN-090 | Brand | Zīmols | |
-| LV-IN-091 | Social | Sociālie tīkli | |
-| LV-IN-092 | Event | Pasākums | |
-| LV-IN-093 | · Landscape | · horizontāls | |
-| LV-IN-094 | · Vertical | · vertikāls | |
-| LV-IN-095 | Need video for your site? | Nepieciešams video jūsu mājaslapai? | |
-| LV-IN-096 | Tell us what you're building — we'll suggest the right format, budget and timeline. | Pastāstiet par savu projektu — ieteiksim piemērotāko formātu, budžetu un termiņus. | |
-| LV-IN-097 | Request a format → | Pieteikt formātu → | |
-| LV-IN-098 | Video player | Video atskaņotājs | |
-| LV-IN-099 | Close | Aizvērt | |
-| LV-IN-100 | Previous | Iepriekšējais | |
-| LV-IN-101 | Next | Nākamais | |
+| LV-IN-081 | Video Production — Erewhile Digital | Video veidošana — Erewhile Digital | |
+| LV-IN-082 | Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Latvia. | Video saturs mājaslapām — zīmolu prezentācijas, skaidrojošie video, Reels un YouTube Shorts. Erewhile Digital, Latvija. | |
+| LV-IN-083 | Video production · Latvia | Video veidošana · Latvija | |
+| LV-IN-084 | Content that sells your website | Saturs, kas palīdz jūsu mājaslapai pārdot | |
+| LV-IN-085 | Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms. | Zīmolu prezentācijas, skaidrojošie video, Reels un Shorts — katrs formāts konkrētam mērķim: uzticībai jūsu mājaslapā un sasniedzamībai mobilajās platformās. | |
+| LV-IN-086 | Landscape | Horizontāli | |
+| LV-IN-087 | Vertical | Vertikāli | |
+| LV-IN-088 | Projects | Projekti | |
+| LV-IN-089 | Brand | Zīmols | |
+| LV-IN-090 | Social | Sociālie tīkli | |
+| LV-IN-091 | Event | Pasākums | |
+| LV-IN-092 | · Landscape | · horizontāls | |
+| LV-IN-093 | · Vertical | · vertikāls | |
+| LV-IN-094 | Need video for your site? | Nepieciešams video jūsu mājaslapai? | |
+| LV-IN-095 | Tell us what you're building — we'll suggest the right format, budget and timeline. | Pastāstiet par savu projektu — ieteiksim piemērotāko formātu, budžetu un termiņus. | |
+| LV-IN-096 | Request a format → | Pieteikt formātu → | |
+| LV-IN-097 | Video player | Video atskaņotājs | |
+| LV-IN-098 | Close | Aizvērt | |
+| LV-IN-099 | Previous | Iepriekšējais | |
+| LV-IN-100 | Next | Nākamais | |
 
 ## Thanks page
 
 | ID | English source | Latvian (current) | Latvian (corrected) |
 |---|---|---|---|
-| LV-IN-102 | Thank you — Erewhile Digital | Paldies — Erewhile Digital | |
-| LV-IN-103 | Thank you, we got your request | Paldies, jūsu pieteikums ir saņemts | |
-| LV-IN-104 | We'll get back to you soon to talk through the details. If it's urgent, call or message us at | Drīzumā sazināsimies ar jums, lai pārrunātu detaļas. Ja jautājums ir steidzams, zvaniet vai rakstiet mums uz | |
-| LV-IN-105 | Back to the website | Atpakaļ uz mājaslapu | |
+| LV-IN-101 | Thank you — Erewhile Digital | Paldies — Erewhile Digital | |
+| LV-IN-102 | Thank you, we got your request | Paldies, jūsu pieteikums ir saņemts | |
+| LV-IN-103 | We'll get back to you soon to talk through the details. If it's urgent, call or message us at | Drīzumā sazināsimies ar jums, lai pārrunātu detaļas. Ja jautājums ir steidzams, zvaniet vai rakstiet mums uz | |
+| LV-IN-104 | Back to the website | Atpakaļ uz mājaslapu | |

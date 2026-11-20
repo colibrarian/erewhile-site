@@ -48,89 +48,88 @@ These are the inner pages: Portfolio, Video and the "thank you" page after the c
 | RU-IN-029 | UNTU — Youth NGO | UNTU — молодёжная НКО | |
 | RU-IN-030 | Non-profit website built around trust and clear calls to action: donate, volunteer, get involved. | Сайт некоммерческой организации, построенный на доверии и понятных призывах: пожертвовать, стать волонтёром, присоединиться. | |
 | RU-IN-031 | Open site → | Открыть сайт → | |
-| RU-IN-032 | Knowledge base | База знаний | |
-| RU-IN-033 | Libraries of learning materials | Библиотеки учебных материалов | |
-| RU-IN-034 | A knowledge base for youth work from the From Thinking to Speaking training: presentations, guides and an interactive bias map, sorted into one library. | База знаний для работы с молодёжью из тренинга From Thinking to Speaking: презентации, гайды и интерактивная карта когнитивных искажений, собранные в одну библиотеку. | |
-| RU-IN-035 | 6 topics13 materials156 slides40 biases on one map | 6 тем13 материалов156 слайдов40 искажений на одной карте | |
-| RU-IN-036 | See the library → | Смотреть библиотеку → | |
-| RU-IN-037 | Tools & Apps | Инструменты и приложения | |
-| RU-IN-038 | Booking flows, dashboards & digital tools | Онлайн-запись, панели и цифровые инструменты | |
-| RU-IN-039 | Booking flow | Онлайн-запись | |
-| RU-IN-040 | Expert Booking Flow | Запись к специалисту | |
-| RU-IN-041 | Short path from landing to booked appointment | Короткий путь от лендинга до записи | |
-| RU-IN-042 | Knowledge base · library of materials · UNTU | База знаний · библиотека материалов · UNTU | |
-| RU-IN-043 | Digital menu | Цифровое меню | |
-| RU-IN-044 | Digital Menu — Grill Bar | Цифровое меню — гриль-бар | |
-| RU-IN-045 | QR-accessible · no app needed | Открывается по QR · без приложения | |
-| RU-IN-046 | DWCM — Project Report Site | DWCM — сайт с отчётами проекта | |
-| RU-IN-047 | Multi-page microsite · structured docs | Многостраничный микросайт · структурированные документы | |
-| RU-IN-048 | Internal CRM — Leads & Workflow | Внутренняя CRM — заявки и процессы | |
-| RU-IN-049 | Pipeline · status tracking · no fees | Воронка · статусы заявок · без абонплаты | |
-| RU-IN-050 | Request details → | Узнать подробнее → | |
-| RU-IN-051 | What will your project cost? | Сколько будет стоить ваш проект? | |
-| RU-IN-052 | Answer six short questions in our calculator and get a realistic price range for your website. | Ответьте на шесть коротких вопросов в калькуляторе и получите реальный диапазон цены для вашего сайта. | |
-| RU-IN-053 | Open the price calculator → | Открыть калькулятор → | |
-| RU-IN-054 | Ready to build something that works? | Готовы сделать то, что работает? | |
-| RU-IN-055 | Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details. | Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. Мы свяжемся с вами и обсудим детали. | |
-| RU-IN-056 | Portfolio page inquiry — erewhile.digital | Заявка со страницы портфолио — erewhile.digital (RU) | |
-| RU-IN-057 | Name | Имя | |
-| RU-IN-058 | What do you need? | Что вам нужно? | |
-| RU-IN-059 | Consultation (project discovery) | Консультация (разбор проекта) | |
-| RU-IN-060 | Website (custom) | Сайт под ключ | |
-| RU-IN-061 | Landing page from €250 | Лендинг от €250 | |
-| RU-IN-062 | Content / video | Контент / видео | |
-| RU-IN-063 | Integrations / analytics | Интеграции / аналитика | |
-| RU-IN-064 | Other | Другое | |
-| RU-IN-065 | Message | Сообщение | |
-| RU-IN-066 | How should we address you? | Как к вам обращаться? | |
-| RU-IN-067 | you@company.com | vy@kompaniya.com | |
-| RU-IN-068 | Niche, goal, deadline — anything that helps us understand the project | Ниша, цель, сроки — всё, что поможет понять проект | |
-| RU-IN-069 | I agree to the <a | Я согласен(-на) с <a | |
-| RU-IN-070 | Terms & Conditions | условиями | |
-| RU-IN-071 | Privacy Policy and | политикой конфиденциальности и | |
-| RU-IN-072 | Cookie Policy. | политикой cookie. | |
-| RU-IN-073 | My email will only be used to respond to this inquiry. | Email будет использован только для ответа на эту заявку. Документы доступны на английском. | |
-| RU-IN-074 | Send request | Отправить запрос | |
-| RU-IN-075 | Urgent? Add your deadline in the message. | Срочно? Укажите дедлайн в сообщении. | |
-| RU-IN-076 | © 2025 Erewhile Digital, Latvia | © 2025 Erewhile Digital, Латвия | |
-| RU-IN-077 | Privacy Policy | Политика конфиденциальности | |
-| RU-IN-078 | Cookie Policy | Политика cookie | |
-| RU-IN-079 | New · B2B catalogue | Новое · B2B-каталог | |
-| RU-IN-080 | Zemits — Cosmetology Equipment | Zemits — косметологическое оборудование | |
-| RU-IN-081 | Three-language catalogue site for the official Zemits representative in the Baltics. | Сайт-каталог на трёх языках для официального представителя Zemits в Балтии. | |
-| RU-IN-082 | Case study → | Подробнее о проекте → | |
-| RU-IN-083 | Open site ↗ | Открыть сайт ↗ | |
+| RU-IN-032 | See the library → | Смотреть библиотеку → | |
+| RU-IN-033 | Digital products | Цифровые продукты | |
+| RU-IN-034 | Knowledge bases, reports & working tools | Базы знаний, отчёты и рабочие инструменты | |
+| RU-IN-035 | Booking flow | Онлайн-запись | |
+| RU-IN-036 | Expert Booking Flow | Запись к специалисту | |
+| RU-IN-037 | Short path from landing to booked appointment | Короткий путь от лендинга до записи | |
+| RU-IN-038 | Knowledge base | База знаний | |
+| RU-IN-039 | 13 materials · bias map · 156 slides | 13 материалов · карта искажений · 156 слайдов | |
+| RU-IN-040 | alt="FTS Library: interactive cognitive bias map | alt="Библиотека FTS: интерактивная карта когнитивных искажений | |
+| RU-IN-041 | Project report | Отчёт проекта | |
+| RU-IN-042 | Digital menu | Цифровое меню | |
+| RU-IN-043 | Digital Menu — Grill Bar | Цифровое меню — гриль-бар | |
+| RU-IN-044 | QR-accessible · no app needed | Открывается по QR · без приложения | |
+| RU-IN-045 | DWCM — Erasmus+ Project Report | DWCM — отчёт проекта Erasmus+ | |
+| RU-IN-046 | Research, toolkits and outputs on one site | Исследование, тулкиты и результаты на одном сайте | |
+| RU-IN-047 | Internal CRM — Leads & Workflow | Внутренняя CRM — заявки и процессы | |
+| RU-IN-048 | Pipeline · status tracking · no fees | Воронка · статусы заявок · без абонплаты | |
+| RU-IN-049 | Request details → | Узнать подробнее → | |
+| RU-IN-050 | What will your project cost? | Сколько будет стоить ваш проект? | |
+| RU-IN-051 | Answer six short questions in our calculator and get a realistic price range for your website. | Ответьте на шесть коротких вопросов в калькуляторе и получите реальный диапазон цены для вашего сайта. | |
+| RU-IN-052 | Open the price calculator → | Открыть калькулятор → | |
+| RU-IN-053 | Ready to build something that works? | Готовы сделать то, что работает? | |
+| RU-IN-054 | Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details. | Расскажите, что нужно — сайт, лендинг, инструмент или что-то другое. Мы свяжемся с вами и обсудим детали. | |
+| RU-IN-055 | Portfolio page inquiry — erewhile.digital | Заявка со страницы портфолио — erewhile.digital (RU) | |
+| RU-IN-056 | Name | Имя | |
+| RU-IN-057 | What do you need? | Что вам нужно? | |
+| RU-IN-058 | Consultation (project discovery) | Консультация (разбор проекта) | |
+| RU-IN-059 | Website (custom) | Сайт под ключ | |
+| RU-IN-060 | Landing page from €250 | Лендинг от €250 | |
+| RU-IN-061 | Content / video | Контент / видео | |
+| RU-IN-062 | Integrations / analytics | Интеграции / аналитика | |
+| RU-IN-063 | Other | Другое | |
+| RU-IN-064 | Message | Сообщение | |
+| RU-IN-065 | How should we address you? | Как к вам обращаться? | |
+| RU-IN-066 | you@company.com | vy@kompaniya.com | |
+| RU-IN-067 | Niche, goal, deadline — anything that helps us understand the project | Ниша, цель, сроки — всё, что поможет понять проект | |
+| RU-IN-068 | I agree to the <a | Я согласен(-на) с <a | |
+| RU-IN-069 | Terms & Conditions | условиями | |
+| RU-IN-070 | Privacy Policy and | политикой конфиденциальности и | |
+| RU-IN-071 | Cookie Policy. | политикой cookie. | |
+| RU-IN-072 | My email will only be used to respond to this inquiry. | Email будет использован только для ответа на эту заявку. Документы доступны на английском. | |
+| RU-IN-073 | Send request | Отправить запрос | |
+| RU-IN-074 | Urgent? Add your deadline in the message. | Срочно? Укажите дедлайн в сообщении. | |
+| RU-IN-075 | © 2025 Erewhile Digital, Latvia | © 2025 Erewhile Digital, Латвия | |
+| RU-IN-076 | Privacy Policy | Политика конфиденциальности | |
+| RU-IN-077 | Cookie Policy | Политика cookie | |
+| RU-IN-078 | New · B2B catalogue | Новое · B2B-каталог | |
+| RU-IN-079 | Zemits — Cosmetology Equipment | Zemits — косметологическое оборудование | |
+| RU-IN-080 | Three-language catalogue site for the official Zemits representative in the Baltics. | Сайт-каталог на трёх языках для официального представителя Zemits в Балтии. | |
+| RU-IN-081 | Case study → | Подробнее о проекте → | |
+| RU-IN-082 | Open site ↗ | Открыть сайт ↗ | |
 
 ## Video page
 
 | ID | English source | Russian (current) | Russian (corrected) |
 |---|---|---|---|
-| RU-IN-084 | Video Production — Erewhile Digital | Видеопродакшн — Erewhile Digital | |
-| RU-IN-085 | Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Latvia. | Видео для сайтов — презентации брендов, объясняющие ролики, Reels и YouTube Shorts. Erewhile Digital, Латвия. | |
-| RU-IN-086 | Video production · Latvia | Видеопродакшн · Латвия | |
-| RU-IN-087 | Content that sells your website | Контент, который продаёт на вашем сайте | |
-| RU-IN-088 | Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms. | Презентации брендов, объясняющие ролики, Reels и Shorts — каждый формат под свою задачу: доверие на сайте и охват на мобильных платформах. | |
-| RU-IN-089 | Landscape | Горизонтально | |
-| RU-IN-090 | Vertical | Вертикально | |
-| RU-IN-091 | Projects | Проектов | |
-| RU-IN-092 | Brand | Бренд | |
-| RU-IN-093 | Social | Соцсети | |
-| RU-IN-094 | Event | Мероприятие | |
-| RU-IN-095 | · Landscape | · горизонтальное | |
-| RU-IN-096 | · Vertical | · вертикальное | |
-| RU-IN-097 | Need video for your site? | Нужно видео для сайта? | |
-| RU-IN-098 | Tell us what you're building — we'll suggest the right format, budget and timeline. | Расскажите о проекте — предложим подходящий формат, бюджет и сроки. | |
-| RU-IN-099 | Request a format → | Подобрать формат → | |
-| RU-IN-100 | Video player | Видеоплеер | |
-| RU-IN-101 | Close | Закрыть | |
-| RU-IN-102 | Previous | Предыдущее | |
-| RU-IN-103 | Next | Следующее | |
+| RU-IN-083 | Video Production — Erewhile Digital | Видеопродакшн — Erewhile Digital | |
+| RU-IN-084 | Video content for websites — brand presentations, explainers, Reels and YouTube Shorts. Erewhile Digital, Latvia. | Видео для сайтов — презентации брендов, объясняющие ролики, Reels и YouTube Shorts. Erewhile Digital, Латвия. | |
+| RU-IN-085 | Video production · Latvia | Видеопродакшн · Латвия | |
+| RU-IN-086 | Content that sells your website | Контент, который продаёт на вашем сайте | |
+| RU-IN-087 | Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms. | Презентации брендов, объясняющие ролики, Reels и Shorts — каждый формат под свою задачу: доверие на сайте и охват на мобильных платформах. | |
+| RU-IN-088 | Landscape | Горизонтально | |
+| RU-IN-089 | Vertical | Вертикально | |
+| RU-IN-090 | Projects | Проектов | |
+| RU-IN-091 | Brand | Бренд | |
+| RU-IN-092 | Social | Соцсети | |
+| RU-IN-093 | Event | Мероприятие | |
+| RU-IN-094 | · Landscape | · горизонтальное | |
+| RU-IN-095 | · Vertical | · вертикальное | |
+| RU-IN-096 | Need video for your site? | Нужно видео для сайта? | |
+| RU-IN-097 | Tell us what you're building — we'll suggest the right format, budget and timeline. | Расскажите о проекте — предложим подходящий формат, бюджет и сроки. | |
+| RU-IN-098 | Request a format → | Подобрать формат → | |
+| RU-IN-099 | Video player | Видеоплеер | |
+| RU-IN-100 | Close | Закрыть | |
+| RU-IN-101 | Previous | Предыдущее | |
+| RU-IN-102 | Next | Следующее | |
 
 ## Thanks page
 
 | ID | English source | Russian (current) | Russian (corrected) |
 |---|---|---|---|
-| RU-IN-104 | Thank you — Erewhile Digital | Спасибо — Erewhile Digital | |
-| RU-IN-105 | Thank you, we got your request | Спасибо, мы получили вашу заявку | |
-| RU-IN-106 | We'll get back to you soon to talk through the details. If it's urgent, call or message us at | Скоро свяжемся с вами и обсудим детали. Если срочно, звоните или пишите на | |
-| RU-IN-107 | Back to the website | Вернуться на сайт | |
+| RU-IN-103 | Thank you — Erewhile Digital | Спасибо — Erewhile Digital | |
+| RU-IN-104 | Thank you, we got your request | Спасибо, мы получили вашу заявку | |
+| RU-IN-105 | We'll get back to you soon to talk through the details. If it's urgent, call or message us at | Скоро свяжемся с вами и обсудим детали. Если срочно, звоните или пишите на | |
+| RU-IN-106 | Back to the website | Вернуться на сайт | |
