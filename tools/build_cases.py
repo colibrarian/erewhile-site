@@ -46,7 +46,7 @@ CASES = [
     cta=('Renting out a <span>space</span>?', 'Tell us how people book you today. We will build a calendar that fills the free hours without the back-and-forth.'),
   ),
   dict(
-    slug='zemits', name='Zemits',
+    slug='zemits', store=True, name='Zemits',
     url='https://zemits-latvija.lv', host='zemits-latvija.lv',
     title='Zemits case study: three-language catalogue for a cosmetology equipment distributor',
     desc='How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics.',
@@ -77,7 +77,7 @@ CASES = [
     cta=('Selling something that needs <span>explaining</span>?', 'Tell us what you sell and who buys it. We will plan the pages that answer their questions before they call.'),
   ),
   dict(
-    slug='kondo', name='Kondo',
+    slug='kondo', store=True, name='Kondo',
     url='https://kondo.ee', host='kondo.ee',
     title='Kondo case study: website for a made-to-order clothing label',
     desc='How we built a one-page brand site with a pre-order bag for Kondo, an Estonian label making linen and ramie clothing to order.',
@@ -140,7 +140,7 @@ CASES = [
     cta=('Want clients to <span>trust</span> you before the first visit?', 'Tell us about your studio and treatments. We will plan a site that explains them clearly and leads to booking.'),
   ),
   dict(
-    slug='razalija', name='Razalija',
+    slug='razalija', store=True, name='Razalija',
     url='https://razalija.lv', host='razalija.lv',
     title='Razalija case study: website for a flower shop in Riga',
     desc='How we built a Latvian and Russian site for Razalija, a florist in Mežaparks, Riga: bouquet gallery, delivery zones and ordering through WhatsApp.',
@@ -297,7 +297,7 @@ CASES = [
 HEADER = '''<header>
   <div class="wrap hdr">
     <a class="brand" href="/"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874" alt="Erewhile Digital">erewhile.digital</a>
-    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/#ew-contact">Contact</a></nav>
+    <nav><a href="/">Websites</a><a href="/portfolio" class="active">Portfolio</a><a href="/video">Video</a><a href="/store-migration/">Online stores</a><a href="/#ew-contact">Contact</a></nav>
     <a class="btn btn-teal btn-sm" href="/#ew-contact">Get a quote</a>
     <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
@@ -306,6 +306,7 @@ HEADER = '''<header>
   <a href="/">Websites</a>
   <a href="/portfolio" class="active">Portfolio</a>
   <a href="/video">Video</a>
+  <a href="/store-migration/">Online stores</a>
   <a href="/#ew-contact">Contact</a>
 </div>'''
 
@@ -331,6 +332,11 @@ def font_stack(name):
 
 def abs_url(u):
   return u if u.startswith('http') else SITE + u
+
+
+def service_btn(c):
+  """E-commerce cases link to the online store service page."""
+  return '<a class="btn alt" href="/store-migration/">Online stores &amp; Etsy migration →</a>' if c.get('store') else ''
 
 
 def page(c, nxt):
@@ -463,7 +469,7 @@ def page(c, nxt):
   <section class="cta reveal">
     <h2>{c['cta'][0]}</h2>
     <p>{c['cta'][1]}</p>
-    <a class="btn" href="/#ew-contact">Start a project</a>
+    <a class="btn" href="/#ew-contact">Start a project</a>{service_btn(c)}
   </section>
 
   <footer><span>© Erewhile Digital · Latvia</span><span><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></span></footer>

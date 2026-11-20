@@ -75,7 +75,8 @@
     .mobile-nav a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
     .mobile-nav a:hover{color:var(--teal)}
     .mobile-nav .m-ctas{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-    @media(max-width:880px){nav{display:none}.burger{display:flex}}
+    nav a{white-space:nowrap}
+    @media(max-width:1080px){nav{display:none}.burger{display:flex}}
     @media(max-width:540px){.social-btn{display:none}.header-ctas .btn-ghost{display:none}.brand-logo{display:none}}
 
     /* ── HERO ── */
@@ -322,6 +323,7 @@
       <a href="/">Websites</a>
       <a href="/portfolio">Portfolio</a>
       <a href="/video" class="active">Video</a>
+      <a href="/store-migration/">Online stores</a>
       <a href="/#ew-contact">Contact</a>
       <a href="/lv/video/" hreflang="lv" lang="lv">LV</a>
       <a href="/ru/video/" hreflang="ru" lang="ru">RU</a>
@@ -343,6 +345,7 @@
   <a href="/">Websites</a>
   <a href="/portfolio">Portfolio</a>
   <a href="/video">Video</a>
+  <a href="/store-migration/">Online stores</a>
   <a href="/#ew-contact" onclick="closeMobileNav()">Contact</a>
   <a href="/lv/video/" hreflang="lv" lang="lv">Latviski</a>
   <a href="/ru/video/" hreflang="ru" lang="ru">Русский</a>
@@ -516,6 +519,8 @@
       <a class="footer-link" href="mailto:web@erewhile.digital">web@erewhile.digital</a>
       <span class="footer-sep">·</span>
       <a class="footer-link" href="tel:+37120579106">+371 20579106</a>
+      <span class="footer-sep">·</span>
+      <a class="footer-link" href="/store-migration/">Online stores &amp; Etsy migration</a>
     </div>
     <span class="footer-copy">© 2025 Erewhile Digital, Latvia</span>
   </div>

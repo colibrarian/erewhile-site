@@ -692,7 +692,8 @@
     .mobile-nav a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
     .mobile-nav a:hover{color:var(--teal)}
     .mobile-nav .m-ctas{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-    @media(max-width:880px){nav{display:none}.burger{display:flex}}
+    nav a{white-space:nowrap}
+    @media(max-width:1080px){nav{display:none}.burger{display:flex}}
     @media(max-width:540px){.social-btn{display:none}.header-ctas .btn-ghost{display:none}.brand-logo{display:none}}
   
     /* ── Header CTA alignment fix ── */
@@ -725,6 +726,7 @@
       <a href="/lv/">Mājaslapas</a>
       <a href="/lv/portfolio/" class="active">Portfolio</a>
       <a href="/lv/video/">Video</a>
+      <a href="/lv/store-migration/">Interneta veikali</a>
       <a href="#contact">Kontakti</a>
       <a href="/portfolio/" hreflang="en" lang="en">EN</a>
       <a href="/ru/portfolio/" hreflang="ru" lang="ru">RU</a>
@@ -744,6 +746,7 @@
   <a href="/lv/">Mājaslapas</a>
   <a href="/lv/portfolio/" class="active">Portfolio</a>
   <a href="/lv/video/">Video</a>
+  <a href="/lv/store-migration/">Interneta veikali</a>
   <a href="#contact" onclick="closeMobileNav()">Kontakti</a>
   <a href="/portfolio/" hreflang="en" lang="en">English</a>
   <a href="/ru/portfolio/" hreflang="ru" lang="ru">Русский</a>
@@ -1064,6 +1067,7 @@
   <div class="footer-row">
     <span class="footer-brand">© 2025 Erewhile Digital, Latvija</span>
     <div class="footer-links">
+      <a class="footer-link" href="/lv/store-migration/">Interneta veikali un pārnešana no Etsy</a>
       <span class="footer-link" onclick="openModal('terms')">Lietošanas noteikumi</span>
       <span class="footer-link" onclick="openModal('privacy')">Privātuma politika</span>
       <span class="footer-link" onclick="openModal('cookies')">Sīkdatņu politika</span>

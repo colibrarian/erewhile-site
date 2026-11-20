@@ -37,4 +37,6 @@ PAIRS=[
 ('aria-label="Close"','aria-label="Закрыть"'),
 ('aria-label="Previous"','aria-label="Предыдущее"'),
 ('aria-label="Next"','aria-label="Следующее"'),
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Интернет-магазины</a>'),
+('>Online stores &amp; Etsy migration<','>Интернет-магазины и перенос с Etsy<'),
 ]

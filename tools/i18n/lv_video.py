@@ -34,4 +34,6 @@ PAIRS=[
 ('aria-label="Close"','aria-label="Aizvērt"'),
 ('aria-label="Previous"','aria-label="Iepriekšējais"'),
 ('aria-label="Next"','aria-label="Nākamais"'),
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Interneta veikali</a>'),
+('>Online stores &amp; Etsy migration<','>Interneta veikali un pārnešana no Etsy<'),
 ]

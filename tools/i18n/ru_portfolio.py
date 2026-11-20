@@ -92,6 +92,8 @@ PAIRS=[
 (">Terms & Conditions</span>",">Условия использования</span>"),
 (">Privacy Policy</span>",">Политика конфиденциальности</span>"),
 (">Cookie Policy</span>",">Политика cookie</span>"),
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Интернет-магазины</a>'),
+('>Online stores &amp; Etsy migration<','>Интернет-магазины и перенос с Etsy<'),
 ]
 OPTIONAL=[
 ('<span class="bcard-tag">B2B catalogue</span>','<span class="bcard-tag">B2B-каталог</span>'),

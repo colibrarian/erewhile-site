@@ -89,6 +89,8 @@ PAIRS=[
 (">Terms & Conditions</span>",">Lietošanas noteikumi</span>"),
 (">Privacy Policy</span>",">Privātuma politika</span>"),
 (">Cookie Policy</span>",">Sīkdatņu politika</span>"),
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Interneta veikali</a>'),
+('>Online stores &amp; Etsy migration<','>Interneta veikali un pārnešana no Etsy<'),
 ]
 # Texts that only the case-pages version of the portfolio has (Zemits card, case links).
 OPTIONAL=[

@@ -88,6 +88,8 @@ PAIRS_HTML=[
 # faq heading
 ('Questions <span class="g">clients ask</span>','Частые <span class="g">вопросы</span>'),
 # form
+('<a href="/store-migration/">Online stores</a>','<a href="/store-migration/">Интернет-магазины</a>'),
+('>Online stores &amp; Etsy migration<','>Интернет-магазины и перенос с Etsy<'),
 ('Request <span class="g">a quote</span>','Запросить <span class="g">расчёт</span>'),
 ("Tell us your niche and goal, and we'll get back to you to talk through the details.",'Расскажите о своей нише и цели, и мы свяжемся с вами, чтобы обсудить детали.'),
 ('New request — erewhile.digital (EN)','New request — erewhile.digital (RU)'),
