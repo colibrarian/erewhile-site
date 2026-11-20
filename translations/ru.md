@@ -45,170 +45,176 @@ Audience: small businesses, NGOs and Erasmus+ projects in the Baltics.
 | RU-030 | Clothing brand · Estonia | Бренд одежды · Эстония | |
 | RU-031 | Kondo — brand website with online ordering | Kondo — сайт бренда с онлайн-заказом | |
 | RU-032 | E-commerce | Онлайн-магазин | |
-| RU-033 | Digital infopack | Цифровой инфопак | |
-| RU-034 | Digital tool | Цифровой инструмент | |
-| RU-035 | Restaurant | Ресторан | |
-| RU-036 | Digital Menu — QR-accessible, no app | Цифровое меню — по QR-коду, без приложения | |
-| RU-037 | Request details → | Узнать подробнее → | |
-| RU-038 | Local shop | Местный магазин | |
-| RU-039 | Flower shop | Цветочный магазин | |
-| RU-040 | Razalija — catalogue & online order | Razalija — каталог и онлайн-заказ | |
-| RU-041 | View all projects | Все проекты | |
-| RU-042 | 10+ websites, tools & apps | 10+ сайтов, инструментов и приложений | |
-| RU-043 | Let's get your business where you want it to be | Выведем ваш бизнес туда, где вы хотите его видеть | |
-| RU-044 | Website, content and integrations built to work as one system, from the first call to launch and beyond. | Сайт, контент и интеграции работают как одна система: от первого созвона до запуска и дальше. | |
-| RU-045 | Start a project | Начать проект | |
-| RU-046 | What will your project cost? | Сколько стоит ваш проект? | |
-| RU-047 | Based on your answers | По вашим ответам | |
-| RU-048 | Get a precise quote → | Получить точный расчёт → | |
-| RU-049 | Start over | Начать заново | |
-| RU-050 | Final price depends on content, integrations and scope. No surprises after we agree. | Итоговая цена зависит от контента, интеграций и объёма. После согласования никаких сюрпризов. | |
-| RU-051 | How a project runs | Как идёт проект | |
-| RU-052 | Discovery call | Знакомство | |
-| RU-053 | We talk through your goal, audience and what success looks like. 30 minutes, no pressure. | Обсуждаем вашу цель, аудиторию и то, каким должен быть результат. 30 минут, без давления. | |
-| RU-054 | Proposal & scope | Предложение и объём | |
-| RU-055 | You get a written plan: structure, timeline, price. We agree on scope before anything starts. | Вы получаете письменный план: структура, сроки, цена. Объём согласуем до начала работы. | |
-| RU-056 | Design & build | Дизайн и разработка | |
-| RU-057 | We design, develop and test. You review and give feedback. Two rounds of revisions included. | Мы делаем дизайн, разрабатываем и тестируем. Вы смотрите и даёте обратную связь. Два круга правок включены. | |
-| RU-058 | Launch & handoff | Запуск и передача | |
-| RU-059 | We launch, connect analytics and hand over everything. You own the site completely. | Запускаем, подключаем аналитику и передаём вам всё. Сайт полностью ваш. | |
-| RU-060 | Questions clients ask | Частые вопросы | |
-| RU-061 | Request a quote | Запросить расчёт | |
-| RU-062 | Tell us your niche and goal — we'll reply with a plan, timeline and estimate within 24 hours. | Расскажите о своей нише и цели, и в течение 24 часов мы пришлём план, сроки и оценку стоимости. | |
-| RU-063 | New request — erewhile.digital (EN) | New request — erewhile.digital (RU) | |
-| RU-064 | Name | Имя | |
-| RU-065 | Email | E-mail | |
-| RU-066 | What do you need? | Что вам нужно? | |
-| RU-067 | Consultation (project discovery) | Консультация (разбор проекта) | |
-| RU-068 | Website (custom) | Сайт (индивидуальный) | |
-| RU-069 | Landing page from €250 | Лендинг от €250 | |
-| RU-070 | Content / video | Контент / видео | |
-| RU-071 | Integrations / analytics | Интеграции / аналитика | |
-| RU-072 | Other | Другое | |
-| RU-073 | Message | Сообщение | |
-| RU-074 | How should we address you? | Как к вам обращаться? | |
-| RU-075 | you@company.com | vy@kompaniya.com | |
-| RU-076 | Briefly: niche, goal, what you sell/offer, deadline, references (if any) | Коротко: ниша, цель, что вы продаёте, сроки, примеры (если есть) | |
-| RU-077 | I agree to the <a | Я согласен(-на) с <a | |
-| RU-078 | My email will only be used to respond to this inquiry. | Мой e-mail будет использован только для ответа на этот запрос. Документы доступны на английском. | |
-| RU-079 | Send request | Отправить запрос | |
-| RU-080 | We reply within 24 hours. Urgent? Add your deadline in the message. | Отвечаем в течение 24 часов. Срочно? Укажите дедлайн в сообщении. | |
-| RU-081 | Terms & Conditions | условиями | |
-| RU-082 | Privacy Policy and | политикой конфиденциальности и | |
-| RU-083 | Cookie Policy. | политикой cookie. | |
-| RU-084 | ← Back | ← Назад | |
-| RU-085 | 2 weeks (rush rate)':time==='flexible'?'4–8 weeks':'2–4 weeks | 2 недель (срочно)':time==='flexible'?'4–8 недель':'2–4 недели | |
-| RU-086 | per day | в день | |
-| RU-087 | Timeline: '+tl+ | Сроки: '+tl+ | |
-| RU-088 | Fixed price agreed in writing | Фиксированная цена, согласованная письменно | |
-| RU-089 | What\'s included | Что входит | |
-| RU-090 | — estimate | — оценка | |
-| RU-091 | tl='Depends on scope | tl='Зависит от объёма | |
-| RU-092 | One focused page | Одна страница с одной целью | |
-| RU-093 | Business website | Сайт для бизнеса | |
-| RU-094 | Several pages, full structure | Несколько страниц, полная структура | |
-| RU-095 | Online store | Интернет-магазин | |
-| RU-096 | Products, cart, checkout | Товары, корзина, оплата | |
-| RU-097 | Custom tool or web app | Индивидуальный инструмент или веб-приложение | |
-| RU-098 | Calculator, dashboard, CRM, API | Калькулятор, дашборд, CRM, API | |
-| RU-099 | How many pages? | Сколько страниц? | |
-| RU-100 | 1 page | 1 страница | |
-| RU-101 | Everything on one screen flow | Всё на одной странице | |
-| RU-102 | 2–5 pages | 2–5 страниц | |
-| RU-103 | Home, services, about, contact | Главная, услуги, о нас, контакты | |
-| RU-104 | 6–10 pages | 6–10 страниц | |
-| RU-105 | Separate service or project pages | Отдельные страницы услуг или проектов | |
-| RU-106 | More than 10 | Больше 10 | |
-| RU-107 | Large site or catalogue | Большой сайт или каталог | |
-| RU-108 | How many languages? | Сколько языков? | |
-| RU-109 | One language | Один язык | |
-| RU-110 | English, Latvian or other | Русский, латышский или другой | |
-| RU-111 | Two languages | Два языка | |
-| RU-112 | e.g. English + Latvian | напр., русский + латышский | |
-| RU-113 | Three or more | Три и больше | |
-| RU-114 | Which features do you need? | Какие функции нужны? | |
-| RU-115 | Contact form | Форма обратной связи | |
-| RU-116 | Requests go to your email | Заявки приходят на почту | |
-| RU-117 | Online booking | Онлайн-запись | |
-| RU-118 | Calendar, appointments | Календарь, бронирования | |
-| RU-119 | CRM integration | Интеграция с CRM | |
-| RU-120 | HubSpot, Pipedrive, etc. | HubSpot, Pipedrive и др. | |
-| RU-121 | Booking + CRM | Запись + CRM | |
-| RU-122 | Full lead flow | Полный цикл заявок | |
-| RU-123 | Are texts and images ready? | Тексты и изображения готовы? | |
-| RU-124 | Yes, all ready | Да, всё готово | |
-| RU-125 | I just need the site built | Нужно только собрать сайт | |
-| RU-126 | Partially ready | Частично | |
-| RU-127 | Need help with some texts | Нужна помощь с частью текстов | |
-| RU-128 | Starting from zero | Начинаем с нуля | |
-| RU-129 | Need texts for every page | Нужны тексты для всех страниц | |
-| RU-130 | ASAP (< 2 weeks) | Срочно (< 2 недель) | |
-| RU-131 | Rush project | Срочный проект | |
-| RU-132 | 2–4 weeks | 2–4 недели | |
-| RU-133 | Standard timeline | Стандартные сроки | |
-| RU-134 | No rush (1–2 months) | Без спешки (1–2 месяца) | |
-| RU-135 | Flexible | Гибко | |
-| RU-136 | Custom tools are estimated in working days after a short discovery call. Most small tools take 4–10 days; about 30% of that time goes to testing and fixes. | Индивидуальные инструменты мы оцениваем в рабочих днях после короткого созвона. Большинство небольших инструментов занимают 4–10 дней, и около 30% этого времени уходит на тестирование и исправления. | |
-| RU-137 | Discovery call and written estimate | Созвон и письменная оценка | |
-| RU-138 | Prototype before full build | Прототип до полной разработки | |
-| RU-139 | Testing on real data | Тестирование на реальных данных | |
-| RU-140 | Handover and documentation | Передача и документация | |
-| RU-141 | A focused page built for conversion: clear message, lead capture, fast launch. | Страница, заточенная под заявки: понятный посыл, форма захвата, быстрый запуск. | |
-| RU-142 | A multi-page business website with full structure, SEO foundations and analytics. | Многостраничный сайт для бизнеса с полной структурой, базовым SEO и аналитикой. | |
-| RU-143 | An online store with catalogue, cart, checkout and payments. | Интернет-магазин с каталогом, корзиной, оформлением заказа и оплатой. | |
-| RU-144 | Responsive design | Адаптивный дизайн | |
-| RU-145 | Lead capture form | Форма заявки | |
-| RU-146 | Analytics setup | Настройка аналитики | |
-| RU-147 | 2 revision rounds | 2 круга правок | |
-| RU-148 | Structure and UI/UX design | Структура и UI/UX-дизайн | |
-| RU-149 | SEO foundations | Базовое SEO | |
-| RU-150 | Product catalogue | Каталог товаров | |
-| RU-151 | Cart and checkout | Корзина и оформление заказа | |
-| RU-152 | Payment integration | Подключение оплаты | |
-| RU-153 | Order notifications | Уведомления о заказах | |
-| RU-154 | Language versions with correct SEO setup | Языковые версии с корректной SEO-настройкой | |
-| RU-155 | Copywriting for the pages you need | Тексты для нужных страниц | |
-| RU-156 | FASHION BRAND | БРЕНД ОДЕЖДЫ | |
-| RU-157 | Shop · About · Contact | Магазин · О нас · Контакты | |
-| RU-158 | New collection | Новая коллекция | |
-| RU-159 | is live | уже в продаже | |
-| RU-160 | Clothing brand from Estonia. Browse the collection and order online. | Бренд одежды из Эстонии. Смотрите коллекцию и заказывайте онлайн. | |
-| RU-161 | Order now | Заказать | |
-| RU-162 | new order received | новый заказ | |
-| RU-163 | NGO PROJECT | ПРОЕКТ НКО | |
-| RU-164 | Modules · Partners | Модули · Партнёры | |
-| RU-165 | digital infopack | цифровой инфопак | |
-| RU-166 | A digital infopack that gives Erasmus+ participants everything in one place. | Цифровой инфопак, где у участников Erasmus+ всё собрано в одном месте. | |
-| RU-167 | Open infopack | Открыть инфопак | |
-| RU-168 | participant registered | участник зарегистрирован | |
-| RU-169 | Erasmus+ infopack | Инфопак Erasmus+ | |
-| RU-170 | Catalogue · Delivery | Каталог · Доставка | |
-| RU-171 | Fresh flowers | Свежие цветы | |
-| RU-172 | for any occasion | на любой случай | |
-| RU-173 | The flower shop catalogue with online ordering. | Каталог цветочного магазина с онлайн-заказом. | |
-| RU-174 | Order a bouquet | Заказать букет | |
-| RU-175 | bouquet ordered | букет заказан | |
-| RU-176 | Catalogue & orders | Каталог и заказы | |
-| RU-177 | DIGITAL MENU | ЦИФРОВОЕ МЕНЮ | |
-| RU-178 | Mains · Drinks · Desserts | Блюда · Напитки · Десерты | |
-| RU-179 | Scan the QR | Сканируйте QR | |
-| RU-180 | see the menu | смотрите меню | |
-| RU-181 | Soup of the day ........ €6 / Grilled salmon ......... €16 / Opens from a QR code, no app. | Суп дня ............... €6 / Лосось на гриле ....... €16 / Открывается по QR-коду, без приложения. | |
-| RU-182 | Call a waiter | Позвать официанта | |
-| RU-183 | table request sent | запрос со столика отправлен | |
-| RU-184 | How much does a website cost? | Сколько стоит сайт? | |
-| RU-185 | A one-page landing page in one language costs €250, a business website with up to five pages starts at €1 200, and an online store at €2 200. Extra pages, language versions, copywriting and integrations are added as clear modules, and custom tools are estimated in working days. The calculator above gives a realistic range, and we confirm a fixed price in writing before work starts. | Лендинг на одном языке стоит €250, сайт для бизнеса до пяти страниц от €1 200, интернет-магазин от €2 200. Дополнительные страницы, языковые версии, тексты и интеграции добавляются понятными модулями, а индивидуальные инструменты оцениваются в рабочих днях. Калькулятор выше показывает реалистичный диапазон, а фиксированную цену мы письменно подтверждаем до начала работы. | |
-| RU-186 | How long does it take to build a website? | Сколько времени занимает разработка сайта? | |
-| RU-187 | A landing page typically takes 1–2 weeks and a business website 2–4 weeks. Rush delivery in under two weeks is possible at a higher rate. Most of the timeline depends on how quickly content and feedback come in. | Лендинг обычно занимает 1–2 недели, сайт для бизнеса 2–4 недели. Срочная разработка быстрее двух недель возможна по повышенному тарифу. Сроки во многом зависят от того, как быстро приходят материалы и обратная связь. | |
-| RU-188 | Do you work with clients outside Latvia? | Работаете ли вы с клиентами за пределами Латвии? | |
-| RU-189 | Yes. We are based in Latvia and work with clients across the Baltics and the EU, for example Kondo in Estonia. Everything can be done remotely, and we communicate in English, Latvian or Russian. | Да. Мы находимся в Латвии и работаем с клиентами по всей Балтии и ЕС, например с Kondo в Эстонии. Всё можно сделать удалённо, общаемся на русском, латышском или английском. | |
-| RU-190 | Do you build websites for NGOs and Erasmus+ projects? | Делаете ли вы сайты для НКО и проектов Erasmus+? | |
-| RU-191 | Yes. We have built websites and digital infopacks for NGOs and Erasmus+ projects, such as From Thinking to Speaking for UNTU. We know what these projects need: clear structure, partner and result pages, and materials that stay online after the project ends. | Да. Мы делали сайты и цифровые инфопаки для НКО и проектов Erasmus+, например From Thinking to Speaking для UNTU. Мы знаем, что нужно таким проектам: понятная структура, страницы партнёров и результатов и материалы, которые остаются онлайн после завершения проекта. | |
-| RU-192 | Will my website be optimised for Google? | Будет ли сайт оптимизирован под Google? | |
-| RU-193 | Every site gets SEO foundations: a clean page structure, meta titles and descriptions, structured data, a sitemap, fast loading and correct language versions. For competitive markets we can also plan landing pages and content around the searches your clients make. | Каждый сайт получает базовое SEO: чистую структуру страниц, мета-заголовки и описания, структурированные данные, карту сайта, быструю загрузку и корректные языковые версии. Для конкурентных рынков можем также спланировать посадочные страницы и контент под запросы ваших клиентов. | |
-| RU-194 | What do I need to prepare before we start? | Что нужно подготовить перед началом? | |
-| RU-195 | A short description of your business and goal, your logo if you have one, and any texts or photos you already have. If you are starting from zero, we can help with structure, copy and visuals. | Короткое описание бизнеса и цели, логотип, если он есть, и любые готовые тексты или фото. Если вы начинаете с нуля, поможем со структурой, текстами и визуалом. | |
-| RU-196 | Can you connect the website to my CRM or booking system? | Можно ли связать сайт с моей CRM или системой записи? | |
-| RU-197 | Yes. We connect forms to CRMs such as HubSpot or Pipedrive, set up booking flows and email notifications, and configure analytics so you can see where your leads come from. | Да. Подключаем формы к CRM, например HubSpot или Pipedrive, настраиваем онлайн-запись и уведомления на почту, а также аналитику, чтобы вы видели, откуда приходят заявки. | |
-| RU-198 | Who owns the website after the project? | Кому принадлежит сайт после проекта? | |
-| RU-199 | You do. After launch we hand over the site, the accounts and access, and you own everything completely. Two rounds of revisions are included in every project. | Вам. После запуска мы передаём сайт, аккаунты и доступы, и всё полностью принадлежит вам. В каждый проект включены два круга правок. | |
+| RU-033 | Knowledge base · Youth work | База знаний · Работа с молодёжью | |
+| RU-034 | FTS Library — a knowledge base for youth workers | Библиотека FTS — база знаний для молодёжных работников | |
+| RU-035 | alt="FTS Library: knowledge base for youth workers | alt="Библиотека FTS: база знаний для молодёжных работников | |
+| RU-036 | See the library → | Смотреть библиотеку → | |
+| RU-037 | Digital tool | Цифровой инструмент | |
+| RU-038 | Restaurant | Ресторан | |
+| RU-039 | Digital Menu — QR-accessible, no app | Цифровое меню — по QR-коду, без приложения | |
+| RU-040 | Request details → | Узнать подробнее → | |
+| RU-041 | B2B catalogue | B2B-каталог | |
+| RU-042 | Beauty equipment · Baltics | Косметологическое оборудование · Балтия | |
+| RU-043 | Zemits — three-language device catalogue | Zemits — каталог оборудования на трёх языках | |
+| RU-044 | alt="Zemits cosmetology equipment catalogue | alt="Каталог косметологического оборудования Zemits | |
+| RU-045 | Case study → | Подробнее о проекте → | |
+| RU-046 | View all projects | Все проекты | |
+| RU-047 | 10+ websites, tools & apps | 10+ сайтов, инструментов и приложений | |
+| RU-048 | Let's get your business where you want it to be | Выведем ваш бизнес туда, где вы хотите его видеть | |
+| RU-049 | Website, content and integrations built to work as one system, from the first call to launch and beyond. | Сайт, контент и интеграции работают как одна система: от первого созвона до запуска и дальше. | |
+| RU-050 | Start a project | Начать проект | |
+| RU-051 | What will your project cost? | Сколько стоит ваш проект? | |
+| RU-052 | Based on your answers | По вашим ответам | |
+| RU-053 | Get a precise quote → | Получить точный расчёт → | |
+| RU-054 | Start over | Начать заново | |
+| RU-055 | Final price depends on content, integrations and scope. No surprises after we agree. | Итоговая цена зависит от контента, интеграций и объёма. После согласования никаких сюрпризов. | |
+| RU-056 | How a project runs | Как идёт проект | |
+| RU-057 | Discovery call | Знакомство | |
+| RU-058 | We talk through your goal, audience and what success looks like. 30 minutes, no pressure. | Обсуждаем вашу цель, аудиторию и то, каким должен быть результат. 30 минут, без давления. | |
+| RU-059 | Proposal & scope | Предложение и объём | |
+| RU-060 | You get a written plan: structure, timeline, price. We agree on scope before anything starts. | Вы получаете письменный план: структура, сроки, цена. Объём согласуем до начала работы. | |
+| RU-061 | Design & build | Дизайн и разработка | |
+| RU-062 | We design, develop and test. You review and give feedback. Two rounds of revisions included. | Мы делаем дизайн, разрабатываем и тестируем. Вы смотрите и даёте обратную связь. Два круга правок включены. | |
+| RU-063 | Launch & handoff | Запуск и передача | |
+| RU-064 | We launch, connect analytics and hand over everything. You own the site completely. | Запускаем, подключаем аналитику и передаём вам всё. Сайт полностью ваш. | |
+| RU-065 | Questions clients ask | Частые вопросы | |
+| RU-066 | Request a quote | Запросить расчёт | |
+| RU-067 | Tell us your niche and goal, and we'll get back to you to talk through the details. | Расскажите о своей нише и цели, и мы свяжемся с вами, чтобы обсудить детали. | |
+| RU-068 | New request — erewhile.digital (EN) | New request — erewhile.digital (RU) | |
+| RU-069 | Name | Имя | |
+| RU-070 | Email | E-mail | |
+| RU-071 | What do you need? | Что вам нужно? | |
+| RU-072 | Consultation (project discovery) | Консультация (разбор проекта) | |
+| RU-073 | Website (custom) | Сайт (индивидуальный) | |
+| RU-074 | Landing page from €250 | Лендинг от €250 | |
+| RU-075 | Content / video | Контент / видео | |
+| RU-076 | Integrations / analytics | Интеграции / аналитика | |
+| RU-077 | Other | Другое | |
+| RU-078 | Message | Сообщение | |
+| RU-079 | How should we address you? | Как к вам обращаться? | |
+| RU-080 | you@company.com | vy@kompaniya.com | |
+| RU-081 | Briefly: niche, goal, what you sell/offer, deadline, references (if any) | Коротко: ниша, цель, что вы продаёте, сроки, примеры (если есть) | |
+| RU-082 | I agree to the <a | Я согласен(-на) с <a | |
+| RU-083 | My email will only be used to respond to this inquiry. | Мой e-mail будет использован только для ответа на этот запрос. Документы доступны на английском. | |
+| RU-084 | Send request | Отправить запрос | |
+| RU-085 | Urgent? Add your deadline in the message. | Срочно? Укажите дедлайн в сообщении. | |
+| RU-086 | Terms & Conditions | условиями | |
+| RU-087 | Privacy Policy and | политикой конфиденциальности и | |
+| RU-088 | Cookie Policy. | политикой cookie. | |
+| RU-089 | ← Back | ← Назад | |
+| RU-090 | 2 weeks (rush rate)':time==='flexible'?'4–8 weeks':'2–4 weeks | 2 недель (срочно)':time==='flexible'?'4–8 недель':'2–4 недели | |
+| RU-091 | per day | в день | |
+| RU-092 | Timeline: '+tl+ | Сроки: '+tl+ | |
+| RU-093 | Fixed price agreed in writing | Фиксированная цена, согласованная письменно | |
+| RU-094 | What\'s included | Что входит | |
+| RU-095 | — estimate | — оценка | |
+| RU-096 | tl='Depends on scope | tl='Зависит от объёма | |
+| RU-097 | One focused page | Одна страница с одной целью | |
+| RU-098 | Business website | Сайт для бизнеса | |
+| RU-099 | Several pages, full structure | Несколько страниц, полная структура | |
+| RU-100 | Online store | Интернет-магазин | |
+| RU-101 | Products, cart, checkout | Товары, корзина, оплата | |
+| RU-102 | Custom tool or web app | Индивидуальный инструмент или веб-приложение | |
+| RU-103 | Calculator, dashboard, CRM, API | Калькулятор, дашборд, CRM, API | |
+| RU-104 | How many pages? | Сколько страниц? | |
+| RU-105 | 1 page | 1 страница | |
+| RU-106 | Everything on one screen flow | Всё на одной странице | |
+| RU-107 | 2–5 pages | 2–5 страниц | |
+| RU-108 | Home, services, about, contact | Главная, услуги, о нас, контакты | |
+| RU-109 | 6–10 pages | 6–10 страниц | |
+| RU-110 | Separate service or project pages | Отдельные страницы услуг или проектов | |
+| RU-111 | More than 10 | Больше 10 | |
+| RU-112 | Large site or catalogue | Большой сайт или каталог | |
+| RU-113 | How many languages? | Сколько языков? | |
+| RU-114 | One language | Один язык | |
+| RU-115 | English, Latvian or other | Русский, латышский или другой | |
+| RU-116 | Two languages | Два языка | |
+| RU-117 | e.g. English + Latvian | напр., русский + латышский | |
+| RU-118 | Three or more | Три и больше | |
+| RU-119 | Which features do you need? | Какие функции нужны? | |
+| RU-120 | Contact form | Форма обратной связи | |
+| RU-121 | Requests go to your email | Заявки приходят на почту | |
+| RU-122 | Online booking | Онлайн-запись | |
+| RU-123 | Calendar, appointments | Календарь, бронирования | |
+| RU-124 | CRM integration | Интеграция с CRM | |
+| RU-125 | HubSpot, Pipedrive, etc. | HubSpot, Pipedrive и др. | |
+| RU-126 | Booking + CRM | Запись + CRM | |
+| RU-127 | Full lead flow | Полный цикл заявок | |
+| RU-128 | Are texts and images ready? | Тексты и изображения готовы? | |
+| RU-129 | Yes, all ready | Да, всё готово | |
+| RU-130 | I just need the site built | Нужно только собрать сайт | |
+| RU-131 | Partially ready | Частично | |
+| RU-132 | Need help with some texts | Нужна помощь с частью текстов | |
+| RU-133 | Starting from zero | Начинаем с нуля | |
+| RU-134 | Need texts for every page | Нужны тексты для всех страниц | |
+| RU-135 | ASAP (< 2 weeks) | Срочно (< 2 недель) | |
+| RU-136 | Rush project | Срочный проект | |
+| RU-137 | 2–4 weeks | 2–4 недели | |
+| RU-138 | Standard timeline | Стандартные сроки | |
+| RU-139 | No rush (1–2 months) | Без спешки (1–2 месяца) | |
+| RU-140 | Flexible | Гибко | |
+| RU-141 | Custom tools are estimated in working days after a short discovery call. Most small tools take 4–10 days; about 30% of that time goes to testing and fixes. | Индивидуальные инструменты мы оцениваем в рабочих днях после короткого созвона. Большинство небольших инструментов занимают 4–10 дней, и около 30% этого времени уходит на тестирование и исправления. | |
+| RU-142 | Discovery call and written estimate | Созвон и письменная оценка | |
+| RU-143 | Prototype before full build | Прототип до полной разработки | |
+| RU-144 | Testing on real data | Тестирование на реальных данных | |
+| RU-145 | Handover and documentation | Передача и документация | |
+| RU-146 | A focused page built for conversion: clear message, lead capture, fast launch. | Страница, заточенная под заявки: понятный посыл, форма захвата, быстрый запуск. | |
+| RU-147 | A multi-page business website with full structure, SEO foundations and analytics. | Многостраничный сайт для бизнеса с полной структурой, базовым SEO и аналитикой. | |
+| RU-148 | An online store with catalogue, cart, checkout and payments. | Интернет-магазин с каталогом, корзиной, оформлением заказа и оплатой. | |
+| RU-149 | Responsive design | Адаптивный дизайн | |
+| RU-150 | Lead capture form | Форма заявки | |
+| RU-151 | Analytics setup | Настройка аналитики | |
+| RU-152 | 2 revision rounds | 2 круга правок | |
+| RU-153 | Structure and UI/UX design | Структура и UI/UX-дизайн | |
+| RU-154 | SEO foundations | Базовое SEO | |
+| RU-155 | Product catalogue | Каталог товаров | |
+| RU-156 | Cart and checkout | Корзина и оформление заказа | |
+| RU-157 | Payment integration | Подключение оплаты | |
+| RU-158 | Order notifications | Уведомления о заказах | |
+| RU-159 | Language versions with correct SEO setup | Языковые версии с корректной SEO-настройкой | |
+| RU-160 | Copywriting for the pages you need | Тексты для нужных страниц | |
+| RU-161 | FASHION BRAND | БРЕНД ОДЕЖДЫ | |
+| RU-162 | Shop · About · Contact | Магазин · О нас · Контакты | |
+| RU-163 | New collection | Новая коллекция | |
+| RU-164 | is live | уже в продаже | |
+| RU-165 | Clothing brand from Estonia. Browse the collection and order online. | Бренд одежды из Эстонии. Смотрите коллекцию и заказывайте онлайн. | |
+| RU-166 | Order now | Заказать | |
+| RU-167 | new order received | новый заказ | |
+| RU-168 | NGO PROJECT | ПРОЕКТ НКО | |
+| RU-169 | Modules · Partners | Модули · Партнёры | |
+| RU-170 | digital infopack | цифровой инфопак | |
+| RU-171 | A digital infopack that gives Erasmus+ participants everything in one place. | Цифровой инфопак, где у участников Erasmus+ всё собрано в одном месте. | |
+| RU-172 | Open infopack | Открыть инфопак | |
+| RU-173 | participant registered | участник зарегистрирован | |
+| RU-174 | Erasmus+ infopack | Инфопак Erasmus+ | |
+| RU-175 | Flower shop | Цветочный магазин | |
+| RU-176 | Catalogue · Delivery | Каталог · Доставка | |
+| RU-177 | Fresh flowers | Свежие цветы | |
+| RU-178 | for any occasion | на любой случай | |
+| RU-179 | The flower shop catalogue with online ordering. | Каталог цветочного магазина с онлайн-заказом. | |
+| RU-180 | Order a bouquet | Заказать букет | |
+| RU-181 | bouquet ordered | букет заказан | |
+| RU-182 | Catalogue & orders | Каталог и заказы | |
+| RU-183 | DIGITAL MENU | ЦИФРОВОЕ МЕНЮ | |
+| RU-184 | Mains · Drinks · Desserts | Блюда · Напитки · Десерты | |
+| RU-185 | Scan the QR | Сканируйте QR | |
+| RU-186 | see the menu | смотрите меню | |
+| RU-187 | Soup of the day ........ €6 / Grilled salmon ......... €16 / Opens from a QR code, no app. | Суп дня ............... €6 / Лосось на гриле ....... €16 / Открывается по QR-коду, без приложения. | |
+| RU-188 | Call a waiter | Позвать официанта | |
+| RU-189 | table request sent | запрос со столика отправлен | |
+| RU-190 | How much does a website cost? | Сколько стоит сайт? | |
+| RU-191 | A one-page landing page in one language costs €250, a business website with up to five pages starts at €1 200, and an online store at €2 200. Extra pages, language versions, copywriting and integrations are added as clear modules, and custom tools are estimated in working days. The calculator above gives a realistic range, and we confirm a fixed price in writing before work starts. | Лендинг на одном языке стоит €250, сайт для бизнеса до пяти страниц от €1 200, интернет-магазин от €2 200. Дополнительные страницы, языковые версии, тексты и интеграции добавляются понятными модулями, а индивидуальные инструменты оцениваются в рабочих днях. Калькулятор выше показывает реалистичный диапазон, а фиксированную цену мы письменно подтверждаем до начала работы. | |
+| RU-192 | How long does it take to build a website? | Сколько времени занимает разработка сайта? | |
+| RU-193 | A landing page typically takes 1–2 weeks and a business website 2–4 weeks. Rush delivery in under two weeks is possible at a higher rate. Most of the timeline depends on how quickly content and feedback come in. | Лендинг обычно занимает 1–2 недели, сайт для бизнеса 2–4 недели. Срочная разработка быстрее двух недель возможна по повышенному тарифу. Сроки во многом зависят от того, как быстро приходят материалы и обратная связь. | |
+| RU-194 | Do you work with clients outside Latvia? | Работаете ли вы с клиентами за пределами Латвии? | |
+| RU-195 | Yes. We are based in Latvia and work with clients across the Baltics and the EU, for example Kondo in Estonia. Everything can be done remotely, and we communicate in English, Latvian or Russian. | Да. Мы находимся в Латвии и работаем с клиентами по всей Балтии и ЕС, например с Kondo в Эстонии. Всё можно сделать удалённо, общаемся на русском, латышском или английском. | |
+| RU-196 | Do you build websites for NGOs and Erasmus+ projects? | Делаете ли вы сайты для НКО и проектов Erasmus+? | |
+| RU-197 | Yes. We have built websites, project reports and knowledge bases for NGOs and Erasmus+ projects, such as the From Thinking to Speaking library and the Daily Wellness Challenge Movement report for UNTU. We know what these projects need: clear structure, partner and result pages, and materials that stay online after the project ends. | Да. Мы делали сайты, отчёты проектов и базы знаний для НКО и проектов Erasmus+, например библиотеку From Thinking to Speaking и отчёт Daily Wellness Challenge Movement для UNTU. Мы знаем, что нужно таким проектам: понятная структура, страницы партнёров и результатов и материалы, которые остаются онлайн после завершения проекта. | |
+| RU-198 | Will my website be optimised for Google? | Будет ли сайт оптимизирован под Google? | |
+| RU-199 | Every site gets SEO foundations: a clean page structure, meta titles and descriptions, structured data, a sitemap, fast loading and correct language versions. For competitive markets we can also plan landing pages and content around the searches your clients make. | Каждый сайт получает базовое SEO: чистую структуру страниц, мета-заголовки и описания, структурированные данные, карту сайта, быструю загрузку и корректные языковые версии. Для конкурентных рынков можем также спланировать посадочные страницы и контент под запросы ваших клиентов. | |
+| RU-200 | What do I need to prepare before we start? | Что нужно подготовить перед началом? | |
+| RU-201 | A short description of your business and goal, your logo if you have one, and any texts or photos you already have. If you are starting from zero, we can help with structure, copy and visuals. | Короткое описание бизнеса и цели, логотип, если он есть, и любые готовые тексты или фото. Если вы начинаете с нуля, поможем со структурой, текстами и визуалом. | |
+| RU-202 | Can you connect the website to my CRM or booking system? | Можно ли связать сайт с моей CRM или системой записи? | |
+| RU-203 | Yes. We connect forms to CRMs such as HubSpot or Pipedrive, set up booking flows and email notifications, and configure analytics so you can see where your leads come from. | Да. Подключаем формы к CRM, например HubSpot или Pipedrive, настраиваем онлайн-запись и уведомления на почту, а также аналитику, чтобы вы видели, откуда приходят заявки. | |
+| RU-204 | Who owns the website after the project? | Кому принадлежит сайт после проекта? | |
+| RU-205 | You do. After launch we hand over the site, the accounts and access, and you own everything completely. Two rounds of revisions are included in every project. | Вам. После запуска мы передаём сайт, аккаунты и доступы, и всё полностью принадлежит вам. В каждый проект включены два круга правок. | |
