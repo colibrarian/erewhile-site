@@ -60,7 +60,7 @@ PAIRS=[
 ('Answer six short questions in our calculator and get a realistic price range for your website.','Atbildiet uz sešiem īsiem jautājumiem mūsu kalkulatorā un uzziniet reālu cenu diapazonu savai mājaslapai.'),
 ('Open the price calculator →','Atvērt cenu kalkulatoru →'),
 # form
-('Ready to build something <em>that works</em>?','Gatavi izveidot kaut ko, <em>kas strādā</em>?'),
+('Ready to start <em>your project</em>?','Gatavi sākt <em>savu projektu</em>?'),
 ("Tell us what you need — website, landing page, tool or something else. We'll get back to you to talk through the details.",
  'Pastāstiet, kas jums nepieciešams — mājaslapa, mērķlapa, rīks vai kas cits. Mēs sazināsimies ar jums, lai pārrunātu detaļas.'),
 ('Portfolio page inquiry — erewhile.digital','Pieteikums no portfolio lapas — erewhile.digital (LV)'),

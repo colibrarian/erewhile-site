@@ -15,7 +15,7 @@ PAIRS=[
 ('aria-label="Open menu"','aria-label="Открыть меню"'),
 # hero
 ('Video production','Видеопродакшн'),
-('<h1>Content that <em>sells</em><br><span class="thin">your website</span></h1>','<h1>Контент, который <em>продаёт</em><br><span class="thin">на вашем сайте</span></h1>'),
+('<h1>Video that <em>works</em><br><span class="thin">for your website</span></h1>','<h1>Видео, которое <em>работает</em><br><span class="thin">на ваш сайт</span></h1>'),
 ('Brand presentations, explainers, Reels and Shorts — each format built for a specific goal: trust on your site, reach on mobile platforms.',
  'Презентации брендов, объясняющие ролики, Reels и Shorts — каждый формат под свою задачу: доверие на сайте и охват на мобильных платформах.'),
 ('<div class="hero-stat-label">Landscape</div>','<div class="hero-stat-label">Горизонтально</div>'),
