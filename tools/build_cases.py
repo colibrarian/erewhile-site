@@ -16,7 +16,37 @@ STYLE = open(os.path.join(ROOT, 'tools', 'case_style.css'), encoding='utf-8').re
 
 CASES = [
   dict(
-    slug='zemits', name='Zemits', new=True,
+    slug='oro', name='ORO Studio', new=True,
+    url='https://orostudiotallinn.com', host='orostudiotallinn.com',
+    title='ORO Studio case study: booking website for an event studio in Tallinn',
+    desc='How we built an Estonian and Russian site for ORO Studio, a cosy event space in the centre of Tallinn: hourly rental, turnkey parties and a booking calendar linked to the studio’s Google Calendar.',
+    h1='A studio site where guests <span>book</span> the date themselves',
+    tags=['Event space', 'Tallinn', 'ET · RU', 'Booking calendar'],
+    lede='ORO Studio is a small event space in the heart of Tallinn for up to 15 people. Experts rent it for workshops, consultations and women’s circles, and friends book it for birthdays and bachelorette parties, with or without a ready programme.',
+    cover='/assets/cases/oro/cover.jpg', cover_wh=(1200, 630),
+    facts=[('Client', 'ORO Studio, Tallinn'), ('Market', 'Tallinn, Estonia'), ('Languages', 'Estonian, Russian'), ('Booking', 'Calendar + email + invoice')],
+    task_h='Turn messages about free dates into bookings',
+    task=['Every rental started with the same chat: is the studio free that evening, how much is it for ten people, what is included. Answering it by hand took time and dates were easy to mix up.',
+          'The site had to show the atmosphere, explain two very different offers (renting the space and a turnkey party) and let people pick a free time on their own.'],
+    built_h='From first look to a booked evening',
+    built=[('Booking calendar', 'Free hours come from the studio’s Google Calendar. A request blocks the time at once and arrives by email, with an invoice for the rent.'),
+           ('Clear hourly prices', 'Three rates by group size, and the calendar shows the rent for the chosen hours before sending.'),
+           ('Turnkey parties', 'Four hours in the studio with one of eight programmes, from making your own perfume to painting on canvas.'),
+           ('Two languages, fast and private', 'Estonian and Russian versions, booking terms, FAQ and structured data. Fonts are hosted on the site, so it needs no cookie banner.')],
+    vis_h='Ivory, olive and a golden flower of life',
+    vis='Warm ivory and deep olive keep the studio calm, and gold comes from the real ORO logo. A soft light slowly travels along the gold lines of the logo on the first screen. An elegant serif for headlines, Montserrat for prices and the calendar.',
+    fonts=('Cormorant Garamond', 'Montserrat', 'Montserrat'), gf='family=Cormorant+Garamond:ital,wght@0,500;1,500',
+    display_w='500', display_ls='0',
+    sample=('Ruum, kus on hea kokku saada', 'Hubane stuudio kohtumisteks ja töötubadeks.', 'Broneeri stuudio'),
+    palette=[('#F7F3EC','Ivory background'), ('#4F5A3D','Deep olive'), ('#6F7A56','Olive'), ('#B08A45','Gold'), ('#3A3428','Text')],
+    ink='#3A3428', logo_bg='#F7F3EC', logo='/assets/cases/oro/logo.webp', logo_wh=(360, 360),
+    gallery=['/assets/cases/oro/perfume.jpg', '/assets/cases/oro/candles.jpg', '/assets/cases/oro/painting.jpg', '/assets/cases/oro/birthday-table.jpg'],
+    gallery_alt='ORO Studio event', gallery_ratio='3/4',
+    handover=['Live site in 2 languages', 'Booking calendar', 'Request emails and invoices', 'Booking terms and privacy', 'Sitemap, schema and llms.txt'],
+    cta=('Renting out a <span>space</span>?', 'Tell us how people book you today. We will build a calendar that fills the free hours without the back-and-forth.'),
+  ),
+  dict(
+    slug='zemits', name='Zemits',
     url='https://zemits-latvija.lv', host='zemits-latvija.lv',
     title='Zemits case study: three-language catalogue for a cosmetology equipment distributor',
     desc='How we built a Latvian, Russian and English site with a device catalogue, training and service pages for Zemits Skin Expert, the official Zemits representative in the Baltics.',
@@ -443,6 +473,200 @@ def page(c, nxt):
 </html>
 '''
 
+# ── Knowledge base: the FTS library gets its own page layout ──────────────────
+# NGO / Erasmus+ work: no commercial wording (no "client", "case", "order").
+KB_STYLE = open(os.path.join(ROOT, 'tools', 'kb_style.css'), encoding='utf-8').read()
+LIB = 'https://untu.ngo/projects/'
+KB = dict(
+  slug='fts-library', name='FTS Library',
+  url=LIB + 'fts-library', host='untu.ngo',
+  title='FTS Library: a knowledge base for youth workers',
+  desc='How we designed the From Thinking to Speaking library: a knowledge base of presentations, guides and an interactive bias map for youth workers from six countries, made for an Erasmus+ training course by Biedrība UNTU.',
+  cover='/assets/cases/fts-library/cover.jpg',
+  topics=['Critical Thinking', 'Media Literacy', 'Public Speaking', 'Podcasting', 'Create &amp; Share', 'Youth Work'],
+  # (topic, link, image, kind, title, text, wide)
+  materials=[
+    ('Critical Thinking', 'fts-bias-map', 'bias-map', 'Interactive map · 40 biases', 'Cognitive Bias Map', '40 cognitive biases around one brain, grouped like Buster Benson’s Cognitive Bias Codex and marked by how well the research holds up. Three views, filters by evidence and effect.', True),
+    ('Critical Thinking', 'fts-biases-chapter-0/', 'biases-chapter-0', 'Presentation · 14 slides', 'Biases 0: What Is a Bias', 'An eyes-closed experiment, three quick quizzes, fast and slow thinking.', False),
+    ('Critical Thinking', 'fts-biases-chapter-1/', 'biases-chapter-1', 'Presentation · 18 slides', 'Biases 1: Filter', 'Confirmation bias, anchoring, framing, availability and priming.', False),
+    ('Critical Thinking', 'fts-biases-chapter-2/', 'biases-chapter-2', 'Presentation · 13 slides', 'Biases 2: Filling the Gaps', 'Thirty coin flips and why one vivid story beats the statistics.', False),
+    ('Critical Thinking', 'fts-biases-chapter-3/', 'biases-chapter-3', 'Presentation · 19 slides', 'Biases 3: People', 'Attribution error, false consensus, double standards and more.', False),
+    ('Critical Thinking', 'fts-biases-chapter-4/', 'biases-chapter-4', 'Presentation · 19 slides', 'Biases 4: Persuasion', 'A speech with eight hidden tricks and a hunt through real quotes.', False),
+    ('Media Literacy', 'fts-media-literacy/', 'media-literacy', 'Presentation · 25 slides', 'True, False, Framed', 'Fake or real: lateral reading and SIFT, reverse image search, AI-generated content, and how one true event becomes many different stories.', True),
+    ('Media Literacy', 'fts-fact-checking', 'fact-checking', 'Guide · one page', 'Don’t Get Fooled', 'A fact-checking toolkit with fact-checkers from all six countries.', False),
+    ('Public Speaking', 'https://colibrarian.github.io/fts-public-speaking-slides/', 'public-speaking', 'Presentation · 19 slides', 'How We Speak', 'From one story to a one-minute talk, with a built-in timer.', False),
+    ('Podcasting', 'fts-audacity/', 'audacity', 'Presentation · 10 slides', 'Podcast Audio in Audacity', 'A free production pipeline, from noise cleanup to export.', False),
+    ('Podcasting', 'fts-podcast-conduct/', 'podcast-conduct', 'Memo · one page', 'On Air Together', 'How to talk to each other while recording a podcast.', False),
+    ('Create &amp; Share', 'fts-team-video/', 'team-video', 'Presentation · 11 slides', 'One Bias, One Video', 'Crew roles, script, phone settings, editing and publishing.', False),
+    ('Youth Work', 'fts-experience-first/', 'experience-first', 'Presentation · 8 slides', 'Experience First', 'How the learning worked, to take home to your own groups.', False),
+  ],
+)
+
+
+def kb_page(c, nxt):
+  e = html.escape
+  slides = sum(int(m[3].split('·')[1].split()[0]) for m in c['materials'] if m[3].startswith('Presentation'))
+  decks = sum(1 for m in c['materials'] if m[3].startswith('Presentation'))
+  tabs = '<button type="button" aria-pressed="true" data-t="all">All</button>' + ''.join(
+    '<button type="button" aria-pressed="false" data-t="%d">%s</button>' % (i, t) for i, t in enumerate(c['topics']))
+  mats = ''.join(
+    '<a class="mat%s" data-t="%d" href="%s" target="_blank" rel="noopener"><img src="/assets/cases/fts-library/%s.jpg" alt="Cover of %s" loading="lazy" width="800" height="450">'
+    '<div class="mat-b"><span class="mat-k">%s</span><span class="mat-t">%s</span><span class="mat-d">%s</span><span class="mat-go">Open ↗</span></div></a>'
+    % (' wide' if w else '', c['topics'].index(t), l if l.startswith('http') else LIB + l, img, e(title), k, title, d)
+    for t, l, img, k, title, d, w in c['materials'])
+  vars_ = ("--c-display:'Bricolage Grotesque',system-ui,sans-serif;--c-body:'Figtree',system-ui,sans-serif;--c-ui:'JetBrains Mono',ui-monospace,monospace;"
+           "--c-display-w:800;--c-display-ls:-.02em;--c-ink:#16181d;--c-logo-bg:#f5f4ee;--c-mark:#16181d;--c-ui-color:#7a7c84")
+  fonts = [('Headings', 'Bricolage Grotesque', 'f-display', 'Speaking is a skill.'),
+           ('Body text', 'Figtree', 'f-body', 'What do I notice, and what do I miss?'),
+           ('Labels and navigation', 'JetBrains Mono', 'f-ui', 'Chapter 1 · Filter')]
+  type_cards = ''.join(
+    '<div class="sh-cell sh-font"><div class="sh-cap"><span>%s</span><span>%s</span></div>'
+    '<div class="sh-row"><span class="sh-aa %s">Aa</span><span class="%s sh-smp">%s</span></div></div>' % (r, f, cls, cls, smp)
+    for r, f, cls, smp in fonts)
+  palette = [('#0B0B0A', 'Ink'), ('#F5F4EE', 'Paper'), ('#F2ECDD', 'Cream'),
+             ('#FF4520', 'Signal red'), ('#3F7FE0', 'Chapter blue'), ('#FFCF3F', 'Highlight')]
+  sw = ''.join('<div class="sw" style="background:%s;color:%s"><b>%s</b><span>%s</span></div>' % (x, '#fff' if luminance(x) < .45 else '#111', r, x)
+               for x, r in palette)
+  ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": c['title'], "url": SITE + '/portfolio/%s/' % c['slug'],
+        "about": c['desc'], "creator": {"@id": SITE + "/#org"}, "image": abs_url(c['cover']), "isBasedOn": c['url'],
+        "inLanguage": "en", "educationalUse": "Youth work", "audience": {"@type": "Audience", "audienceType": "Youth workers"}}
+  gf = ('family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Anton'
+        '&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;600')
+  return f'''<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
+  <title>{e(c['title'])} — Erewhile Digital</title>
+  <meta name="description" content="{e(c['desc'])}"/>
+  <link rel="canonical" href="{SITE}/portfolio/{c['slug']}/"/>
+  <meta property="og:title" content="{e(c['title'])} — Erewhile Digital"/>
+  <meta property="og:description" content="{e(c['desc'])}"/>
+  <meta property="og:image" content="{abs_url(c['cover'])}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?{gf}&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+  <style>
+{STYLE}{KB_STYLE}
+    .case{{{vars_}}}
+  </style>
+</head>
+<body>
+{HEADER}
+
+<main class="wrap case kb">
+  <div class="crumbs"><a href="/portfolio">Portfolio</a> / {e(c['name'])}</div>
+
+  <section class="intro">
+    <div>
+      <h1>A knowledge base for youth work, designed as one <span>library</span></h1>
+      <div class="tags"><span class="tag new">Knowledge base</span><span class="tag">Erasmus+</span><span class="tag">Youth work</span><span class="tag">6 countries</span></div>
+    </div>
+    <div>
+      <p class="lede">From Thinking to Speaking is an Erasmus+ training course on critical thinking, media literacy, public speaking and podcasting, organised by the Latvian youth organisation Biedrība UNTU. We designed its library: every presentation, guide and tool from the course, sorted by topic and open to any youth worker.</p>
+      <div class="actions"><a class="btn btn-teal" href="{c['url']}" target="_blank" rel="noopener">Open the library ↗</a><a class="btn btn-ghost" href="/#ew-contact">Plan a knowledge base</a></div>
+    </div>
+  </section>
+
+  <a class="kb-shot reveal" href="{c['url']}" target="_blank" rel="noopener" aria-label="The FTS library on untu.ngo. Opens the live library">
+    <picture><source media="(max-width:640px)" srcset="/assets/cases/fts-library/library-screen-m.jpg"><img src="/assets/cases/fts-library/library-screen.jpg" alt="The FTS library page: six topics and a cover for every material" width="1800" height="1125" loading="eager"></picture>
+    <span class="st-open">untu.ngo/projects/fts-library ↗</span>
+  </a>
+
+  <div class="kb-stats reveal">
+    <div class="kb-stat"><b>{len(c['topics'])}</b><span>topics, from critical thinking to youth work methods</span></div>
+    <div class="kb-stat"><b>{len(c['materials'])}</b><span>materials, each with its own cover</span></div>
+    <div class="kb-stat"><b>{slides}</b><span>slides in {decks} decks that open in any browser</span></div>
+    <div class="kb-stat"><b>40</b><span>cognitive biases on one interactive map</span></div>
+  </div>
+  <dl class="facts reveal">
+    <div class="fact"><dt>Organised by</dt><dd>Biedrība UNTU, Latvia</dd></div>
+    <div class="fact"><dt>Programme</dt><dd>Erasmus+ KA153-YOU</dd></div>
+    <div class="fact"><dt>Used by youth workers from</dt><dd>Latvia, Estonia, Norway, France, Spain, Romania</dd></div>
+    <div class="fact"><dt>Format</dt><dd>Library, slide decks, guides, interactive map</dd></div>
+  </dl>
+
+  <section class="lib reveal" aria-labelledby="lib-h">
+    <div class="lib-top">
+      <div>
+        <div class="lib-eyebrow"><i></i>From Thinking to Speaking · Library</div>
+        <h2 id="lib-h">Inside the library</h2>
+      </div>
+      <p class="lib-sub">The highlights, in the library’s own style. Pick a topic, open any material: they are live on untu.ngo.</p>
+    </div>
+    <div class="lib-tabs" role="group" aria-label="Filter by topic">{tabs}</div>
+    <div class="lib-grid" id="libGrid">{mats}</div>
+    <div class="lib-foot"><span>Erasmus+ KA153-YOU · Vircava, Latvia · 2026</span><a href="{c['url']}" target="_blank" rel="noopener">The whole library ↗</a></div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">The task</div><h2>Make a week of training useful for months</h2></div>
+    <div class="body">
+      <p>A training course lasts a week. Youth workers need its materials much longer: to run the same activity with their own groups, to check a fact, to remember how a method worked.</p>
+      <p>Participants and partner organisations from six countries needed one place where everything from the course can be found again, on a phone or a projector, without logins or downloads.</p>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">What we built</div><h2>A library, not a folder of files</h2></div>
+    <div class="body"><div class="list">
+      <div class="item"><b>Library by topic</b><span>Six topics, and every material has a cover, a type and a length, so people find it by sight instead of by file name.</span></div>
+      <div class="item"><b>Interactive bias map</b><span>40 cognitive biases around one brain, each marked by how well the research supports it. Click any bias to read an example and the sources.</span></div>
+      <div class="item"><b>Slide decks in the browser</b><span>One idea per screen, a chapter colour that shows where you are, arrow-key navigation and an overview of all slides. Nothing to install.</span></div>
+      <div class="item"><b>One-page guides and memos</b><span>A fact-checking toolkit and a podcast conversation memo, short enough to print and keep at hand.</span></div>
+      <div class="item"><b>Visibility kit</b><span>A ready caption and partner tags with copy buttons, so every post from the course carries the required Erasmus+ text.</span></div>
+      <div class="item"><b>Part of the project site</b><span>The library is page six of the project’s site on untu.ngo, next to the programme, travel and preparation pages.</span></div>
+    </div></div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">Visual language</div><h2>Loud on the shelf, calm inside</h2></div>
+    <div class="body wide">
+      <p>The library speaks in tall Anton capitals on dark ink, like the spines on a shelf. Inside, the materials switch to a calmer system for reading on a big screen: Bricolage Grotesque headings, Figtree text and JetBrains Mono labels on light paper. One idea per screen, and colour tells you which chapter you are in.</p>
+      <div class="sheet" style="--n:3">
+        <div class="sh-cell sh-logo"><div class="sh-cap"><span>Mark</span></div><span class="bp-mark" style="font-family:var(--k-anton);font-weight:400;letter-spacing:.02em;background:#3f7fe0;color:#fbfbf6;padding:10px 22px;border-radius:14px;transform:rotate(-3deg);font-size:clamp(40px,5vw,60px)">FTS</span></div>
+        {type_cards}
+        <div class="sh-palette">{sw}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">Tested in the room</div><h2>Designed by someone who also taught with it</h2></div>
+    <div class="body"><div class="note">
+      <p>The library and the materials were designed by Konstantin, the designer behind Erewhile Digital. He was also one of the trainers on the course, so the slides were tested in front of the group by the person who designed them.</p>
+    </div></div>
+  </section>
+
+  <section class="block reveal">
+    <div><div class="label">Stays online</div><h2>Open after the course ends</h2></div>
+    <div class="body"><ul class="handover"><li>Library with {len(c['topics'])} topics</li><li>Interactive bias map</li><li>{decks} slide decks</li><li>2 one-page guides</li><li>Visibility kit</li><li>Open to any youth worker</li></ul></div>
+  </section>
+
+  <div class="next"><a href="/portfolio">← All projects</a><span>Next project: <a href="/portfolio/{nxt['slug']}/">{e(nxt['name'])} →</a></span></div>
+
+  <section class="cta reveal">
+    <h2>Have knowledge worth <span>keeping</span>?</h2>
+    <p>Tell us about your course, training or project. We will turn its materials into a library people can open again long after it ends.</p>
+    <a class="btn" href="/#ew-contact">Start a project</a>
+  </section>
+
+  <footer><span>© Erewhile Digital · Latvia</span><span><a href="mailto:web@erewhile.digital">web@erewhile.digital</a></span></footer>
+</main>
+
+{SCRIPT}
+<script>
+(function(){{var g=document.getElementById('libGrid'),bs=document.querySelectorAll('.lib-tabs button');bs.forEach(function(b){{b.addEventListener('click',function(){{
+bs.forEach(function(x){{x.setAttribute('aria-pressed',x===b)}});var t=b.dataset.t;g.querySelectorAll('.mat').forEach(function(m){{m.hidden=!(t==='all'||m.dataset.t===t)}})}})}})}})();
+</script>
+</body>
+</html>
+'''
+
 
 if __name__ == '__main__':
   for i, c in enumerate(CASES):
@@ -450,3 +674,7 @@ if __name__ == '__main__':
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(page(c, CASES[(i + 1) % len(CASES)]))
     print('built', os.path.relpath(out, ROOT))
+  out = os.path.join(ROOT, 'portfolio', KB['slug'], 'index.html')
+  os.makedirs(os.path.dirname(out), exist_ok=True)
+  open(out, 'w', encoding='utf-8').write(kb_page(KB, CASES[0]))
+  print('built', os.path.relpath(out, ROOT))
