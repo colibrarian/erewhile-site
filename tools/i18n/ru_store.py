@@ -39,8 +39,8 @@ PAIRS = [
 ('Orders and newsletter sign-ups come to you, so you can send news, new collections and offers to the people who already bought from you.',
  'Заказы и подписки на рассылку приходят к вам, и вы можете отправлять новости, новые коллекции и предложения тем, кто уже у вас покупал.'),
 # what we move
-('Reviews and order history stay on the marketplace: they belong to the platform and cannot be imported automatically. We can show selected reviews on your new store as testimonials.',
- 'Отзывы и история заказов остаются на маркетплейсе: они принадлежат платформе, и автоматически их не перенести. Избранные отзывы можно показать в новом магазине как отзывы клиентов.'),
+('<b>Good to know.</b> Reviews and order history stay on the marketplace: they belong to the platform and cannot be imported automatically. We can show selected reviews on your new store as testimonials.',
+ '<b>Важно.</b> Отзывы и история заказов остаются на маркетплейсе: они принадлежат платформе, и автоматически их не перенести. Избранные отзывы можно показать в новом магазине как отзывы клиентов.'),
 # services
 ('>Product migration<','>Перенос товаров<'),
 ('You already have a store or a platform you like. We export your catalogue from the marketplace and import it there, with categories, variations and photos in place.',
@@ -100,8 +100,8 @@ PAIRS = [
  'content="Интернет-магазины и перенос товаров с Etsy"'),
 ('Online stores · Product migration',
  'Интернет-магазины · Перенос товаров'),
-('<h1>Move from <span class="sm-swap" id="smSwap">Etsy</span> to <span class="g">your own</span> online store</h1>',
- '<h1>С <span class="sm-swap" id="smSwap">Etsy</span> в <span class="g">собственный</span> интернет-магазин</h1>'),
+('<h1>Move from <span class="sm-swap" id="smSwap">Etsy</span><br>to <span class="g">your own</span> online store</h1>',
+ '<h1>С <span class="sm-swap" id="smSwap">Etsy</span><br>в <span class="g">собственный</span> <span style="white-space:nowrap">интернет-магазин</span></h1>'),
 ('We build independent online stores and move your products into them from Etsy and other marketplaces: titles, descriptions, photos, variations and prices. From a few dozen items to catalogues of thousands.',
  'Создаём независимые интернет-магазины и переносим в них товары с Etsy и других маркетплейсов: названия, описания, фото, варианты и цены. От нескольких десятков позиций до каталогов в тысячи товаров.'),
 ('>Online store development<',

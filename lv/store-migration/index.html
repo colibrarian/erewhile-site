@@ -393,7 +393,7 @@
 
     /* ── Store migration page ── */
     .sm-hero{padding-top:clamp(64px,8vw,104px);padding-bottom:clamp(40px,5vw,64px)}
-    .sm-hero-text{max-width:820px}
+    .sm-hero-text{max-width:1000px}
     .sm-hero h1{font-size:clamp(36px,5.6vw,72px)}
     .sm-swap{display:inline-block;text-align:left;white-space:nowrap;transition:width .35s var(--ease)}
     .sm-swap.out{animation:swOut .26s cubic-bezier(.5,0,.75,0) forwards}
@@ -445,13 +445,21 @@
     }
     @media(max-width:420px){.flow-list li{font-size:12px;padding:8px 10px}}
 
-    .sm-lead{max-width:62ch;color:var(--muted);margin-bottom:24px}
-    .sm-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:760px){.sm-points{grid-template-columns:1fr}}
-    .sm-points > div{border-top:2px solid var(--teal-line);padding:16px 4px 0}
-    .sm-points b{display:block;font-size:15px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
-    .sm-points p{font-size:13px;color:var(--muted);line-height:1.65}
-    .sm-note{margin-top:28px;max-width:70ch;font-size:13px;color:var(--muted);padding-left:14px;border-left:2px solid var(--teal-line)}
+    .sm-scale{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start;padding:clamp(28px,5vw,64px);border-radius:clamp(20px,2.4vw,32px);background:#0D3E3E;color:#fff;box-shadow:0 24px 60px rgba(13,62,62,0.18)}
+    @media(max-width:860px){.sm-scale{grid-template-columns:1fr}}
+    .sm-scale-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(ellipse at 15% 20%,#000 0%,transparent 70%);mask-image:radial-gradient(ellipse at 15% 20%,#000 0%,transparent 70%)}
+    .sm-scale > :not(.sm-scale-grid){position:relative}
+    .sm-scale .section-h2{color:#fff;font-size:clamp(28px,3.6vw,44px)}
+    .sm-scale .section-h2 .g{color:#9FE6E4}
+    .sm-lead{margin-top:16px;max-width:46ch;font-size:15px;line-height:1.75;color:rgba(255,255,255,.88)}
+    .sm-points{display:grid;gap:0}
+    .sm-points > div{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:20px 0;border-top:1px solid rgba(255,255,255,.16)}
+    .sm-points > div:first-child{border-top:none;padding-top:4px}
+    .sm-pn{grid-row:span 2;font-family:var(--mono);font-size:13px;color:#9FE6E4;padding-top:3px}
+    .sm-points b{display:block;font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px;color:#fff}
+    .sm-points p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.7}
+    .sm-note{margin-top:18px;max-width:none;font-size:14px;line-height:1.7;color:var(--ink2);padding:16px 20px;background:#fff;border:1px solid var(--line);border-radius:14px}
+    .sm-note b{color:var(--teal)}
     .sm-two{grid-template-columns:1fr 1fr}
     @media(max-width:760px){.sm-two{grid-template-columns:1fr}}
 
@@ -504,7 +512,7 @@
 <section class="section sm-hero" id="top">
   <div class="sm-hero-text">
     <div class="hero-eyebrow">Interneta veikali · Preču pārnešana</div>
-    <h1>No <span class="sm-swap" id="smSwap">Etsy</span> uz <span class="g">savu</span> interneta veikalu</h1>
+    <h1>No <span class="sm-swap" id="smSwap">Etsy</span><br>uz <span class="g">savu</span> interneta veikalu</h1>
     <p class="hero-sub">Izstrādājam neatkarīgus interneta veikalus un pārnesam tajos jūsu preces no Etsy un citām tirdzniecības platformām: nosaukumus, aprakstus, fotoattēlus, variantus un cenas. No dažiem desmitiem preču līdz tūkstošiem.</p>
     <div class="sm-offer">
       <a href="#sm-store"><b>Interneta veikala izstrāde</b><span>Dizains, katalogs, maksājumi, piegāde</span></a>
@@ -594,14 +602,19 @@
 
 <!-- SCALE -->
 <section class="section" id="sm-scale">
-  <h2 class="section-h2 reveal" style="margin-bottom:12px;">Lieli katalogi <span class="g">nav problēma</span></h2>
-  <p class="sm-lead reveal">Pārnesam jebkura apjoma katalogus, no dažiem desmitiem preču līdz tūkstošiem preču ar visiem variantiem. Pārnešana notiek ar skriptiem, tāpēc apjoms nepārvēršas nedēļās roku darba.</p>
-  <div class="sm-points">
-    <div class="reveal"><b>Skripti, nevis kopēšana</b><p>Preces tiek eksportētas un importētas automātiski, tāpēc tūkstošiem preču katalogs tiek pārnests tikpat droši kā katalogs ar piecdesmit precēm.</p></div>
-    <div class="reveal" style="transition-delay:.08s;"><b>Nekas nepazūd</b><p>Pirms un pēc importa saskaitām preces, variantus un fotoattēlus un salīdzinām skaitļus.</p></div>
-    <div class="reveal" style="transition-delay:.16s;"><b>Sakārtoti dati</b><p>Pārnešanas laikā sakārtojam nosaukumus, kategorijas un birkas, tāpēc jaunajā veikalā ir vieglāk meklēt un filtrēt.</p></div>
+  <div class="sm-scale reveal">
+    <div class="sm-scale-grid" aria-hidden="true"></div>
+    <div class="sm-scale-head">
+      <h2 class="section-h2">Lieli katalogi <span class="g">nav problēma</span></h2>
+      <p class="sm-lead">Pārnesam jebkura apjoma katalogus, no dažiem desmitiem preču līdz tūkstošiem preču ar visiem variantiem. Pārnešana notiek ar skriptiem, tāpēc apjoms nepārvēršas nedēļās roku darba.</p>
+    </div>
+    <div class="sm-points">
+      <div><span class="sm-pn">01</span><b>Skripti, nevis kopēšana</b><p>Preces tiek eksportētas un importētas automātiski, tāpēc tūkstošiem preču katalogs tiek pārnests tikpat droši kā katalogs ar piecdesmit precēm.</p></div>
+      <div><span class="sm-pn">02</span><b>Nekas nepazūd</b><p>Pirms un pēc importa saskaitām preces, variantus un fotoattēlus un salīdzinām skaitļus.</p></div>
+      <div><span class="sm-pn">03</span><b>Sakārtoti dati</b><p>Pārnešanas laikā sakārtojam nosaukumus, kategorijas un birkas, tāpēc jaunajā veikalā ir vieglāk meklēt un filtrēt.</p></div>
+    </div>
   </div>
-  <p class="sm-note reveal">Atsauksmes un pasūtījumu vēsture paliek platformā: tās pieder platformai, un tās nevar importēt automātiski. Izvēlētas atsauksmes varam parādīt jūsu jaunajā veikalā kā klientu atsauksmes.</p>
+  <p class="sm-note reveal"><b>Der zināt.</b> Atsauksmes un pasūtījumu vēsture paliek platformā: tās pieder platformai, un tās nevar importēt automātiski. Izvēlētas atsauksmes varam parādīt jūsu jaunajā veikalā kā klientu atsauksmes.</p>
 </section>
 <div class="divider"></div>
 

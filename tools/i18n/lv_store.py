@@ -37,8 +37,8 @@ PAIRS = [
 ('Orders and newsletter sign-ups come to you, so you can send news, new collections and offers to the people who already bought from you.',
  'Pasūtījumi un jaunumu abonementi nonāk pie jums, tāpēc varat sūtīt jaunumus, jaunas kolekcijas un piedāvājumus tiem, kas jau ir pirkuši no jums.'),
 # what we move
-('Reviews and order history stay on the marketplace: they belong to the platform and cannot be imported automatically. We can show selected reviews on your new store as testimonials.',
- 'Atsauksmes un pasūtījumu vēsture paliek platformā: tās pieder platformai, un tās nevar importēt automātiski. Izvēlētas atsauksmes varam parādīt jūsu jaunajā veikalā kā klientu atsauksmes.'),
+('<b>Good to know.</b> Reviews and order history stay on the marketplace: they belong to the platform and cannot be imported automatically. We can show selected reviews on your new store as testimonials.',
+ '<b>Der zināt.</b> Atsauksmes un pasūtījumu vēsture paliek platformā: tās pieder platformai, un tās nevar importēt automātiski. Izvēlētas atsauksmes varam parādīt jūsu jaunajā veikalā kā klientu atsauksmes.'),
 # services
 ('>Product migration<','>Preču pārnešana<'),
 ('You already have a store or a platform you like. We export your catalogue from the marketplace and import it there, with categories, variations and photos in place.',
@@ -98,8 +98,8 @@ PAIRS = [
  'content="Interneta veikali un preču pārnešana no Etsy"'),
 ('Online stores · Product migration',
  'Interneta veikali · Preču pārnešana'),
-('<h1>Move from <span class="sm-swap" id="smSwap">Etsy</span> to <span class="g">your own</span> online store</h1>',
- '<h1>No <span class="sm-swap" id="smSwap">Etsy</span> uz <span class="g">savu</span> interneta veikalu</h1>'),
+('<h1>Move from <span class="sm-swap" id="smSwap">Etsy</span><br>to <span class="g">your own</span> online store</h1>',
+ '<h1>No <span class="sm-swap" id="smSwap">Etsy</span><br>uz <span class="g">savu</span> interneta veikalu</h1>'),
 ('We build independent online stores and move your products into them from Etsy and other marketplaces: titles, descriptions, photos, variations and prices. From a few dozen items to catalogues of thousands.',
  'Izstrādājam neatkarīgus interneta veikalus un pārnesam tajos jūsu preces no Etsy un citām tirdzniecības platformām: nosaukumus, aprakstus, fotoattēlus, variantus un cenas. No dažiem desmitiem preču līdz tūkstošiem.'),
 ('>Online store development<',
