@@ -65,6 +65,27 @@
   </url>
   <url><loc>https://erewhile.digital/en/fast-website.html</loc></url>
   <url>
+    <loc>https://erewhile.digital/portfolio/outland/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/outland/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/lv/portfolio/outland/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/outland/"/>
+  </url>
+  <url>
+    <loc>https://erewhile.digital/ru/portfolio/outland/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://erewhile.digital/ru/portfolio/outland/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erewhile.digital/portfolio/outland/"/>
+  </url>
+  <url>
     <loc>https://erewhile.digital/portfolio/oro/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://erewhile.digital/portfolio/oro/"/>
     <xhtml:link rel="alternate" hreflang="lv" href="https://erewhile.digital/lv/portfolio/oro/"/>

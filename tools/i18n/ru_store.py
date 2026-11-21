@@ -174,4 +174,6 @@ PAIRS = [
  '<span>товаров перенесено · пример</span>'),
 ('<li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li>',
  '<li>фото</li><li>варианты</li><li>цены</li><li>остатки</li><li>категории</li><li>SEO</li>'),
+('<span class="sm-case-k">Example</span><span class="sm-case-t">About 1 500 products moved from Etsy to the own WooCommerce store of Outland Miniatures</span><span class="sm-case-a">See the case →</span>',
+ '<span class="sm-case-k">Пример</span><span class="sm-case-t">Около 1 500 товаров перенесены с Etsy в собственный магазин Outland Miniatures на WooCommerce</span><span class="sm-case-a">Смотреть проект →</span>'),
 ] + FORM

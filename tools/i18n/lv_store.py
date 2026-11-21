@@ -172,4 +172,6 @@ PAIRS = [
  '<span>preces pārnestas · piemērs</span>'),
 ('<li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li>',
  '<li>foto</li><li>varianti</li><li>cenas</li><li>atlikumi</li><li>kategorijas</li><li>SEO</li>'),
+('<span class="sm-case-k">Example</span><span class="sm-case-t">About 1 500 products moved from Etsy to the own WooCommerce store of Outland Miniatures</span><span class="sm-case-a">See the case →</span>',
+ '<span class="sm-case-k">Piemērs</span><span class="sm-case-t">Ap 1 500 preču pārnestas no Etsy uz Outland Miniatures pašu WooCommerce veikalu</span><span class="sm-case-a">Skatīt projektu →</span>'),
 ] + FORM

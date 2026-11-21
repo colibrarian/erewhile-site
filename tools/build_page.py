@@ -31,7 +31,7 @@ LOCAL_PATHS = {'/': '/', '/portfolio': '/portfolio/', '/portfolio/': '/portfolio
                '/video': '/video/', '/video/': '/video/',
                '/store-migration': '/store-migration/', '/store-migration/': '/store-migration/'}
 # Case pages exist in all three languages (tools/build_cases.py); the FTS library is English only.
-CASE_SLUGS = ('oro', 'zemits', 'kondo', 'solvata-beauty', 'razalija', 'jelgava-coworking', 'untu', 'id-chef', 'grill-in')
+CASE_SLUGS = ('outland', 'oro', 'zemits', 'kondo', 'solvata-beauty', 'razalija', 'jelgava-coworking', 'untu', 'id-chef', 'grill-in')
 LOCAL_PATHS.update({'/portfolio/%s/' % s: '/portfolio/%s/' % s for s in CASE_SLUGS})
 SWITCH = {'en': ('EN', 'English'), 'lv': ('LV', 'Latviski'), 'ru': ('RU', 'Русский')}
 MODAL_MARKERS = ('<!-- MODALS -->', '<!-- ── MODALS ── -->')
