@@ -166,4 +166,12 @@ PAIRS = [
  '<b>Данные становятся чище</b>'),
 ('Titles, categories and tags are tidied up during the move, so the new store is easier to search and filter.',
  'Во время переноса приводим в порядок названия, категории и теги, поэтому в новом магазине проще искать и фильтровать.'),
+('<div><b>Marketplace</b><span>Etsy · Wix · CSV</span></div><div><b>your-store.com</b><span>your own store</span></div>',
+ '<div><b>Маркетплейс</b><span>Etsy · Wix · CSV</span></div><div><b>your-store.com</b><span>ваш магазин</span></div>'),
+('aria-label="Diagram: products move one by one from the marketplace shop to your own store, with photos, variations, prices, stock, categories and SEO"',
+ 'aria-label="Схема: товары по одному переезжают с маркетплейса в ваш магазин вместе с фото, вариантами, ценами, остатками, категориями и SEO"'),
+('<span>products moved · example</span>',
+ '<span>товаров перенесено · пример</span>'),
+('<li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li>',
+ '<li>фото</li><li>варианты</li><li>цены</li><li>остатки</li><li>категории</li><li>SEO</li>'),
 ] + FORM

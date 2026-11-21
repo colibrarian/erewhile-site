@@ -164,4 +164,12 @@ PAIRS = [
  '<b>Sakārtoti dati</b>'),
 ('Titles, categories and tags are tidied up during the move, so the new store is easier to search and filter.',
  'Pārnešanas laikā sakārtojam nosaukumus, kategorijas un birkas, tāpēc jaunajā veikalā ir vieglāk meklēt un filtrēt.'),
+('<div><b>Marketplace</b><span>Etsy · Wix · CSV</span></div><div><b>your-store.com</b><span>your own store</span></div>',
+ '<div><b>Tirgus platforma</b><span>Etsy · Wix · CSV</span></div><div><b>your-store.com</b><span>jūsu veikals</span></div>'),
+('aria-label="Diagram: products move one by one from the marketplace shop to your own store, with photos, variations, prices, stock, categories and SEO"',
+ 'aria-label="Shēma: preces viena pēc otras pārceļas no tirgus platformas uz jūsu veikalu kopā ar foto, variantiem, cenām, atlikumiem, kategorijām un SEO"'),
+('<span>products moved · example</span>',
+ '<span>preces pārnestas · piemērs</span>'),
+('<li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li>',
+ '<li>foto</li><li>varianti</li><li>cenas</li><li>atlikumi</li><li>kategorijas</li><li>SEO</li>'),
 ] + FORM

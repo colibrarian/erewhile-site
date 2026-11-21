@@ -445,6 +445,29 @@
       .flow-list{grid-template-columns:1fr 1fr}
     }
     @media(max-width:420px){.flow-list li{font-size:12px;padding:8px 10px}}
+    /* phone version of the diagram: product cards move from one shelf to the other */
+    .flow-m{display:none;margin-top:32px;padding:16px;border:1px solid var(--line);border-radius:20px;background:#fff;opacity:0;animation:fadeUp .9s var(--ease) .5s forwards}
+    .fm-heads{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}
+    .fm-heads b{display:block;font-size:15px;font-weight:800;letter-spacing:-.02em}
+    .fm-heads span{display:block;font-size:11.5px;color:var(--muted)}
+    .fm-heads div:last-child{text-align:right}
+    .fm-stage{position:relative;height:118px;border-radius:14px;background:var(--bg);overflow:hidden}
+    .fm-stage::after{content:'';position:absolute;left:50%;top:12px;bottom:12px;border-left:1px dashed var(--teal-line)}
+    .fm-prod{position:absolute;top:14px;width:86px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px;transition:left 1.1s cubic-bezier(.6,0,.25,1),transform 1.1s cubic-bezier(.6,0,.25,1),border-color .4s,box-shadow .4s}
+    .fm-prod i{display:block;height:44px;border-radius:6px;background:var(--th)}
+    .fm-prod s{display:block;height:6px;border-radius:3px;background:#d9d9d4;margin-top:6px;width:80%}
+    .fm-prod u{display:flex;justify-content:space-between;margin-top:5px;font-size:9px;font-weight:700;color:var(--muted);text-decoration:none}
+    .fm-prod u em{font-style:normal;color:var(--teal);opacity:0;transition:opacity .3s}
+    .fm-prod.moved{border-color:var(--teal-line);box-shadow:0 6px 16px rgba(13,62,62,.1)}
+    .fm-prod.moved u em{opacity:1}
+    .fm-bar{height:5px;border-radius:3px;background:var(--teal-dim);margin-top:12px;overflow:hidden}
+    .fm-bar i{display:block;height:100%;width:0;background:var(--teal);transition:width .9s ease}
+    .fm-foot{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:10px;font-size:11.5px;color:var(--muted)}
+    .fm-foot b{font-size:24px;font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+    .fm-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;list-style:none}
+    .fm-tags li{font-size:10.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 9px;transition:color .3s,border-color .3s,background .3s}
+    .fm-tags li.on{color:var(--teal);border-color:var(--teal);background:var(--teal-dim)}
+    @media(max-width:860px){.flow{display:none}.flow-m{display:block}}
 
     .sm-scale{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start;padding:clamp(28px,5vw,64px);border-radius:clamp(20px,2.4vw,32px);background:#0D3E3E;color:#fff;box-shadow:0 24px 60px rgba(13,62,62,0.18)}
     @media(max-width:860px){.sm-scale{grid-template-columns:1fr}}
@@ -559,6 +582,13 @@
         <li>Shipping zones & rates</li>
       </ul>
     </div>
+  </div>
+  <div class="flow-m" id="smFlowM" role="img" aria-label="Diagram: products move one by one from the marketplace shop to your own store, with photos, variations, prices, stock, categories and SEO">
+    <div class="fm-heads"><div><b>Marketplace</b><span>Etsy · Wix · CSV</span></div><div><b>your-store.com</b><span>your own store</span></div></div>
+    <div class="fm-stage" aria-hidden="true"></div>
+    <div class="fm-bar" aria-hidden="true"><i></i></div>
+    <div class="fm-foot"><span>products moved · example</span><b id="smCountM">12 480</b></div>
+    <ul class="fm-tags"><li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li></ul>
   </div>
 </section>
 
@@ -859,6 +889,31 @@ document.getElementById('burgerBtn').addEventListener('click',function(){
   }
   var started=false;
   new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;setTimeout(tick,900)}})},{threshold:.3}).observe(f);
+})();
+/* phone version: product cards move one by one from the marketplace shelf to the store shelf */
+(function(){
+  var f=document.getElementById('smFlowM');if(!f)return;
+  var stage=f.querySelector('.fm-stage'),bar=f.querySelector('.fm-bar i'),cnt=document.getElementById('smCountM'),tags=f.querySelectorAll('.fm-tags li');
+  var N=6,TARGET=12480,TH=['#cfdcda','#e1ddd5','#d6dbe0','#dce6df','#e5e2da','#d2dfde'],PR=['€24','€38','€19','€52','€31','€45'],items=[],done=0;
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
+  for(var n=0;n<N;n++){var p=document.createElement('div');p.className='fm-prod';p.style.setProperty('--th',TH[n]);
+    p.innerHTML='<i></i><s></s><u><span>'+PR[n]+'</span><em>✓</em></u>';stage.appendChild(p);items.push(p)}
+  function layout(){var half=stage.clientWidth/2;
+    items.forEach(function(p,j){var moved=j<done,pos=moved?done-1-j:j-done;
+      p.style.left=((moved?half+12:12)+Math.min(pos,4)*9)+'px';
+      p.style.transform='rotate('+(moved?0:(pos%2?-2:2))+'deg)';
+      p.style.zIndex=(moved?100:50)-pos;p.style.opacity=pos>4?0:1;p.classList.toggle('moved',moved)})}
+  addEventListener('resize',layout);
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){done=N;layout();bar.style.width='100%';tags.forEach(function(t){t.classList.add('on')});return}
+  layout();cnt.textContent='0';
+  function tick(){
+    if(done===N){done=0;layout();bar.style.width='0';cnt.textContent='0';tags.forEach(function(t){t.classList.remove('on')});setTimeout(tick,1400);return}
+    done++;layout();tags[done-1].classList.add('on');var d=done;
+    setTimeout(function(){bar.style.width=(d/N*100)+'%';cnt.textContent=fmt(Math.round(TARGET*d/N))},700);
+    setTimeout(tick,done===N?3200:1700);
+  }
+  var started=false;
+  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;setTimeout(tick,600)}})},{threshold:.3}).observe(f);
 })();
 </script>
 <script src="/assets/ripple.js" defer></script>
