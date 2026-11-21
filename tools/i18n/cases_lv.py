@@ -13,6 +13,24 @@ UI = dict(
 )
 
 CASES = {
+  'outland': dict(
+    title='Outland Miniatures: WooCommerce veikals un 1 500 preces, pārnestas no Etsy',
+    desc='Kā mēs izveidojām WordPress un WooCommerce veikalu Outland Miniatures, Latvijas sveķu miniatūru ražotājam, un pārnesām ap 1 500 preču no Etsy kopā ar foto, variantiem un cenām.',
+    h1='Miniatūru zīmola veikals ar <span>1 500</span> precēm no Etsy',
+    tags=['Interneta veikals', 'Latvija · visa pasaule', 'WooCommerce', 'Pārnešana no Etsy'],
+    lede='Outland Miniatures Latvijā drukā sveķu miniatūras: krūšutēlus, reljefu, varoņus un briesmoņus D&D spēlētājiem, kara spēļu cienītājiem un miniatūru krāsotājiem. Veikals tirgojās Etsy un vēlējās savu vietni blakus tam, ar visu katalogu vienuviet.',
+    facts=[('Klients', 'Outland Miniatures, Latvija'), ('Tirgus', 'Piegāde visā pasaulē'), ('Platforma', 'WordPress + WooCommerce'), ('Katalogs', 'Ap 1 500 preču no Etsy')],
+    task_h='Pārnest lielu katalogu, neko nepazaudējot',
+    task=['Katalogs Etsy auga gadiem: ap 1 500 sludinājumu, katram vairāki foto, izmēri un opcijas. Salikt to no jauna ar rokām jaunajā veikalā aizņemtu mēnešus.', 'Jaunajam veikalam bija jāsaglabā katra prece ar foto un variantiem, jāsakārto tās skaidrās kategorijās un jāpieņem maksājumi un piegāde visā pasaulē, kamēr Etsy veikals turpina strādāt.'],
+    built_h='Veikals ar pilnu katalogu no pirmās dienas',
+    built=[('Katalogs pārnests no Etsy', 'Ap 1 500 preču izgūtas no Etsy, sakārtotas un ielādētas WooCommerce ar foto, variantiem un cenām.'), ('Kategorijas un filtri', 'Pin-up figūras, reljefs, krūšutēli, pūķi, briesmoņi un kolekcijas, ar filtriem, lai pircējs ātri atrod modeli.'), ('Maksājumi un piegāde', 'Tiešsaistes maksājums noformējot, izsekojama piegāde visā pasaulē un bezmaksas piegādes slieksnis.'), ('Dāvanas un lojalitāte', 'Bezmaksas pārsteiguma miniatūras no noteiktas pasūtījuma summas, vēlmju saraksts un atlaide par jaunumu abonēšanu.')],
+    vis_h='Drūma fantāzija uz tumšas skatuves',
+    handover=['Strādājošs WooCommerce veikals', 'Ap 1 500 pārnestu preču', 'Iestatīti maksājumi un piegāde', 'Kategorijas un filtri', 'Vēlmju saraksts un jaunumi'],
+    cta=('Tirgojaties <span>Etsy</span> un vēlaties savu veikalu?', 'Pastāstiet, cik liels ir jūsu katalogs un kur tirgojaties šodien. Saplānosim pārcelšanos tā, lai nekas nepazustu.'),
+    vis='Tumšais pirmais ekrāns ar mākslas darbu un zelta pogas rada drūmu fantāzijas noskaņu, bet gaišas pergamenta sadaļas padara katalogu ērti pārlūkojamu. Tās mijas visā lapā. Merriweather piešķir virsrakstiem fantāzijas grāmatas sajūtu, bet Inter saglabā cenas, filtrus un pasūtīšanu skaidru.',
+    palette=['Tumšs fons', 'Zelts', 'Bronzas līnijas', 'Pergaments', 'Teksts'],
+    gallery_alt='Sveķu miniatūra no Outland kataloga',
+  ),
   'oro': dict(
     title='ORO Studio: rezervāciju mājaslapa pasākumu studijai Tallinā',
     desc='Kā mēs izveidojām igauņu un krievu valodas mājaslapu ORO Studio, mājīgai pasākumu telpai Tallinas centrā: stundu noma, ballītes “atslēgas galā” un rezervāciju kalendārs, kas savienots ar studijas Google kalendāru.',

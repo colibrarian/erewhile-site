@@ -97,7 +97,10 @@ PAIRS=[
 ]
 OPTIONAL=[
 ('<span class="bcard-tag">B2B catalogue</span>','<span class="bcard-tag">B2B-каталог</span>'),
-('<span class="bcard-tag">New · Event studio</span>','<span class="bcard-tag">Новое · Студия для мероприятий</span>'),
+('<span class="bcard-tag">New · Online store</span>','<span class="bcard-tag">Новое · Интернет-магазин</span>'),
+('Outland Miniatures — Online Store','Outland Miniatures — интернет-магазин'),
+('WooCommerce store for resin miniatures, with about 1 500 products moved from Etsy.','Магазин миниатюр из смолы на WooCommerce, около 1 500 товаров перенесены с Etsy.'),
+('<span class="bcard-tag">Event studio</span>','<span class="bcard-tag">Студия для мероприятий</span>'),
 ('ORO Studio — Event Space in Tallinn','ORO Studio — пространство для мероприятий в Таллине'),
 ('Estonian and Russian site with hourly rental, turnkey parties and a booking calendar.','Сайт на эстонском и русском: почасовая аренда, праздники под ключ и календарь бронирования.'),
 ('<span class="bcard-tag">New · B2B catalogue</span>','<span class="bcard-tag">Новое · B2B-каталог</span>'),

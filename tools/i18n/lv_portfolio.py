@@ -95,7 +95,10 @@ PAIRS=[
 # Texts that only the case-pages version of the portfolio has (Zemits card, case links).
 OPTIONAL=[
 ('<span class="bcard-tag">B2B catalogue</span>','<span class="bcard-tag">B2B katalogs</span>'),
-('<span class="bcard-tag">New · Event studio</span>','<span class="bcard-tag">Jaunums · Pasākumu studija</span>'),
+('<span class="bcard-tag">New · Online store</span>','<span class="bcard-tag">Jaunums · Interneta veikals</span>'),
+('Outland Miniatures — Online Store','Outland Miniatures — interneta veikals'),
+('WooCommerce store for resin miniatures, with about 1 500 products moved from Etsy.','Sveķu miniatūru WooCommerce veikals, ap 1 500 preču pārnestas no Etsy.'),
+('<span class="bcard-tag">Event studio</span>','<span class="bcard-tag">Pasākumu studija</span>'),
 ('ORO Studio — Event Space in Tallinn','ORO Studio — pasākumu telpa Tallinā'),
 ('Estonian and Russian site with hourly rental, turnkey parties and a booking calendar.','Vietne igauņu un krievu valodā ar stundu nomu, pasākumiem "pēc atslēgas" un rezervāciju kalendāru.'),
 ('<span class="bcard-tag">New · B2B catalogue</span>','<span class="bcard-tag">Jaunums · B2B katalogs</span>'),
