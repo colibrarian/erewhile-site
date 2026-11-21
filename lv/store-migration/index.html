@@ -437,6 +437,8 @@
     .fd-grid i{display:block;aspect-ratio:3/4;border-radius:10px;border:1px dashed var(--line);background:var(--bg)}
     .fd-card{position:absolute;z-index:2;width:96px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px;box-shadow:0 6px 16px rgba(0,0,0,.06);transition:left .9s cubic-bezier(.6,0,.25,1),top .9s cubic-bezier(.6,0,.25,1),width .9s cubic-bezier(.6,0,.25,1),transform .9s cubic-bezier(.6,0,.25,1),border-color .4s,box-shadow .4s}
     .fd-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;background:#1b1916}
+    .fd-ph{display:block;aspect-ratio:1/1;border-radius:6px}
+    .fd-card s{display:block;height:6px;width:75%;border-radius:3px;background:#dcdcd6;margin:6px 2px 0}
     .fd-card u{display:flex;justify-content:space-between;align-items:center;margin-top:4px;padding:0 2px;font-size:9.5px;font-weight:700;color:var(--muted);text-decoration:none}
     .fd-card u em{font-style:normal;color:var(--teal);opacity:0;transition:opacity .3s}
     .fd-card.go{z-index:3;box-shadow:0 16px 36px rgba(13,62,62,.22);border-color:var(--teal)}
@@ -473,10 +475,10 @@
     .fm-tags li.on{color:var(--teal);border-color:var(--teal);background:var(--teal-dim)}
     @media(max-width:860px){.flow-d{display:none}.flow-m{display:block}}
     .sm-case{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);margin-top:18px;border:1px solid var(--line);border-radius:clamp(18px,2vw,26px);background:#fff;overflow:hidden;transition:border-color .2s,box-shadow .2s}
-    .sm-case:hover{border-color:var(--teal-line);box-shadow:0 18px 44px rgba(13,62,62,.1)}
+    .sm-case{transition:border-color .25s,box-shadow .25s,transform .25s var(--ease)}
+    .sm-case:hover{border-color:var(--teal-line);box-shadow:0 22px 48px rgba(13,62,62,.14);transform:translateY(-3px)}
     .sm-case-img{display:block;min-height:260px;background:#16130F}
-    .sm-case-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-    .sm-case:hover .sm-case-img img{transform:scale(1.03)}
+    .sm-case-img img{display:block;width:100%;height:100%;object-fit:cover}
     .sm-case-body{display:flex;flex-direction:column;gap:10px;padding:clamp(22px,3vw,36px)}
     .sm-case-k{align-self:flex-start;font-family:var(--mono);font-size:11px;color:var(--teal);background:var(--teal-dim);border-radius:6px;padding:3px 9px}
     .sm-case-h{font-size:clamp(20px,2.2vw,26px);font-weight:900;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
@@ -876,11 +878,12 @@ document.getElementById('burgerBtn').addEventListener('click',function(){
   var stage=f.querySelector('.fd-stage'),src=f.querySelector('.fd-src'),mid=f.querySelector('.fd-mid'),
       slots=f.querySelectorAll('.fd-grid i'),steps=f.querySelectorAll('.flow-step'),prog=f.querySelector('.fd-prog i'),
       tags=f.querySelectorAll('.fd-tags li'),cnt=document.getElementById('smCount');
-  var N=6,TARGET=12480,IMG=['/assets/cases/outland/mini-1.jpg','/assets/cases/outland/mini-2.jpg','/assets/cases/outland/mini-3.jpg','/assets/cases/outland/mini-4.jpg','/assets/cases/outland/mini-2.jpg','/assets/cases/outland/mini-1.jpg'],
+  var N=6,TARGET=12480,/* product pictures: put 6 image URLs here; while empty, cards show soft colour placeholders */
+      IMG=[],TH=['#cfdcda','#e1ddd5','#d6dbe0','#dce6df','#e5e2da','#d2dfde'],
       PR=['€24','€38','€19','€52','€31','€45'],cards=[],done=0,busy=-1;
   function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
   for(var n=0;n<N;n++){var c=document.createElement('div');c.className='fd-card';
-    c.innerHTML='<img src="'+IMG[n]+'" alt="" loading="lazy"><u><span>'+PR[n]+'</span><em>✓</em></u>';stage.appendChild(c);cards.push(c)}
+    c.innerHTML=(IMG[n]?'<img src="'+IMG[n]+'" alt="" loading="lazy">':'<span class="fd-ph" style="background:'+TH[n]+'"></span><s></s>')+'<u><span>'+PR[n]+'</span><em>✓</em></u>';stage.appendChild(c);cards.push(c)}
   function rel(el){var b=stage.getBoundingClientRect(),r=el.getBoundingClientRect();return{x:r.left-b.left,y:r.top-b.top,w:r.width,h:r.height}}
   function place(c,x,y,w,rot){c.style.left=x+'px';c.style.top=y+'px';c.style.width=w+'px';c.style.transform='rotate('+rot+'deg)'}
   function onShelf(c,pos){var r=rel(src);place(c,r.x+r.w/2-60+Math.min(pos,4)*12,r.y+(r.h-c.offsetHeight)/2-14+Math.min(pos,4)*6,96,pos%2?-3:3);c.style.zIndex=10-pos;c.style.opacity=pos>4?0:1}
