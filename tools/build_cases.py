@@ -28,7 +28,7 @@ CASES = [
     h1='A miniatures brand’s own store, with <span>1 500</span> products moved from Etsy',
     tags=['Online store', 'Latvia · worldwide', 'WooCommerce', 'Moved from Etsy'],
     lede='Outland Miniatures prints resin miniatures in Latvia: busts, terrain, heroes and monsters for D&D players, wargamers and display painters. The shop sold on Etsy and wanted its own store next to it, with the whole catalogue in one place.',
-    cover='/assets/cases/outland/cover.jpg',
+    cover='https://ik.imagekit.io/erewhile/erewhile/portfolio/om%20pic.jpg?tr=w-1600',
     cover_wh=(1200, 630),
     facts=[('Client', 'Outland Miniatures, Latvia'), ('Market', 'Worldwide shipping'), ('Platform', 'WordPress + WooCommerce'), ('Catalogue', 'About 1 500 products from Etsy')],
     task_h='Move a large catalogue without losing anything',

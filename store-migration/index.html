@@ -409,42 +409,46 @@
     @media(max-width:560px){.sm-offer{grid-template-columns:1fr}}
     .sm-hero .hero-ctas{margin-top:24px}
 
-    /* the transfer diagram */
-    .flow{position:relative;margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:1fr minmax(220px,.9fr) 1fr;gap:clamp(40px,7vw,96px);align-items:center;padding:clamp(20px,3vw,36px);border:1px solid var(--line);border-radius:clamp(18px,2vw,26px);background:#fff;opacity:0;animation:fadeUp .9s var(--ease) .5s forwards}
-    .flow-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-    .flow-svg path{fill:none;stroke:var(--teal-line);stroke-width:1.2}
-    .flow-svg path.on{stroke:var(--teal);stroke-width:1.6;stroke-dasharray:6 6;animation:flowDash .6s linear infinite}
-    @keyframes flowDash{to{stroke-dashoffset:-12}}
-    .flow-svg circle{fill:var(--teal)}
-    .flow-col{position:relative;z-index:1}
+    /* the transfer diagram (desktop): product cards travel from the marketplace shelf through the three steps into the store grid */
+    .flow-d{position:relative;margin-top:clamp(40px,5vw,64px);padding:clamp(20px,2.6vw,32px);border:1px solid var(--line);border-radius:clamp(18px,2vw,26px);background:#fff;opacity:0;animation:fadeUp .9s var(--ease) .5s forwards}
+    .fd-heads{display:flex;justify-content:space-between;gap:20px;margin-bottom:16px}
+    .fd-heads > div:last-child{text-align:right}
     .flow-head{font-size:15px;font-weight:800;letter-spacing:-.02em}
-    .flow-sub{font-size:11.5px;color:var(--muted);margin:2px 0 14px}
-    .flow-list{list-style:none;display:grid;gap:8px}
-    .flow-list li{position:relative;font-size:13px;font-weight:600;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);transition:border-color .3s,background .3s,color .3s}
-    .flow-src li.on{border-color:var(--teal);color:var(--teal);background:#fff}
-    .flow-dst li{padding-right:30px}
-    .flow-dst li::after{content:'✓';position:absolute;right:12px;top:50%;transform:translateY(-50%) scale(.6);opacity:0;color:var(--teal);font-weight:800;transition:opacity .3s,transform .3s}
-    .flow-dst li.done{background:var(--teal-dim);border-color:var(--teal-line)}
-    .flow-dst li.done::after{opacity:1;transform:translateY(-50%) scale(1)}
-    .flow-dst li.on{border-color:var(--teal);background:#fff}
-    .flow-mid{position:relative;z-index:1;background:#0D3E3E;color:#fff;border-radius:18px;padding:20px;box-shadow:0 16px 40px rgba(13,62,62,0.16)}
+    .flow-sub{font-size:11.5px;color:var(--muted);margin-top:2px}
+    .fd-stage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 250px minmax(0,1.25fr);gap:clamp(28px,4vw,56px);align-items:center;min-height:280px;padding:22px;border-radius:18px;background:var(--bg)}
+    .fd-stage::before{content:'';position:absolute;left:22px;right:22px;top:var(--ly,50%);border-top:1.5px dashed var(--teal-line)}
+    .fd-gate{height:142px;border:1px dashed rgba(159,230,228,.35);border-radius:12px;margin-bottom:8px;background:rgba(255,255,255,.04)}
+    .fd-mid .flow-step{padding:6px 10px}
+    .fd-src{position:relative;height:236px;border:1px dashed var(--line);border-radius:14px}
+    .fd-label{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+    .flow-mid{position:relative;z-index:1;background:#0D3E3E;color:#fff;border-radius:18px;padding:16px;box-shadow:0 16px 40px rgba(13,62,62,0.18)}
     .flow-steps{display:grid;gap:4px}
     .flow-step{display:grid;grid-template-columns:28px 1fr;column-gap:8px;padding:9px 10px;border-radius:10px;transition:background .3s}
     .flow-step b{grid-row:span 2;font-family:var(--mono);font-size:11px;font-weight:500;color:#9FE6E4;padding-top:2px}
     .flow-step span{font-size:14px;font-weight:700}
     .flow-step i{font-style:normal;font-size:11.5px;color:rgba(255,255,255,.6)}
-    .flow-step.on{background:rgba(255,255,255,.08)}
-    .flow-count{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
-    .flow-count span{display:block;font-size:clamp(26px,2.8vw,34px);font-weight:900;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
-    .flow-count i{font-style:normal;font-size:11.5px;color:rgba(255,255,255,.6)}
-    @media(max-width:860px){
-      .flow{grid-template-columns:1fr;gap:34px}
-      .flow-svg{display:none}
-      .flow-mid::before,.flow-mid::after{content:'↓';position:absolute;left:50%;transform:translateX(-50%);color:var(--teal);font-weight:800;font-size:18px}
-      .flow-mid::before{top:-30px}.flow-mid::after{bottom:-30px}
-      .flow-list{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:420px){.flow-list li{font-size:12px;padding:8px 10px}}
+    .flow-step.on{background:rgba(255,255,255,.1)}
+    .flow-step.on b{color:#fff}
+    .fd-dst{position:relative;z-index:1;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(13,62,62,.06)}
+    .fd-bar{display:flex;align-items:center;gap:5px;padding:8px 12px;border-bottom:1px solid var(--line);background:#fafaf8}
+    .fd-bar i{width:7px;height:7px;border-radius:50%;background:#dcdcd6}
+    .fd-bar span{margin-left:8px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+    .fd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px}
+    .fd-grid i{display:block;aspect-ratio:3/4;border-radius:10px;border:1px dashed var(--line);background:var(--bg)}
+    .fd-card{position:absolute;z-index:2;width:96px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px;box-shadow:0 6px 16px rgba(0,0,0,.06);transition:left .9s cubic-bezier(.6,0,.25,1),top .9s cubic-bezier(.6,0,.25,1),width .9s cubic-bezier(.6,0,.25,1),transform .9s cubic-bezier(.6,0,.25,1),border-color .4s,box-shadow .4s}
+    .fd-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;background:#1b1916}
+    .fd-card u{display:flex;justify-content:space-between;align-items:center;margin-top:4px;padding:0 2px;font-size:9.5px;font-weight:700;color:var(--muted);text-decoration:none}
+    .fd-card u em{font-style:normal;color:var(--teal);opacity:0;transition:opacity .3s}
+    .fd-card.go{z-index:3;box-shadow:0 16px 36px rgba(13,62,62,.22);border-color:var(--teal)}
+    .fd-card.done{border-color:var(--teal-line)}
+    .fd-card.done u em{opacity:1}
+    .fd-foot{display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:center;margin-top:18px}
+    .fd-prog{grid-column:1/-1;height:5px;border-radius:3px;background:var(--teal-dim);overflow:hidden}
+    .fd-prog i{display:block;height:100%;width:0;background:var(--teal);transition:width .9s ease}
+    .fd-tags{margin-top:0}
+    .fd-count{text-align:right}
+    .fd-count span{display:block;font-size:34px;font-weight:900;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+    .fd-count i{font-style:normal;font-size:11.5px;color:var(--muted)}
     /* phone version of the diagram: product cards move from one shelf to the other */
     .flow-m{display:none;margin-top:32px;padding:16px;border:1px solid var(--line);border-radius:20px;background:#fff;opacity:0;animation:fadeUp .9s var(--ease) .5s forwards}
     .fm-heads{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}
@@ -467,12 +471,21 @@
     .fm-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;list-style:none}
     .fm-tags li{font-size:10.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 9px;transition:color .3s,border-color .3s,background .3s}
     .fm-tags li.on{color:var(--teal);border-color:var(--teal);background:var(--teal-dim)}
-    @media(max-width:860px){.flow{display:none}.flow-m{display:block}}
-    .sm-case{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:14px;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:13.5px;transition:border-color .2s}
-    .sm-case:hover{border-color:var(--teal-line)}
-    .sm-case-k{font-family:var(--mono);font-size:11px;color:var(--teal);background:var(--teal-dim);border-radius:6px;padding:2px 8px}
-    .sm-case-t{flex:1 1 260px;font-weight:600;min-width:0}
-    .sm-case-a{font-weight:700;color:var(--teal);white-space:nowrap}
+    @media(max-width:860px){.flow-d{display:none}.flow-m{display:block}}
+    .sm-case{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);margin-top:18px;border:1px solid var(--line);border-radius:clamp(18px,2vw,26px);background:#fff;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+    .sm-case:hover{border-color:var(--teal-line);box-shadow:0 18px 44px rgba(13,62,62,.1)}
+    .sm-case-img{display:block;min-height:260px;background:#16130F}
+    .sm-case-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+    .sm-case:hover .sm-case-img img{transform:scale(1.03)}
+    .sm-case-body{display:flex;flex-direction:column;gap:10px;padding:clamp(22px,3vw,36px)}
+    .sm-case-k{align-self:flex-start;font-family:var(--mono);font-size:11px;color:var(--teal);background:var(--teal-dim);border-radius:6px;padding:3px 9px}
+    .sm-case-h{font-size:clamp(20px,2.2vw,26px);font-weight:900;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+    .sm-case-t{font-size:14px;color:var(--muted);line-height:1.6}
+    .sm-case-f{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
+    .sm-case-f b{color:var(--ink);font-weight:800;margin-right:4px}
+    .sm-case-f > span:not(:first-child){padding-left:16px;border-left:1px solid var(--line)}
+    .sm-case-a{margin-top:auto;padding-top:6px;font-weight:800;color:var(--teal)}
+    @media(max-width:760px){.sm-case{grid-template-columns:1fr}.sm-case-img{min-height:0;aspect-ratio:16/9}}
 
     .sm-scale{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start;padding:clamp(28px,5vw,64px);border-radius:clamp(20px,2.4vw,32px);background:#0D3E3E;color:#fff;box-shadow:0 24px 60px rgba(13,62,62,0.18)}
     @media(max-width:860px){.sm-scale{grid-template-columns:1fr}}
@@ -553,39 +566,30 @@
     </div>
   </div>
 
-  <div class="flow" id="smFlow" role="img" aria-label="Diagram: products, photos, variations, sections, tags and shipping are exported from the marketplace, cleaned and mapped, and imported into your own store">
-    <svg class="flow-svg" aria-hidden="true"></svg>
-    <div class="flow-col flow-src">
-      <div class="flow-head">Marketplace shop</div>
-      <div class="flow-sub">Etsy · Shopify · Wix · CSV</div>
-      <ul class="flow-list">
-        <li>Listings</li>
-        <li>Photos</li>
-        <li>Variations</li>
-        <li>Shop sections</li>
-        <li>Tags</li>
-        <li>Shipping profiles</li>
-      </ul>
+  <div class="flow-d" id="smFlow" role="img" aria-label="Diagram: products, photos, variations, sections, tags and shipping are exported from the marketplace, cleaned and mapped, and imported into your own store">
+    <div class="fd-heads">
+      <div><div class="flow-head">Marketplace shop</div><div class="flow-sub">Etsy · Shopify · Wix · CSV</div></div>
+      <div><div class="flow-head">your-store.com</div><div class="flow-sub">WooCommerce · Shopify · custom</div></div>
     </div>
-    <div class="flow-mid">
-      <div class="flow-steps">
-        <div class="flow-step"><b>01</b><span>Export</span><i>via API or CSV</i></div>
-        <div class="flow-step"><b>02</b><span>Clean & map</span><i>titles, variations, categories</i></div>
-        <div class="flow-step"><b>03</b><span>Import & check</span><i>every product counted</i></div>
+    <div class="fd-stage" aria-hidden="true">
+      <div class="fd-src"><span class="fd-label">Etsy</span></div>
+      <div class="flow-mid fd-mid">
+        <div class="fd-gate"></div>
+        <div class="flow-steps">
+          <div class="flow-step"><b>01</b><span>Export</span><i>via API or CSV</i></div>
+          <div class="flow-step"><b>02</b><span>Clean & map</span><i>titles, variations, categories</i></div>
+          <div class="flow-step"><b>03</b><span>Import & check</span><i>every product counted</i></div>
+        </div>
       </div>
-      <div class="flow-count"><span id="smCount">12 480</span><i>products moved · example</i></div>
+      <div class="fd-dst">
+        <div class="fd-bar"><i></i><i></i><i></i><span>your-store.com/shop</span></div>
+        <div class="fd-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
     </div>
-    <div class="flow-col flow-dst">
-      <div class="flow-head">your-store.com</div>
-      <div class="flow-sub">WooCommerce · Shopify · custom</div>
-      <ul class="flow-list">
-        <li>Product pages</li>
-        <li>Product galleries</li>
-        <li>Variants with price & stock</li>
-        <li>Categories & filters</li>
-        <li>SEO titles & descriptions</li>
-        <li>Shipping zones & rates</li>
-      </ul>
+    <div class="fd-foot">
+      <div class="fd-prog"><i></i></div>
+      <ul class="fm-tags fd-tags"><li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li></ul>
+      <div class="fd-count"><span id="smCount">12 480</span><i>products moved · example</i></div>
     </div>
   </div>
   <div class="flow-m" id="smFlowM" role="img" aria-label="Diagram: products move one by one from the marketplace shop to your own store, with photos, variations, prices, stock, categories and SEO">
@@ -595,7 +599,16 @@
     <div class="fm-foot"><span>products moved · example</span><b id="smCountM">12 480</b></div>
     <ul class="fm-tags"><li>photos</li><li>variations</li><li>prices</li><li>stock</li><li>categories</li><li>SEO</li></ul>
   </div>
-  <a class="sm-case" href="/portfolio/outland/"><span class="sm-case-k">Example</span><span class="sm-case-t">About 1 500 products moved from Etsy to the own WooCommerce store of Outland Miniatures</span><span class="sm-case-a">See the case →</span></a>
+  <a class="sm-case" href="/portfolio/outland/">
+    <span class="sm-case-img"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/om%20pic.jpg?tr=w-900" alt="Outland Miniatures online store" loading="lazy"></span>
+    <span class="sm-case-body">
+      <span class="sm-case-k">Real project</span>
+      <span class="sm-case-h">Outland Miniatures: from Etsy to their own store</span>
+      <span class="sm-case-t">A resin miniatures shop from Latvia. We built their WooCommerce store and moved about 1&#160;500 products from Etsy with photos, variations and prices, while the Etsy shop kept selling.</span>
+      <span class="sm-case-f"><span><b>~1&#160;500</b> products</span><span><b>WooCommerce</b> store</span><span><b>Worldwide</b> shipping</span></span>
+      <span class="sm-case-a">See the case →</span>
+    </span>
+  </a>
 </section>
 
 <div class="divider"></div>
@@ -856,45 +869,45 @@ document.getElementById('burgerBtn').addEventListener('click',function(){
     setTimeout(function(){i=(i+1)%names.length;el.textContent=names[i];el.style.width=W[names[i]]+'px';el.classList.remove('out');el.classList.add('in')},260);
   },2400);
 })();
-/* transfer diagram: lines from every marketplace field into the pipeline and out to the store field;
-   one field at a time lights up, travels through the three steps and gets its check mark */
+/* transfer diagram (desktop): product cards wait on the marketplace shelf, travel through the three steps
+   (the dark card) and land in the store grid with a check mark; counter and progress bar follow */
 (function(){
   var f=document.getElementById('smFlow');if(!f)return;
-  var svg=f.querySelector('.flow-svg'),mid=f.querySelector('.flow-mid'),
-      src=f.querySelectorAll('.flow-src li'),dst=f.querySelectorAll('.flow-dst li'),
-      steps=f.querySelectorAll('.flow-step'),cnt=document.getElementById('smCount'),
-      NS='http://www.w3.org/2000/svg',pin=[],pout=[];
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function draw(){
-    svg.innerHTML='';pin=[];pout=[];
-    var b=f.getBoundingClientRect(),m=mid.getBoundingClientRect();
-    if(getComputedStyle(svg).display==='none')return;
-    var my=m.top+m.height/2-b.top;
-    function path(x1,y1,x2,y2){var p=document.createElementNS(NS,'path'),dx=(x2-x1)/2;
-      p.setAttribute('d','M'+x1+' '+y1+' C'+(x1+dx)+' '+y1+','+(x2-dx)+' '+y2+','+x2+' '+y2);svg.appendChild(p);return p}
-    src.forEach(function(li,i){var r=li.getBoundingClientRect();pin.push(path(r.right-b.left,r.top+r.height/2-b.top,m.left-b.left,my-30+i*12))});
-    dst.forEach(function(li,i){var r=li.getBoundingClientRect();pout.push(path(m.right-b.left,my-30+i*12,r.left-b.left,r.top+r.height/2-b.top))});
-  }
-  draw();addEventListener('resize',draw);
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
-  if(reduce){dst.forEach(function(li){li.classList.add('done')});return;}
-  var TARGET=12480;cnt.textContent='0';
+  var stage=f.querySelector('.fd-stage'),src=f.querySelector('.fd-src'),mid=f.querySelector('.fd-mid'),
+      slots=f.querySelectorAll('.fd-grid i'),steps=f.querySelectorAll('.flow-step'),prog=f.querySelector('.fd-prog i'),
+      tags=f.querySelectorAll('.fd-tags li'),cnt=document.getElementById('smCount');
+  var N=6,TARGET=12480,IMG=['/assets/cases/outland/mini-1.jpg','/assets/cases/outland/mini-2.jpg','/assets/cases/outland/mini-3.jpg','/assets/cases/outland/mini-4.jpg','/assets/cases/outland/mini-2.jpg','/assets/cases/outland/mini-1.jpg'],
+      PR=['€24','€38','€19','€52','€31','€45'],cards=[],done=0,busy=-1;
   function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
-  function clear(el){el.classList.remove('on')}
-  var i=0;
+  for(var n=0;n<N;n++){var c=document.createElement('div');c.className='fd-card';
+    c.innerHTML='<img src="'+IMG[n]+'" alt="" loading="lazy"><u><span>'+PR[n]+'</span><em>✓</em></u>';stage.appendChild(c);cards.push(c)}
+  function rel(el){var b=stage.getBoundingClientRect(),r=el.getBoundingClientRect();return{x:r.left-b.left,y:r.top-b.top,w:r.width,h:r.height}}
+  function place(c,x,y,w,rot){c.style.left=x+'px';c.style.top=y+'px';c.style.width=w+'px';c.style.transform='rotate('+rot+'deg)'}
+  function onShelf(c,pos){var r=rel(src);place(c,r.x+r.w/2-60+Math.min(pos,4)*12,r.y+(r.h-c.offsetHeight)/2-14+Math.min(pos,4)*6,96,pos%2?-3:3);c.style.zIndex=10-pos;c.style.opacity=pos>4?0:1}
+  function inSlot(c,j){var r=rel(slots[j]);place(c,r.x,r.y,r.w,0);c.style.zIndex=2;c.style.opacity=1}
+  var gate=f.querySelector('.fd-gate');
+  function inMid(c){var r=rel(gate);place(c,r.x+r.w/2-48,r.y+(r.h-c.offsetHeight)/2,96,0);c.style.zIndex=4}
+  function layout(){var g=rel(gate);stage.style.setProperty('--ly',(g.y+g.h/2)+'px');cards.forEach(function(c,j){if(j===busy)return;if(j<done)inSlot(c,j);else onShelf(c,j-done)})}
+  addEventListener('resize',function(){cards.forEach(function(c){c.style.transition='none'});layout();if(busy>=0)inSlot(cards[busy],busy);
+    requestAnimationFrame(function(){cards.forEach(function(c){c.style.transition=''})})});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){done=N;layout();cards.forEach(function(c){c.classList.add('done')});prog.style.width='100%';tags.forEach(function(t){t.classList.add('on')});return}
+  layout();cnt.textContent='0';
+  function on(k){steps.forEach(function(s,i){s.classList.toggle('on',i===k)})}
   function tick(){
-    if(i===0){dst.forEach(function(li){li.classList.remove('done')});cnt.textContent='0';}
-    src.forEach(clear);dst.forEach(clear);steps.forEach(clear);pin.forEach(clear);pout.forEach(clear);
-    src[i].classList.add('on');if(pin[i])pin[i].classList.add('on');steps[0].classList.add('on');
-    var k=i;
-    setTimeout(function(){steps[0].classList.remove('on');steps[1].classList.add('on')},450);
-    setTimeout(function(){steps[1].classList.remove('on');steps[2].classList.add('on');if(pin[k])pin[k].classList.remove('on');if(pout[k])pout[k].classList.add('on');dst[k].classList.add('on')},900);
-    setTimeout(function(){dst[k].classList.remove('on');dst[k].classList.add('done');cnt.textContent=fmt(Math.round(TARGET*(k+1)/src.length))},1350);
-    i=(i+1)%src.length;
-    setTimeout(tick,i===0?4200:1500);
+    if(done===N){done=0;cards.forEach(function(c){c.classList.remove('done')});layout();prog.style.width='0';cnt.textContent='0';
+      tags.forEach(function(t){t.classList.remove('on')});setTimeout(tick,1500);return}
+    var k=done,c=cards[k];busy=k;c.classList.add('go');on(0);
+    inMid(c);
+    for(var j=k+1;j<N;j++)onShelf(cards[j],j-k-1);
+    setTimeout(function(){on(1)},650);
+    setTimeout(function(){on(2);inSlot(c,k)},1300);
+    setTimeout(function(){c.classList.remove('go');c.classList.add('done');on(-1);busy=-1;done=k+1;
+      prog.style.width=(done/N*100)+'%';cnt.textContent=fmt(Math.round(TARGET*done/N));tags[k].classList.add('on')},2150);
+    setTimeout(tick,k===N-1?4600:2500);
   }
   var started=false;
-  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;setTimeout(tick,900)}})},{threshold:.3}).observe(f);
+  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;setTimeout(tick,700)}})},{threshold:.3}).observe(f);
 })();
 /* phone version: product cards move one by one from the marketplace shelf to the store shelf */
 (function(){
