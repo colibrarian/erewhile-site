@@ -266,7 +266,7 @@
     .scatter-arena {
       position: relative;
       width: 100%;
-      height: 570px;
+      height: 700px;
       background: transparent;
     }
 
@@ -782,7 +782,7 @@
   <nav class="pf-chips" aria-label="Разделы портфолио">
     <a href="#featured">Избранное <span>4</span></a>
     <a href="#websites">Сайты и магазины <span>10</span></a>
-    <a href="#toolsSection">Цифровые продукты <span>5</span></a>
+    <a href="#toolsSection">Цифровые продукты <span>6</span></a>
   </nav>
 </div>
 
@@ -807,21 +807,21 @@
       </div>
     </article>
     <article class="fcard">
-      <a class="fcard-img" href="/portfolio/fts-library/" tabindex="-1" aria-hidden="true"><img src="/assets/cases/fts-library/bias-map.jpg" alt="Библиотека FTS: интерактивная карта когнитивных искажений" loading="eager"></a>
+      <a class="fcard-img" href="/portfolio/fts-library/" tabindex="-1" aria-hidden="true"><img src="/assets/cases/fts-library/media-literacy.jpg" alt="Библиотека FTS: презентация True, False, Framed" loading="eager"></a>
       <div class="fcard-body">
         <div class="fcard-tag">База знаний · Erasmus+</div>
         <div class="fcard-title">FTS Library</div>
-        <div class="fcard-desc">13 учебных материалов для молодёжных работников, интерактивная карта когнитивных искажений и 156 слайдов в одном месте.</div>
+        <div class="fcard-desc">Презентации, гайды и памятки для молодёжных работников о критическом мышлении, медиаграмотности и подкастах.</div>
         <a class="fcard-link" href="/portfolio/fts-library/">Смотреть библиотеку →</a>
       </div>
     </article>
     <article class="fcard">
-      <a class="fcard-img" href="/ru/portfolio/oro/" tabindex="-1" aria-hidden="true"><img src="/assets/cases/oro/cover.jpg" alt="ORO Studio Tallinn" loading="eager"></a>
+      <a class="fcard-img" href="/ru/portfolio/kondo/" tabindex="-1" aria-hidden="true"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/8.jpg?tr=w-1200" alt="Kondo clothing brand" loading="eager"></a>
       <div class="fcard-body">
-        <div class="fcard-tag">Площадка для мероприятий</div>
-        <div class="fcard-title">ORO Studio — пространство для мероприятий в Таллине</div>
-        <div class="fcard-desc">Сайт на эстонском и русском: почасовая аренда, праздники под ключ и календарь бронирования.</div>
-        <a class="fcard-link" href="/ru/portfolio/oro/">Подробнее о проекте →</a>
+        <div class="fcard-tag">Бренд одежды</div>
+        <div class="fcard-title">Kondo — бренд одежды</div>
+        <div class="fcard-desc">Сайт эстонского бренда одежды с онлайн-заказом.</div>
+        <a class="fcard-link" href="/ru/portfolio/kondo/">Подробнее о проекте →</a>
       </div>
     </article>
     <article class="fcard">
@@ -1050,7 +1050,7 @@
 
       <div class="scard" id="sc1" data-rot="3">
         <a href="/portfolio/fts-library/" class="scard-img">
-          <img src="/assets/cases/fts-library/bias-map.jpg" alt="Библиотека FTS: интерактивная карта когнитивных искажений" loading="lazy">
+          <img src="/assets/cases/fts-library/library-screen.jpg" alt="Библиотека FTS: учебные материалы" loading="lazy">
         </a>
         <div class="scard-body">
           <div class="scard-tag">База знаний</div>
@@ -1093,6 +1093,18 @@
           <div class="scard-name">Внутренняя CRM — заявки и процессы</div>
           <div class="scard-sub">Воронка · статусы заявок · без абонплаты</div>
           <a class="scard-link" href="#contact">Узнать подробнее →</a>
+        </div>
+      </div>
+
+      <div class="scard" id="sc5" data-rot="5">
+        <a href="/portfolio/fts-library/" class="scard-img">
+          <img src="/assets/cases/fts-library/bias-map.jpg" alt="Карта когнитивных искажений: 40 искажений вокруг мозга" loading="lazy">
+        </a>
+        <div class="scard-body">
+          <div class="scard-tag">Интерактивная карта</div>
+          <div class="scard-name">Cognitive Bias Map</div>
+          <div class="scard-sub">40 искажений · 3 режима · фильтр по доказанности</div>
+          <a class="scard-link" href="/portfolio/fts-library/">Смотреть в библиотеке →</a>
         </div>
       </div>
 
@@ -1324,13 +1336,15 @@ function closeModal(id) {
       // sc0 (320px) — top-left, tilts -6°
       { l: px(0),   t: py(12),  r: -6,  z: 3, dur: '6.4s', delay: '0s'    },
       // sc1 (260px) — bottom-left, overlaps sc0 right+bottom, sc3 left
-      { l: px(200), t: py(250), r:  5,  z: 4, dur: '7.2s', delay: '-2.4s' },
+      { l: px(40),  t: py(345), r:  5,  z: 4, dur: '7.2s', delay: '-2.4s' },
       // sc2 (280px) — top-center, overlaps sc0 right, sc4 left, sc1 top
       { l: px(280), t: py(25),  r:  3,  z: 5, dur: '5.9s', delay: '-4.0s' },
       // sc3 (260px) — bottom-right-center, overlaps sc1 right, sc2 bottom, sc4 bottom-left
-      { l: px(510), t: py(240), r: -5,  z: 4, dur: '8.0s', delay: '-1.6s' },
+      { l: px(330), t: py(335), r: -5,  z: 4, dur: '8.0s', delay: '-1.6s' },
       // sc4 (320px) — top-right, overlaps sc2 right, sc3 top
       { l: px(600), t: py(10),  r:  8,  z: 2, dur: '6.8s', delay: '-3.7s' },
+      // sc5 (260px) — bottom-right, overlaps sc3 right, sc4 bottom
+      { l: px(620), t: py(350), r:  5,  z: 6, dur: '7.6s', delay: '-0.8s' },
     ];
   }
 
@@ -1340,9 +1354,10 @@ function closeModal(id) {
     { tx:    '0%', ty: '-160%' }, // sc2 center → from top
     { tx:  '140%', ty:  '130%' }, // sc3 bottom → from right
     { tx:  '160%', ty: '-140%' }, // sc4 top-right → from top-right
+    { tx:  '160%', ty:  '130%' }, // sc5 bottom-right → from right
   ];
 
-  const cards = [0,1,2,3,4].map(i => document.getElementById('sc'+i)).filter(Boolean);
+  const cards = [0,1,2,3,4,5].map(i => document.getElementById('sc'+i)).filter(Boolean);
 
   function initDesktop() {
     const positions = getPositions();

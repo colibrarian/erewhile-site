@@ -1,6 +1,12 @@
 """Russian texts for /portfolio/. Each pair is (English as it appears in portfolio/index.html, Russian)."""
 PAIRS=[
 # featured + section chips (portfolio redesign)
+('<div class="fcard-tag">Fashion brand</div>','<div class="fcard-tag">Бренд одежды</div>'),
+('Presentations, guides and memos for youth workers on critical thinking, media literacy and podcasting.','Презентации, гайды и памятки для молодёжных работников о критическом мышлении, медиаграмотности и подкастах.'),
+('<div class="scard-tag">Interactive map</div>','<div class="scard-tag">Интерактивная карта</div>'),
+('40 biases · 3 views · filters by evidence','40 искажений · 3 режима · фильтр по доказанности'),
+('See in the library →','Смотреть в библиотеке →'),
+('alt="Cognitive Bias Map: 40 biases around one brain"','alt="Карта когнитивных искажений: 40 искажений вокруг мозга"'),
 ("<h1>Work we've <em>built</em><br>and launched</h1>",'<h1>Проекты, которые мы <em>сделали</em><br>и запустили</h1>'),
 ('Websites, online stores, knowledge bases, project reports and internal tools.','Сайты, интернет-магазины, базы знаний, отчёты проектов и внутренние инструменты.'),
 ('aria-label="Portfolio sections"','aria-label="Разделы портфолио"'),
@@ -11,10 +17,8 @@ PAIRS=[
 ('<div class="section-title">Selected work</div>','<div class="section-title">Избранные проекты</div>'),
 ('<div class="fcard-tag">Online store</div>','<div class="fcard-tag">Интернет-магазин</div>'),
 ('<div class="fcard-tag">Knowledge base · Erasmus+</div>','<div class="fcard-tag">База знаний · Erasmus+</div>'),
-('<div class="fcard-tag">Event space</div>','<div class="fcard-tag">Площадка для мероприятий</div>'),
 ('<div class="fcard-tag">Project report · Erasmus+</div>','<div class="fcard-tag">Отчёт проекта · Erasmus+</div>'),
 ('About 1&nbsp;500 products moved from Etsy to the brand’s own WooCommerce store.','Около 1&nbsp;500 товаров перенесены с Etsy в собственный магазин бренда на WooCommerce.'),
-('13 learning materials for youth workers, an interactive bias map and 156 slides in one place.','13 учебных материалов для молодёжных работников, интерактивная карта когнитивных искажений и 156 слайдов в одном месте.'),
 ('Research, toolkits and project results gathered on one clear site.','Исследования, методички и результаты проекта собраны на одном понятном сайте.'),
 ('<title>Portfolio — Erewhile Digital</title>','<title>Портфолио — Erewhile Digital</title>'),
 ('content="Website portfolio — Erewhile Digital. Web design, landing pages, NGO sites, CRM dashboards and booking flows."',
@@ -61,7 +65,8 @@ PAIRS=[
 ('Short path from landing to booked appointment','Короткий путь от лендинга до записи'),
 ('<div class="scard-tag">Knowledge base</div>','<div class="scard-tag">База знаний</div>'),
 ('13 materials · bias map · 156 slides','13 материалов · карта искажений · 156 слайдов'),
-('alt="FTS Library: interactive cognitive bias map"','alt="Библиотека FTS: интерактивная карта когнитивных искажений"'),
+('alt="FTS Library: training materials"','alt="Библиотека FTS: учебные материалы"'),
+('alt="FTS Library: True, False, Framed presentation"','alt="Библиотека FTS: презентация True, False, Framed"'),
 ('<div class="scard-tag">Project report</div>','<div class="scard-tag">Отчёт проекта</div>'),
 ('<div class="scard-tag">Digital menu</div>','<div class="scard-tag">Цифровое меню</div>'),
 ('Digital Menu — Grill Bar','Цифровое меню — гриль-бар'),

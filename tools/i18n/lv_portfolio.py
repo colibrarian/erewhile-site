@@ -1,6 +1,12 @@
 """Latvian texts for /portfolio/. Each pair is (English as it appears in portfolio/index.html, Latvian)."""
 PAIRS=[
 # featured + section chips (portfolio redesign)
+('<div class="fcard-tag">Fashion brand</div>','<div class="fcard-tag">Apģērbu zīmols</div>'),
+('Presentations, guides and memos for youth workers on critical thinking, media literacy and podcasting.','Prezentācijas, ceļveži un atgādnes jaunatnes darbiniekiem par kritisko domāšanu, medijpratību un podkāstiem.'),
+('<div class="scard-tag">Interactive map</div>','<div class="scard-tag">Interaktīva karte</div>'),
+('40 biases · 3 views · filters by evidence','40 kļūdas · 3 skati · filtri pēc pierādījumiem'),
+('See in the library →','Skatīt bibliotēkā →'),
+('alt="Cognitive Bias Map: 40 biases around one brain"','alt="Kognitīvo kļūdu karte: 40 kļūdas ap smadzenēm"'),
 ("<h1>Work we've <em>built</em><br>and launched</h1>",'<h1>Projekti, ko esam <em>izstrādājuši</em><br>un palaiduši</h1>'),
 ('Websites, online stores, knowledge bases, project reports and internal tools.','Mājaslapas, interneta veikali, zināšanu bāzes, projektu atskaites un iekšējie rīki.'),
 ('aria-label="Portfolio sections"','aria-label="Portfolio sadaļas"'),
@@ -11,10 +17,8 @@ PAIRS=[
 ('<div class="section-title">Selected work</div>','<div class="section-title">Izvēlētie projekti</div>'),
 ('<div class="fcard-tag">Online store</div>','<div class="fcard-tag">Interneta veikals</div>'),
 ('<div class="fcard-tag">Knowledge base · Erasmus+</div>','<div class="fcard-tag">Zināšanu bāze · Erasmus+</div>'),
-('<div class="fcard-tag">Event space</div>','<div class="fcard-tag">Pasākumu telpa</div>'),
 ('<div class="fcard-tag">Project report · Erasmus+</div>','<div class="fcard-tag">Projekta atskaite · Erasmus+</div>'),
 ('About 1&nbsp;500 products moved from Etsy to the brand’s own WooCommerce store.','Ap 1&nbsp;500 preču pārnestas no Etsy uz zīmola paša WooCommerce veikalu.'),
-('13 learning materials for youth workers, an interactive bias map and 156 slides in one place.','13 mācību materiāli jaunatnes darbiniekiem, interaktīva kognitīvo kļūdu karte un 156 slaidi vienuviet.'),
 ('Research, toolkits and project results gathered on one clear site.','Pētījumi, rīkkopas un projekta rezultāti apkopoti vienā pārskatāmā vietnē.'),
 ('<title>Portfolio — Erewhile Digital</title>','<title>Portfolio — Erewhile Digital</title>'),
 ('content="Website portfolio — Erewhile Digital. Web design, landing pages, NGO sites, CRM dashboards and booking flows."',
@@ -58,7 +62,8 @@ PAIRS=[
 ('Short path from landing to booked appointment','Īss ceļš no mērķlapas līdz rezervētai vizītei'),
 ('<div class="scard-tag">Knowledge base</div>','<div class="scard-tag">Zināšanu bāze</div>'),
 ('13 materials · bias map · 156 slides','13 materiāli · kognitīvo kļūdu karte · 156 slaidi'),
-('alt="FTS Library: interactive cognitive bias map"','alt="FTS bibliotēka: interaktīva kognitīvo kļūdu karte"'),
+('alt="FTS Library: training materials"','alt="FTS bibliotēka: mācību materiāli"'),
+('alt="FTS Library: True, False, Framed presentation"','alt="FTS bibliotēka: prezentācija True, False, Framed"'),
 ('<div class="scard-tag">Project report</div>','<div class="scard-tag">Projekta atskaite</div>'),
 ('<div class="scard-tag">Digital menu</div>','<div class="scard-tag">Digitālā ēdienkarte</div>'),
 ('Digital Menu — Grill Bar','Digitālā ēdienkarte — grila bārs'),
