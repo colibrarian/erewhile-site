@@ -140,6 +140,28 @@
       to   { opacity: 1; transform: none; }
     }
 
+    /* ── Section chips + featured work ── */
+    html{scroll-behavior:smooth}
+    #featured,#websites,#toolsSection{scroll-margin-top:84px}
+    .pf-chips{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px;margin-top:22px;opacity:0;animation:fadeUp .8s var(--ease) .35s forwards}
+    .pf-chips a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px 8px 15px;border:1px solid var(--line);border-radius:100px;background:#fff;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;transition:transform .2s var(--ease),border-color .2s,box-shadow .2s}
+    .pf-chips a:hover{transform:translateY(-1px);border-color:rgba(13,62,62,.35);box-shadow:0 6px 18px rgba(13,62,62,.08)}
+    .pf-chips a span{min-width:24px;height:24px;padding:0 7px;border-radius:100px;background:rgba(13,62,62,.08);color:var(--teal);font-size:11.5px;font-weight:800;display:grid;place-items:center}
+    .feat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:8px clamp(16px,4vw,48px) 0}
+    .fcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
+    .fcard:hover{transform:translateY(-4px);box-shadow:0 22px 54px rgba(13,62,62,.13);border-color:rgba(13,62,62,.22)}
+    .fcard-img{display:block;aspect-ratio:16/9;overflow:hidden;background:rgba(10,10,10,.05);border-bottom:1px solid var(--line)}
+    .fcard-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+    .fcard-body{display:flex;flex-direction:column;gap:7px;flex:1;padding:20px 22px 22px}
+    .fcard-tag{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+    .fcard-title{font-size:clamp(18px,1.8vw,22px);font-weight:800;letter-spacing:-.03em;line-height:1.15;color:var(--ink)}
+    .fcard-desc{font-size:13.5px;line-height:1.6;color:var(--muted)}
+    .fcard-link{margin-top:auto;padding-top:8px;font-size:13px;font-weight:700;color:var(--teal);text-decoration:none}
+    .fcard-link::after{content:'';position:absolute;inset:0;z-index:1}
+    @media(max-width:520px){.pf-chips{gap:6px}.pf-chips a{font-size:12.5px;padding:7px 8px 7px 12px}.pf-chips a span{min-width:22px;height:22px}}
+    @media(max-width:760px){.feat-grid{grid-template-columns:1fr;gap:14px}.fcard-body{padding:16px 18px 18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
     /* ── SECTION / RAIL ── */
     .portfolio-section {
       max-width: 1200px; margin: 0 auto;
@@ -755,14 +777,71 @@
 <!-- ── PAGE HERO ── -->
 <div class="page-hero">
   <div class="page-hero-eyebrow">Портфолио</div>
-  <h1>Сайты, которые мы <em>сделали</em><br>и запустили</h1>
-  <p class="page-hero-sub">Сайты для бизнеса и НКО, онлайн-запись, внутренние инструменты и лендинги — каждый сделан, чтобы приводить клиентов.</p>
+  <h1>Проекты, которые мы <em>сделали</em><br>и запустили</h1>
+  <p class="page-hero-sub">Сайты, интернет-магазины, базы знаний, отчёты проектов и внутренние инструменты.</p>
+  <nav class="pf-chips" aria-label="Разделы портфолио">
+    <a href="#featured">Избранное <span>4</span></a>
+    <a href="#websites">Сайты и магазины <span>10</span></a>
+    <a href="#toolsSection">Цифровые продукты <span>5</span></a>
+  </nav>
 </div>
+
+<!-- ════════════════════════
+     FEATURED — mixed best work
+════════════════════════ -->
+<section class="portfolio-section reveal" id="featured">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Избранное</div>
+      <div class="section-title">Избранные проекты</div>
+    </div>
+  </div>
+  <div class="feat-grid">
+    <article class="fcard">
+      <a class="fcard-img" href="/ru/portfolio/outland/" tabindex="-1" aria-hidden="true"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/om%20pic.jpg?tr=w-1200" alt="Outland Miniatures online store" loading="eager"></a>
+      <div class="fcard-body">
+        <div class="fcard-tag">Интернет-магазин</div>
+        <div class="fcard-title">Outland Miniatures — интернет-магазин</div>
+        <div class="fcard-desc">Около 1&nbsp;500 товаров перенесены с Etsy в собственный магазин бренда на WooCommerce.</div>
+        <a class="fcard-link" href="/ru/portfolio/outland/">Подробнее о проекте →</a>
+      </div>
+    </article>
+    <article class="fcard">
+      <a class="fcard-img" href="/portfolio/fts-library/" tabindex="-1" aria-hidden="true"><img src="/assets/cases/fts-library/bias-map.jpg" alt="Библиотека FTS: интерактивная карта когнитивных искажений" loading="eager"></a>
+      <div class="fcard-body">
+        <div class="fcard-tag">База знаний · Erasmus+</div>
+        <div class="fcard-title">FTS Library</div>
+        <div class="fcard-desc">13 учебных материалов для молодёжных работников, интерактивная карта когнитивных искажений и 156 слайдов в одном месте.</div>
+        <a class="fcard-link" href="/portfolio/fts-library/">Смотреть библиотеку →</a>
+      </div>
+    </article>
+    <article class="fcard">
+      <a class="fcard-img" href="/ru/portfolio/oro/" tabindex="-1" aria-hidden="true"><img src="/assets/cases/oro/cover.jpg" alt="ORO Studio Tallinn" loading="eager"></a>
+      <div class="fcard-body">
+        <div class="fcard-tag">Площадка для мероприятий</div>
+        <div class="fcard-title">ORO Studio — пространство для мероприятий в Таллине</div>
+        <div class="fcard-desc">Сайт на эстонском и русском: почасовая аренда, праздники под ключ и календарь бронирования.</div>
+        <a class="fcard-link" href="/ru/portfolio/oro/">Подробнее о проекте →</a>
+      </div>
+    </article>
+    <article class="fcard">
+      <a class="fcard-img" href="https://untu.ngo/projects/dwcm" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://ik.imagekit.io/erewhile/erewhile/portfolio/3.jpg?tr=w-1200" alt="DWCM project report" loading="eager"></a>
+      <div class="fcard-body">
+        <div class="fcard-tag">Отчёт проекта · Erasmus+</div>
+        <div class="fcard-title">DWCM — отчёт проекта Erasmus+</div>
+        <div class="fcard-desc">Исследования, методички и результаты проекта собраны на одном понятном сайте.</div>
+        <a class="fcard-link" href="https://untu.ngo/projects/dwcm" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="section-divider reveal"></div>
 
 <!-- ════════════════════════
      RAIL 1 — WEBSITES
 ════════════════════════ -->
-<section class="portfolio-section reveal">
+<section class="portfolio-section reveal" id="websites">
   <div class="section-header">
     <div>
       <div class="section-label">Сайты</div>

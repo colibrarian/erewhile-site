@@ -1,5 +1,21 @@
 """Latvian texts for /portfolio/. Each pair is (English as it appears in portfolio/index.html, Latvian)."""
 PAIRS=[
+# featured + section chips (portfolio redesign)
+("<h1>Work we've <em>built</em><br>and launched</h1>",'<h1>Projekti, ko esam <em>izstrādājuši</em><br>un palaiduši</h1>'),
+('Websites, online stores, knowledge bases, project reports and internal tools.','Mājaslapas, interneta veikali, zināšanu bāzes, projektu atskaites un iekšējie rīki.'),
+('aria-label="Portfolio sections"','aria-label="Portfolio sadaļas"'),
+('<a href="#featured">Featured <span>','<a href="#featured">Izlase <span>'),
+('Websites &amp; stores <span>','Mājaslapas un veikali <span>'),
+('<a href="#toolsSection">Digital products <span>','<a href="#toolsSection">Digitālie produkti <span>'),
+('<div class="section-label">Featured</div>','<div class="section-label">Izlase</div>'),
+('<div class="section-title">Selected work</div>','<div class="section-title">Izvēlētie projekti</div>'),
+('<div class="fcard-tag">Online store</div>','<div class="fcard-tag">Interneta veikals</div>'),
+('<div class="fcard-tag">Knowledge base · Erasmus+</div>','<div class="fcard-tag">Zināšanu bāze · Erasmus+</div>'),
+('<div class="fcard-tag">Event space</div>','<div class="fcard-tag">Pasākumu telpa</div>'),
+('<div class="fcard-tag">Project report · Erasmus+</div>','<div class="fcard-tag">Projekta atskaite · Erasmus+</div>'),
+('About 1&nbsp;500 products moved from Etsy to the brand’s own WooCommerce store.','Ap 1&nbsp;500 preču pārnestas no Etsy uz zīmola paša WooCommerce veikalu.'),
+('13 learning materials for youth workers, an interactive bias map and 156 slides in one place.','13 mācību materiāli jaunatnes darbiniekiem, interaktīva kognitīvo kļūdu karte un 156 slaidi vienuviet.'),
+('Research, toolkits and project results gathered on one clear site.','Pētījumi, rīkkopas un projekta rezultāti apkopoti vienā pārskatāmā vietnē.'),
 ('<title>Portfolio — Erewhile Digital</title>','<title>Portfolio — Erewhile Digital</title>'),
 ('content="Website portfolio — Erewhile Digital. Web design, landing pages, NGO sites, CRM dashboards and booking flows."',
  'content="Mājaslapu portfolio — Erewhile Digital. Mājaslapu dizains, mērķlapas, NVO vietnes, CRM paneļi un rezervāciju plūsmas."'),
@@ -10,9 +26,6 @@ PAIRS=[
 ('>Get a quote<','>Piedāvājums<'),
 ('aria-label="Open menu"','aria-label="Atvērt izvēlni"'),
 # hero
-("<h1>Websites we've <em>built</em><br>and launched</h1>",'<h1>Mājaslapas, ko esam <em>izstrādājuši</em><br>un palaiduši</h1>'),
-('Business sites, NGO pages, booking flows, internal tools and landing pages — each one built to convert.',
- 'Biznesa mājaslapas, NVO vietnes, rezervāciju plūsmas, iekšējie rīki un mērķlapas — katra veidota, lai piesaistītu klientus.'),
 # websites rail
 ('<div class="section-label">Websites</div>','<div class="section-label">Mājaslapas</div>'),
 ('Business, brand & NGO sites','Biznesa, zīmolu un NVO mājaslapas'),

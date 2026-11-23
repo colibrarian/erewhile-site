@@ -1,5 +1,21 @@
 """Russian texts for /portfolio/. Each pair is (English as it appears in portfolio/index.html, Russian)."""
 PAIRS=[
+# featured + section chips (portfolio redesign)
+("<h1>Work we've <em>built</em><br>and launched</h1>",'<h1>Проекты, которые мы <em>сделали</em><br>и запустили</h1>'),
+('Websites, online stores, knowledge bases, project reports and internal tools.','Сайты, интернет-магазины, базы знаний, отчёты проектов и внутренние инструменты.'),
+('aria-label="Portfolio sections"','aria-label="Разделы портфолио"'),
+('<a href="#featured">Featured <span>','<a href="#featured">Избранное <span>'),
+('Websites &amp; stores <span>','Сайты и магазины <span>'),
+('<a href="#toolsSection">Digital products <span>','<a href="#toolsSection">Цифровые продукты <span>'),
+('<div class="section-label">Featured</div>','<div class="section-label">Избранное</div>'),
+('<div class="section-title">Selected work</div>','<div class="section-title">Избранные проекты</div>'),
+('<div class="fcard-tag">Online store</div>','<div class="fcard-tag">Интернет-магазин</div>'),
+('<div class="fcard-tag">Knowledge base · Erasmus+</div>','<div class="fcard-tag">База знаний · Erasmus+</div>'),
+('<div class="fcard-tag">Event space</div>','<div class="fcard-tag">Площадка для мероприятий</div>'),
+('<div class="fcard-tag">Project report · Erasmus+</div>','<div class="fcard-tag">Отчёт проекта · Erasmus+</div>'),
+('About 1&nbsp;500 products moved from Etsy to the brand’s own WooCommerce store.','Около 1&nbsp;500 товаров перенесены с Etsy в собственный магазин бренда на WooCommerce.'),
+('13 learning materials for youth workers, an interactive bias map and 156 slides in one place.','13 учебных материалов для молодёжных работников, интерактивная карта когнитивных искажений и 156 слайдов в одном месте.'),
+('Research, toolkits and project results gathered on one clear site.','Исследования, методички и результаты проекта собраны на одном понятном сайте.'),
 ('<title>Portfolio — Erewhile Digital</title>','<title>Портфолио — Erewhile Digital</title>'),
 ('content="Website portfolio — Erewhile Digital. Web design, landing pages, NGO sites, CRM dashboards and booking flows."',
  'content="Портфолио сайтов — Erewhile Digital. Веб-дизайн, лендинги, сайты НКО, CRM-панели и онлайн-запись."'),
@@ -13,9 +29,6 @@ PAIRS=[
 ('aria-label="Open menu"','aria-label="Открыть меню"'),
 # hero
 ('<div class="page-hero-eyebrow">Portfolio</div>','<div class="page-hero-eyebrow">Портфолио</div>'),
-("<h1>Websites we've <em>built</em><br>and launched</h1>",'<h1>Сайты, которые мы <em>сделали</em><br>и запустили</h1>'),
-('Business sites, NGO pages, booking flows, internal tools and landing pages — each one built to convert.',
- 'Сайты для бизнеса и НКО, онлайн-запись, внутренние инструменты и лендинги — каждый сделан, чтобы приводить клиентов.'),
 # websites rail
 ('<div class="section-label">Websites</div>','<div class="section-label">Сайты</div>'),
 ('Business, brand & NGO sites','Сайты для бизнеса, брендов и НКО'),
