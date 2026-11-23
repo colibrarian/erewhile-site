@@ -567,6 +567,7 @@ def page(c, nxt, lang='en'):
 </main>
 
 {SCRIPT}
+<script src="/assets/contact-fab.js" defer></script>
 </body>
 </html>
 '''
