@@ -2,12 +2,12 @@
    Appears after a short scroll, hides while the request form (#ew-contact) is on screen. Language from <html lang>.
    PHOTO: set to an image URL (square portrait) to replace the initial. */
 (function(){
-  var PHOTO = '';
+  var PHOTO = '/assets/konstantin.jpg';
   var WA = 'https://wa.me/37120579106', TG = 'https://t.me/Colibrarian', MAIL = 'web@erewhile.digital';
   var T = {
-    en: {name:'Konstantin', role:'Project manager · Erewhile', text:'Hi, I’m Konstantin, project manager at Erewhile. It’s usually quickest to talk things through in a chat, so message me directly and I’ll be glad to help.', open:'Message Konstantin', close:'Close', mail:'or email'},
-    lv: {name:'Konstantīns', role:'Projektu vadītājs · Erewhile', text:'Sveiki, mani sauc Konstantīns, esmu Erewhile projektu vadītājs. Visu parasti ir vienkāršāk apspriest čatā, tāpēc rakstiet man tieši, labprāt palīdzēšu.', open:'Rakstīt Konstantīnam', close:'Aizvērt', mail:'vai e-pasts'},
-    ru: {name:'Константин', role:'Менеджер проектов · Erewhile', text:'Привет, меня зовут Константин, я менеджер проектов в Erewhile. Обычно проще всего обсудить всё в чате, так что пишите мне напрямую, с радостью помогу.', open:'Написать Константину', close:'Закрыть', mail:'или почта'}
+    en: {name:'Konstantin', role:'Project manager<br>Erewhile Digital', text:'Hi, I’m Konstantin, project manager at Erewhile Digital. It’s usually quickest to talk things through in a chat, so message me directly and I’ll be glad to help.', open:'Message Konstantin', close:'Close', mail:'or email'},
+    lv: {name:'Konstantīns', role:'Projektu vadītājs<br>Erewhile Digital', text:'Sveiki, mani sauc Konstantīns, esmu Erewhile Digital projektu vadītājs. Visu parasti ir vienkāršāk apspriest čatā, tāpēc rakstiet man tieši, labprāt palīdzēšu.', open:'Rakstīt Konstantīnam', close:'Aizvērt', mail:'vai e-pasts'},
+    ru: {name:'Константин', role:'Менеджер проектов<br>Erewhile Digital', text:'Привет, меня зовут Константин, я менеджер проектов в Erewhile Digital. Обычно проще всего обсудить всё в чате, так что пишите мне напрямую, с радостью помогу.', open:'Написать Константину', close:'Закрыть', mail:'или почта'}
   };
   var lang = (document.documentElement.lang || 'en').slice(0, 2), t = T[lang] || T.en;
   function track(n){ try{ if(window.umami) umami.track(n) }catch(e){} }
