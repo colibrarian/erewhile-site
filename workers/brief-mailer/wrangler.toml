@@ -1,0 +1,15 @@
+# Optional: deploy from the command line with `npx wrangler deploy` in this folder.
+# The same settings can be made by hand in the Cloudflare dashboard (see README.md).
+name = "brief-mailer"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+workers_dev = false
+preview_urls = false
+
+[vars]
+FROM = "brief@erewhile.digital"
+TO = "konstantin.raugevich@gmail.com"
+
+[[send_email]]
+name = "SEND"
+destination_address = "konstantin.raugevich@gmail.com"

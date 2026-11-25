@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Project brief — Erewhile Digital</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636900/apple-touch-icon_xewslz.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636904/favicon-32x32_zujayz.png">
+  <link rel="icon" href="https://res.cloudinary.com/da4ctmwz5/image/upload/v1770636907/favicon_u65czo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0a0a0a;--muted:rgba(10,10,10,0.55);--teal:#0D3E3E;--teal-dim:rgba(13,62,62,0.07);--bg:#f7f7f5;--line:rgba(10,10,10,0.1);--err:#8a1f11}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;font-size:15px;line-height:1.6}
+    header{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:0 auto;padding:22px 16px}
+    .logo img{height:30px;display:block}
+    .langs{display:flex;gap:4px}
+    .langs button{font:inherit;font-size:12px;font-weight:600;padding:5px 10px;border-radius:100px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+    .langs button.on{background:var(--teal);border-color:var(--teal);color:#fff}
+    main{max-width:760px;margin:0 auto;padding:12px 16px 80px}
+    h1{font-size:clamp(30px,6vw,48px);font-weight:900;letter-spacing:-.04em;line-height:1.05}
+    .lead{margin-top:14px;color:var(--muted);max-width:560px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 24px;margin-top:22px}
+    h2{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:18px}
+    h2 span{color:var(--muted);font-weight:600;margin-right:8px}
+    .q{margin-top:20px}.q:first-of-type{margin-top:0}
+    .q>label,.q>.lbl{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+    .req{color:var(--teal)}
+    .hint{color:var(--muted);font-size:13px;margin:-4px 0 8px}
+    input[type=text],input[type=email],input[type=tel],input[type=password],textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+    textarea{min-height:88px;resize:vertical}
+    input:focus,textarea:focus{outline:2px solid var(--teal);outline-offset:-1px}
+    .opts{display:flex;flex-wrap:wrap;gap:8px}
+    .opt{position:relative}
+    .opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
+    .opt span{display:block;padding:8px 14px;border:1px solid var(--line);border-radius:100px;font-size:13.5px;background:#fff;transition:background .15s,border-color .15s}
+    .opt input:checked+span{background:var(--teal);border-color:var(--teal);color:#fff}
+    .opt input:focus-visible+span{outline:2px solid var(--teal);outline-offset:2px}
+    .other{margin-top:8px}
+    .btn{display:inline-block;font:inherit;font-weight:600;font-size:14px;padding:13px 26px;border-radius:100px;border:0;background:var(--teal);color:#fff;cursor:pointer}
+    .btn:disabled{opacity:.5;cursor:wait}
+    .msg{margin-top:12px;font-size:14px;color:var(--err);min-height:1px}
+    .gate{max-width:620px;padding-top:24px}
+    .eyebrow{font-size:12px;font-weight:600;color:var(--teal);margin-bottom:14px}
+    .gate .row{max-width:460px}
+    .works{margin-top:72px}
+    .works-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+    .works-head a{color:var(--teal);font-weight:600;font-size:14px;text-decoration:none}
+    .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .work{display:block;color:var(--ink);text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+    .work:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+    .work img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eee}
+    .work div{padding:14px 16px}
+    .work b{display:block;font-size:15px}
+    .work small{color:var(--muted);font-size:13px}
+    .gate .row{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-top:22px}
+    .pin{display:flex;gap:10px}
+    .pin input{width:56px;height:68px;text-align:center;font:inherit;font-size:28px;font-weight:800;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:14px;caret-color:var(--teal);transition:border-color .2s,background .2s,color .2s,transform .2s}
+    .pin input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px var(--teal-dim)}
+    .pin input.filled{background:var(--teal);border-color:var(--teal);color:#fff;animation:pop .25s ease}
+    .pin input:nth-child(3){margin-right:12px}
+    .pin.bad input{border-color:var(--err);animation:shake .4s ease}
+    .pin.ok input{background:var(--teal);color:#fff}
+    @keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+    @media (prefers-reduced-motion:reduce){.pin input{animation:none !important;transition:none}}
+    .types{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+    .note{color:var(--muted);font-size:13px}
+    .done{text-align:center;padding:48px 24px}
+    .done p{color:var(--muted);margin-top:12px}
+    [hidden]{display:none !important}
+    @media (max-width:760px){.works-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:520px){.works-grid{grid-template-columns:1fr}.card{padding:22px 16px}.pin{gap:6px}.pin input{width:calc((100vw - 32px - 42px) / 6);max-width:52px;height:60px;font-size:24px}.pin input:nth-child(3){margin-right:12px}}
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/" id="home"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874&tr=h-64" alt="Erewhile Digital"></a>
+    <div class="langs" id="langs"></div>
+  </header>
+  <main>
+    <section id="gate" class="gate">
+      <p class="eyebrow" data-t="eyebrow"></p>
+      <h1 data-t="gateTitle"></h1>
+      <p class="lead" data-t="about"></p>
+      <p class="lead" data-t="gateLead"></p>
+      <form id="gateForm" class="row" autocomplete="off">
+        <div class="pin" id="pin"></div>
+        <button class="btn" type="submit" data-t="open"></button>
+      </form>
+      <p class="msg" id="gateMsg" role="alert"></p>
+    </section>
+
+    <section id="brief" hidden>
+      <h1 id="briefTitle"></h1>
+      <p class="lead" data-t="briefLead"></p>
+      <div class="types" id="types"></div>
+      <form id="briefForm" novalidate>
+        <div id="fields"></div>
+        <div class="foot">
+          <button class="btn" type="submit" id="send" data-t="send"></button>
+          <span class="note" data-t="saved"></span>
+        </div>
+        <p class="msg" id="sendMsg" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="done" class="card done" hidden>
+      <h1 data-t="doneTitle"></h1>
+      <p data-t="doneText"></p>
+    </section>
+
+    <section class="works">
+      <div class="works-head"><h2 data-t="worksTitle"></h2><a id="allWorks" href="/portfolio/" target="_blank" data-t="allWorks"></a></div>
+      <div class="works-grid" id="works"></div>
+    </section>
+  </main>
+
+  <script src="/brief/brief-data.js"></script>
+  <script>
+  (function(){
+    var UI = {
+      eyebrow: ['Erewhile Digital · Project brief', 'Erewhile Digital · Projekta brīfs', 'Erewhile Digital · Бриф проекта'],
+      gateTitle: ['Let’s plan your online store', 'Izplānosim jūsu interneta veikalu', 'Давайте спланируем ваш интернет-магазин'],
+      about: ['Erewhile Digital designs and builds websites and online stores for businesses in Latvia and across Europe. This brief helps us understand your project before we start.', 'Erewhile Digital veido mājaslapas un interneta veikalus uzņēmumiem Latvijā un visā Eiropā. Šis brīfs palīdzēs mums saprast jūsu projektu vēl pirms darba sākuma.', 'Erewhile Digital создаёт сайты и интернет-магазины для бизнеса в Латвии и Европе. Этот бриф поможет нам понять ваш проект ещё до начала работы.'],
+      worksTitle: ['Online stores we’ve built', 'Mūsu izveidotie interneta veikali', 'Интернет-магазины, которые мы сделали'],
+      allWorks: ['All case studies →', 'Visi projekti →', 'Все кейсы →'],
+      gateLead: ['Enter the 6-digit code you received from Erewhile Digital to open the brief.', 'Ievadiet 6 ciparu kodu, ko saņēmāt no Erewhile Digital, lai atvērtu brīfu.', 'Введите 6-значный код, который вы получили от Erewhile Digital, чтобы открыть бриф.'],
+      open: ['Open', 'Atvērt', 'Открыть'],
+      badCode: ['This code doesn’t work. Check it or ask us for a new one.', 'Šis kods neder. Pārbaudiet to vai palūdziet jaunu.', 'Код не подходит. Проверьте его или попросите новый.'],
+      netErr: ['Something went wrong. Please try again in a minute.', 'Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz pēc minūtes.', 'Что-то пошло не так. Попробуйте ещё раз через минуту.'],
+      briefLead: ['Answer what you can. If you’re not sure about something, skip it and we’ll talk it through together.', 'Atbildiet uz to, ko zināt. Ja par kaut ko neesat pārliecināti, izlaidiet to, un mēs to pārrunāsim kopā.', 'Ответьте на то, что знаете. Если в чём-то не уверены, пропустите, мы обсудим это вместе.'],
+      other: ['Other', 'Cits', 'Другое'],
+      otherPh: ['Your option', 'Jūsu variants', 'Ваш вариант'],
+      send: ['Send the brief', 'Nosūtīt brīfu', 'Отправить бриф'],
+      sending: ['Sending...', 'Sūta...', 'Отправляем...'],
+      saved: ['Your answers are saved in this browser until you send them.', 'Atbildes tiek saglabātas šajā pārlūkā līdz nosūtīšanai.', 'Ответы сохраняются в этом браузере до отправки.'],
+      fill: ['Please fill in the required fields marked with *.', 'Lūdzu, aizpildiet obligātos laukus, kas atzīmēti ar *.', 'Пожалуйста, заполните обязательные поля со звёздочкой *.'],
+      sendErr: ['The brief wasn’t sent. Please try again, or message us on WhatsApp +371 20579106.', 'Brīfs netika nosūtīts. Mēģiniet vēlreiz vai rakstiet mums WhatsApp: +371 20579106.', 'Бриф не отправился. Попробуйте ещё раз или напишите в WhatsApp +371 20579106.'],
+      doneTitle: ['Thank you, the brief is sent', 'Paldies, brīfs ir nosūtīts', 'Спасибо, бриф отправлен'],
+      doneText: ['We’ll read your answers and get back to you to talk through the details.', 'Mēs iepazīsimies ar jūsu atbildēm un sazināsimies, lai pārrunātu detaļas.', 'Мы прочитаем ваши ответы и свяжемся с вами, чтобы обсудить детали.']
+    };
+    var LANGS = ['en', 'lv', 'ru'], RU = 2;
+    var IMG = 'https://ik.imagekit.io/erewhile/erewhile/portfolio/';
+    var WORKS = [
+      { slug: 'outland', img: 'om%20pic.jpg', name: 'Outland Miniatures', tag: ['Miniature figures', 'Miniatūras figūriņas', 'Миниатюрные фигурки'] },
+      { slug: 'kondo', img: '8.jpg', name: 'Kondo', tag: ['Clothing brand', 'Apģērbu zīmols', 'Бренд одежды'] },
+      { slug: 'razalija', img: '1.jpg', name: 'Razalija', tag: ['Flower shop', 'Ziedu veikals', 'Цветочный магазин'] }
+    ];
+    var qs = new URLSearchParams(location.search);
+    var lang = LANGS.indexOf(qs.get('lang')) >= 0 ? qs.get('lang') : (/^(lv|ru)/.test(navigator.language) ? navigator.language.slice(0, 2) : 'en');
+    var types = Object.keys(window.BRIEFS);
+    var type = types.indexOf(qs.get('type')) >= 0 ? qs.get('type') : types[0];
+    var code = '';
+    var $ = function(id){ return document.getElementById(id); };
+    var li = function(){ return LANGS.indexOf(lang); };
+    var tr = function(arr){ return arr[li()] || arr[0]; };
+    var store = { get: function(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } },
+                  set: function(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} },
+                  del: function(k){ try { localStorage.removeItem(k); } catch(e){} } };
+    var draftKey = function(){ return 'ew-brief-' + type; };
+
+    function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+    function renderUI(){
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = tr(UI[el.dataset.t]); });
+      document.querySelectorAll('[data-ph]').forEach(function(el){ el.placeholder = tr(UI[el.dataset.ph]); });
+      var pre = lang === 'en' ? '' : '/' + lang;
+      $('home').href = pre + '/'; $('allWorks').href = pre + '/portfolio/';
+      $('works').innerHTML = WORKS.map(function(w){
+        return '<a class="work" target="_blank" href="' + pre + '/portfolio/' + w.slug + '/"><img src="' + IMG + w.img + '?tr=w-700" alt="' + w.name + '" loading="lazy"><div><b>' + w.name + '</b><small>' + tr(w.tag) + '</small></div></a>';
+      }).join('');
+      $('langs').innerHTML = LANGS.map(function(l){ return '<button type="button" data-l="' + l + '" class="' + (l === lang ? 'on' : '') + '">' + l.toUpperCase() + '</button>'; }).join('');
+    }
+
+    function renderBrief(){
+      var b = window.BRIEFS[type], values = collect();
+      $('briefTitle').textContent = tr(b.title);
+      $('types').innerHTML = types.length < 2 ? '' : types.map(function(t){
+        return '<label class="opt"><input type="radio" name="__type" value="' + t + '"' + (t === type ? ' checked' : '') + '><span>' + esc(tr(window.BRIEFS[t].title)) + '</span></label>';
+      }).join('');
+      $('fields').innerHTML = b.sections.map(function(s, i){
+        return '<div class="card"><h2><span>' + (i + 1) + '</span>' + esc(tr(s.t)) + '</h2>' + s.q.map(field).join('') + '</div>';
+      }).join('');
+      fill(Object.keys(values).length ? values : (store.get(draftKey()) || {}));
+    }
+
+    function field(q){
+      var star = q.req ? ' <span class="req">*</span>' : '';
+      var hint = q.h ? '<p class="hint">' + esc(tr(q.h)) + '</p>' : '';
+      if (q.type === 'radio' || q.type === 'check') {
+        var t = q.type === 'radio' ? 'radio' : 'checkbox';
+        var opts = q.o.map(function(o, i){ return '<label class="opt"><input type="' + t + '" name="' + q.id + '" value="' + i + '"><span>' + esc(tr(o)) + '</span></label>'; });
+        if (q.other) opts.push('<label class="opt"><input type="' + t + '" name="' + q.id + '" value="other"><span>' + esc(tr(UI.other)) + '</span></label>');
+        return '<div class="q" data-q="' + q.id + '"><span class="lbl">' + esc(tr(q.l)) + star + '</span>' + hint + '<div class="opts">' + opts.join('') + '</div>' +
+          (q.other ? '<input type="text" class="other" name="' + q.id + '__other" placeholder="' + esc(tr(UI.otherPh)) + '" hidden>' : '') + '</div>';
+      }
+      var input = q.type === 'textarea' ? '<textarea id="f_' + q.id + '" name="' + q.id + '"></textarea>'
+        : '<input type="' + q.type + '" id="f_' + q.id + '" name="' + q.id + '">';
+      return '<div class="q" data-q="' + q.id + '"><label for="f_' + q.id + '">' + esc(tr(q.l)) + star + '</label>' + hint + input + '</div>';
+    }
+
+    function collect(){
+      var v = {};
+      $('briefForm').querySelectorAll('input,textarea').forEach(function(el){
+        if (!el.name || el.name === '__type') return;
+        if (el.type === 'radio' || el.type === 'checkbox') { if (el.checked) (v[el.name] = v[el.name] || []).push(el.value); }
+        else if (el.value.trim()) v[el.name] = el.value;
+      });
+      return v;
+    }
+
+    function fill(v){
+      $('briefForm').querySelectorAll('input,textarea').forEach(function(el){
+        if (!el.name || !(el.name in v)) return;
+        if (el.type === 'radio' || el.type === 'checkbox') el.checked = v[el.name].indexOf(el.value) >= 0;
+        else el.value = v[el.name];
+      });
+      toggleOthers();
+    }
+
+    function toggleOthers(){
+      document.querySelectorAll('input.other').forEach(function(o){
+        var box = document.querySelector('input[name="' + o.name.replace('__other', '') + '"][value="other"]');
+        o.hidden = !(box && box.checked);
+      });
+    }
+
+    // The email to Konstantin is in Russian: question labels and chosen options in Russian, free text as typed.
+    function report(v){
+      var b = window.BRIEFS[type], lines = [];
+      b.sections.forEach(function(s, i){
+        lines.push('', '== ' + (i + 1) + '. ' + s.t[RU] + ' ==');
+        s.q.forEach(function(q){
+          var a = v[q.id];
+          if (Array.isArray(a)) a = a.map(function(x){ return x === 'other' ? 'Другое: ' + (v[q.id + '__other'] || '') : q.o[+x][RU]; }).join('; ');
+          lines.push(q.l[RU] + (/[?]$/.test(q.l[RU]) ? ' ' : ': ') + (a || '—'));
+        });
+      });
+      return lines.join('\n').trim();
+    }
+
+    function missing(v){
+      var miss = [];
+      window.BRIEFS[type].sections.forEach(function(s){ s.q.forEach(function(q){ if (q.req && !v[q.id]) miss.push(q.id); }); });
+      if (v.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) miss.push('email');
+      return miss;
+    }
+
+    function post(body){
+      return fetch('/api/brief', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ j.status = r.status; return j; }); });
+    }
+
+    $('langs').addEventListener('click', function(e){
+      var l = e.target.dataset && e.target.dataset.l; if (!l) return;
+      lang = l; renderUI(); if (!$('brief').hidden) renderBrief();
+    });
+
+    // 6-digit code: one box per digit, auto-advance, paste, backspace; sends itself on the last digit.
+    var pin = $('pin');
+    pin.innerHTML = [0,1,2,3,4,5].map(function(i){ return '<input inputmode="numeric" pattern="[0-9]*" maxlength="1" autocomplete="' + (i ? 'off' : 'one-time-code') + '" aria-label="Digit ' + (i + 1) + '">'; }).join('');
+    var boxes = [].slice.call(pin.querySelectorAll('input'));
+    var pinValue = function(){ return boxes.map(function(b){ return b.value; }).join(''); };
+    function setDigits(start, digits){
+      digits.split('').forEach(function(d, k){ var b = boxes[start + k]; if (b) { b.value = d; b.classList.add('filled'); } });
+      var next = boxes[Math.min(start + digits.length, 5)]; next.focus();
+      if (pinValue().length === 6) $('gateForm').requestSubmit();
+    }
+    boxes.forEach(function(b, i){
+      b.addEventListener('input', function(){
+        var d = b.value.replace(/\D/g, ''); b.value = ''; b.classList.remove('filled');
+        pin.classList.remove('bad'); $('gateMsg').textContent = '';
+        if (d) setDigits(i, d.slice(0, 6 - i));
+      });
+      b.addEventListener('keydown', function(e){
+        if (e.key === 'Backspace' && !b.value && i) { boxes[i - 1].value = ''; boxes[i - 1].classList.remove('filled'); boxes[i - 1].focus(); e.preventDefault(); }
+        if (e.key === 'ArrowLeft' && i) boxes[i - 1].focus();
+        if (e.key === 'ArrowRight' && i < 5) boxes[i + 1].focus();
+      });
+      b.addEventListener('paste', function(e){
+        var d = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '').slice(0, 6);
+        if (d) { e.preventDefault(); boxes.forEach(function(x){ x.value = ''; x.classList.remove('filled'); }); setDigits(0, d); }
+      });
+      b.addEventListener('focus', function(){ b.select(); });
+    });
+
+    $('gateForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = pinValue(), btn = e.target.querySelector('button');
+      if (v.length < 6 || btn.disabled) { boxes[v.length < 6 ? v.length : 5].focus(); return; }
+      btn.disabled = true; $('gateMsg').textContent = '';
+      post({ action: 'check', code: v }).then(function(r){
+        if (r.ok) { code = v; pin.classList.add('ok'); setTimeout(function(){ $('gate').hidden = true; $('brief').hidden = false; renderBrief(); scrollTo(0, 0); }, 450); }
+        else {
+          $('gateMsg').textContent = tr(r.status === 403 ? UI.badCode : UI.netErr);
+          pin.classList.add('bad');
+          setTimeout(function(){ boxes.forEach(function(x){ x.value = ''; x.classList.remove('filled'); }); boxes[0].focus(); }, 400);
+        }
+      }).catch(function(){ $('gateMsg').textContent = tr(UI.netErr); }).then(function(){ btn.disabled = false; });
+    });
+
+    $('briefForm').addEventListener('change', function(e){
+      if (e.target.name === '__type') { store.set(draftKey(), collect()); type = e.target.value; $('fields').innerHTML = ''; renderBrief(); return; }
+      toggleOthers(); store.set(draftKey(), collect());
+    });
+    $('briefForm').addEventListener('input', function(){ store.set(draftKey(), collect()); });
+
+    $('briefForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = collect(), miss = missing(v);
+      document.querySelectorAll('.q').forEach(function(q){ q.style.color = miss.indexOf(q.dataset.q) >= 0 ? 'var(--err)' : ''; });
+      if (miss.length) { $('sendMsg').textContent = tr(UI.fill); document.querySelector('[data-q="' + miss[0] + '"]').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+      var btn = $('send'); btn.disabled = true; btn.textContent = tr(UI.sending); $('sendMsg').textContent = '';
+      post({ action: 'submit', code: code, type: type, typeTitle: window.BRIEFS[type].title[RU], lang: lang,
+             name: v.name, brand: v.brand || '', email: v.email, text: report(v) }).then(function(r){
+        if (r.ok) { store.del(draftKey()); $('brief').hidden = true; $('done').hidden = false; scrollTo(0, 0); try { umami.track('Brief sent'); } catch(e){} }
+        else $('sendMsg').textContent = tr(r.status === 403 ? UI.badCode : UI.sendErr);
+      }).catch(function(){ $('sendMsg').textContent = tr(UI.sendErr); }).then(function(){ btn.disabled = false; btn.textContent = tr(UI.send); });
+    });
+
+    renderUI();
+  })();
+  </script>
+</body>
+</html>
