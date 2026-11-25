@@ -2,14 +2,14 @@
 // POST {action:'check', code}            -> 200 if the code is valid, 403 if not.
 // POST {action:'submit', code, ...brief} -> checks the code again, then emails the brief.
 // Settings in the Pages project (Settings -> Variables and Secrets / Bindings):
-//   BRIEF_CODES  secret, comma-separated access codes, e.g. "ANNA-4821,ZEMITS-7730"
+//   BRIEF_CODES  secret, comma-separated 6-digit access codes, e.g. "482193,730215" (one per client)
 //   MAILER       service binding to the "brief-mailer" Worker (workers/brief-mailer), which sends the email.
 const json = (body, status = 200) => new Response(JSON.stringify(body), {
   status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
 
 function validCode(env, code) {
-  const codes = String(env.BRIEF_CODES || '').split(',').map(c => c.trim().toLowerCase()).filter(Boolean);
-  return !!code && codes.includes(String(code).trim().toLowerCase());
+  const codes = String(env.BRIEF_CODES || '').split(',').map(c => c.trim()).filter(c => /^\d{6}$/.test(c));
+  return /^\d{6}$/.test(String(code)) && codes.includes(String(code));
 }
 const clean = (s, max) => String(s || '').replace(/[\r\n]+/g, ' ').trim().slice(0, max);
 

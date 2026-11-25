@@ -18,7 +18,7 @@ paste `workers/brief-mailer/worker.js`, Deploy. Then in the Worker **Settings**:
 
 ## 3. The Pages project (erewhile-site)
 **Workers & Pages** → erewhile-site → **Settings**:
-- **Variables and Secrets** → add a **Secret** `BRIEF_CODES`, for example `ANNA-4821` (several codes separated by commas, one per client).
+- **Variables and Secrets** → add a **Secret** `BRIEF_CODES` with 6-digit codes, for example `482193` (several separated by commas, one per client; avoid easy ones like 123456).
 - **Bindings** → Add → **Service binding** → variable name `MAILER`, service `brief-mailer`.
 - Redeploy (Deployments → latest → Retry deployment) so the settings take effect.
 

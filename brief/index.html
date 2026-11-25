@@ -56,8 +56,17 @@
     .work div{padding:14px 16px}
     .work b{display:block;font-size:15px}
     .work small{color:var(--muted);font-size:13px}
-    .gate .row{display:flex;gap:8px;margin-top:16px}
-    .gate .row input{flex:1}
+    .gate .row{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-top:22px}
+    .pin{display:flex;gap:10px}
+    .pin input{width:56px;height:68px;text-align:center;font:inherit;font-size:28px;font-weight:800;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:14px;caret-color:var(--teal);transition:border-color .2s,background .2s,color .2s,transform .2s}
+    .pin input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px var(--teal-dim)}
+    .pin input.filled{background:var(--teal);border-color:var(--teal);color:#fff;animation:pop .25s ease}
+    .pin input:nth-child(3){margin-right:12px}
+    .pin.bad input{border-color:var(--err);animation:shake .4s ease}
+    .pin.ok input{background:var(--teal);color:#fff}
+    @keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+    @media (prefers-reduced-motion:reduce){.pin input{animation:none !important;transition:none}}
     .types{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
     .foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
     .note{color:var(--muted);font-size:13px}
@@ -65,7 +74,7 @@
     .done p{color:var(--muted);margin-top:12px}
     [hidden]{display:none !important}
     @media (max-width:760px){.works-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:520px){.works-grid{grid-template-columns:1fr}.card{padding:22px 16px}.gate .row{flex-direction:column}}
+    @media (max-width:520px){.works-grid{grid-template-columns:1fr}.card{padding:22px 16px}.pin{gap:6px}.pin input{width:calc((100vw - 32px - 42px) / 6);max-width:52px;height:60px;font-size:24px}.pin input:nth-child(3){margin-right:12px}}
   </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
 </head>
@@ -81,7 +90,7 @@
       <p class="lead" data-t="about"></p>
       <p class="lead" data-t="gateLead"></p>
       <form id="gateForm" class="row" autocomplete="off">
-        <input type="password" id="code" required data-ph="codePh" aria-label="Code"/>
+        <div class="pin" id="pin"></div>
         <button class="btn" type="submit" data-t="open"></button>
       </form>
       <p class="msg" id="gateMsg" role="alert"></p>
@@ -119,10 +128,9 @@
       eyebrow: ['Erewhile Digital · Project brief', 'Erewhile Digital · Projekta brīfs', 'Erewhile Digital · Бриф проекта'],
       gateTitle: ['Let’s plan your online store', 'Plānosim jūsu interneta veikalu', 'Давайте спланируем ваш интернет-магазин'],
       about: ['Erewhile Digital designs and builds websites and online stores for businesses in Latvia and across Europe. This brief helps us understand your project before we start.', 'Erewhile Digital veido mājaslapas un interneta veikalus uzņēmumiem Latvijā un visā Eiropā. Šis brīfs palīdzēs mums saprast jūsu projektu vēl pirms darba sākuma.', 'Erewhile Digital создаёт сайты и интернет-магазины для бизнеса в Латвии и Европе. Этот бриф поможет нам понять ваш проект ещё до начала работы.'],
-      worksTitle: ['Our recent projects', 'Mūsu jaunākie projekti', 'Наши последние проекты'],
-      allWorks: ['All projects →', 'Visi projekti →', 'Все проекты →'],
-      gateLead: ['Enter the code you received from Erewhile Digital to open the brief.', 'Ievadiet kodu, ko saņēmāt no Erewhile Digital, lai atvērtu brīfu.', 'Введите код, который вы получили от Erewhile Digital, чтобы открыть бриф.'],
-      codePh: ['Access code', 'Piekļuves kods', 'Код доступа'],
+      worksTitle: ['Online stores we’ve built', 'Mūsu izveidotie interneta veikali', 'Интернет-магазины, которые мы сделали'],
+      allWorks: ['All case studies →', 'Visi projekti →', 'Все кейсы →'],
+      gateLead: ['Enter the 6-digit code you received from Erewhile Digital to open the brief.', 'Ievadiet 6 ciparu kodu, ko saņēmāt no Erewhile Digital, lai atvērtu brīfu.', 'Введите 6-значный код, который вы получили от Erewhile Digital, чтобы открыть бриф.'],
       open: ['Open', 'Atvērt', 'Открыть'],
       badCode: ['This code doesn’t work. Check it or ask us for a new one.', 'Šis kods neder. Pārbaudiet to vai palūdziet jaunu.', 'Код не подходит. Проверьте его или попросите новый.'],
       netErr: ['Something went wrong. Please try again in a minute.', 'Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz pēc minūtes.', 'Что-то пошло не так. Попробуйте ещё раз через минуту.'],
@@ -140,7 +148,7 @@
     var LANGS = ['en', 'lv', 'ru'], RU = 2;
     var IMG = 'https://ik.imagekit.io/erewhile/erewhile/portfolio/';
     var WORKS = [
-      { slug: 'outland', img: 'om%20pic.jpg', name: 'Outland Miniatures', tag: ['Online store', 'Interneta veikals', 'Интернет-магазин'] },
+      { slug: 'outland', img: 'om%20pic.jpg', name: 'Outland Miniatures', tag: ['Miniature figures', 'Miniatūras figūras', 'Миниатюрные фигурки'] },
       { slug: 'kondo', img: '8.jpg', name: 'Kondo', tag: ['Clothing brand', 'Apģērbu zīmols', 'Бренд одежды'] },
       { slug: 'razalija', img: '1.jpg', name: 'Razalija', tag: ['Flower shop', 'Ziedu veikals', 'Цветочный магазин'] }
     ];
@@ -255,12 +263,46 @@
       lang = l; renderUI(); if (!$('brief').hidden) renderBrief();
     });
 
+    // 6-digit code: one box per digit, auto-advance, paste, backspace; sends itself on the last digit.
+    var pin = $('pin');
+    pin.innerHTML = [0,1,2,3,4,5].map(function(i){ return '<input inputmode="numeric" pattern="[0-9]*" maxlength="1" autocomplete="' + (i ? 'off' : 'one-time-code') + '" aria-label="Digit ' + (i + 1) + '">'; }).join('');
+    var boxes = [].slice.call(pin.querySelectorAll('input'));
+    var pinValue = function(){ return boxes.map(function(b){ return b.value; }).join(''); };
+    function setDigits(start, digits){
+      digits.split('').forEach(function(d, k){ var b = boxes[start + k]; if (b) { b.value = d; b.classList.add('filled'); } });
+      var next = boxes[Math.min(start + digits.length, 5)]; next.focus();
+      if (pinValue().length === 6) $('gateForm').requestSubmit();
+    }
+    boxes.forEach(function(b, i){
+      b.addEventListener('input', function(){
+        var d = b.value.replace(/\D/g, ''); b.value = ''; b.classList.remove('filled');
+        pin.classList.remove('bad'); $('gateMsg').textContent = '';
+        if (d) setDigits(i, d.slice(0, 6 - i));
+      });
+      b.addEventListener('keydown', function(e){
+        if (e.key === 'Backspace' && !b.value && i) { boxes[i - 1].value = ''; boxes[i - 1].classList.remove('filled'); boxes[i - 1].focus(); e.preventDefault(); }
+        if (e.key === 'ArrowLeft' && i) boxes[i - 1].focus();
+        if (e.key === 'ArrowRight' && i < 5) boxes[i + 1].focus();
+      });
+      b.addEventListener('paste', function(e){
+        var d = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '').slice(0, 6);
+        if (d) { e.preventDefault(); boxes.forEach(function(x){ x.value = ''; x.classList.remove('filled'); }); setDigits(0, d); }
+      });
+      b.addEventListener('focus', function(){ b.select(); });
+    });
+
     $('gateForm').addEventListener('submit', function(e){
       e.preventDefault();
-      var btn = e.target.querySelector('button'); btn.disabled = true; $('gateMsg').textContent = '';
-      post({ action: 'check', code: $('code').value.trim() }).then(function(r){
-        if (r.ok) { code = $('code').value.trim(); $('gate').hidden = true; $('brief').hidden = false; renderBrief(); }
-        else $('gateMsg').textContent = tr(r.status === 403 ? UI.badCode : UI.netErr);
+      var v = pinValue(), btn = e.target.querySelector('button');
+      if (v.length < 6 || btn.disabled) { boxes[v.length < 6 ? v.length : 5].focus(); return; }
+      btn.disabled = true; $('gateMsg').textContent = '';
+      post({ action: 'check', code: v }).then(function(r){
+        if (r.ok) { code = v; pin.classList.add('ok'); setTimeout(function(){ $('gate').hidden = true; $('brief').hidden = false; renderBrief(); scrollTo(0, 0); }, 450); }
+        else {
+          $('gateMsg').textContent = tr(r.status === 403 ? UI.badCode : UI.netErr);
+          pin.classList.add('bad');
+          setTimeout(function(){ boxes.forEach(function(x){ x.value = ''; x.classList.remove('filled'); }); boxes[0].focus(); }, 400);
+        }
       }).catch(function(){ $('gateMsg').textContent = tr(UI.netErr); }).then(function(){ btn.disabled = false; });
     });
 
