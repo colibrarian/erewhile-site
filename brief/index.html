@@ -16,7 +16,7 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;font-size:15px;line-height:1.6}
     header{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:0 auto;padding:22px 16px}
-    .logo{font-weight:900;letter-spacing:-.03em;color:var(--ink);text-decoration:none;font-size:17px}
+    .logo img{height:30px;display:block}
     .langs{display:flex;gap:4px}
     .langs button{font:inherit;font-size:12px;font-weight:600;padding:5px 10px;border-radius:100px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
     .langs button.on{background:var(--teal);border-color:var(--teal);color:#fff}
@@ -43,7 +43,19 @@
     .btn{display:inline-block;font:inherit;font-weight:600;font-size:14px;padding:13px 26px;border-radius:100px;border:0;background:var(--teal);color:#fff;cursor:pointer}
     .btn:disabled{opacity:.5;cursor:wait}
     .msg{margin-top:12px;font-size:14px;color:var(--err);min-height:1px}
-    .gate{max-width:440px}
+    .gate{max-width:620px;padding-top:24px}
+    .eyebrow{font-size:12px;font-weight:600;color:var(--teal);margin-bottom:14px}
+    .gate .row{max-width:460px}
+    .works{margin-top:72px}
+    .works-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+    .works-head a{color:var(--teal);font-weight:600;font-size:14px;text-decoration:none}
+    .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .work{display:block;color:var(--ink);text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+    .work:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+    .work img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eee}
+    .work div{padding:14px 16px}
+    .work b{display:block;font-size:15px}
+    .work small{color:var(--muted);font-size:13px}
     .gate .row{display:flex;gap:8px;margin-top:16px}
     .gate .row input{flex:1}
     .types{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
@@ -52,18 +64,21 @@
     .done{text-align:center;padding:48px 24px}
     .done p{color:var(--muted);margin-top:12px}
     [hidden]{display:none !important}
-    @media (max-width:520px){.card{padding:22px 16px}.gate .row{flex-direction:column}}
+    @media (max-width:760px){.works-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:520px){.works-grid{grid-template-columns:1fr}.card{padding:22px 16px}.gate .row{flex-direction:column}}
   </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="05637fa8-68fc-4678-9073-128758979e4b"></script>
 </head>
 <body>
   <header>
-    <a class="logo" href="/">Erewhile Digital</a>
+    <a class="logo" href="/" id="home"><img src="https://ik.imagekit.io/erewhile/erewhile/logo%20erewhile.png?updatedAt=1777367873874&tr=h-64" alt="Erewhile Digital"></a>
     <div class="langs" id="langs"></div>
   </header>
   <main>
     <section id="gate" class="gate">
+      <p class="eyebrow" data-t="eyebrow"></p>
       <h1 data-t="gateTitle"></h1>
+      <p class="lead" data-t="about"></p>
       <p class="lead" data-t="gateLead"></p>
       <form id="gateForm" class="row" autocomplete="off">
         <input type="password" id="code" required data-ph="codePh" aria-label="Code"/>
@@ -90,13 +105,22 @@
       <h1 data-t="doneTitle"></h1>
       <p data-t="doneText"></p>
     </section>
+
+    <section class="works">
+      <div class="works-head"><h2 data-t="worksTitle"></h2><a id="allWorks" href="/portfolio/" target="_blank" data-t="allWorks"></a></div>
+      <div class="works-grid" id="works"></div>
+    </section>
   </main>
 
   <script src="/brief/brief-data.js"></script>
   <script>
   (function(){
     var UI = {
-      gateTitle: ['Project brief', 'Projekta brīfs', 'Бриф проекта'],
+      eyebrow: ['Erewhile Digital · Project brief', 'Erewhile Digital · Projekta brīfs', 'Erewhile Digital · Бриф проекта'],
+      gateTitle: ['Let’s plan your online store', 'Plānosim jūsu interneta veikalu', 'Давайте спланируем ваш интернет-магазин'],
+      about: ['Erewhile Digital designs and builds websites and online stores for businesses in Latvia and across Europe. This brief helps us understand your project before we start.', 'Erewhile Digital veido mājaslapas un interneta veikalus uzņēmumiem Latvijā un visā Eiropā. Šis brīfs palīdzēs mums saprast jūsu projektu vēl pirms darba sākuma.', 'Erewhile Digital создаёт сайты и интернет-магазины для бизнеса в Латвии и Европе. Этот бриф поможет нам понять ваш проект ещё до начала работы.'],
+      worksTitle: ['Our recent projects', 'Mūsu jaunākie projekti', 'Наши последние проекты'],
+      allWorks: ['All projects →', 'Visi projekti →', 'Все проекты →'],
       gateLead: ['Enter the code you received from Erewhile Digital to open the brief.', 'Ievadiet kodu, ko saņēmāt no Erewhile Digital, lai atvērtu brīfu.', 'Введите код, который вы получили от Erewhile Digital, чтобы открыть бриф.'],
       codePh: ['Access code', 'Piekļuves kods', 'Код доступа'],
       open: ['Open', 'Atvērt', 'Открыть'],
@@ -114,6 +138,12 @@
       doneText: ['We’ll read your answers and get back to you to talk through the details.', 'Mēs izlasīsim jūsu atbildes un sazināsimies, lai pārrunātu detaļas.', 'Мы прочитаем ваши ответы и свяжемся с вами, чтобы обсудить детали.']
     };
     var LANGS = ['en', 'lv', 'ru'], RU = 2;
+    var IMG = 'https://ik.imagekit.io/erewhile/erewhile/portfolio/';
+    var WORKS = [
+      { slug: 'outland', img: 'om%20pic.jpg', name: 'Outland Miniatures', tag: ['Online store', 'Interneta veikals', 'Интернет-магазин'] },
+      { slug: 'kondo', img: '8.jpg', name: 'Kondo', tag: ['Clothing brand', 'Apģērbu zīmols', 'Бренд одежды'] },
+      { slug: 'razalija', img: '1.jpg', name: 'Razalija', tag: ['Flower shop', 'Ziedu veikals', 'Цветочный магазин'] }
+    ];
     var qs = new URLSearchParams(location.search);
     var lang = LANGS.indexOf(qs.get('lang')) >= 0 ? qs.get('lang') : (/^(lv|ru)/.test(navigator.language) ? navigator.language.slice(0, 2) : 'en');
     var types = Object.keys(window.BRIEFS);
@@ -133,6 +163,11 @@
       document.documentElement.lang = lang;
       document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = tr(UI[el.dataset.t]); });
       document.querySelectorAll('[data-ph]').forEach(function(el){ el.placeholder = tr(UI[el.dataset.ph]); });
+      var pre = lang === 'en' ? '' : '/' + lang;
+      $('home').href = pre + '/'; $('allWorks').href = pre + '/portfolio/';
+      $('works').innerHTML = WORKS.map(function(w){
+        return '<a class="work" target="_blank" href="' + pre + '/portfolio/' + w.slug + '/"><img src="' + IMG + w.img + '?tr=w-700" alt="' + w.name + '" loading="lazy"><div><b>' + w.name + '</b><small>' + tr(w.tag) + '</small></div></a>';
+      }).join('');
       $('langs').innerHTML = LANGS.map(function(l){ return '<button type="button" data-l="' + l + '" class="' + (l === lang ? 'on' : '') + '">' + l.toUpperCase() + '</button>'; }).join('');
     }
 

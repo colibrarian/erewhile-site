@@ -7,7 +7,7 @@ by a small Worker (`workers/brief-mailer/worker.js`). No third-party form servic
 ## 1. Email Routing (once)
 Cloudflare dashboard → erewhile.digital → **Email** → **Email Routing**:
 - Enable it (if not yet) and let Cloudflare add the DNS records.
-- **Destination addresses** → add the inbox that should receive briefs and confirm it from the email Cloudflare sends.
+- **Destination addresses** → add konstantin.raugevich@gmail.com (the inbox for briefs) and confirm it from the email Cloudflare sends.
 
 ## 2. The mailer Worker
 **Workers & Pages** → **Create** → **Worker** → name it `brief-mailer` → Deploy → **Edit code**,

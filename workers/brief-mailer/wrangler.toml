@@ -8,8 +8,8 @@ preview_urls = false
 
 [vars]
 FROM = "brief@erewhile.digital"
-TO = "CHANGE-ME@example.com"
+TO = "konstantin.raugevich@gmail.com"
 
 [[send_email]]
 name = "SEND"
-destination_address = "CHANGE-ME@example.com"
+destination_address = "konstantin.raugevich@gmail.com"
